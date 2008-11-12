@@ -97,6 +97,7 @@
 		breakpoints = (
 			2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:27 */,
 			2C4D2D140EC9B95800D09C32 /* ScriptLoader.m:9 */,
+			2C94936B0ECAAC4100273C7C /* AppController.m:38 */,
 		);
 		breakpointsGroup = 2C67BFBD0C96AA9600E4D9D5 /* XCBreakpointsBucket */;
 		codeSenseManager = 25D9445B07B1533700FF306F /* Code sense */;
@@ -162,8 +163,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 248150626;
-			PBXWorkspaceStateSaveDate = 248150626;
+			PBXPerProjectTemplateStateSaveDate = 248168171;
+			PBXWorkspaceStateSaveDate = 248168171;
 		};
 		sourceControlManager = 25D9445A07B1533700FF306F /* Source Control */;
 		userBuildSettings = {
@@ -237,7 +238,46 @@
 		objects = (
 			2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:27 */,
 			2C4D2D140EC9B95800D09C32 /* ScriptLoader.m:9 */,
+			2C94936B0ECAAC4100273C7C /* AppController.m:38 */,
 		);
+	};
+	2C9492B80ECA99A600273C7C /* AppController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {855, 579}}";
+			sepNavSelRange = "{318, 0}";
+			sepNavVisRect = "{{0, 0}, {855, 579}}";
+			sepNavWindowFrame = "{{338, 203}, {894, 652}}";
+		};
+	};
+	2C9492B90ECA99A600273C7C /* AppController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {937, 2608}}";
+			sepNavSelRange = "{3250, 0}";
+			sepNavVisRect = "{{0, 1239}, {899, 573}}";
+			sepNavWindowFrame = "{{357, 147}, {938, 646}}";
+		};
+	};
+	2C9493320ECAA3DC00273C7C /* FactorySettings.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {899, 573}}";
+			sepNavSelRange = "{440, 24}";
+			sepNavVisRect = "{{0, 0}, {899, 573}}";
+			sepNavWindowFrame = "{{61, 245}, {938, 646}}";
+		};
+	};
+	2C94936B0ECAAC4100273C7C /* AppController.m:38 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 2C9492B90ECA99A600273C7C /* AppController.m */;
+		functionName = "-awakeFromNib";
+		hitCount = 0;
+		lineNumber = 38;
+		modificationTime = 248163393.129353;
+		state = 1;
 	};
 	2CD975EE0EC9013500024156 /* ASFormatting.m */ = {
 		uiCtxt = {

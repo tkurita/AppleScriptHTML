@@ -8,6 +8,7 @@ property ASHTML : missing value
 property ScriptLinkMaker : missing value
 property TemplateProcessor : missing value
 property ASHTMLProcessor : missing value
+property DefaultsManager : missing value
 
 on __load__(loader)
 	tell loader
@@ -37,6 +38,7 @@ on will finish launching theObject
 	set ASHTML to import_script("ASHTML")
 	set ASFormattingStyle to import_script("ASFormattingStyle")
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
+	set DefaultsManager to import_script("DefaultsManager")
 end will finish launching
 
 on launched theObject
@@ -60,5 +62,12 @@ on launched theObject
 	log ASHTML's process_text("tell hello" & return & "display dialog {1,2,3} as text" & return & "beep" & return & "end tell", true)
 	
 end launched
+
+on clicked theObject
+	set a_name to name of theObject
+	if a_name is "CopyToClipBoard" then
+		ASHTMLProcessor's do()
+	end if
+end clicked
 
 
