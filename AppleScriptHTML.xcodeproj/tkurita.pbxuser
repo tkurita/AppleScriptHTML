@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	257572C2072881A4000BE9CA /* AppleScriptHTML */ = {
+		activeExec = 0;
+		executables = (
+			25D9445407B1533600FF306F /* AppleScriptHTML */,
+		);
+	};
+	257572D5072881A4000BE9CA /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {797, 528}}";
+			sepNavSelRange = "{944, 0}";
+			sepNavVisRect = "{{0, 56}, {721, 472}}";
+			sepNavWindowFrame = "{{84, 325}, {760, 545}}";
+		};
+	};
+	25D9445407B1533600FF306F /* AppleScriptHTML */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-1" = {
+				PBXLSLaunchAction = 1;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXGDB_LaunchConfig;
+				displayName = GDB;
+				identifier = com.apple.Xcode.launch.GDBMI_Config;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = ASKDebugger;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = NO;
+				name = AEDebug;
+				value = 1;
+			},
+			{
+				active = NO;
+				name = AEDebugSends;
+				value = 1;
+			},
+			{
+				active = NO;
+				name = AEDebugReceives;
+				value = 1;
+			},
+			{
+				active = NO;
+				name = AEDebugVerbose;
+				value = 1;
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = AppleScriptHTML;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+			"ae_keyword-AEKeyword-+[ASFormatting appleScriptFormatting]" = 5;
+			"descriptorType-DescType-+[ASFormatting appleScriptFormatting]" = 5;
+		};
+	};
+	25D9445A07B1533700FF306F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	25D9445B07B1533700FF306F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 25D9445407B1533600FF306F /* AppleScriptHTML */;
+		activeTarget = 257572C2072881A4000BE9CA /* AppleScriptHTML */;
+		addToTargets = (
+			257572C2072881A4000BE9CA /* AppleScriptHTML */,
+		);
+		breakpoints = (
+			2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:27 */,
+			2C4D2D140EC9B95800D09C32 /* ScriptLoader.m:9 */,
+		);
+		breakpointsGroup = 2C67BFBD0C96AA9600E4D9D5 /* XCBreakpointsBucket */;
+		codeSenseManager = 25D9445B07B1533700FF306F /* Code sense */;
+		executables = (
+			25D9445407B1533600FF306F /* AppleScriptHTML */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					265,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					377,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					197,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 248150626;
+			PBXWorkspaceStateSaveDate = 248150626;
+		};
+		sourceControlManager = 25D9445A07B1533700FF306F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {721, 472}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {721, 472}}";
+			sepNavWindowFrame = "{{15, 388}, {760, 545}}";
+		};
+	};
+	2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:27 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 2CD975EE0EC9013500024156 /* ASFormatting.m */;
+		functionName = "+styleRunsForSource:";
+		hitCount = 1;
+		lineNumber = 27;
+		location = ASFormatting.ob;
+		modificationTime = 248101334.903545;
+		state = 1;
+	};
+	2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {855, 5202}}";
+			sepNavSelRange = "{8506, 0}";
+			sepNavVisRect = "{{0, 4104}, {855, 579}}";
+			sepNavWindowFrame = "{{497, 197}, {894, 652}}";
+		};
+	};
+	2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {855, 1258}}";
+			sepNavSelRange = "{2098, 0}";
+			sepNavVisRect = "{{0, 131}, {855, 579}}";
+			sepNavWindowFrame = "{{538, 172}, {894, 652}}";
+		};
+	};
+	2C4D2CA20EC9AF4500D09C32 /* ScriptLoader.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = ScriptLoader.m;
+		path = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/Class/ScriptLoader.m;
+		sourceTree = "<absolute>";
+	};
+	2C4D2D140EC9B95800D09C32 /* ScriptLoader.m:9 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = 2C4D2CA20EC9AF4500D09C32 /* ScriptLoader.m */;
+		functionName = "+load";
+		hitCount = 1;
+		lineNumber = 9;
+		location = ScriptLoader.ob;
+		modificationTime = 248101302.14523;
+		state = 1;
+	};
+	2C67BFBD0C96AA9600E4D9D5 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "プロジェクトブレークポイント";
+		objects = (
+			2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:27 */,
+			2C4D2D140EC9B95800D09C32 /* ScriptLoader.m:9 */,
+		);
+	};
+	2CD975EE0EC9013500024156 /* ASFormatting.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {855, 2704}}";
+			sepNavSelRange = "{853, 0}";
+			sepNavVisRect = "{{0, 0}, {855, 726}}";
+			sepNavWindowFrame = "{{86, 139}, {894, 799}}";
+		};
+	};
+	2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {855, 817}}";
+			sepNavSelRange = "{1469, 0}";
+			sepNavVisRect = "{{0, 0}, {855, 579}}";
+			sepNavWindowFrame = "{{521, 156}, {894, 652}}";
+		};
+	};
+	65359356078DD41800E8BB2F /* AppleScriptKit.sdef */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{61, 346}, {760, 545}}";
+		};
+	};
+	DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {774, 1105}}";
+			sepNavSelRange = "{1651, 0}";
+			sepNavVisRect = "{{0, 442}, {684, 614}}";
+			sepNavWindowFrame = "{{15, 246}, {723, 687}}";
+		};
+	};
+}
