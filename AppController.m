@@ -30,6 +30,16 @@
 }
 
 #pragma mark initilize
++ (void)initialize
+{
+	NSString *defaults_plist = [[NSBundle mainBundle] 
+						pathForResource:@"FactorySettings" ofType:@"plist"];
+	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
+	
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	[user_defaults registerDefaults:factory_defaults];
+}
+
 - (void)awakeFromNib
 {
 #if useLog
@@ -84,12 +94,6 @@
 #if useLog
 	NSLog(@"start applicationWillFinishLaunching");
 #endif
-	NSString *defaults_plist = [[NSBundle mainBundle] 
-						pathForResource:@"FactorySettings" ofType:@"plist"];
-	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
-	
-	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults registerDefaults:factory_defaults];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

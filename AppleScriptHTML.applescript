@@ -9,6 +9,8 @@ property ScriptLinkMaker : missing value
 property TemplateProcessor : missing value
 property ASHTMLProcessor : missing value
 property DefaultsManager : missing value
+property CSSBuilder : missing value
+property RGBColor : missing value
 
 on __load__(loader)
 	tell loader
@@ -58,8 +60,8 @@ on launched theObject
 	log a_script's _message
 	log a_script2's _message
 	*)
-	ASHTML's initialize()
-	log ASHTML's process_text("tell hello" & return & "display dialog {1,2,3} as text" & return & "beep" & return & "end tell", true)
+	--ASHTML's initialize()
+	--log ASHTML's process_text("tell hello" & return & "display dialog {1,2,3} as text" & return & "beep" & return & "end tell", true)
 	
 end launched
 
