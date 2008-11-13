@@ -3,6 +3,8 @@ global ASHTML
 global TemplateProcessor
 global DefaultsManager
 global XFile
+global SheetManager
+global _main_window
 
 property _is_css : missing value
 property _is_convert : missing value
@@ -12,13 +14,22 @@ property _use_scripteditor : missing value
 script EditorController
 	property _target_text : missing value
 	on check_target()
+		tell application "System Events"
+			set run_flag to exists application process "Script Editor"
+		end tell
+		
+		if not run_flag then
+			display alert "Script Editor is not Launched" attached to _main_window
+			return false
+		end if
+		
 		tell application "Script Editor"
 			set run_flag to exists front document
 		end tell
 		
 		if not run_flag then
-			display dialog "No documents in Script Editor" giving up after 20
-			return fasel
+			display alert "No documents in Script Editor" attached to _main_window
+			return false
 		end if
 		return true
 	end check_target
@@ -70,23 +81,29 @@ script FileController
 		return a_result
 	end markup
 	
+	on resolve_target_path()
+		if my _target_path is missing value then
+			set my _target_path to DefaultsManager's value_for("TargetScript")
+		end if
+	end resolve_target_path
+	
 	on target_text()
 		if my _target_text is missing value then
-			set my _target_path to DefaultsManager's value_for("TargetScript")
+			resolve_target_path()
 			set my _target_text to call method "scriptSource:" of class "ASFormatting" with parameter my _target_path
 		end if
-		
 		return my _target_text
 	end target_text
 	
 	on doc_name()
+		resolve_target_path()
 		set a_name to XFile's make_with(POSIX file (my _target_path))'s item_name()
 		return a_name
 	end doc_name
 end script
 
 on do given fullhtml:full_flag
-	log "start do"
+	--log "start do"
 	ASHTML's initialize()
 	
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
@@ -98,7 +115,6 @@ on do given fullhtml:full_flag
 	else
 		set CodeController to FileController
 	end if
-	log "000"
 	set template_name to missing value
 	if _is_css then
 		if (_is_convert) then
@@ -115,7 +131,8 @@ on do given fullhtml:full_flag
 	end if
 	if (_is_convert or _is_scriptlink) then
 		if not CodeController's check_target() then
-			return false
+			error "No Target." number 1500
+			return missing value
 		end if
 		
 		if (_is_convert) then
@@ -136,7 +153,6 @@ on do given fullhtml:full_flag
 		end if
 	end if
 	if template_name is not missing value then
-		log template_name
 		set template_file to path to resource template_name
 		set a_template to TemplateProcessor's make_with_file(template_file)
 		if (_is_convert) then a_template's insert_text("$BODY", script_html's as_unicode())
@@ -183,7 +199,12 @@ on do given fullhtml:full_flag
 end do
 
 on copy_to_clipboard()
-	set a_result to do without fullhtml
+	try
+		set a_result to do without fullhtml
+	on error msg number 1500
+		return false
+	end try
+	
 	tell application (path to frontmost application as Unicode text)
 		set the clipboard to a_result's as_unicode()
 	end tell
@@ -191,7 +212,7 @@ end copy_to_clipboard
 
 on save_location()
 	if (_is_css and (not (_is_convert and _is_scriptlink))) then
-		set html_path to choose file name with prompt "Save a HTML file" default name "AppleScript.css"
+		set html_path to choose file name with prompt "Save a CSS file" default name "AppleScript.css"
 	else
 		tell application "Script Editor"
 			set file_path to path of front document
@@ -216,8 +237,98 @@ on save_location()
 	return html_path
 end save_location
 
+on save_location_name()
+	set a_location to missing value
+	set a_name to missing value
+	if (_is_css and (not (_is_convert and _is_scriptlink))) then
+		set a_name to "AppleScript.css"
+	else
+		if _use_scripteditor then
+			tell application "Script Editor"
+				set a_path to path of front document
+			end tell
+			
+			try
+				get a_path
+				set is_saved to true
+			on error
+				set is_saved to false
+			end try
+			
+			if is_saved then
+				set a_xfile to XFile's make_with(POSIX file a_path)
+				set a_xfile to a_xfile's change_path_extension(".html")
+				set a_name to a_xfile's item_name()
+				set a_location to a_xfile's parent_folder()'s as_alias()
+				
+			else
+				set a_name to "AppleScript HTML.html"
+			end if
+		else
+			set a_path to DefaultsManager's value_for("TargetScript")
+			set a_xfile to XFile's make_with(POSIX file a_path)
+			set a_xfile to a_xfile's change_path_extension(".html")
+			set a_name to a_xfile's item_name()
+			set a_location to a_xfile's parent_folder()'s as_alias()
+		end if
+	end if
+	return {a_location, a_name}
+end save_location_name
+
+on after_save(a_file)
+	display alert "Success to Make a HTML file." attached to _main_window default button "Open" other button "Reveal" alternate button "Cancel"
+	script AfterAlert
+		on sheet_ended(sender, a_reply)
+			set the_result to button returned of a_reply
+			if the_result is "Reveal" then
+				tell application "Finder"
+					reveal a_file
+				end tell
+				activate process "Finder"
+			else if the_result is "Open" then
+				tell application "Finder"
+					open a_file
+				end tell
+			end if
+		end sheet_ended
+	end script
+	register_sheet of SheetManager given attached_to:_main_window, delegate:AfterAlert
+end after_save
+
 on save_to_file()
-	set a_result to do with fullhtml
+	try
+		set a_result to do with fullhtml
+	on error msg number 1500
+		return false
+	end try
+	set {a_location, a_name} to save_location_name()
+	if a_location is missing value then
+		display save panel attached to _main_window with file name a_name
+	else
+		display save panel attached to _main_window with file name a_name in directory a_location
+	end if
+	
+	script FileWriter
+		on sheet_ended(sender, a_replay)
+			close panel sender
+			if a_replay is not 1 then
+				return
+			end if
+			set a_path to path name of sender
+			a_result's write_to_file(POSIX file a_path)
+			set html_path to (POSIX file a_path) as alias
+			tell application "Finder"
+				set creator type of html_path to missing value
+				set file type of html_path to missing value
+			end tell
+			
+			after_save(html_path)
+		end sheet_ended
+	end script
+	
+	register_sheet of SheetManager given attached_to:_main_window, delegate:FileWriter
+	
+	return true
 	try
 		set html_path to save_location()
 	on error msg number errno

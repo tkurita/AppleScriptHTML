@@ -17,6 +17,7 @@
 				2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */,
 				2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */,
 				2C535EC70ECA81B100C73295 /* DefaultsManager.applescript in AppleScript */,
+				2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +48,7 @@
 		2CE618070ECB2B7A00445AFE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618020ECB2B7A00445AFE /* Info.plist */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
+		2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C535EC30ECA800800C73295 /* SheetManager.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CF3A6430ECACC4800D63AF8 /* template_sourcecode.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */; };
 		2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6410ECACC4800D63AF8 /* template_full.html */; };

@@ -12,7 +12,10 @@ property DefaultsManager : missing value
 property CSSBuilder : missing value
 property RGBColor : missing value
 property XFile : missing value
+property SheetManager : missing value
+
 property _indicator : missing value
+property _main_window : missing value
 
 on __load__(loader)
 	tell loader
@@ -44,6 +47,7 @@ on will finish launching theObject
 	set ASFormattingStyle to import_script("ASFormattingStyle")
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
 	set DefaultsManager to import_script("DefaultsManager")
+	set SheetManager to import_script("SheetManager")
 end will finish launching
 
 on launched theObject
@@ -85,8 +89,22 @@ on awake from nib theObject
 	set a_name to name of theObject
 	if a_name is "ProgressIndicator" then
 		set my _indicator to theObject
+	else if a_name is "MainWindow" then
+		set my _main_window to theObject
 	end if
 end awake from nib
+
+on alert ended theObject with reply withReply
+	SheetManager's sheet_ended(theObject, withReply)
+end alert ended
+
+on dialog ended theObject with reply withReply
+	SheetManager's sheet_ended(theObject, withReply)
+end dialog ended
+
+on panel ended theObject with result withResult
+	SheetManager's sheet_ended(theObject, withResult)
+end panel ended
 
 on start_indicator()
 	set visible of _indicator to true
