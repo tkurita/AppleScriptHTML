@@ -4,6 +4,8 @@
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"
 
+#define useLog 1
+
 @implementation AppController
 
 #pragma mark services for scripts
@@ -22,7 +24,7 @@
 {
 	[[NSUserDefaultsController sharedUserDefaultsController]
 					setValue:a_path forKeyPath:@"values.TargetScript"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditor's Selection", @"Indicator of ScriptEditor's Selection mode");
+	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
 	if (![a_path isEqualToString:use_se_selection]) {
 		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts"];
 	}
@@ -101,7 +103,7 @@
 	[DonationReminder remindDonation];
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	if ([user_defaults boolForKey:@"UseScriptEditorSelection"] ) {
-		NSString *use_se_selection = NSLocalizedString(@"ScriptEditor's Selection", @"Indicator of ScriptEditor's Selection mode");
+		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
 		[user_defaults setObject:use_se_selection forKey:@"TargetScript"];
 	} else {
 		NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
@@ -134,7 +136,7 @@
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setBool:YES forKey:@"UseScriptEditorSelection"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditor's Selection", @"Indicator of ScriptEditor's Selection mode");
+	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
 	[[NSUserDefaultsController sharedUserDefaultsController]
 				setValue:use_se_selection forKeyPath:@"values.TargetScript"];
 }

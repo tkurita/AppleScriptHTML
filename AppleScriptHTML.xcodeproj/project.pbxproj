@@ -44,6 +44,9 @@
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
+		2CE618070ECB2B7A00445AFE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618020ECB2B7A00445AFE /* Info.plist */; };
+		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
+		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
 		2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CF3A6430ECACC4800D63AF8 /* template_sourcecode.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */; };
 		2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6410ECACC4800D63AF8 /* template_full.html */; };
@@ -107,6 +110,11 @@
 		2CD975EE0EC9013500024156 /* ASFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormatting.m; sourceTree = "<group>"; };
 		2CD976030EC912B700024156 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2CDDB3690EC9D8E8001A0A19 /* ASFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormatting.h; sourceTree = "<group>"; };
+		2CE618020ECB2B7A00445AFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE618040ECB2B7A00445AFE /* URI Escape */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = "URI Escape"; sourceTree = "<group>"; };
+		2CE618060ECB2B7A00445AFE /* URI Escape.rsrc */ = {isa = PBXFileReference; lastKnownFileType = archive.rsrc; path = "URI Escape.rsrc"; sourceTree = "<group>"; };
+		2CE618AA0ECB34CD00445AFE /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CE619170ECBB9D700445AFE /* template_full_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_body.html; sourceTree = "<group>"; };
 		2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.applescript; path = ASHTMLProcessor.applescript; sourceTree = "<group>"; };
 		2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode.html; sourceTree = "<group>"; };
 		2CF3A6410ECACC4800D63AF8 /* template_full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full.html; sourceTree = "<group>"; };
@@ -200,6 +208,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CE618A90ECB34CD00445AFE /* Localizable.strings */,
+				2CE618000ECB2B7A00445AFE /* URI Escape.osax */,
 				2C9493320ECAA3DC00273C7C /* FactorySettings.plist */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -275,9 +285,45 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		2CE618000ECB2B7A00445AFE /* URI Escape.osax */ = {
+			isa = PBXGroup;
+			children = (
+				2CE618010ECB2B7A00445AFE /* Contents */,
+			);
+			name = "URI Escape.osax";
+			path = "../URI Escape.osax";
+			sourceTree = SOURCE_ROOT;
+		};
+		2CE618010ECB2B7A00445AFE /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				2CE618020ECB2B7A00445AFE /* Info.plist */,
+				2CE618030ECB2B7A00445AFE /* MacOS */,
+				2CE618050ECB2B7A00445AFE /* Resources */,
+			);
+			path = Contents;
+			sourceTree = "<group>";
+		};
+		2CE618030ECB2B7A00445AFE /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				2CE618040ECB2B7A00445AFE /* URI Escape */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		2CE618050ECB2B7A00445AFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CE618060ECB2B7A00445AFE /* URI Escape.rsrc */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2CF3A6330ECACC1600D63AF8 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				2CE619170ECBB9D700445AFE /* template_full_body.html */,
 				2CF3A6A60ECAD3B400D63AF8 /* template_full_scriptlink.html */,
 				2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */,
 				2CF3A6410ECACC4800D63AF8 /* template_full.html */,
@@ -309,6 +355,7 @@
 				257572C9072881A4000BE9CA /* Sources */,
 				257572CB072881A4000BE9CA /* Frameworks */,
 				2C9492E70ECAA1D000273C7C /* CopyFiles */,
+				2CE618230ECB2C9000445AFE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -347,10 +394,29 @@
 				2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */,
 				2CF3A6450ECACC4800D63AF8 /* button_template.html in Resources */,
 				2CF3A6A70ECAD3B400D63AF8 /* template_full_scriptlink.html in Resources */,
+				2CE618070ECB2B7A00445AFE /* Info.plist in Resources */,
+				2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */,
+				2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE618230ECB2C9000445AFE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPTING_ADDITIONS_FOLDER=\"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Scripting Additions\"\nmkdir -p \"$SCRIPTING_ADDITIONS_FOLDER\"\ncp -RH \"../URI Escape.osax\" \"$SCRIPTING_ADDITIONS_FOLDER\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		257572C9072881A4000BE9CA /* Sources */ = {
@@ -384,6 +450,14 @@
 				29B97319FDCFA39411CA2CEA /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2CE618A90ECB34CD00445AFE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CE618AA0ECB34CD00445AFE /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

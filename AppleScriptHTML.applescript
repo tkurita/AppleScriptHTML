@@ -11,6 +11,8 @@ property ASHTMLProcessor : missing value
 property DefaultsManager : missing value
 property CSSBuilder : missing value
 property RGBColor : missing value
+property XFile : missing value
+property _indicator : missing value
 
 on __load__(loader)
 	tell loader
@@ -24,6 +26,7 @@ on __load__(loader)
 	set XDict to CSSBuilder's XDict
 	set XList to XDict's XList
 	set XText to XList's XText
+	set XFile to TemplateProcessor's XFile
 	return missing value
 end __load__
 
@@ -68,8 +71,30 @@ end launched
 on clicked theObject
 	set a_name to name of theObject
 	if a_name is "CopyToClipBoard" then
-		ASHTMLProcessor's do()
+		start_indicator()
+		ASHTMLProcessor's copy_to_clipboard()
+		stop_indicator()
+	else if a_name is "SaveToFile" then
+		start_indicator()
+		ASHTMLProcessor's save_to_file()
+		stop_indicator()
 	end if
 end clicked
 
+on awake from nib theObject
+	set a_name to name of theObject
+	if a_name is "ProgressIndicator" then
+		set my _indicator to theObject
+	end if
+end awake from nib
+
+on start_indicator()
+	set visible of _indicator to true
+	start _indicator
+end start_indicator
+
+on stop_indicator()
+	stop _indicator
+	set visible of _indicator to false
+end stop_indicator
 
