@@ -43,9 +43,10 @@
 		2C9492ED0ECAA1DD00273C7C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C9492E10ECAA18700273C7C /* DonationReminder.framework */; };
 		2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */; };
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
+		2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
+		2CAEECA70ECC616E0068900A /* URI Escape.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
-		2CE618070ECB2B7A00445AFE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618020ECB2B7A00445AFE /* Info.plist */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
 		2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C535EC30ECA800800C73295 /* SheetManager.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -67,6 +68,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2C9492ED0ECAA1DD00273C7C /* DonationReminder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAEEC9E0ECC61540068900A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Scripting Additions";
+			dstSubfolderSpec = 7;
+			files = (
+				2CAEECA70ECC616E0068900A /* URI Escape.osax in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +123,10 @@
 		2C9493000ECAA28100273C7C /* NSUserDefaultsExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsExtensions.h; sourceTree = "<group>"; };
 		2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsExtensions.m; sourceTree = "<group>"; };
 		2C9493320ECAA3DC00273C7C /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
+		2CAEEC870ECC61310068900A /* URI Escape.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "URI Escape.osax"; path = "../URI Escape.osax"; sourceTree = SOURCE_ROOT; };
 		2CD975EE0EC9013500024156 /* ASFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormatting.m; sourceTree = "<group>"; };
 		2CD976030EC912B700024156 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2CDDB3690EC9D8E8001A0A19 /* ASFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormatting.h; sourceTree = "<group>"; };
-		2CE618020ECB2B7A00445AFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CE618040ECB2B7A00445AFE /* URI Escape */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; path = "URI Escape"; sourceTree = "<group>"; };
-		2CE618060ECB2B7A00445AFE /* URI Escape.rsrc */ = {isa = PBXFileReference; lastKnownFileType = archive.rsrc; path = "URI Escape.rsrc"; sourceTree = "<group>"; };
 		2CE618AA0ECB34CD00445AFE /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CE619170ECBB9D700445AFE /* template_full_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_body.html; sourceTree = "<group>"; };
 		2CE61C830ECC055B00445AFE /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
@@ -217,8 +226,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CAEEC870ECC61310068900A /* URI Escape.osax */,
 				2CE618A90ECB34CD00445AFE /* Localizable.strings */,
-				2CE618000ECB2B7A00445AFE /* URI Escape.osax */,
 				2C9493320ECAA3DC00273C7C /* FactorySettings.plist */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -294,41 +303,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		2CE618000ECB2B7A00445AFE /* URI Escape.osax */ = {
-			isa = PBXGroup;
-			children = (
-				2CE618010ECB2B7A00445AFE /* Contents */,
-			);
-			name = "URI Escape.osax";
-			path = "../URI Escape.osax";
-			sourceTree = SOURCE_ROOT;
-		};
-		2CE618010ECB2B7A00445AFE /* Contents */ = {
-			isa = PBXGroup;
-			children = (
-				2CE618020ECB2B7A00445AFE /* Info.plist */,
-				2CE618030ECB2B7A00445AFE /* MacOS */,
-				2CE618050ECB2B7A00445AFE /* Resources */,
-			);
-			path = Contents;
-			sourceTree = "<group>";
-		};
-		2CE618030ECB2B7A00445AFE /* MacOS */ = {
-			isa = PBXGroup;
-			children = (
-				2CE618040ECB2B7A00445AFE /* URI Escape */,
-			);
-			path = MacOS;
-			sourceTree = "<group>";
-		};
-		2CE618050ECB2B7A00445AFE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2CE618060ECB2B7A00445AFE /* URI Escape.rsrc */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		2CE61C820ECC055B00445AFE /* SmartActivateLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +349,7 @@
 				257572C9072881A4000BE9CA /* Sources */,
 				257572CB072881A4000BE9CA /* Frameworks */,
 				2C9492E70ECAA1D000273C7C /* CopyFiles */,
-				2CE618230ECB2C9000445AFE /* ShellScript */,
+				2CAEEC9E0ECC61540068900A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -414,29 +388,13 @@
 				2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */,
 				2CF3A6450ECACC4800D63AF8 /* button_template.html in Resources */,
 				2CF3A6A70ECAD3B400D63AF8 /* template_full_scriptlink.html in Resources */,
-				2CE618070ECB2B7A00445AFE /* Info.plist in Resources */,
 				2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */,
 				2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */,
+				2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2CE618230ECB2C9000445AFE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SCRIPTING_ADDITIONS_FOLDER=\"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Scripting Additions\"\nmkdir -p \"$SCRIPTING_ADDITIONS_FOLDER\"\ncp -RH \"../URI Escape.osax\" \"$SCRIPTING_ADDITIONS_FOLDER\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		257572C9072881A4000BE9CA /* Sources */ = {
