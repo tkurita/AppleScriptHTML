@@ -284,7 +284,7 @@ on after_save(a_file)
 				tell application "Finder"
 					reveal a_file
 				end tell
-				activate process "Finder"
+				call method "activateAppOfIdentifier:" of class "SmartActivate" with parameter "com.apple.finder"
 			else if the_result is "Open" then
 				tell application "Finder"
 					open a_file
