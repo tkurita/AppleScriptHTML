@@ -20,15 +20,17 @@
 }
 
 #pragma mark private methods
-- (void)setTargetScript:(NSString *)a_path
+- (BOOL)setTargetScript:(NSString *)a_path
 {
 	[[NSUserDefaultsController sharedUserDefaultsController]
 					setValue:a_path forKeyPath:@"values.TargetScript"];
 	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
 	if (![a_path isEqualToString:use_se_selection]) {
 		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts"];
+		[recentScriptsButton setTitle:@""];
+		return YES;
 	}
-	[recentScriptsButton setTitle:@""];
+	return NO;
 }
 
 #pragma mark initilize
@@ -48,6 +50,9 @@
 	NSLog(@"awakeFromNib");
 #endif
 	[recentScriptsButton setTitle:@""];
+	NSPopUpButtonCell *a_cell = [recentScriptsButton cell];
+	[a_cell setBezelStyle:NSSmallSquareBezelStyle];
+	[a_cell setArrowPosition:NSPopUpArrowAtCenter];
 	[targetScriptBox setAcceptFileInfo:[NSArray arrayWithObjects:
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeDirectory, @"FileType",
 													@"scptd", @"PathExtension", nil], 
@@ -91,6 +96,14 @@
 }
 
 #pragma mark delegate methods for NSApplication
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
+{
+#if useLog
+	NSLog(filename);
+#endif
+	return [self setTargetScript:filename];
+}
+
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
 #if useLog

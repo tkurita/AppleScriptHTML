@@ -4,8 +4,91 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>scptd</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>script bundle</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>scpt</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>script</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>osas</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>applescript</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>text</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>TEXT</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>application</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>app</string>
+			</array>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>APPL</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>application bundle</string>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>app</string>
+			</array>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>APPL</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSTypeIsPackage</key>
+			<true/>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.1 copyright 2007-2008, Tetsuro KURITA</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>AppleScriptHTMLHelp</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
@@ -24,15 +107,11 @@
 	<string>1.1</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright 2007-2008, Tetsuro KURITA</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>CFBundleGetInfoString</key>
-	<string>1.1 copyright 2007-2008, Tetsuro KURITA</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>AppleScriptHTMLHelp</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2007-2008, Tetsuro KURITA</string>
 </dict>
 </plist>

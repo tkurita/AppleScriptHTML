@@ -117,6 +117,10 @@
 		2C535EC40ECA800800C73295 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
 		2C535EC50ECA800800C73295 /* TerminalSettings.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalSettings.applescript; sourceTree = "<group>"; };
 		2C535EC60ECA800800C73295 /* UtilityHandlers.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = UtilityHandlers.applescript; sourceTree = "<group>"; };
+		2C92C1DB0ED03D1900F8ED89 /* SmallPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.h; path = SmallPopUpButton.h; sourceTree = "<group>"; };
+		2C92C1DC0ED03D1900F8ED89 /* SmallPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.objc; path = SmallPopUpButton.m; sourceTree = "<group>"; };
+		2C92C1F80ED04EEE00F8ED89 /* SmallPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallPopUpButtonCell.h; sourceTree = "<group>"; };
+		2C92C1F90ED04EEE00F8ED89 /* SmallPopUpButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallPopUpButtonCell.m; sourceTree = "<group>"; };
 		2C9492B80ECA99A600273C7C /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2C9492B90ECA99A600273C7C /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		2C9492E10ECAA18700273C7C /* DonationReminder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DonationReminder.framework; path = ../DonationReminder.framework; sourceTree = SOURCE_ROOT; };
@@ -299,6 +303,10 @@
 				2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */,
 				2C9492B80ECA99A600273C7C /* AppController.h */,
 				2C9492B90ECA99A600273C7C /* AppController.m */,
+				2C92C1DB0ED03D1900F8ED89 /* SmallPopUpButton.h */,
+				2C92C1DC0ED03D1900F8ED89 /* SmallPopUpButton.m */,
+				2C92C1F80ED04EEE00F8ED89 /* SmallPopUpButtonCell.h */,
+				2C92C1F90ED04EEE00F8ED89 /* SmallPopUpButtonCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

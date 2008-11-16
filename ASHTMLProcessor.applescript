@@ -240,7 +240,7 @@ end save_location
 on save_location_name()
 	set a_location to missing value
 	set a_name to missing value
-	if (_is_css and (not (_is_convert and _is_scriptlink))) then
+	if (_is_css and (not (_is_convert or _is_scriptlink))) then
 		set a_name to "AppleScript.css"
 	else
 		if _use_scripteditor then
