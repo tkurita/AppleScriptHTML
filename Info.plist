@@ -51,12 +51,12 @@
 			<false/>
 		</dict>
 		<dict>
-			<key>CFBundleTypeName</key>
-			<string>application</string>
 			<key>CFBundleTypeExtensions</key>
 			<array>
 				<string>app</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>application</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>APPL</string>
@@ -67,12 +67,12 @@
 			<false/>
 		</dict>
 		<dict>
-			<key>CFBundleTypeName</key>
-			<string>application bundle</string>
 			<key>CFBundleTypeExtensions</key>
 			<array>
 				<string>app</string>
 			</array>
+			<key>CFBundleTypeName</key>
+			<string>application bundle</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>APPL</string>
@@ -86,7 +86,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.1 copyright 2007-2008, Tetsuro KURITA</string>
+	<string>2.0 copyright 2007-2008, Tetsuro KURITA</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>AppleScriptHTMLHelp</string>
 	<key>CFBundleIconFile</key>
@@ -100,11 +100,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>2.0</string>
 	<key>NSAppleScriptEnabled</key>
 	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>

@@ -153,7 +153,7 @@ on do given fullhtml:full_flag
 		if (_is_scriptlink) then
 			set a_code to CodeController's target_text()
 			set mode_index to DefaultsManager's value_for("ScriptLinkModeIndex")
-			set mode_text to item (mode_index + 1) of {"new", "insert"}
+			set mode_text to item (mode_index + 1) of {"new", "insert", "append"}
 			if not DefaultsManager's value_for("ObtainScriptLinkTitleFromFilename") then
 				set a_title to DefaultsManager's value_for("ScriptLinkTitle")
 				if length of a_title is not 0 then
