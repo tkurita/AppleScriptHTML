@@ -61,7 +61,10 @@ script EditorController
 		set a_name to name of front document of application "Script Editor"
 		if (a_name starts with "ñºèÃñ¢ê›íË") or (a_name starts with "Untitled") then
 			set a_name to "edit"
+		else
+			set a_name to XFile's make_with(a_name)'s basename()
 		end if
+		
 		return a_name
 	end doc_name
 end script
@@ -97,7 +100,7 @@ script FileController
 	
 	on doc_name()
 		resolve_target_path()
-		set a_name to XFile's make_with(POSIX file (my _target_path))'s item_name()
+		set a_name to XFile's make_with(POSIX file (my _target_path))'s basename()
 		return a_name
 	end doc_name
 end script
@@ -148,8 +151,17 @@ on do given fullhtml:full_flag
 		end if
 		set doc_name to CodeController's doc_name()
 		if (_is_scriptlink) then
-			set a_text to CodeController's target_text()
-			set a_scriptlink to ScriptLinkMaker's button_with_template(a_text, doc_name, "new", "button_template.html")
+			set a_code to CodeController's target_text()
+			set mode_index to DefaultsManager's value_for("ScriptLinkModeIndex")
+			set mode_text to item (mode_index + 1) of {"new", "insert"}
+			if not DefaultsManager's value_for("ObtainScriptLinkTitleFromFilename") then
+				set a_title to DefaultsManager's value_for("ScriptLinkTitle")
+				if length of a_title is not 0 then
+					set doc_name to a_title
+					call method "addToHistory:forKey:" of user defaults with parameters {doc_name, "ScriptLinkTitleHistory"}
+				end if
+			end if
+			set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
 		end if
 	end if
 	if template_name is not missing value then

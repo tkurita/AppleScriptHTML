@@ -9,24 +9,16 @@
 @implementation AppController
 
 #pragma mark services for scripts
-- (NSString *)script_source:(NSString *)path
-{
-	NSDictionary *error_info;
-	NSAppleScript *a_script = [[[NSAppleScript alloc] initWithContentsOfURL:
-									[NSURL fileURLWithPath:path] error:&error_info] autorelease];
-									
-	return [a_script source];
-
-}
 
 #pragma mark private methods
 - (BOOL)setTargetScript:(NSString *)a_path
 {
 	[[NSUserDefaultsController sharedUserDefaultsController]
 					setValue:a_path forKeyPath:@"values.TargetScript"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
+	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
+											@"Indicator of ScriptEditor's Selection mode");
 	if (![a_path isEqualToString:use_se_selection]) {
-		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts"];
+		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
 		[recentScriptsButton setTitle:@""];
 		return YES;
 	}
@@ -53,11 +45,23 @@
 	NSPopUpButtonCell *a_cell = [recentScriptsButton cell];
 	[a_cell setBezelStyle:NSSmallSquareBezelStyle];
 	[a_cell setArrowPosition:NSPopUpArrowAtCenter];
+	
 	[targetScriptBox setAcceptFileInfo:[NSArray arrayWithObjects:
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeDirectory, @"FileType",
 													@"scptd", @"PathExtension", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
 													@"scpt", @"PathExtension", nil], nil]];
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults] ;
+	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
+		NSString *target = [user_defaults stringForKey:@"TargetScript"];
+		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
+											@"Indicator of ScriptEditor's Selection mode");
+		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
+		[a_cell setObjectValue:@""];
+		if (![target isEqualToString:use_se_selection]) {
+			[a_cell setPlaceholderString:[[target lastPathComponent] stringByDeletingPathExtension]];
+		}
+	}
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
 }
@@ -149,7 +153,8 @@
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setBool:YES forKey:@"UseScriptEditorSelection"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
+	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
+								@"Indicator of ScriptEditor's Selection mode");
 	[[NSUserDefaultsController sharedUserDefaultsController]
 				setValue:use_se_selection forKeyPath:@"values.TargetScript"];
 }
@@ -171,11 +176,29 @@
 	if ([a_path fileExists]) {
 		[[NSUserDefaultsController sharedUserDefaultsController] 
 						setValue:a_path forKeyPath:@"values.TargetScript"];
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
 	} else {
 		[[NSUserDefaults standardUserDefaults] removeFromHistory:a_path
 												forKey:@"RecentScripts"];
 	}
 	[recentScriptsButton setTitle:@""];
+}
+
+- (IBAction)useFileName:(id)sender
+{
+	if ([sender state] == NSOnState) {
+		NSString *title_text;
+		NSString *target = [[NSUserDefaults standardUserDefaults] stringForKey:@"TargetScript"];
+		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
+												@"Indicator of ScriptEditor's Selection mode");
+		if ([target isEqualToString:use_se_selection]) {
+			title_text = @"";			
+		} else {
+			title_text = [[target lastPathComponent] stringByDeletingPathExtension];
+		}
+		[[scriptLinkTitleComboBox cell] setObjectValue:@""];
+		[[scriptLinkTitleComboBox cell] setPlaceholderString:title_text];
+	}
 }
 
 @end

@@ -14,5 +14,11 @@
 	<true/>
 	<key>UseScriptEditorSelection</key>
 	<true/>
+	<key>ObtainScriptLinkTitleFromFilename</key>
+	<true/>
+	<key>ScriptLinkModeIndex</key>
+	<integer>0</integer>
+	<key>ScriptLinkTitle</key>
+	<string></string>
 </dict>
 </plist>

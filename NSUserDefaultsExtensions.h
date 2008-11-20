@@ -4,6 +4,7 @@
 @interface NSUserDefaults (NSUserDefaultsExtensions) 
 
 - (void)addToHistory:(id)value forKey:(NSString *)key;
+- (void)addToHistory:(id)value forKey:(NSString *)key emptyFirst:(BOOL)emptyFirst;
 - (void)removeFromHistory:(id)value forKey:(NSString *)key;
 
 @end

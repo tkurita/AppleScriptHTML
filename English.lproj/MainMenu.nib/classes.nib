@@ -5,11 +5,17 @@
                 makeDonation = id; 
                 popUpRecents = id; 
                 selectTarget = id; 
+                useFileName = id; 
                 useScriptEditorSelection = id; 
             }; 
             CLASS = AppController; 
             LANGUAGE = ObjC; 
-            OUTLETS = {mainWindow = id; recentScriptsButton = id; targetScriptBox = id; }; 
+            OUTLETS = {
+                mainWindow = id; 
+                recentScriptsButton = id; 
+                scriptLinkTitleComboBox = id; 
+                targetScriptBox = id; 
+            }; 
             SUPERCLASS = NSObject; 
         }, 
         {
@@ -18,7 +24,13 @@
             OUTLETS = {delegate = id; }; 
             SUPERCLASS = NSBox; 
         }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = TitleBoxController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {titleComboBox = id; }; 
+            SUPERCLASS = NSObject; 
+        }
     ); 
     IBVersion = 1; 
 }
