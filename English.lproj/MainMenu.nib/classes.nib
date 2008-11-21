@@ -24,13 +24,7 @@
             OUTLETS = {delegate = id; }; 
             SUPERCLASS = NSBox; 
         }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
-        {
-            CLASS = TitleBoxController; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {titleComboBox = id; }; 
-            SUPERCLASS = NSObject; 
-        }
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
     ); 
     IBVersion = 1; 
 }
