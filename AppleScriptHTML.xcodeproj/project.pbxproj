@@ -31,8 +31,6 @@
 		257572CA072881A4000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		257572CD072881A4000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
-		2C1BDF150ED316E1000C68F9 /* TitleBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BDF130ED316E1000C68F9 /* TitleBoxController.m */; };
-		2C1BDF160ED316E1000C68F9 /* TitleBoxController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1BDF140ED316E1000C68F9 /* TitleBoxController.h */; };
 		2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */; };
 		2C4D2C870EC99CCE00D09C32 /* ASHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -94,8 +92,6 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2C1BDF130ED316E1000C68F9 /* TitleBoxController.m */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.objc; path = TitleBoxController.m; sourceTree = "<group>"; };
-		2C1BDF140ED316E1000C68F9 /* TitleBoxController.h */ = {isa = PBXFileReference; fileEncoding = "-2147483647"; lastKnownFileType = sourcecode.c.h; path = TitleBoxController.h; sourceTree = "<group>"; };
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
 		2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASFormattingStyle.applescript; sourceTree = "<group>"; };
@@ -303,8 +299,6 @@
 				2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */,
 				2C9492B80ECA99A600273C7C /* AppController.h */,
 				2C9492B90ECA99A600273C7C /* AppController.m */,
-				2C1BDF130ED316E1000C68F9 /* TitleBoxController.m */,
-				2C1BDF140ED316E1000C68F9 /* TitleBoxController.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -339,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE61C870ECC055B00445AFE /* SmartActivate.h in Headers */,
-				2C1BDF160ED316E1000C68F9 /* TitleBoxController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +367,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 4E71A80908A2C90C0034BBD9 /* Build configuration list for PBXProject "AppleScriptHTML" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* AppleScriptHTML */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				257572C2072881A4000BE9CA /* AppleScriptHTML */,
 			);
@@ -417,7 +412,6 @@
 				2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */,
 				2CE61C860ECC055B00445AFE /* SmartActivate.c in Sources */,
 				2CE61C880ECC055B00445AFE /* SmartActivate.m in Sources */,
-				2C1BDF150ED316E1000C68F9 /* TitleBoxController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
