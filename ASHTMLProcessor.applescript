@@ -288,16 +288,20 @@ on save_location_name()
 end save_location_name
 
 on after_save(a_file)
-	display alert "Success to Make a HTML file." attached to _main_window default button "Open" other button "Reveal" alternate button "Cancel"
+	set reveal_label to localized string "Reveal"
+	set open_label to localized string "Open"
+	set cancel_label to localized string "Cancel"
+	set msg to localized string "Success to Make a HTML file."
+	display alert msg attached to _main_window default button open_label other button reveal_label alternate button cancel_label
 	script AfterAlert
 		on sheet_ended(sender, a_reply)
 			set the_result to button returned of a_reply
-			if the_result is "Reveal" then
+			if the_result is reveal_label then
 				tell application "Finder"
 					reveal a_file
 				end tell
 				call method "activateAppOfIdentifier:" of class "SmartActivate" with parameter "com.apple.finder"
-			else if the_result is "Open" then
+			else if the_result is open_label then
 				tell application "Finder"
 					open a_file
 				end tell
@@ -341,32 +345,4 @@ on save_to_file()
 	register_sheet of SheetManager given attached_to:_main_window, delegate:FileWriter
 	
 	return true
-	try
-		set html_path to save_location()
-	on error msg number errno
-		if errno is not -128 then
-			error msg number errno
-		end if
-		return
-	end try
-	
-	a_result's write_to_file(html_path)
-	set html_path to html_path as alias
-	tell application "Finder"
-		set creator type of html_path to missing value
-		set file type of html_path to missing value
-	end tell
-	
-	display dialog "Success to Make a HTML file." buttons {"Cancel", "Reveal", "Open"}
-	set the_result to button returned of the result
-	if the_result is "Reveal" then
-		tell application "Finder"
-			reveal html_path
-		end tell
-		activate process "Finder"
-	else if the_result is "Open" then
-		tell application "Finder"
-			open html_path
-		end tell
-	end if
 end save_to_file
