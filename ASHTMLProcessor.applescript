@@ -207,7 +207,6 @@ on do given fullhtml:full_flag
 	end if
 	
 	return a_result
-	--display dialog "The HTML formatted script has been placed on the clipboard." giving up after 20
 end do
 
 on copy_to_clipboard()
