@@ -126,18 +126,23 @@ on do given fullhtml:full_flag
 			else
 				set template_name to "template_full.html"
 			end if
+		else
+			if (_is_scriptlink) then
+				set template_name to "template_full_onlyscriptlink.html"
+			end if
 		end if
 	else
 		if (_is_convert and _is_scriptlink) then
 			set template_name to "template_sourcecode.html"
 		end if
 	end if
+	
 	if (_is_convert or _is_scriptlink) then
 		if not CodeController's check_target() then
 			error "No Target." number 1500
 			return missing value
 		end if
-		
+		set button_position to missing value
 		if (_is_convert) then
 			set script_html to CodeController's markup()
 			--log (script_html's contents_ref()'s item_at(-1)'s element_name())
@@ -147,7 +152,6 @@ on do given fullhtml:full_flag
 			else
 				set button_position to "0em"
 			end if
-			
 		end if
 		set doc_name to CodeController's doc_name()
 		if (_is_scriptlink) then
@@ -182,7 +186,7 @@ on do given fullhtml:full_flag
 		end if
 		if (_is_scriptlink) then
 			a_template's insert_text("$SCRIPTBUTTON", a_scriptlink's as_unicode())
-			if (_is_css) then
+			if (button_position is not missing value) and (_is_convert or _is_css) then
 				a_template's insert_text("$BUTTONPOSITION", button_position)
 			end if
 		end if

@@ -45,6 +45,7 @@
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
 		2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
 		2CAEECA70ECC616E0068900A /* URI Escape.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
+		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
@@ -125,6 +126,7 @@
 		2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsExtensions.m; sourceTree = "<group>"; };
 		2C9493320ECAA3DC00273C7C /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
 		2CAEEC870ECC61310068900A /* URI Escape.osax */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "URI Escape.osax"; path = "../URI Escape.osax"; sourceTree = SOURCE_ROOT; };
+		2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink.html; sourceTree = "<group>"; };
 		2CD975EE0EC9013500024156 /* ASFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormatting.m; sourceTree = "<group>"; };
 		2CD976030EC912B700024156 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2CDDB3690EC9D8E8001A0A19 /* ASFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormatting.h; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		2CF3A6330ECACC1600D63AF8 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */,
 				2CE619170ECBB9D700445AFE /* template_full_body.html */,
 				2CF3A6A60ECAD3B400D63AF8 /* template_full_scriptlink.html */,
 				2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */,
@@ -397,6 +400,7 @@
 				2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */,
 				2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */,
 				2CF85C840EDB732700F0BFE1 /* HelpSetup.plist in Resources */,
+				2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
