@@ -43,7 +43,6 @@
 		2C9492ED0ECAA1DD00273C7C /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C9492E10ECAA18700273C7C /* DonationReminder.framework */; };
 		2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */; };
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
-		2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
 		2CAEECA70ECC616E0068900A /* URI Escape.osax in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CAEEC870ECC61310068900A /* URI Escape.osax */; };
 		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
@@ -398,7 +397,6 @@
 				2CF3A6A70ECAD3B400D63AF8 /* template_full_scriptlink.html in Resources */,
 				2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */,
 				2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */,
-				2CAEEC920ECC61310068900A /* URI Escape.osax in Resources */,
 				2CF85C840EDB732700F0BFE1 /* HelpSetup.plist in Resources */,
 				2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */,
 			);

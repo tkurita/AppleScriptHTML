@@ -336,9 +336,13 @@ on save_to_file()
 			set a_path to path name of sender
 			a_result's write_to_file(POSIX file a_path)
 			set html_path to (POSIX file a_path) as alias
-			tell application "Finder"
+			tell application "System Events"
+				(*
 				set creator type of html_path to missing value
 				set file type of html_path to missing value
+				*)
+				set creator type of html_path to ""
+				set file type of html_path to ""
 			end tell
 			
 			after_save(html_path)
