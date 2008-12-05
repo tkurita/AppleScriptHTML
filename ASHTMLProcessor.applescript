@@ -5,6 +5,7 @@ global DefaultsManager
 global XFile
 global SheetManager
 global _main_window
+global _monitor_textview
 
 property _is_css : missing value
 property _is_convert : missing value
@@ -146,11 +147,13 @@ on do given fullhtml:full_flag
 		if (_is_convert) then
 			set script_html to CodeController's markup()
 			--log (script_html's contents_ref()'s item_at(-1)'s element_name())
-			set roottag to script_html's contents_ref()'s item_at(-1)'s element_name()
-			if roottag is "div" then
-				set button_position to "-2em"
-			else
-				set button_position to "0em"
+			set button_position to "0em"
+			set roottag to script_html's contents_ref()'s item_at(-1)
+			if class of roottag is script then -- when one line script, roottag will be string
+				set roottag to roottag's element_name()
+				if roottag is "div" then
+					set button_position to "-2em"
+				end if
 			end if
 		end if
 		set doc_name to CodeController's doc_name()
@@ -219,10 +222,11 @@ on copy_to_clipboard()
 	on error msg number 1500
 		return false
 	end try
-	
+	set a_text to a_result's as_unicode()
 	tell application (path to frontmost application as Unicode text)
-		set the clipboard to a_result's as_unicode()
+		set the clipboard to a_text
 	end tell
+	set content of _monitor_textview to a_text
 end copy_to_clipboard
 
 on save_location()

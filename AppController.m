@@ -64,6 +64,8 @@
 	}
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
+	[monitorWindow center];
+	[monitorWindow setFrameAutosaveName:@"Monitor"];
 }
 
 #pragma mark delegate methods for somethings
@@ -141,6 +143,7 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
 	[mainWindow saveFrameUsingName:@"Main"];
+	[monitorWindow saveFrameUsingName:@"Monitor"];
 }
 
 #pragma mark actions

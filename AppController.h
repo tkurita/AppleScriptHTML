@@ -6,6 +6,7 @@
 	IBOutlet id mainWindow;
 	IBOutlet id targetScriptBox;
 	IBOutlet id scriptLinkTitleComboBox;
+	IBOutlet id monitorWindow;
 }
 - (IBAction)selectTarget:(id)sender;
 - (IBAction)makeDonation:(id)sender;

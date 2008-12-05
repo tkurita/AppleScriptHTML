@@ -12,6 +12,7 @@
             LANGUAGE = ObjC; 
             OUTLETS = {
                 mainWindow = id; 
+                monitorWindow = id; 
                 recentScriptsButton = id; 
                 scriptLinkTitleComboBox = id; 
                 targetScriptBox = id; 
