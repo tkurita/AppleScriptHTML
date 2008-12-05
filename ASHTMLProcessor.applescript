@@ -341,14 +341,10 @@ on save_to_file()
 			a_result's write_to_file(POSIX file a_path)
 			set html_path to (POSIX file a_path) as alias
 			tell application "System Events"
-				(*
-				set creator type of html_path to missing value
-				set file type of html_path to missing value
-				*)
 				set creator type of html_path to ""
 				set file type of html_path to ""
 			end tell
-			
+			set content of _monitor_textview to a_result's as_unicode()
 			after_save(html_path)
 		end sheet_ended
 	end script
