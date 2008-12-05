@@ -94,7 +94,6 @@ on awake from nib theObject
 		set my _main_window to theObject
 	else if a_name is "MonitorTextView" then
 		set my _monitor_textview to theObject
-		log theObject
 	end if
 end awake from nib
 

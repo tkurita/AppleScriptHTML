@@ -204,7 +204,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2CD4BD080EE9758D0066E553</string>
+						<string>2CD4BD0C0EE975F10066E553</string>
 						<key>history</key>
 						<array>
 							<string>2CD4BD000EE9754C0066E553</string>
@@ -548,11 +548,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>2C4F92B70EC88A3C002C2379</string>
 		<string>2CD4BCFE0EE9754C0066E553</string>
+		<string>1C0AD2B3069F1EA900FABCE6</string>
 		<string>/Users/tkurita/Dev/Projects/AppleScriptHTML/trunk/AppleScriptHTML.xcodeproj</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>106 269 931 614 0 0 1440 938 </string>
@@ -781,14 +781,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ASHTMLProcessor.applescript</string>
+										<string>AppleScriptHTML.applescript</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {822, 589}}</string>
+										<string>{{0, 0}, {822, 417}}</string>
 										<key>RubberWindowFrame</key>
 										<string>561 97 822 833 0 0 1440 938 </string>
 									</dict>
@@ -799,7 +799,7 @@
 								</dict>
 							</array>
 							<key>Proportion</key>
-							<string>589pt</string>
+							<string>417pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -812,14 +812,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 594}, {822, 198}}</string>
+								<string>{{0, 422}, {822, 370}}</string>
 								<key>RubberWindowFrame</key>
 								<string>561 97 822 833 0 0 1440 938 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXProjectFindModule</string>
 							<key>Proportion</key>
-							<string>198pt</string>
+							<string>370pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -847,7 +847,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -1009,7 +1009,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

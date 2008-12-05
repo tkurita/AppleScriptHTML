@@ -214,6 +214,7 @@
 			2CD4BD040EE975690066E553 /* PBXTextBookmark */ = 2CD4BD040EE975690066E553 /* PBXTextBookmark */;
 			2CD4BD060EE975710066E553 /* PBXTextBookmark */ = 2CD4BD060EE975710066E553 /* PBXTextBookmark */;
 			2CD4BD080EE9758D0066E553 /* PBXTextBookmark */ = 2CD4BD080EE9758D0066E553 /* PBXTextBookmark */;
+			2CD4BD0C0EE975F10066E553 /* PBXTextBookmark */ = 2CD4BD0C0EE975F10066E553 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 25D9445A07B1533700FF306F /* Source Control */;
 		userBookmarkGroup = 2CCF87590EE75C8800EA6824 /* PBXBookmarkGroup */;
@@ -504,7 +505,7 @@
 		fRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
 		name = "AppleScriptHTML.applescript: 122";
 		rLen = 0;
-		rLoc = 3660;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 1019;
 		vrLoc = 2321;
@@ -514,7 +515,7 @@
 		fRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
 		name = "AppleScriptHTML.applescript: 123";
 		rLen = 0;
-		rLoc = 3660;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 2646;
@@ -534,7 +535,7 @@
 		fRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
 		name = "AppleScriptHTML.applescript: 123";
 		rLen = 0;
-		rLoc = 3660;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 2646;
@@ -544,9 +545,19 @@
 		fRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
 		name = "AppleScriptHTML.applescript: 123";
 		rLen = 0;
-		rLoc = 3660;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 921;
+		vrLoc = 2646;
+	};
+	2CD4BD0C0EE975F10066E553 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
+		name = "AppleScriptHTML.applescript: 122";
+		rLen = 0;
+		rLoc = 3644;
+		rType = 0;
+		vrLen = 925;
 		vrLoc = 2646;
 	};
 	2CD975EE0EC9013500024156 /* ASFormatting.m */ = {
@@ -616,7 +627,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1012, 6103}}";
 			sepNavSelRange = "{10938, 0}";
-			sepNavVisRect = "{{0, 2310}, {781, 557}}";
+			sepNavVisRect = "{{0, 2295}, {781, 385}}";
 			sepNavWindowFrame = "{{405, 109}, {992, 756}}";
 		};
 	};
@@ -667,8 +678,8 @@
 	};
 	DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {784, 2091}}";
-			sepNavSelRange = "{3660, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {784, 2074}}";
+			sepNavSelRange = "{3644, 0}";
 			sepNavVisRect = "{{0, 1368}, {684, 614}}";
 			sepNavWindowFrame = "{{459, 124}, {723, 687}}";
 		};
