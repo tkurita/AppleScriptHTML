@@ -147,6 +147,13 @@
 }
 
 #pragma mark actions
+- (IBAction)showMonitorWindow:(id)sender
+{
+	[monitorWindow orderFront:self];
+	[monitorWindow makeMainWindow];
+	[monitorWindow makeKeyWindow];
+}
+
 - (IBAction)makeDonation:(id)sender
 {
 	[DonationReminder goToDonation];

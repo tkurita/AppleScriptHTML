@@ -5,6 +5,7 @@
                 makeDonation = id; 
                 popUpRecents = id; 
                 selectTarget = id; 
+                showMonitorWindow = id; 
                 useFileName = id; 
                 useScriptEditorSelection = id; 
             }; 

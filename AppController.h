@@ -13,5 +13,6 @@
 - (IBAction)popUpRecents:(id)sender;
 - (IBAction)useScriptEditorSelection:(id)sender;
 - (IBAction)useFileName:(id)sender;
+- (IBAction)showMonitorWindow:(id)sender;
 
 @end

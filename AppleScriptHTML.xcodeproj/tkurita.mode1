@@ -190,24 +190,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>2C55CB440EED396F005CAC0D</string>
+				<string>2C93FD360EED455E003B3A5D</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>AppController.m</string>
+				<string>AppleScriptHTML.applescript</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>2C55CB450EED396F005CAC0D</string>
+						<string>2C93FD370EED455E003B3A5D</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>AppController.m</string>
+						<string>AppleScriptHTML.applescript</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C93FD190EED43FF003B3A5D</string>
+						<string>2C93FD440EED4611003B3A5D</string>
 						<key>history</key>
 						<array>
-							<string>2C55CB790EED3F75005CAC0D</string>
+							<string>2C93FD2D0EED451C003B3A5D</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -219,11 +219,11 @@
 			<key>Geometry</key>
 			<dict>
 				<key>Frame</key>
-				<string>{{0, 20}, {880, 792}}</string>
+				<string>{{0, 20}, {723, 646}}</string>
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>210 105 880 833 0 0 1440 938 </string>
+				<string>459 124 723 687 0 0 1440 938 </string>
 			</dict>
 		</dict>
 	</array>
@@ -261,8 +261,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -307,7 +305,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
+									<integer>8</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -376,6 +374,8 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -548,8 +548,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>2C4F92B70EC88A3C002C2379</string>
+		<string>2C93FD360EED455E003B3A5D</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>2C55CB440EED396F005CAC0D</string>
 		<string>/Users/tkurita/Dev/Projects/AppleScriptHTML/trunk/AppleScriptHTML.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -591,8 +592,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
@@ -634,7 +633,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>2C4F92B70EC88A3C002C2379</string>
-				<string>2C55CB480EED396F005CAC0D</string>
+				<string>2C93FD230EED448F003B3A5D</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -645,7 +644,7 @@
 			<key>WindowToolGUID</key>
 			<string>2C4F92B70EC88A3C002C2379</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1009,7 +1008,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C0AD2B3069F1EA900FABCE6</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
