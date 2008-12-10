@@ -113,6 +113,13 @@ on do given fullhtml:full_flag
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
 	set _is_convert to DefaultsManager's value_for("CodeToHTML")
 	set _is_scriptlink to DefaultsManager's value_for("MakeScriptLink")
+	
+	if not (_is_css or _is_convert or _is_scriptlink) then
+		set msg to localized string "No action is selected."
+		display alert msg attached to _main_window default button "OK"
+		error "No Action." number 1501
+	end if
+	
 	set _use_scripteditor to DefaultsManager's value_for("UseScriptEditorSelection")
 	if _use_scripteditor then
 		set CodeController to EditorController
@@ -143,20 +150,13 @@ on do given fullhtml:full_flag
 			error "No Target." number 1500
 			return missing value
 		end if
-		set button_position to missing value
+		set is_multiline to false
 		if (_is_convert) then
 			set script_html to CodeController's markup()
 			--log (script_html's contents_ref()'s item_at(-1)'s element_name())
-			set button_position to "0em"
-			set roottag to script_html's contents_ref()'s item_at(-1)
-			if class of roottag is script then -- when one line script, roottag will be string
-				set roottag to roottag's element_name()
-				if roottag is "div" then
-					set button_position to "-2em"
-				end if
-			end if
 		end if
 		set doc_name to CodeController's doc_name()
+		set button_position to missing value
 		if (_is_scriptlink) then
 			set a_code to CodeController's target_text()
 			set mode_index to DefaultsManager's value_for("ScriptLinkModeIndex")
@@ -169,6 +169,14 @@ on do given fullhtml:full_flag
 				end if
 			end if
 			set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
+			if _is_css then
+				set pos_index to DefaultsManager's value_for("ScriptLinkPositionIndex")
+				if pos_index is 0 then
+					set button_position to "top : 0.5em;"
+				else
+					set button_position to "bottom : 0.5em;"
+				end if
+			end if
 		end if
 	end if
 	if template_name is not missing value then
@@ -219,7 +227,10 @@ end do
 on copy_to_clipboard()
 	try
 		set a_result to do without fullhtml
-	on error msg number 1500
+	on error msg number errno
+		if errno is not in {1500, 1501} then
+			error msg number errno
+		end if
 		return false
 	end try
 	set a_text to a_result's as_unicode()
@@ -321,7 +332,10 @@ end after_save
 on save_to_file()
 	try
 		set a_result to do with fullhtml
-	on error msg number 1500
+	on error msg number errno
+		if errno is not in {1500, 1501} then
+			error msg number errno
+		end if
 		return false
 	end try
 	set {a_location, a_name} to save_location_name()

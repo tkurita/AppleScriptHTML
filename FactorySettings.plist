@@ -18,6 +18,8 @@
 	<true/>
 	<key>ScriptLinkModeIndex</key>
 	<integer>0</integer>
+	<key>ScriptLinkPositionIndex</key>
+	<integer>0</integer>
 	<key>ScriptLinkTitle</key>
 	<string></string>
 </dict>
