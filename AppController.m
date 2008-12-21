@@ -67,6 +67,9 @@
 	[mainWindow setFrameAutosaveName:@"Main"];
 	[monitorWindow center];
 	[monitorWindow setFrameAutosaveName:@"Monitor"];
+	[settingWindow center];
+	[settingWindow setFrameAutosaveName:@"Setting"];
+
 }
 
 #pragma mark delegate methods for somethings
@@ -145,6 +148,7 @@
 {
 	[mainWindow saveFrameUsingName:@"Main"];
 	[monitorWindow saveFrameUsingName:@"Monitor"];
+	[settingWindow saveFrameUsingName:@"Setting"];
 }
 
 #pragma mark actions
