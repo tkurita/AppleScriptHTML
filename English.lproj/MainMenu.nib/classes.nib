@@ -1,32 +1,72 @@
-{
-    IBClasses = (
-        {
-            ACTIONS = {
-                makeDonation = id; 
-                popUpRecents = id; 
-                selectTarget = id; 
-                showMonitorWindow = id; 
-                useFileName = id; 
-                useScriptEditorSelection = id; 
-            }; 
-            CLASS = AppController; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {
-                mainWindow = id; 
-                monitorWindow = id; 
-                recentScriptsButton = id; 
-                scriptLinkTitleComboBox = id; 
-                targetScriptBox = id; 
-            }; 
-            SUPERCLASS = NSObject; 
-        }, 
-        {
-            CLASS = DropBox; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {delegate = id; }; 
-            SUPERCLASS = NSBox; 
-        }, 
-        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
-    ); 
-    IBVersion = 1; 
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBClasses</key>
+	<array>
+		<dict>
+			<key>CLASS</key>
+			<string>DropBox</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>delegate</key>
+				<string>id</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSBox</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>FirstResponder</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>makeDonation</key>
+				<string>id</string>
+				<key>popUpRecents</key>
+				<string>id</string>
+				<key>selectTarget</key>
+				<string>id</string>
+				<key>showMonitorWindow</key>
+				<string>id</string>
+				<key>showSettingWindow</key>
+				<string>id</string>
+				<key>useFileName</key>
+				<string>id</string>
+				<key>useScriptEditorSelection</key>
+				<string>id</string>
+			</dict>
+			<key>CLASS</key>
+			<string>AppController</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>mainWindow</key>
+				<string>id</string>
+				<key>monitorWindow</key>
+				<string>id</string>
+				<key>recentScriptsButton</key>
+				<string>id</string>
+				<key>scriptLinkTitleComboBox</key>
+				<string>id</string>
+				<key>settingWindow</key>
+				<string>id</string>
+				<key>targetScriptBox</key>
+				<string>id</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSObject</string>
+		</dict>
+	</array>
+	<key>IBVersion</key>
+	<string>1</string>
+</dict>
+</plist>

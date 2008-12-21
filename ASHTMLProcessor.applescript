@@ -6,105 +6,13 @@ global XFile
 global SheetManager
 global _main_window
 global _monitor_textview
+global EditorController
+global FileController
 
 property _is_css : missing value
 property _is_convert : missing value
 property _is_scriptlink : missing value
 property _use_scripteditor : missing value
-
-script EditorController
-	property _target_text : missing value
-	on check_target()
-		tell application "System Events"
-			set run_flag to exists application process "Script Editor"
-		end tell
-		
-		if not run_flag then
-			display alert "Script Editor is not Launched" attached to _main_window
-			return false
-		end if
-		
-		tell application "Script Editor"
-			set run_flag to exists front document
-		end tell
-		
-		if not run_flag then
-			display alert "No documents in Script Editor" attached to _main_window
-			return false
-		end if
-		return true
-	end check_target
-	
-	on markup()
-		ASHTML's set_wrap_with_block(false)
-		set a_result to ASHTML's process_document(front document of application "Script Editor")
-		set my _target_text to ASHTML's target_text()
-		return a_result
-	end markup
-	
-	on target_text()
-		if my _target_text is not missing value then
-			return my _target_text
-		end if
-		tell application "Script Editor"
-			set runForSelection to ("" is not (contents of selection of document 1))
-			
-			if runForSelection then
-				set my _target_text to contents of selection of document 1 as Unicode text
-			else
-				set my _target_text to contents of document 1 as Unicode text
-			end if
-		end tell
-		return my _target_text
-	end target_text
-	
-	on doc_name()
-		set a_name to name of front document of application "Script Editor"
-		if (a_name starts with "ñºèÃñ¢ê›íË") or (a_name starts with "Untitled") then
-			set a_name to "edit"
-		else
-			set a_name to XFile's make_with(a_name)'s basename()
-		end if
-		
-		return a_name
-	end doc_name
-end script
-
-script FileController
-	property _target_text : missing value
-	property _target_path : missing value
-	on check_target()
-		return true
-	end check_target
-	
-	on markup()
-		ASHTML's set_wrap_with_block(false)
-		set my _target_path to DefaultsManager's value_for("TargetScript")
-		set a_result to ASHTML's process_file(my _target_path, false)
-		set my _target_text to ASHTML's target_text()
-		return a_result
-	end markup
-	
-	on resolve_target_path()
-		if my _target_path is missing value then
-			set my _target_path to DefaultsManager's value_for("TargetScript")
-		end if
-	end resolve_target_path
-	
-	on target_text()
-		if my _target_text is missing value then
-			resolve_target_path()
-			set my _target_text to call method "scriptSource:" of class "ASFormatting" with parameter my _target_path
-		end if
-		return my _target_text
-	end target_text
-	
-	on doc_name()
-		resolve_target_path()
-		set a_name to XFile's make_with(POSIX file (my _target_path))'s basename()
-		return a_name
-	end doc_name
-end script
 
 on do given fullhtml:full_flag
 	--log "start do"
@@ -152,8 +60,15 @@ on do given fullhtml:full_flag
 		end if
 		set is_multiline to false
 		if (_is_convert) then
-			set script_html to CodeController's markup()
-			--log (script_html's contents_ref()'s item_at(-1)'s element_name())
+			try
+				set script_html to CodeController's markup()
+				--log (script_html's contents_ref()'s item_at(-1)'s element_name())
+			on error number1480
+				set msg to localized string "No content."
+				display alert msg attached to _main_window default button "OK"
+				error "No Action." number 1502
+			end try
+			
 		end if
 		set doc_name to CodeController's doc_name()
 		set button_position to missing value
@@ -228,7 +143,7 @@ on copy_to_clipboard()
 	try
 		set a_result to do without fullhtml
 	on error msg number errno
-		if errno is not in {1500, 1501} then
+		if errno is not in {1500, 1501, 1502} then
 			error msg number errno
 		end if
 		return false
@@ -270,6 +185,7 @@ end save_location
 on save_location_name()
 	set a_location to missing value
 	set a_name to missing value
+	set save_to_source_location to DefaultsManager's value_for("SaveToSourceLocation")
 	if (_is_css and (not (_is_convert or _is_scriptlink))) then
 		set a_name to "AppleScript.css"
 	else
@@ -289,7 +205,9 @@ on save_location_name()
 				set a_xfile to XFile's make_with(POSIX file a_path)
 				set a_xfile to a_xfile's change_path_extension(".html")
 				set a_name to a_xfile's item_name()
-				set a_location to a_xfile's parent_folder()'s as_alias()
+				if save_to_source_location then
+					set a_location to a_xfile's parent_folder()'s as_alias()
+				end if
 				
 			else
 				set a_name to "AppleScript HTML.html"
@@ -299,7 +217,9 @@ on save_location_name()
 			set a_xfile to XFile's make_with(POSIX file a_path)
 			set a_xfile to a_xfile's change_path_extension(".html")
 			set a_name to a_xfile's item_name()
-			set a_location to a_xfile's parent_folder()'s as_alias()
+			if save_to_source_location then
+				set a_location to a_xfile's parent_folder()'s as_alias()
+			end if
 		end if
 	end if
 	return {a_location, a_name}
@@ -333,7 +253,7 @@ on save_to_file()
 	try
 		set a_result to do with fullhtml
 	on error msg number errno
-		if errno is not in {1500, 1501} then
+		if errno is not in {1500, 1501, 1502} then
 			error msg number errno
 		end if
 		return false

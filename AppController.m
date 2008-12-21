@@ -155,6 +155,13 @@
 	[monitorWindow makeKeyWindow];
 }
 
+- (IBAction)showSettingWindow:(id)sender
+{
+	[settingWindow orderFront:self];
+	[settingWindow makeMainWindow];
+	[settingWindow makeKeyWindow];
+}
+
 - (IBAction)makeDonation:(id)sender
 {
 	[DonationReminder goToDonation];

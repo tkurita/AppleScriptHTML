@@ -13,6 +13,8 @@ property CSSBuilder : missing value
 property RGBColor : missing value
 property XFile : missing value
 property SheetManager : missing value
+property EditorController : missing value
+property FileController : missing value
 
 property _indicator : missing value
 property _main_window : missing value
@@ -49,6 +51,8 @@ on will finish launching theObject
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
 	set DefaultsManager to import_script("DefaultsManager")
 	set SheetManager to import_script("SheetManager")
+	set EditorController to import_script("EditorController")
+	set FileController to import_script("FileController")
 end will finish launching
 
 on launched theObject
