@@ -27,6 +27,7 @@ on check_target()
 end check_target
 
 on markup()
+	--log "start markup in EditorController"
 	ASHTML's set_wrap_with_block(false)
 	set a_result to ASHTML's process_document(front document of application "Script Editor")
 	set my _target_text to ASHTML's target_text()

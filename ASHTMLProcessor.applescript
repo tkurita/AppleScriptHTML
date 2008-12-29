@@ -63,10 +63,10 @@ on do given fullhtml:full_flag
 			try
 				set script_html to CodeController's markup()
 				--log (script_html's contents_ref()'s item_at(-1)'s element_name())
-			on error number1480
+			on error number 1480
 				set msg to localized string "No content."
 				display alert msg attached to _main_window default button "OK"
-				error "No Action." number 1502
+				error "No Content." number 1502
 			end try
 			
 		end if
