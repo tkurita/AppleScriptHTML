@@ -53,10 +53,8 @@
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
 													@"scpt", @"PathExtension", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
-												[NSNumber numberWithBool:YES], @"isPackage",
 													 @"aplt", @"CreatorCode", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
-										 [NSNumber numberWithBool:YES], @"isPackage",
 										 @"dplt", @"CreatorCode", nil], 										
 										nil]];
 		
@@ -195,7 +193,7 @@
 	NSOpenPanel *a_panel = [NSOpenPanel openPanel];
 	[a_panel setResolvesAliases:NO];
 	[a_panel beginSheetForDirectory:nil file:nil 
-			types:[NSArray arrayWithObjects:@"scpt", @"scptd", nil]
+			types:[NSArray arrayWithObjects:@"scpt", @"scptd", @"app", nil]
 			modalForWindow:mainWindow modalDelegate:self
 			didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:) 
 			contextInfo:nil];
