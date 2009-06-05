@@ -30,6 +30,7 @@ on do given fullhtml:full_flag
 	
 	set _use_scripteditor to DefaultsManager's value_for("UseScriptEditorSelection")
 	if _use_scripteditor then
+		--log "use Script Editor"
 		set CodeController to EditorController
 	else
 		set CodeController to FileController

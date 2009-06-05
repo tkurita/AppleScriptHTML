@@ -11,10 +11,12 @@ on check_target()
 end check_target
 
 on markup()
+	--log "start markup in FileController"
 	ASHTML's set_wrap_with_block(false)
 	set my _target_path to DefaultsManager's value_for("TargetScript")
 	set a_result to ASHTML's process_file(my _target_path, false)
 	set my _target_text to ASHTML's target_text()
+	--log "end markup in FileController"
 	return a_result
 end markup
 
@@ -25,10 +27,12 @@ on resolve_target_path()
 end resolve_target_path
 
 on target_text()
+	--log "start target_text in FileController"
 	if my _target_text is missing value then
 		resolve_target_path()
 		set my _target_text to call method "scriptSource:" of class "ASFormatting" with parameter my _target_path
 	end if
+	--log "end target_text in FileController"
 	return my _target_text
 end target_text
 

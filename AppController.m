@@ -51,7 +51,15 @@
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeDirectory, @"FileType",
 													@"scptd", @"PathExtension", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
-													@"scpt", @"PathExtension", nil], nil]];
+													@"scpt", @"PathExtension", nil], 
+		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
+												[NSNumber numberWithBool:YES], @"isPackage",
+													 @"aplt", @"CreatorCode", nil], 
+		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
+										 [NSNumber numberWithBool:YES], @"isPackage",
+										 @"dplt", @"CreatorCode", nil], 										
+										nil]];
+		
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults] ;
 	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
 		NSString *target = [user_defaults stringForKey:@"TargetScript"];
@@ -77,6 +85,7 @@
 {
 	item = [[item infoResolvingAliasFile] objectForKey:@"ResolvedPath"];
 	[self setTargetScript:item];
+	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
 	return YES;
 }
 
