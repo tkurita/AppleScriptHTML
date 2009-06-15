@@ -36,6 +36,9 @@
 		2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */; };
 		2C4D2C870EC99CCE00D09C32 /* ASHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C506D2E0FE67C8500C1CA94 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
+		2C506D310FE67CA000C1CA94 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
+		2C506D520FE67FE300C1CA94 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2C506D510FE67FE300C1CA94 /* dsa_pub.pem */; };
 		2C535EC70ECA81B100C73295 /* DefaultsManager.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C535EC10ECA800800C73295 /* DefaultsManager.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C535EC90ECA81C100C73295 /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB10ECA7FF700C73295 /* DropBox.m */; };
 		2C535ECC0ECA81E500C73295 /* NSURL+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB50ECA7FF700C73295 /* NSURL+NDCarbonUtilities.m */; };
@@ -74,6 +77,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2C506D310FE67CA000C1CA94 /* Sparkle.framework in CopyFiles */,
 				2C9492ED0ECAA1DD00273C7C /* DonationReminder.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +106,8 @@
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
 		2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASFormattingStyle.applescript; sourceTree = "<group>"; };
+		2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		2C506D510FE67FE300C1CA94 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		2C535EB00ECA7FF700C73295 /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
 		2C535EB10ECA7FF700C73295 /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2C535EB20ECA7FF700C73295 /* NDAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAlias.h; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 				2CD976040EC912B700024156 /* Carbon.framework in Frameworks */,
 				2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */,
 				2C9492E20ECAA18700273C7C /* DonationReminder.framework in Frameworks */,
+				2C506D2E0FE67C8500C1CA94 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +192,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */,
 				2C9492E10ECAA18700273C7C /* DonationReminder.framework */,
 				2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */,
 				2CD976030EC912B700024156 /* Carbon.framework */,
@@ -240,6 +248,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C506D510FE67FE300C1CA94 /* dsa_pub.pem */,
 				2CF85C830EDB732600F0BFE1 /* HelpSetup.plist */,
 				257572D5072881A4000BE9CA /* Info.plist */,
 				2CAEEC870ECC61310068900A /* URI Escape.osax */,
@@ -414,6 +423,7 @@
 				2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */,
 				2CF85C840EDB732700F0BFE1 /* HelpSetup.plist in Resources */,
 				2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */,
+				2C506D520FE67FE300C1CA94 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,8 +484,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -498,8 +510,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/..\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;

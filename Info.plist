@@ -113,5 +113,13 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>DonationURL</key>
+	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
+	<key>SUCheckAtStartup</key>
+	<true/>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
+	<key>SUFeedURL</key>
+	<string>http://homepage.mac.com/tkurita/scriptfactory/appcast/AppleScriptHTML.xml</string>
 </dict>
 </plist>

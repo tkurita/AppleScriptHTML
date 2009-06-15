@@ -4,8 +4,6 @@
 <dict>
 	<key>CodeToHTML</key>
 	<true/>
-	<key>DonationURL</key>
-	<string>http://homepage.mac.com/tkurita/scriptfactory/donationproxy.html</string>
 	<key>GenerateCSS</key>
 	<true/>
 	<key>HistoryMax</key>
@@ -22,6 +20,8 @@
 	<integer>0</integer>
 	<key>ScriptLinkTitle</key>
 	<string></string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
 	<key>SaveToSourceLocation</key>
 	<false/>
 </dict>
