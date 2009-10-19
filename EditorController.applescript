@@ -7,15 +7,15 @@ property _target_text : missing value
 
 on check_target()
 	tell application "System Events"
-		set run_flag to exists application process "Script Editor"
+		set a_list to application processes whose bundle identifier is "com.apple.ScriptEditor2"
 	end tell
-	
+	set run_flag to (length of a_list > 0)
 	if not run_flag then
 		display alert "Script Editor is not Launched" attached to _main_window
 		return false
 	end if
 	
-	tell application "Script Editor"
+	tell application id "com.apple.ScriptEditor2"
 		set run_flag to exists front document
 	end tell
 	
@@ -29,7 +29,7 @@ end check_target
 on markup()
 	--log "start markup in EditorController"
 	ASHTML's set_wrap_with_block(false)
-	set a_result to ASHTML's process_document(front document of application "Script Editor")
+	set a_result to ASHTML's process_document(front document of application id "com.apple.ScriptEditor2")
 	set my _target_text to ASHTML's target_text()
 	return a_result
 end markup
@@ -38,7 +38,7 @@ on target_text()
 	if my _target_text is not missing value then
 		return my _target_text
 	end if
-	tell application "Script Editor"
+	tell application id "com.apple.ScriptEditor2"
 		set run_for_selection to ("" is not (contents of selection of document 1))
 		
 		if run_for_selection then
@@ -51,7 +51,7 @@ on target_text()
 end target_text
 
 on doc_name()
-	set a_name to name of front document of application "Script Editor"
+	set a_name to name of front document of application id "com.apple.ScriptEditor2"
 	if (a_name starts with "名称未設定") or (a_name starts with "Untitled") then
 		set a_name to "edit"
 	else

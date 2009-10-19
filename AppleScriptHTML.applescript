@@ -26,7 +26,7 @@ on __load__(loader)
 		set XCharacterSet to load("XCharacterSet")
 		set RGBColor to load("RGBColor")
 		set CSSBuilder to load("CSSBuilder")
-		set ScriptLinkMaker to load("ScriptLinkMaker")
+		--set ScriptLinkMaker to load("ScriptLinkMaker")
 		set TemplateProcessor to load("TemplateProcessor")
 	end tell
 	set XDict to CSSBuilder's XDict
@@ -53,6 +53,7 @@ on will finish launching theObject
 	set SheetManager to import_script("SheetManager")
 	set EditorController to import_script("EditorController")
 	set FileController to import_script("FileController")
+	set ScriptLinkMaker to import_script("ScriptLinkMaker")
 end will finish launching
 
 on launched theObject
