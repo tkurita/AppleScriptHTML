@@ -24,6 +24,16 @@
 	<integer>86400</integer>
 	<key>SaveToSourceLocation</key>
 	<false/>
+	<key>CSSClassNames</key>
+	<array>
+		<string>uncompiled</string>
+		<string>normal</string>
+		<string>langKeyword</string>
+		<string>appKeyword</string>
+		<string>comment</string>
+		<string>literal</string>
+		<string>userDefine</string>
+	</array>
 	<key>styleNameToCSSNameTable</key>
 	<dict>
 		<key>New text (uncompiled)</key>
