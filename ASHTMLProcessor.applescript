@@ -15,19 +15,16 @@ property _is_scriptlink : missing value
 property _use_scripteditor : missing value
 
 on do given fullhtml:full_flag
-	log "start do"
+	--log "start do"
 	ASHTML's initialize()
-	log "aaa"
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
 	set _is_convert to DefaultsManager's value_for("CodeToHTML")
 	set _is_scriptlink to DefaultsManager's value_for("MakeScriptLink")
-	log "bbb"
 	if not (_is_css or _is_convert or _is_scriptlink) then
 		set msg to localized string "No action is selected."
 		display alert msg attached to _main_window default button "OK"
 		error "No Action." number 1501
 	end if
-	log "ccc"
 	set _use_scripteditor to DefaultsManager's value_for("UseScriptEditorSelection")
 	if _use_scripteditor then
 		--log "use Script Editor"
@@ -71,11 +68,9 @@ on do given fullhtml:full_flag
 			end try
 			
 		end if
-		log "eee"
 		set doc_name to CodeController's doc_name()
 		set button_position to missing value
 		if (_is_scriptlink) then
-			log "hhh"
 			set a_code to CodeController's target_text()
 			set mode_index to DefaultsManager's value_for("ScriptLinkModeIndex")
 			set mode_text to item (mode_index + 1) of {"new", "insert", "append"}
@@ -86,12 +81,12 @@ on do given fullhtml:full_flag
 					call method "addToHistory:forKey:" of user defaults with parameters {doc_name, "ScriptLinkTitleHistory"}
 				end if
 			end if
-			log "iii"
+			(*
 			log a_code
 			log doc_name
 			log mode_text
+			*)
 			set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
-			log "iii2"
 			if _is_css then
 				set pos_index to DefaultsManager's value_for("ScriptLinkPositionIndex")
 				if pos_index is 0 then
@@ -100,11 +95,8 @@ on do given fullhtml:full_flag
 					set button_position to "bottom : 0.5em;"
 				end if
 			end if
-			log "jjj"
 		end if
-		log "kkk"
 	end if
-	log "fff"
 	if template_name is not missing value then
 		set template_file to path to resource template_name
 		set a_template to TemplateProcessor's make_with_file(template_file)
