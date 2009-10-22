@@ -53,32 +53,31 @@
 											@"Indicator of ScriptEditor's Selection mode");
 	if (![a_path isEqualToString:use_se_selection]) {
 		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
-		[recentScriptsButton setTitle:@""];
 		return YES;
 	}
 	return NO;
 }
 
 #pragma mark initilize
-+ (void)initialize
-{
-	NSString *defaults_plist = [[NSBundle mainBundle] 
-						pathForResource:@"FactorySettings" ofType:@"plist"];
-	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
-	
-	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults registerDefaults:factory_defaults];
-}
 
 - (void)awakeFromNib
 {
 #if useLog
 	NSLog(@"awakeFromNib");
 #endif
-	[recentScriptsButton setTitle:@""];
+	// setup FactorySettings
+	NSString *defaults_plist = [[NSBundle mainBundle] 
+								pathForResource:@"FactorySettings" ofType:@"plist"];
+	NSDictionary *factory_defaults = [NSDictionary dictionaryWithContentsOfFile:defaults_plist];
+	
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	[user_defaults registerDefaults:factory_defaults];
+	
+	// set recentScriptsButton
 	NSPopUpButtonCell *a_cell = [recentScriptsButton cell];
 	[a_cell setBezelStyle:NSSmallSquareBezelStyle];
 	[a_cell setArrowPosition:NSPopUpArrowAtCenter];
+	[a_cell setUsesItemFromMenu:NO];
 	
 	[targetScriptBox setAcceptFileInfo:[NSArray arrayWithObjects:
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeDirectory, @"FileType",
@@ -91,7 +90,6 @@
 										 @"dplt", @"CreatorCode", nil], 										
 										nil]];
 		
-	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults] ;
 	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
 		NSString *target = [user_defaults stringForKey:@"TargetScript"];
 		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
@@ -245,7 +243,6 @@
 		[[NSUserDefaults standardUserDefaults] removeFromHistory:a_path
 												forKey:@"RecentScripts"];
 	}
-	[recentScriptsButton setTitle:@""];
 }
 
 - (IBAction)useFileName:(id)sender
