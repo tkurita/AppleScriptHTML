@@ -44,46 +44,5 @@
 		<string>additionProperty</string>
 		<string>additionEnumeratedValue</string>
 	</array>
-	<key>styleNameToCSSNameTable</key>
-	<dict>
-		<key>New text (uncompiled)</key>
-		<string>uncompiled</string>
-		<key>Operators, etc. (+ &amp; ,)</key>
-		<string>normal</string>
-		<key>Language keywords</key>
-		<string>langKeyword</string>
-		<key>Application keywords</key>
-		<string>appKeyword</string>
-		<key>Comments</key>
-		<string>comment</string>
-		<key>Values (numbers, data)</key>
-		<string>literal</string>
-		<key>Variables and subroutine names</key>
-		<string>userDefine</string>
-		<key>Values (number, strings, lists)</key>
-		<string>literal</string>
-		<key>Strings</key>
-		<string></string>
-		<key>Command names</key>
-		<string></string>
-		<key>Parameter names</key>
-		<string></string>
-		<key>Classes</key>
-		<string></string>
-		<key>Properties</key>
-		<string></string>
-		<key>Enumerated values</key>
-		<string></string>
-		<key>Addition Command names</key>
-		<string></string>
-		<key>Addition Parameter names</key>
-		<string></string>
-		<key>Addition Classes</key>
-		<string></string>
-		<key>Addition Properties</key>
-		<string></string>
-		<key>Addition Enumerated values</key>
-		<string></string>
-	</dict>
 </dict>
 </plist>

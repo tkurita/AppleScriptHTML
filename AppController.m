@@ -4,46 +4,15 @@
 #import "PathExtra.h"
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"
-#import "NSAppleEventDescriptor+NDScriptData.h"
-#import "ASFormatting.h"
+#import "PreferencesWindowController.h"
 
-#define useLog 0
+#define useLog 1
 
 @implementation AppController
 
 #pragma mark services for scripts
 
 #pragma mark private methods
-
-- (NSArray *)styleNamesAndCSSClassNames
-{
-	NSAppleEventDescriptor *style_names_descriptor = [ASFormatting styleNames];
-	NSArray *style_names = [style_names_descriptor objectValue];
-	NSArray *class_names = [[NSUserDefaults standardUserDefaults] objectForKey:@"CSSClassNames"];
-	if (!class_names) {
-		class_names = [NSMutableArray array];
-	}	
-	
-	NSMutableArray *a_result = [NSMutableArray array];
-	int n = 0;
-	for (NSString *a_name in style_names) {
-		NSString *cname = @"";
-		if ([class_names count] > n) {
-			cname = [class_names objectAtIndex:n];
-			if (!cname) cname = @"";
-		}
-		[a_result addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:a_name, @"styleName", 
-							 cname, @"className", nil]];
-		n++;
-	}
-	return a_result;
-}
-
-- (void)setStyleNamesAndCSSClassNames:(NSArray *)dictArray
-{
-	NSArray *class_names = [dictArray valueForKey:@"className"];
-	[[NSUserDefaults standardUserDefaults] setObject:class_names forKey:@"CSSClassNames"];
-}
 
 - (BOOL)setTargetScript:(NSString *)a_path
 {
@@ -200,9 +169,13 @@
 
 - (IBAction)showSettingWindow:(id)sender
 {
+	/*
 	[settingWindow orderFront:self];
 	[settingWindow makeMainWindow];
 	[settingWindow makeKeyWindow];
+	 */
+	PreferencesWindowController *wc = [PreferencesWindowController sharedPreferencesWindowController];
+	[wc showWindow:self];
 }
 
 - (IBAction)makeDonation:(id)sender

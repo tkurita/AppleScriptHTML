@@ -34,6 +34,9 @@
 		257572CA072881A4000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		257572CD072881A4000BE9CA /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30E65210958A1100605969 /* PreferencesWindow.nib */; };
+		2C30E65910958AD900605969 /* PreferencesWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C30E65710958AD900605969 /* PreferencesWindowController.h */; };
+		2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C30E65810958AD900605969 /* PreferencesWindowController.m */; };
 		2C437EEA10956ABA00E9F76F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2C437EE910956ABA00E9F76F /* Credits.rtf */; };
 		2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */; };
 		2C4D2C870EC99CCE00D09C32 /* ASHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -101,6 +104,9 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2C30E65310958A1100605969 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PreferencesWindow.nib; sourceTree = "<group>"; };
+		2C30E65710958AD900605969 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		2C30E65810958AD900605969 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		2C437EE910956ABA00E9F76F /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C30E65210958A1100605969 /* PreferencesWindow.nib */,
 				2C437EE910956ABA00E9F76F /* Credits.rtf */,
 				2C506D510FE67FE300C1CA94 /* dsa_pub.pem */,
 				2CF85C830EDB732600F0BFE1 /* HelpSetup.plist */,
@@ -386,6 +393,8 @@
 				2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */,
 				2C9492B80ECA99A600273C7C /* AppController.h */,
 				2C9492B90ECA99A600273C7C /* AppController.m */,
+				2C30E65710958AD900605969 /* PreferencesWindowController.h */,
+				2C30E65810958AD900605969 /* PreferencesWindowController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -424,6 +433,7 @@
 				2C5FCF1C0FD8B0590061CC42 /* HFSTypeUtils.h in Headers */,
 				2CD43148108F5C4F0026C231 /* ASFormattingExtensions.h in Headers */,
 				2CD43185108F66690026C231 /* NSAppleEventDescriptor+NDScriptData.h in Headers */,
+				2C30E65910958AD900605969 /* PreferencesWindowController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +496,7 @@
 				2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */,
 				2C506D520FE67FE300C1CA94 /* dsa_pub.pem in Resources */,
 				2C437EEA10956ABA00E9F76F /* Credits.rtf in Resources */,
+				2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +521,7 @@
 				2CD43184108F66620026C231 /* NSAppleEventDescriptor+NDScriptData.m in Sources */,
 				2CD43186108F66900026C231 /* NSURL+NDCarbonUtilities.m in Sources */,
 				2CD43187108F66A00026C231 /* NDProgrammerUtilities.m in Sources */,
+				2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +542,14 @@
 				29B97319FDCFA39411CA2CEA /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		2C30E65210958A1100605969 /* PreferencesWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C30E65310958A1100605969 /* English */,
+			);
+			name = PreferencesWindow.nib;
 			sourceTree = "<group>";
 		};
 		2CE618A90ECB34CD00445AFE /* Localizable.strings */ = {
