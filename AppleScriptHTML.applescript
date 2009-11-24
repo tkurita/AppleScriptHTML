@@ -26,7 +26,6 @@ on __load__(loader)
 		set XCharacterSet to load("XCharacterSet")
 		set RGBColor to load("RGBColor")
 		set CSSBuilder to load("CSSBuilder")
-		--set ScriptLinkMaker to load("ScriptLinkMaker")
 		set TemplateProcessor to load("TemplateProcessor")
 	end tell
 	set XDict to CSSBuilder's XDict
@@ -36,7 +35,7 @@ on __load__(loader)
 	return missing value
 end __load__
 
-property _ : __load__(proxy() of application (get "AppleScriptHTMLLib"))
+property _ : __load__(make loader of application (get "AppleScriptHTMLLib"))
 
 on import_script(script_name)
 	tell main bundle

@@ -22,6 +22,7 @@
 											@"Indicator of ScriptEditor's Selection mode");
 	if (![a_path isEqualToString:use_se_selection]) {
 		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
 		return YES;
 	}
 	return NO;
@@ -82,9 +83,7 @@
 - (BOOL)dropBox:(NSView *)dbv acceptDrop:(id <NSDraggingInfo>)info item:(id)item
 {
 	item = [[item infoResolvingAliasFile] objectForKey:@"ResolvedPath"];
-	[self setTargetScript:item];
-	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
-	return YES;
+	return [self setTargetScript:item];
 }
 
 - (void)openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode 

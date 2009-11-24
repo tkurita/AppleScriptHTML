@@ -138,7 +138,7 @@ on do given fullhtml:full_flag
 			end if
 		end if
 	end if
-	log "ggg"
+	
 	return a_result
 end do
 
