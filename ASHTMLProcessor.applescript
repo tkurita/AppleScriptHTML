@@ -1,6 +1,7 @@
 global ScriptLinkMaker
 global ASHTML
 global TemplateProcessor
+global HTMLElement
 global DefaultsManager
 global XFile
 global SheetManager
@@ -129,11 +130,17 @@ on do given fullhtml:full_flag
 			else if _is_convert then
 				set a_result to script_html
 			end if
+			
 			if full_flag then
 				set template_file to path to resource "template_full_body.html"
 				set a_template to TemplateProcessor's make_with_file(template_file)
 				a_template's insert_text("$BODY", a_result's as_unicode())
 				a_template's insert_text("$TITLE", doc_name)
+				set a_result to a_template
+			else if CodeController's is_multiparagraph() then
+				set template_file to path to resource "template_sourcecode_noscriptlink.html"
+				set a_template to TemplateProcessor's make_with_file(template_file)
+				a_template's insert_text("$BODY", a_result's as_unicode())
 				set a_result to a_template
 			end if
 		end if

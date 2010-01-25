@@ -42,3 +42,6 @@ on doc_name()
 	return a_name
 end doc_name
 
+on is_multiparagraph()
+	return true
+end is_multiparagraph

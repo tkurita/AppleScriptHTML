@@ -60,3 +60,7 @@ on doc_name()
 	
 	return a_name
 end doc_name
+
+on is_multiparagraph()
+	return (count paragraphs of target_text()) > 1
+end is_multiparagraph
