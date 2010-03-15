@@ -1,17 +1,20 @@
+property HTMLElement : module
+property XCharacterSet : module
+property XDict : module
+property XList : module
+property XText : module
+property RGBColor : module
+property XFile : module
+property CSSBuilder : module
+property TemplateProcessor : module
+
+property loader : boot (module loader of application (get "AppleScriptHTMLLib")) for me
+
 property ASFormattingStyle : missing value
-property HTMLElement : missing value
-property XCharacterSet : missing value
-property XDict : missing value
-property XList : missing value
-property XText : missing value
 property ASHTML : missing value
 property ScriptLinkMaker : missing value
-property TemplateProcessor : missing value
 property ASHTMLProcessor : missing value
 property DefaultsManager : missing value
-property CSSBuilder : missing value
-property RGBColor : missing value
-property XFile : missing value
 property SheetManager : missing value
 property EditorController : missing value
 property FileController : missing value
@@ -19,23 +22,6 @@ property FileController : missing value
 property _indicator : missing value
 property _main_window : missing value
 property _monitor_textview : missing value
-
-on __load__(loader)
-	tell loader
-		set HTMLElement to load("HTMLElement")
-		set XCharacterSet to load("XCharacterSet")
-		set RGBColor to load("RGBColor")
-		set CSSBuilder to load("CSSBuilder")
-		set TemplateProcessor to load("TemplateProcessor")
-	end tell
-	set XDict to CSSBuilder's XDict
-	set XList to XDict's XList
-	set XText to XList's XText
-	set XFile to TemplateProcessor's XFile
-	return missing value
-end __load__
-
-property _ : __load__(make loader of application (get "AppleScriptHTMLLib"))
 
 on import_script(script_name)
 	tell main bundle
