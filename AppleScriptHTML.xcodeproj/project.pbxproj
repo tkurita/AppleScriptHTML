@@ -60,6 +60,7 @@
 		2CC5C807108C5C2B0037A04C /* StringExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EBB0ECA7FF700C73295 /* StringExtra.m */; };
 		2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
+		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43148108F5C4F0026C231 /* ASFormattingExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD43146108F5C4F0026C231 /* ASFormattingExtensions.h */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD43184108F66620026C231 /* NSAppleEventDescriptor+NDScriptData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */; };
@@ -148,6 +149,7 @@
 		2C9493320ECAA3DC00273C7C /* FactorySettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorySettings.plist; sourceTree = "<group>"; };
 		2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = ScriptLinkMaker.applescript; sourceTree = "<group>"; };
 		2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink.html; sourceTree = "<group>"; };
+		2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppleScriptHTML.icns; sourceTree = "<group>"; };
 		2CD43146108F5C4F0026C231 /* ASFormattingExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormattingExtensions.h; sourceTree = "<group>"; };
 		2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormattingExtensions.m; sourceTree = "<group>"; };
 		2CD4316B108F66380026C231 /* IntegerMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IntegerMath.c; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */,
 				2C30E65210958A1100605969 /* PreferencesWindow.nib */,
 				2C437EE910956ABA00E9F76F /* Credits.rtf */,
 				2C506D510FE67FE300C1CA94 /* dsa_pub.pem */,
@@ -501,6 +504,7 @@
 				2C437EEA10956ABA00E9F76F /* Credits.rtf in Resources */,
 				2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */,
 				2C790A06110E100400D23122 /* template_sourcecode_noscriptlink.html in Resources */,
+				2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -88,15 +88,15 @@
 	<key>CFBundleVersion</key>
 	<string>8</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.3</string>
+	<string>2.1.1</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2010, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>2.1.3 copyright 2007-2010, Tetsuro KURITA</string>
+	<string>2.1.1 copyright 2007-2010, Tetsuro KURITA</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>AppleScriptHTMLHelp</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>AppleScriptHTML</string>
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.AppleScriptHTML</string>
 	<key>CFBundleInfoDictionaryVersion</key>
