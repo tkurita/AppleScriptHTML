@@ -182,7 +182,7 @@ on save_location()
 		
 		if is_saved then
 			set a_xfile to XFile's make_with(POSIX file file_path)
-			set a_xfile to a_xfile's change_path_extension(".html")
+			set a_xfile to a_xfile's change_path_extension("html")
 			set html_path to choose file name with prompt "Save a HTML file" default name a_xfile's item_name() default location (a_xfile's parent_folder()'s as_alias())
 			
 		else
@@ -213,7 +213,7 @@ on save_location_name()
 			
 			if is_saved then
 				set a_xfile to XFile's make_with(POSIX file a_path)
-				set a_xfile to a_xfile's change_path_extension(".html")
+				set a_xfile to a_xfile's change_path_extension("html")
 				set a_name to a_xfile's item_name()
 				if save_to_source_location then
 					set a_location to a_xfile's parent_folder()'s as_alias()
@@ -225,7 +225,7 @@ on save_location_name()
 		else
 			set a_path to DefaultsManager's value_for("TargetScript")
 			set a_xfile to XFile's make_with(POSIX file a_path)
-			set a_xfile to a_xfile's change_path_extension(".html")
+			set a_xfile to a_xfile's change_path_extension("html")
 			set a_name to a_xfile's item_name()
 			if save_to_source_location then
 				set a_location to a_xfile's parent_folder()'s as_alias()
@@ -235,7 +235,7 @@ on save_location_name()
 	return {a_location, a_name}
 end save_location_name
 
-on after_save(a_file)
+on after_save(a_path)
 	set reveal_label to localized string "Reveal"
 	set open_label to localized string "Open"
 	set cancel_label to localized string "Cancel"
@@ -243,16 +243,17 @@ on after_save(a_file)
 	display alert msg attached to _main_window default button open_label other button reveal_label alternate button cancel_label
 	script AfterAlert
 		on sheet_ended(sender, a_reply)
-			set the_result to button returned of a_reply
-			if the_result is reveal_label then
+			set a_result to button returned of a_reply
+			if a_result is reveal_label then
+				set a_file to (POSIX file a_path) as alias
 				tell application "Finder"
 					reveal a_file
 				end tell
+				--call method "selectFile:inFileViewerRootedAtPath:" of workspace with parameters {a_path, ""}
 				call method "activateAppOfIdentifier:" of class "SmartActivate" with parameter "com.apple.finder"
-			else if the_result is open_label then
-				tell application "Finder"
-					open a_file
-				end tell
+			else if a_result is open_label then
+				set workspace to call method "sharedWorkspace" of class "NSWorkspace"
+				call method "openFile:" of workspace with parameter a_path
 			end if
 		end sheet_ended
 	end script
@@ -282,14 +283,17 @@ on save_to_file()
 				return
 			end if
 			set a_path to path name of sender
-			a_result's write_to_file(POSIX file a_path)
-			set html_path to (POSIX file a_path) as alias
-			tell application "System Events"
-				set creator type of html_path to ""
-				set file type of html_path to ""
+			tell AppleScript
+				set file_ref to a_result's write_to_file(POSIX file a_path)
+				set an_alias to (file_ref as alias)
 			end tell
+			tell application "System Events"
+				set creator type of an_alias to ""
+				set file type of an_alias to ""
+			end tell
+			-- an_alias does not works after removing a creator and a type  due to unknown reason
 			set content of _monitor_textview to a_result's as_unicode()
-			after_save(html_path)
+			after_save(a_path)
 		end sheet_ended
 	end script
 	
