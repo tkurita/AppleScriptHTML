@@ -6,7 +6,7 @@
 #import "DropBox.h"
 #import "PreferencesWindowController.h"
 
-#define useLog 1
+#define useLog 0
 
 @implementation AppController
 
