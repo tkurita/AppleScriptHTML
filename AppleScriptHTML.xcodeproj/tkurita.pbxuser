@@ -263,8 +263,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 354787091;
-			PBXWorkspaceStateSaveDate = 354787091;
+			PBXPerProjectTemplateStateSaveDate = 354789255;
+			PBXWorkspaceStateSaveDate = 354789255;
 		};
 		perUserProjectItems = {
 			2C2CD61110BBEA2A008CA461 = 2C2CD61110BBEA2A008CA461 /* PBXTextBookmark */;
@@ -275,16 +275,33 @@
 			2C46DBD710A1A7F700501F03 = 2C46DBD710A1A7F700501F03 /* PBXTextBookmark */;
 			2C46DBD810A1A7F700501F03 = 2C46DBD810A1A7F700501F03 /* PlistBookmark */;
 			2C46DBDA10A1A7F700501F03 = 2C46DBDA10A1A7F700501F03 /* PBXTextBookmark */;
+			2C4ACCA61525A566007615FA = 2C4ACCA61525A566007615FA /* PlistBookmark */;
+			2C4ACCA71525A566007615FA = 2C4ACCA71525A566007615FA /* PBXTextBookmark */;
+			2C4ACCA81525A566007615FA = 2C4ACCA81525A566007615FA /* PBXTextBookmark */;
+			2C4ACCA91525A566007615FA = 2C4ACCA91525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAA1525A566007615FA = 2C4ACCAA1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAB1525A566007615FA = 2C4ACCAB1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAC1525A566007615FA = 2C4ACCAC1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAD1525A566007615FA = 2C4ACCAD1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAE1525A566007615FA = 2C4ACCAE1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCAF1525A566007615FA = 2C4ACCAF1525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB01525A566007615FA = 2C4ACCB01525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB11525A566007615FA = 2C4ACCB11525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB21525A566007615FA = 2C4ACCB21525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB31525A566007615FA = 2C4ACCB31525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB41525A566007615FA = 2C4ACCB41525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB51525A566007615FA = 2C4ACCB51525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB61525A566007615FA = 2C4ACCB61525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB71525A566007615FA = 2C4ACCB71525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB81525A566007615FA = 2C4ACCB81525A566007615FA /* PBXTextBookmark */;
+			2C4ACCB91525A566007615FA = 2C4ACCB91525A566007615FA /* PBXTextBookmark */;
 			2C506D8C0FE688AF00C1CA94 = 2C506D8C0FE688AF00C1CA94 /* PBXTextBookmark */;
-			2C58AD7515234E9B0059F46F = 2C58AD7515234E9B0059F46F /* PlistBookmark */;
 			2C58AD7615234E9B0059F46F = 2C58AD7615234E9B0059F46F /* PBXTextBookmark */;
-			2C58AD7715234E9B0059F46F = 2C58AD7715234E9B0059F46F /* PlistBookmark */;
 			2C58AD7815234E9B0059F46F = 2C58AD7815234E9B0059F46F /* PlistBookmark */;
 			2C58AE071523571D0059F46F = 2C58AE071523571D0059F46F /* PBXTextBookmark */;
 			2C58AE081523571D0059F46F = 2C58AE081523571D0059F46F /* PBXTextBookmark */;
-			2C58AE091523571D0059F46F = 2C58AE091523571D0059F46F /* PBXTextBookmark */;
 			2C58AE1215244DE80059F46F = 2C58AE1215244DE80059F46F /* PlistBookmark */;
-			2C58AE1315244DE80059F46F = 2C58AE1315244DE80059F46F /* PBXTextBookmark */;
+			2C5F543F1525A79E005BED31 /* PBXTextBookmark */ = 2C5F543F1525A79E005BED31 /* PBXTextBookmark */;
 			2C790A18110E117A00D23122 = 2C790A18110E117A00D23122 /* PBXTextBookmark */;
 			2C790A19110E117A00D23122 = 2C790A19110E117A00D23122 /* PBXTextBookmark */;
 			2C790A1A110E117A00D23122 = 2C790A1A110E117A00D23122 /* PBXTextBookmark */;
@@ -330,7 +347,6 @@
 			2CEB827411546DCA0004966F = 2CEB827411546DCA0004966F /* PBXTextBookmark */;
 			2CEB8292115471FE0004966F = 2CEB8292115471FE0004966F /* PBXTextBookmark */;
 			2CEB8294115471FE0004966F = 2CEB8294115471FE0004966F /* PBXTextBookmark */;
-			2CEB8295115471FE0004966F = 2CEB8295115471FE0004966F /* PBXTextBookmark */;
 		};
 		sourceControlManager = 25D9445A07B1533700FF306F /* Source Control */;
 		userBookmarkGroup = 2CCF87590EE75C8800EA6824 /* PBXBookmarkGroup */;
@@ -490,6 +506,207 @@
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 0;
+	};
+	2C4ACCA61525A566007615FA /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 257572D5072881A4000BE9CA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	2C4ACCA71525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C437EE910956ABA00E9F76F /* Credits.rtf */;
+		name = "Credits.rtf: 8";
+		rLen = 0;
+		rLoc = 119;
+		rType = 0;
+		vrLen = 1057;
+		vrLoc = 0;
+	};
+	2C4ACCA81525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4316B108F66380026C231 /* IntegerMath.c */;
+		name = "IntegerMath.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1485;
+		vrLoc = 0;
+	};
+	2C4ACCA91525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4316C108F66380026C231 /* IntegerMath.h */;
+		name = "IntegerMath.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 0;
+	};
+	2C4ACCAA1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4316D108F66380026C231 /* NDComponentInstance.h */;
+		name = "NDComponentInstance.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 0;
+	};
+	2C4ACCAB1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4316E108F66380026C231 /* NDComponentInstance.m */;
+		name = "NDComponentInstance.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1463;
+		vrLoc = 0;
+	};
+	2C4ACCAC1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4316F108F66380026C231 /* NDProgrammerUtilities.h */;
+		name = "NDProgrammerUtilities.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1692;
+		vrLoc = 0;
+	};
+	2C4ACCAD1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43170108F66380026C231 /* NDProgrammerUtilities.m */;
+		name = "NDProgrammerUtilities.m: 52";
+		rLen = 0;
+		rLoc = 2598;
+		rType = 0;
+		vrLen = 1529;
+		vrLoc = 1584;
+	};
+	2C4ACCAE1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43171108F66380026C231 /* NDResourceFork.h */;
+		name = "NDResourceFork.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1461;
+		vrLoc = 0;
+	};
+	2C4ACCAF1525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43172108F66380026C231 /* NDResourceFork.m */;
+		name = "NDResourceFork.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1542;
+		vrLoc = 0;
+	};
+	2C4ACCB01525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43173108F66380026C231 /* NDScript.h */;
+		name = "NDScript.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1804;
+		vrLoc = 0;
+	};
+	2C4ACCB11525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43174108F66380026C231 /* NDScriptData.h */;
+		name = "NDScriptData.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1460;
+		vrLoc = 0;
+	};
+	2C4ACCB21525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43175108F66380026C231 /* NDScriptData.m */;
+		name = "NDScriptData.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1412;
+		vrLoc = 0;
+	};
+	2C4ACCB31525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43176108F66380026C231 /* NDScriptData_Protocols.h */;
+		name = "NDScriptData_Protocols.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1512;
+		vrLoc = 0;
+	};
+	2C4ACCB41525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43177108F66380026C231 /* NDSDKCompatibility.h */;
+		name = "NDSDKCompatibility.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1385;
+		vrLoc = 0;
+	};
+	2C4ACCB51525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD4317A108F66380026C231 /* NSArray+NDUtilities.h */;
+		name = "NSArray+NDUtilities.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 0;
+	};
+	2C4ACCB61525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43178108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.h */;
+		name = "NSAppleEventDescriptor+NDScriptData.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1548;
+		vrLoc = 0;
+	};
+	2C4ACCB71525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */;
+		name = "ASFormattingExtensions.m: 2";
+		rLen = 12;
+		rLoc = 67;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 0;
+	};
+	2C4ACCB81525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */;
+		name = "NSAppleEventDescriptor+NDScriptData.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1481;
+		vrLoc = 0;
+	};
+	2C4ACCB91525A566007615FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */;
+		name = "NSAppleEventDescriptor+NDScriptData.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 15418;
 	};
 	2C4D2C4B0EC9858900D09C32 /* ASFormatting.m:73 */ = {
 		isa = PBXFileBreakpoint;
@@ -687,18 +904,6 @@
 			sepNavWindowFrame = "{{15, 287}, {938, 646}}";
 		};
 	};
-	2C58AD7515234E9B0059F46F /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 257572D5072881A4000BE9CA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleDevelopmentRegion,
-		);
-		name = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/Info.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
 	2C58AD7615234E9B0059F46F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */;
@@ -708,18 +913,6 @@
 		rType = 0;
 		vrLen = 398;
 		vrLoc = 1685;
-	};
-	2C58AD7715234E9B0059F46F /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 257572D5072881A4000BE9CA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			NSHumanReadableCopyright,
-		);
-		name = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/Info.plist;
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	2C58AD7815234E9B0059F46F /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -734,9 +927,9 @@
 	};
 	2C58AD93152353D30059F46F /* Japanese */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 447}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 320}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 434}}";
+			sepNavSelRange = "{88, 0}";
+			sepNavVisRange = "{0, 327}";
 		};
 	};
 	2C58AD97152353F00059F46F /* Japanese */ = {
@@ -766,16 +959,6 @@
 		vrLen = 90;
 		vrLoc = 0;
 	};
-	2C58AE091523571D0059F46F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2CE61C840ECC055B00445AFE /* SmartActivate.h */;
-		name = "SmartActivate.h: 29";
-		rLen = 0;
-		rLoc = 1072;
-		rType = 0;
-		vrLen = 1096;
-		vrLoc = 0;
-	};
 	2C58AE1215244DE80059F46F /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 257572D5072881A4000BE9CA /* Info.plist */;
@@ -788,15 +971,15 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	2C58AE1315244DE80059F46F /* PBXTextBookmark */ = {
+	2C5F543F1525A79E005BED31 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2CE61C840ECC055B00445AFE /* SmartActivate.h */;
-		name = "SmartActivate.h: 29";
+		fRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */;
+		name = "NSAppleEventDescriptor+NDScriptData.m: 1";
 		rLen = 0;
-		rLoc = 1072;
+		rLoc = 0;
 		rType = 0;
-		vrLen = 1096;
-		vrLoc = 0;
+		vrLen = 1018;
+		vrLoc = 15418;
 	};
 	2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */ = {
 		uiCtxt = {
@@ -1084,31 +1267,128 @@
 	};
 	2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {837, 508}}";
-			sepNavSelRange = "{44, 0}";
-			sepNavVisRange = "{0, 832}";
+			sepNavIntBoundsRect = "{{0, 0}, {989, 377}}";
+			sepNavSelRange = "{67, 12}";
+			sepNavVisRange = "{0, 783}";
+		};
+	};
+	2CD4316B108F66380026C231 /* IntegerMath.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {810, 546}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1485}";
+		};
+	};
+	2CD4316C108F66380026C231 /* IntegerMath.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1482, 715}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1543}";
+		};
+	};
+	2CD4316D108F66380026C231 /* NDComponentInstance.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = descriptionFunction;\n            r = \"{8787, 23}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{10473, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{10499, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{10530, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{10548, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{10697, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{10723, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{10747, 10}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 13426}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {733, 3861}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1462}";
+		};
+	};
+	2CD4316E108F66380026C231 /* NDComponentInstance.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 9958}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1463}";
+		};
+	};
+	2CD4316F108F66380026C231 /* NDProgrammerUtilities.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = Abstract;\n            r = \"{1734, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{1760, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{2660, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{2686, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{3641, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{3667, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{3977, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{4003, 14}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4442}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2245, 1144}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1692}";
 		};
 	};
 	2CD43170108F66380026C231 /* NDProgrammerUtilities.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1524, 1014}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1524, 1040}}";
 			sepNavSelRange = "{2598, 0}";
-			sepNavVisRange = "{1578, 1535}";
+			sepNavVisRange = "{1584, 1529}";
+		};
+	};
+	2CD43171108F66380026C231 /* NDResourceFork.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = Discussion;\n            r = \"{23928, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{23955, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{24138, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{24364, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{24391, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{24625, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{24859, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{24887, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{25070, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{25302, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{25330, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{25564, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{25814, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{25841, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{25863, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{25883, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{25905, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{25923, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{26166, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{26194, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{26216, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{26236, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{26258, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{26276, 10}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 26402}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2539, 5187}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1461}";
+		};
+	};
+	2CD43172108F66380026C231 /* NDResourceFork.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1279, 8229}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1542}";
+		};
+	};
+	2CD43173108F66380026C231 /* NDScript.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2364, 845}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1804}";
+		};
+	};
+	2CD43174108F66380026C231 /* NDScriptData.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = Abstract;\n            r = \"{41426, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{41452, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{41568, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{41594, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{41628, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{41837, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{41863, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{42099, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{42125, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{42550, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{42576, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{42603, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{42970, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{42996, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{43023, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{43211, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{43237, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{43496, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{43522, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{43953, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{43979, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{44009, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{44360, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{44386, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{44416, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{44588, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{44614, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{44857, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{44883, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{44910, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{45091, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{45117, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{45358, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{45384, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{45414, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{45772, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{45798, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{45828, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{46002, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{46028, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{46052, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{46121, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{46147, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{46396, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{46422, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstact;\n            r = \"{46702, 11}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{46730, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{46834, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{46860, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{47119, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{47145, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{47559, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{47585, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{47845, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{47871, 14}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{48343, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{48367, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{48514, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{48538, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{48647, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{48671, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{48788, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{48812, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{48917, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{48943, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{49037, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{49063, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{49221, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{49247, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{49275, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{49454, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{49480, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{49773, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{49799, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{49895, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{50133, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{50159, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{50455, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{50481, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{50842, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{50868, 14}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{51227, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{51312, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{51340, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{51612, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{51638, 14}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{52037, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{52061, 10}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{52179, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{52209, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{52400, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{52426, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{52460, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{52478, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{52599, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{52625, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{52688, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{52947, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{52973, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{53042, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{53309, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{53335, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{53398, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{53657, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{53683, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{53747, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{53891, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{53917, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{53981, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{54106, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{54132, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{54206, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{54482, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{54508, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{54582, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{54854, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{54880, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{54950, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{55192, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{55218, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{55288, 8}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{55534, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{55903, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{56020, 12}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{56517, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{56867, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{56980, 12}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{57458, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{57827, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{57946, 12}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{58446, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{58817, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{58936, 12}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{59439, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{59795, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{59904, 12}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{60374, 12}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{60960, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{61063, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 61719}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {796, 16419}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1460}";
+		};
+	};
+	2CD43175108F66380026C231 /* NDScriptData.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 25285}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1412}";
+		};
+	};
+	2CD43176108F66380026C231 /* NDScriptData_Protocols.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = Abstract;\n            r = \"{6270, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{6296, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{6330, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{6348, 10}\";\n            s = 1;\n        },\n                {\n            l = \"brief description\";\n            r = \"{6521, 21}\";\n            s = 1;\n        },\n                {\n            l = \"comprehensive description\";\n            r = \"{6556, 29}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{6695, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{6721, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{6755, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{6773, 10}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6882}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 1547}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1512}";
+		};
+	};
+	2CD43177108F66380026C231 /* NDSDKCompatibility.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 624}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1385}";
 		};
 	};
 	2CD43178108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.h */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = Discussion;\n            r = \"{24151, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{73207, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{73233, 14}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{83600, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{83626, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{83650, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{83985, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{84011, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{84035, 10}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 84090}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {2184, 18606}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 17342}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1652}";
+			sepNavVisRange = "{0, 1548}";
 		};
 	};
 	2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1752, 24024}}";
-			sepNavSelRange = "{30954, 0}";
-			sepNavVisRange = "{30523, 724}";
+			sepNavIntBoundsRect = "{{0, 0}, {1860, 21619}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{15418, 1018}";
+		};
+	};
+	2CD4317A108F66380026C231 /* NSArray+NDUtilities.h */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = abstract;\n            r = \"{1563, 12}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{1590, 14}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{1618, 14}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{1646, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{7550, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{7568, 10}\";\n            s = 1;\n        },\n                {\n            l = Abstract;\n            r = \"{7757, 12}\";\n            s = 1;\n        },\n                {\n            l = Discussion;\n            r = \"{7783, 14}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{7809, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{7831, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{7855, 8}\";\n            s = 1;\n        },\n                {\n            l = disc;\n            r = \"{7882, 8}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{7900, 10}\";\n            s = 1;\n        },\n                {\n            l = abstract;\n            r = \"{14194, 12}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{14220, 14}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{14252, 14}\";\n            s = 1;\n        },\n                {\n            l = discussion;\n            r = \"{14282, 14}\";\n            s = 1;\n        },\n                {\n            l = result;\n            r = \"{14306, 10}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 14900}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 4069}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1305}";
 		};
 	};
 	2CD4317D108F66380026C231 /* NSString+NDCarbonUtilities.m */ = {
@@ -1470,9 +1750,9 @@
 	};
 	2CE618AA0ECB34CD00445AFE /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 447}}";
-			sepNavSelRange = "{320, 11}";
-			sepNavVisRange = "{0, 357}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 434}}";
+			sepNavSelRange = "{81, 0}";
+			sepNavVisRange = "{0, 362}";
 			sepNavVisRect = "{{0, 0}, {623, 396}}";
 			sepNavWindowFrame = "{{130, 182}, {938, 646}}";
 		};
@@ -1570,16 +1850,6 @@
 		rType = 0;
 		vrLen = 623;
 		vrLoc = 8348;
-	};
-	2CEB8295115471FE0004966F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2C437EE910956ABA00E9F76F /* Credits.rtf */;
-		name = "Credits.rtf: 16";
-		rLen = 0;
-		rLoc = 323;
-		rType = 0;
-		vrLen = 871;
-		vrLoc = 0;
 	};
 	2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {
 		uiCtxt = {

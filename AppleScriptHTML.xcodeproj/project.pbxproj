@@ -46,6 +46,8 @@
 		2C535EC90ECA81C100C73295 /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB10ECA7FF700C73295 /* DropBox.m */; };
 		2C535ECE0ECA81EA00C73295 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB90ECA7FF700C73295 /* PathExtra.m */; };
 		2C58AD96152353E20059F46F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C58AD95152353E20059F46F /* InfoPlist.strings */; };
+		2C5F544E1525BBC1005BED31 /* MainMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544A1525BBC1005BED31 /* MainMenu.strings */; };
+		2C5F544F1525BBC1005BED31 /* PreferencesWindow.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */; };
 		2C5FCF1B0FD8B0590061CC42 /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */; };
 		2C6A28B60EFDF71600624BDC /* EditorController.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C6A28B50EFDF71600624BDC /* EditorController.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C6A28BC0EFDF77500624BDC /* FileController.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C6A28BB0EFDF77500624BDC /* FileController.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -134,6 +136,8 @@
 		2C58AD92152353A10059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/PreferencesWindow.nib; sourceTree = "<group>"; };
 		2C58AD93152353D30059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C58AD97152353F00059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C5F544B1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		2C5F544D1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
 		2C5FCF1A0FD8B0590061CC42 /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
 		2C6A28B50EFDF71600624BDC /* EditorController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = EditorController.applescript; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				257572D5072881A4000BE9CA /* Info.plist */,
 				2CE618A90ECB34CD00445AFE /* Localizable.strings */,
 				2C9493320ECAA3DC00273C7C /* FactorySettings.plist */,
+				2C5F544A1525BBC1005BED31 /* MainMenu.strings */,
+				2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
 				2C58AD95152353E20059F46F /* InfoPlist.strings */,
 				65359356078DD41800E8BB2F /* AppleScriptKit.sdef */,
@@ -507,6 +513,8 @@
 				2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */,
 				2C790A06110E100400D23122 /* template_sourcecode_noscriptlink.html in Resources */,
 				2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */,
+				2C5F544E1525BBC1005BED31 /* MainMenu.strings in Resources */,
+				2C5F544F1525BBC1005BED31 /* PreferencesWindow.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +593,22 @@
 				2C58AD97152353F00059F46F /* Japanese */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C5F544A1525BBC1005BED31 /* MainMenu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C5F544B1525BBC1005BED31 /* Japanese */,
+			);
+			name = MainMenu.strings;
+			sourceTree = "<group>";
+		};
+		2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C5F544D1525BBC1005BED31 /* Japanese */,
+			);
+			name = PreferencesWindow.strings;
 			sourceTree = "<group>";
 		};
 		2CE618A90ECB34CD00445AFE /* Localizable.strings */ = {
