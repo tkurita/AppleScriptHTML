@@ -37,6 +37,7 @@
 		<string>commandName</string>
 		<string>parameterName</string>
 		<string>className</string>
+		<string>propertyName</string>
 		<string>enumeratedValues</string>
 		<string>additionCommandName</string>
 		<string>additionParameterName</string>
