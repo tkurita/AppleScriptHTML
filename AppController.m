@@ -61,12 +61,10 @@
 										nil]];
 		
 	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
-		NSString *target = [user_defaults stringForKey:@"TargetScript"];
-		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
-											@"Indicator of ScriptEditor's Selection mode");
 		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
 		[a_cell setObjectValue:@""];
-		if (![target isEqualToString:use_se_selection]) {
+		if (![user_defaults boolForKey:@"UseScriptEditorSelection"] ) {
+			NSString *target = [user_defaults stringForKey:@"TargetScript"];
 			[a_cell setPlaceholderString:[[target lastPathComponent] stringByDeletingPathExtension]];
 		}
 	}
