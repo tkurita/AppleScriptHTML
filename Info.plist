@@ -86,13 +86,13 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>11</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.3</string>
+	<string>2.1.4b</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
-	<string>2.1.3 copyright 2007-2012, Tetsuro KURITA</string>
+	<string>2.1.4b copyright 2007-2012, Tetsuro KURITA</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>AppleScriptHTMLHelp</string>
 	<key>CFBundleIconFile</key>
