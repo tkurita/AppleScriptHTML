@@ -8,6 +8,7 @@
 	IBOutlet id scriptLinkTitleComboBox;
 	IBOutlet id monitorWindow;
 	IBOutlet id settingWindow;
+	IBOutlet id monitorTextView;
 }
 - (IBAction)selectTarget:(id)sender;
 - (IBAction)makeDonation:(id)sender;
@@ -16,5 +17,6 @@
 - (IBAction)useFileName:(id)sender;
 - (IBAction)showMonitorWindow:(id)sender;
 - (IBAction)showSettingWindow:(id)sender;
+- (void)monitorCSS:(id)sender;
 
 @end

@@ -110,3 +110,6 @@ on stop_indicator()
 	set visible of _indicator to false
 end stop_indicator
 
+on generate_css()
+	return ASHTML's css_as_unicode()
+end generate_css

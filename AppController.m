@@ -5,8 +5,16 @@
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"
 #import "PreferencesWindowController.h"
+#import <OSAKit/OSAScript.h>
 
 #define useLog 0
+
+@interface ASKScriptCache : NSObject
+{
+}
++ (ASKScriptCache *)sharedScriptCache;
+- (OSAScript *)scriptWithName:(NSString *)name;
+@end
 
 @implementation AppController
 
@@ -166,11 +174,6 @@
 
 - (IBAction)showSettingWindow:(id)sender
 {
-	/*
-	[settingWindow orderFront:self];
-	[settingWindow makeMainWindow];
-	[settingWindow makeKeyWindow];
-	 */
 	PreferencesWindowController *wc = [PreferencesWindowController sharedPreferencesWindowController];
 	[wc showWindow:self];
 }
@@ -230,6 +233,31 @@
 		[[scriptLinkTitleComboBox cell] setObjectValue:@""];
 		[[scriptLinkTitleComboBox cell] setPlaceholderString:title_text];
 	}
+}
+
+- (void)monitorCSS:(id)sender
+{
+	OSAScript *script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
+	NSDictionary *error_info = nil;
+	NSAppleEventDescriptor *result = 
+		[script executeHandlerWithName:@"generate_css"
+					arguments:nil error:&error_info];
+	if (error_info) {
+		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
+		if ([err_no intValue] != -128) {
+			[[NSAlert alertWithMessageText:@"AppleScript Error"
+							 defaultButton:@"OK" alternateButton:nil otherButton:nil
+				 informativeTextWithFormat:@"%@\nNumber: %@", 
+			  [error_info objectForKey:OSAScriptErrorMessage],
+			  err_no] runModal];
+#if useLog
+			NSLog(@"%@", [error_info description]);
+#endif			
+		}
+		return;
+	}
+	[self showMonitorWindow:sender];
+	[monitorTextView setString:[result stringValue]];
 }
 
 @end

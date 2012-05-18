@@ -1,6 +1,7 @@
 #import "PreferencesWindowController.h"
 #import "ASFormatting.h"
 #import "NSAppleEventDescriptor+NDScriptData.h"
+#import "AppController.h"
 
 static PreferencesWindowController *sharedInstance = nil;
 static NSString *frameName = @"PreferencesWindow";
@@ -61,4 +62,9 @@ static NSString *frameName = @"PreferencesWindow";
 	[[self window] saveFrameUsingName:frameName];
 }
 
+- (IBAction)generateCSS:(id)sender
+{
+	AppController *app_controller = [NSApp delegate];
+	[app_controller monitorCSS:sender];
+}
 @end

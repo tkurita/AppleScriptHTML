@@ -6,5 +6,5 @@
 }
 
 + (id)sharedPreferencesWindowController;
-
+- (IBAction)generateCSS:(id)sender;
 @end
