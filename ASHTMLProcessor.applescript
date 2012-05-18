@@ -162,7 +162,8 @@ on copy_to_clipboard()
 	tell application (path to frontmost application as Unicode text)
 		set the clipboard to a_text
 	end tell
-	set content of _monitor_textview to a_text
+	call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, "html"}
+	--set content of _monitor_textview to a_text
 end copy_to_clipboard
 
 on save_location()
@@ -292,7 +293,8 @@ on save_to_file()
 				set file type of an_alias to ""
 			end tell
 			-- an_alias does not works after removing a creator and a type  due to unknown reason
-			set content of _monitor_textview to a_result's as_unicode()
+			--set content of _monitor_textview to a_result's as_unicode()
+			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, "html"}
 			after_save(a_path)
 		end sheet_ended
 	end script

@@ -17,6 +17,5 @@
 - (IBAction)useFileName:(id)sender;
 - (IBAction)showMonitorWindow:(id)sender;
 - (IBAction)showSettingWindow:(id)sender;
-- (void)monitorCSS:(id)sender;
 
 @end

@@ -5,16 +5,9 @@
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"
 #import "PreferencesWindowController.h"
-#import <OSAKit/OSAScript.h>
+#import "MonitorWindowController.h"
 
 #define useLog 0
-
-@interface ASKScriptCache : NSObject
-{
-}
-+ (ASKScriptCache *)sharedScriptCache;
-- (OSAScript *)scriptWithName:(NSString *)name;
-@end
 
 @implementation AppController
 
@@ -80,8 +73,8 @@
 	[mainWindow setFrameAutosaveName:@"Main"];
 	[monitorWindow center];
 	[monitorWindow setFrameAutosaveName:@"Monitor"];
-	[settingWindow center];
-	[settingWindow setFrameAutosaveName:@"Setting"];
+	//[settingWindow center];
+	//[settingWindow setFrameAutosaveName:@"Setting"];
 
 }
 
@@ -159,17 +152,14 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
 	[mainWindow saveFrameUsingName:@"Main"];
-	[monitorWindow saveFrameUsingName:@"Monitor"];
-	[settingWindow saveFrameUsingName:@"Setting"];
 }
 
 #pragma mark actions
 
 - (IBAction)showMonitorWindow:(id)sender
 {
-	[monitorWindow orderFront:self];
-	[monitorWindow makeMainWindow];
-	[monitorWindow makeKeyWindow];
+	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
+	[wc showWindow:self];	
 }
 
 - (IBAction)showSettingWindow:(id)sender
@@ -235,29 +225,9 @@
 	}
 }
 
-- (void)monitorCSS:(id)sender
+- (void)saveDocument:(id)sender
 {
-	OSAScript *script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
-	NSDictionary *error_info = nil;
-	NSAppleEventDescriptor *result = 
-		[script executeHandlerWithName:@"generate_css"
-					arguments:nil error:&error_info];
-	if (error_info) {
-		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
-		if ([err_no intValue] != -128) {
-			[[NSAlert alertWithMessageText:@"AppleScript Error"
-							 defaultButton:@"OK" alternateButton:nil otherButton:nil
-				 informativeTextWithFormat:@"%@\nNumber: %@", 
-			  [error_info objectForKey:OSAScriptErrorMessage],
-			  err_no] runModal];
-#if useLog
-			NSLog(@"%@", [error_info description]);
-#endif			
-		}
-		return;
-	}
-	[self showMonitorWindow:sender];
-	[monitorTextView setString:[result stringValue]];
+	NSLog(@"SaveDocument");
 }
 
 @end
