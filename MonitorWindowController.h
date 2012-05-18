@@ -8,5 +8,5 @@
 + (id)sharedWindowController;
 + (void)setContent:(NSString *)string type:(NSString *)type;
 - (void)setContent:(NSString *)string type:(NSString *)type;
-
+- (IBAction)copyAll:(id)sender;
 @end

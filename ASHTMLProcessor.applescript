@@ -18,6 +18,7 @@ property _use_scripteditor : missing value
 on do given fullhtml:full_flag
 	--log "start do"
 	ASHTML's initialize()
+	set content_type to "html"
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
 	set _is_convert to DefaultsManager's value_for("CodeToHTML")
 	set _is_scriptlink to DefaultsManager's value_for("MakeScriptLink")
@@ -124,6 +125,7 @@ on do given fullhtml:full_flag
 	else
 		if _is_css then
 			set a_result to ASHTML's formatting_style()'s as_css()
+			set content_type to "css"
 		else
 			if _is_scriptlink then
 				set a_result to a_scriptlink
@@ -146,7 +148,7 @@ on do given fullhtml:full_flag
 		end if
 	end if
 	
-	return a_result
+	return {content:a_result, type:content_type}
 end do
 
 on copy_to_clipboard()
@@ -158,11 +160,11 @@ on copy_to_clipboard()
 		end if
 		return false
 	end try
-	set a_text to a_result's as_unicode()
+	set a_text to a_result's content's as_unicode()
 	tell application (path to frontmost application as Unicode text)
 		set the clipboard to a_text
 	end tell
-	call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, "html"}
+	call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, a_result's type}
 	--set content of _monitor_textview to a_text
 end copy_to_clipboard
 
@@ -285,7 +287,7 @@ on save_to_file()
 			end if
 			set a_path to path name of sender
 			tell AppleScript
-				set file_ref to a_result's write_to_file(POSIX file a_path)
+				set file_ref to a_result's content's write_to_file(POSIX file a_path)
 				set an_alias to (file_ref as alias)
 			end tell
 			tell application "System Events"
@@ -294,7 +296,7 @@ on save_to_file()
 			end tell
 			-- an_alias does not works after removing a creator and a type  due to unknown reason
 			--set content of _monitor_textview to a_result's as_unicode()
-			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, "html"}
+			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_result's content's as_unicode(), a_result's type}
 			after_save(a_path)
 		end sheet_ended
 	end script

@@ -225,9 +225,4 @@
 	}
 }
 
-- (void)saveDocument:(id)sender
-{
-	NSLog(@"SaveDocument");
-}
-
 @end
