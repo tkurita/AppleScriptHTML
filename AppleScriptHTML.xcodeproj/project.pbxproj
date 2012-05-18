@@ -137,7 +137,7 @@
 		2C58AD93152353D30059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C58AD97152353F00059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C5F544B1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		2C5F544D1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
+		2C5F544D1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
 		2C5FCF1A0FD8B0590061CC42 /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
 		2C6A28B50EFDF71600624BDC /* EditorController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = EditorController.applescript; sourceTree = "<group>"; };
