@@ -261,8 +261,8 @@
 		29B97314FDCFA39411CA2CEA /* AppleScriptHTML */ = {
 			isa = PBXGroup;
 			children = (
-				2CD4316A108F66380026C231 /* NDScript */,
 				2C6BE34D108C1067007BBBA7 /* History.rd */,
+				2CD4316A108F66380026C231 /* NDScript */,
 				2CE61C820ECC055B00445AFE /* SmartActivateLib */,
 				2CF3A6330ECACC1600D63AF8 /* Templates */,
 				2C535EAF0ECA7FF700C73295 /* CocoaLib */,

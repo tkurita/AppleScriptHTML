@@ -23,7 +23,7 @@ static NSString *frameName = @"PreferencesWindow";
 	if (!class_names) {
 		class_names = [NSMutableArray array];
 	}	
-	
+	NSArray *attributes = [ASFormatting sourceAttributes];
 	NSMutableArray *a_result = [NSMutableArray array];
 	int n = 0;
 	for (NSString *a_name in style_names) {
@@ -32,7 +32,11 @@ static NSString *frameName = @"PreferencesWindow";
 			cname = [class_names objectAtIndex:n];
 			if (!cname) cname = @"";
 		}
-		[a_result addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:a_name, @"styleName", 
+		NSAttributedString *styled_name = [[NSAttributedString alloc] initWithString:a_name
+																  attributes:[attributes objectAtIndex:n]];
+
+		[a_result addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+							 [styled_name autorelease], @"styleName", 
 							 cname, @"className", nil]];
 		n++;
 	}
