@@ -7,6 +7,7 @@ property RGBColor : module
 property XFile : module
 property CSSBuilder : module
 property TemplateProcessor : module
+property only local : true
 
 property loader : boot (module loader of application (get "AppleScriptHTMLLib")) for me
 
