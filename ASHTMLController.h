@@ -3,10 +3,12 @@
 
 @interface ASHTMLController : NSObject {
 	OSAScript *script;
+	IBOutlet id indicator;
 }
 @property(retain) OSAScript *script;
 
 + (id)sharedASHTMLController;
 - (void)generateCSS:(id)sender;
+- (IBAction)copyToClipboard:(id)sender;
 
 @end

@@ -43,7 +43,7 @@ static ASHTMLController *sharedInstance = nil;
 {
 	NSDictionary *error_info = nil;
 	NSAppleEventDescriptor *result = 
-	[self.script executeHandlerWithName:handler
+	[script executeHandlerWithName:handler
 							  arguments:args error:&error_info];
 	if (error_info) {
 		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
@@ -70,6 +70,25 @@ static ASHTMLController *sharedInstance = nil;
 	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
 	[wc showWindow:self];
 	[wc setContent:[css stringValue] type:@"css"];
+}
+
+- (void)startIndicator
+{
+	[indicator setHidden:NO];
+	[indicator startAnimation:self];	
+}
+
+- (void)stopIndicator
+{
+	[indicator stopAnimation:self];
+	[indicator setHidden:YES];
+}
+
+- (IBAction)copyToClipboard:(id)sender
+{
+	[self startIndicator];
+	[self runHandlerWithName:@"copy_to_clipboard" arguments:nil];
+	[self stopIndicator];
 }
 
 @end

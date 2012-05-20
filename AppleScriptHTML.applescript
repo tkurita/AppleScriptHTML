@@ -65,16 +65,16 @@ end launched
 
 on clicked theObject
 	set a_name to name of theObject
-	if a_name is "CopyToClipBoard" then
-		start_indicator()
-		ASHTMLProcessor's copy_to_clipboard()
-		stop_indicator()
-	else if a_name is "SaveToFile" then
+	if a_name is "SaveToFile" then
 		start_indicator()
 		ASHTMLProcessor's save_to_file()
 		stop_indicator()
 	end if
 end clicked
+
+on copy_to_clipboard()
+	ASHTMLProcessor's copy_to_clipboard()
+end copy_to_clipboard
 
 on awake from nib theObject
 	set a_name to name of theObject
