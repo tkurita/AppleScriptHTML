@@ -22,7 +22,6 @@ property FileController : missing value
 
 property _indicator : missing value
 property _main_window : missing value
-property _monitor_textview : missing value
 
 on import_script(script_name)
 	tell main bundle
@@ -83,8 +82,6 @@ on awake from nib theObject
 		set my _indicator to theObject
 	else if a_name is "MainWindow" then
 		set my _main_window to theObject
-	else if a_name is "MonitorTextView" then
-		set my _monitor_textview to theObject
 	end if
 end awake from nib
 

@@ -6,7 +6,6 @@ global DefaultsManager
 global XFile
 global SheetManager
 global _main_window
-global _monitor_textview
 global EditorController
 global FileController
 
@@ -165,7 +164,6 @@ on copy_to_clipboard()
 		set the clipboard to a_text
 	end tell
 	call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, a_result's type}
-	--set content of _monitor_textview to a_text
 end copy_to_clipboard
 
 on save_location()
@@ -295,7 +293,6 @@ on save_to_file()
 				set file type of an_alias to ""
 			end tell
 			-- an_alias does not works after removing a creator and a type  due to unknown reason
-			--set content of _monitor_textview to a_result's as_unicode()
 			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_result's content's as_unicode(), a_result's type}
 			after_save(a_path)
 		end sheet_ended
