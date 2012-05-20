@@ -91,4 +91,11 @@ static ASHTMLController *sharedInstance = nil;
 	[self stopIndicator];
 }
 
+- (IBAction)saveToFile:(id)sender
+{
+	[self startIndicator];
+	[self runHandlerWithName:@"save_to_file" arguments:nil];
+	[self stopIndicator];
+}
+
 @end

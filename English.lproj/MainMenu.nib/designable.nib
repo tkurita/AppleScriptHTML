@@ -1249,7 +1249,7 @@
 			<object class="NSCustomObject" id="1009093963">
 				<string key="NSClassName">SUUpdater</string>
 			</object>
-			<object class="NSCustomObject" id="834732016">
+			<object class="NSCustomObject" id="416167538">
 				<string key="NSClassName">ASHTMLController</string>
 			</object>
 		</object>
@@ -1882,7 +1882,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">indicator</string>
-						<reference key="source" ref="834732016"/>
+						<reference key="source" ref="416167538"/>
 						<reference key="destination" ref="382430833"/>
 					</object>
 					<int key="connectionID">730</int>
@@ -1890,10 +1890,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">copyToClipboard:</string>
-						<reference key="source" ref="834732016"/>
+						<reference key="source" ref="416167538"/>
 						<reference key="destination" ref="410574995"/>
 					</object>
 					<int key="connectionID">731</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">saveToFile:</string>
+						<reference key="source" ref="416167538"/>
+						<reference key="destination" ref="456321273"/>
+					</object>
+					<int key="connectionID">732</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2720,7 +2728,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">729</int>
-						<reference key="object" ref="834732016"/>
+						<reference key="object" ref="416167538"/>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">ASHTMLController</string>
 					</object>
@@ -3124,10 +3132,9 @@
 							<int key="appleScriptScriptScope">0</int>
 							<object class="NSArray" key="appleScriptEventHandlerNames">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<string>Clicked</string>
 							</object>
 							<string key="appleScriptScriptName">AppleScriptHTML.applescript</string>
-							<string key="appleScriptObjectName">SaveToFile</string>
+							<string key="appleScriptObjectName"/>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3228,7 +3235,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">731</int>
+			<int key="maxID">732</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3242,9 +3249,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>copyToClipboard:</string>
 							<string>generateCSS:</string>
+							<string>saveToFile:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -3255,6 +3264,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>copyToClipboard:</string>
 							<string>generateCSS:</string>
+							<string>saveToFile:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3264,6 +3274,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">generateCSS:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">saveToFile:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

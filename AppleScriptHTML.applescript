@@ -63,14 +63,9 @@ on launched theObject
 	
 end launched
 
-on clicked theObject
-	set a_name to name of theObject
-	if a_name is "SaveToFile" then
-		start_indicator()
-		ASHTMLProcessor's save_to_file()
-		stop_indicator()
-	end if
-end clicked
+on save_to_file()
+	ASHTMLProcessor's save_to_file()
+end save_to_file
 
 on copy_to_clipboard()
 	ASHTMLProcessor's copy_to_clipboard()
@@ -78,9 +73,7 @@ end copy_to_clipboard
 
 on awake from nib theObject
 	set a_name to name of theObject
-	if a_name is "ProgressIndicator" then
-		set my _indicator to theObject
-	else if a_name is "MainWindow" then
+	if a_name is "MainWindow" then
 		set my _main_window to theObject
 	end if
 end awake from nib

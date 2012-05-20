@@ -10,5 +10,6 @@
 + (id)sharedASHTMLController;
 - (void)generateCSS:(id)sender;
 - (IBAction)copyToClipboard:(id)sender;
-
+- (IBAction)saveToFile:(id)sender;
+zw
 @end
