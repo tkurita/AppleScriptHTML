@@ -71,9 +71,6 @@
 	}
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
-	//[settingWindow center];
-	//[settingWindow setFrameAutosaveName:@"Setting"];
-
 }
 
 #pragma mark delegate methods for somethings
