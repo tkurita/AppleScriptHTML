@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="503"/>
+			<integer value="421"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -114,6 +114,7 @@
 											<object class="NSMutableArray" key="NSTableColumns">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSTableColumn" id="812853114">
+													<string key="NSIdentifier">styleName</string>
 													<double key="NSWidth">284</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
@@ -167,6 +168,7 @@
 													<reference key="NSTableView" ref="379644989"/>
 												</object>
 												<object class="NSTableColumn" id="1023170205">
+													<string key="NSIdentifier">className</string>
 													<double key="NSWidth">118</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
