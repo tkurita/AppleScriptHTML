@@ -71,8 +71,6 @@
 	}
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
-	[monitorWindow center];
-	[monitorWindow setFrameAutosaveName:@"Monitor"];
 	//[settingWindow center];
 	//[settingWindow setFrameAutosaveName:@"Setting"];
 

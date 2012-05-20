@@ -193,10 +193,10 @@
 		<key>XCBarModuleItems</key>
 		<array>
 			<string>2C30E65810958AD900605969</string>
+			<string>2C9492B90ECA99A600273C7C</string>
 			<string>DA206CF3015C4E8B03C91932</string>
 			<string>2CF2FF050ECA579000BADC90</string>
 			<string>2C85DB2F156627E20038CC9E</string>
-			<string>2C9492B90ECA99A600273C7C</string>
 		</array>
 	</dict>
 	<key>FirstTimeWindowDisplayed</key>
@@ -302,13 +302,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>17</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 165}, {273, 574}}</string>
+							<string>{{0, 0}, {273, 574}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,7 +328,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>66 187 1067 655 0 0 1440 878 </string>
+						<string>49 202 1067 655 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -414,7 +413,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {772, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>66 187 1067 655 0 0 1440 878 </string>
+								<string>49 202 1067 655 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -429,7 +428,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppleScriptHTML.applescript</string>
+								<string>History.rd</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -437,11 +436,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppleScriptHTML.applescript</string>
+										<string>History.rd</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CE248161568E77E00C78D88</string>
+										<string>2CE248371568EB0600C78D88</string>
 										<key>history</key>
 										<array>
 											<string>2CC5C86B108C61720037A04C</string>
@@ -487,7 +486,6 @@
 											<string>2C4ACCB61525A566007615FA</string>
 											<string>2C5F547B152B1081005BED31</string>
 											<string>2C5F547C152B1081005BED31</string>
-											<string>2C5F547D152B1081005BED31</string>
 											<string>2C7004611565D518009E5AF0</string>
 											<string>2C7004631565D518009E5AF0</string>
 											<string>2C7004641565D518009E5AF0</string>
@@ -497,21 +495,21 @@
 											<string>2C70046D1565D518009E5AF0</string>
 											<string>2C70048C1565D928009E5AF0</string>
 											<string>2C85DAE01565E26E0038CC9E</string>
-											<string>2C85DAE21565E26E0038CC9E</string>
 											<string>2C85DAFF1565E6780038CC9E</string>
 											<string>2C85DB001565E6780038CC9E</string>
 											<string>2C85DB6D156640220038CC9E</string>
 											<string>2C85DB6F156640220038CC9E</string>
 											<string>2C85DB861566425E0038CC9E</string>
 											<string>2C85DB871566425E0038CC9E</string>
-											<string>2C85DB8B1566425E0038CC9E</string>
-											<string>2C85DC0415664DA70038CC9E</string>
-											<string>2C85DC49156652350038CC9E</string>
 											<string>2C85DC6615665D550038CC9E</string>
 											<string>2C85DC7315665E7F0038CC9E</string>
-											<string>2CE248141568E77E00C78D88</string>
 											<string>2CE248151568E77E00C78D88</string>
-											<string>2CE248101568E76500C78D88</string>
+											<string>2CE2481B1568E91400C78D88</string>
+											<string>2CE2481C1568E91400C78D88</string>
+											<string>2CE2481D1568E91400C78D88</string>
+											<string>2CE248231568E9AE00C78D88</string>
+											<string>2CE248351568EB0600C78D88</string>
+											<string>2CE248361568EB0600C78D88</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -525,7 +523,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {772, 506}}</string>
 								<key>RubberWindowFrame</key>
-								<string>66 187 1067 655 0 0 1440 878 </string>
+								<string>49 202 1067 655 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -545,7 +543,7 @@
 								<key>Frame</key>
 								<string>{{0, 516}, {772, 76}}</string>
 								<key>RubberWindowFrame</key>
-								<string>66 187 1067 655 0 0 1440 878 </string>
+								<string>49 202 1067 655 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -736,7 +734,7 @@
 		<string>/Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/AppleScriptHTML.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>66 187 1067 655 0 0 1440 878 </string>
+	<string>49 202 1067 655 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -971,7 +969,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppleScriptHTML.applescript</string>
+										<string>ASHTMLProcessor.applescript</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1060,6 +1058,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
