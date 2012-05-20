@@ -72,6 +72,8 @@
 		2CD43187108F66A00026C231 /* NDProgrammerUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43170108F66380026C231 /* NDProgrammerUtilities.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
+		2CE2488B1569349600C78D88 /* ASHTMLController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE248891569349600C78D88 /* ASHTMLController.h */; };
+		2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
 		2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C535EC30ECA800800C73295 /* SheetManager.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -194,6 +196,8 @@
 		2CD976030EC912B700024156 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		2CDDB3690EC9D8E8001A0A19 /* ASFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormatting.h; sourceTree = "<group>"; };
 		2CE247F81567F86400C78D88 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/MonitorWindow.nib; sourceTree = "<group>"; };
+		2CE248891569349600C78D88 /* ASHTMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHTMLController.h; sourceTree = "<group>"; };
+		2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHTMLController.m; sourceTree = "<group>"; };
 		2CE618AA0ECB34CD00445AFE /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CE619170ECBB9D700445AFE /* template_full_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_body.html; sourceTree = "<group>"; };
 		2CE61C830ECC055B00445AFE /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
@@ -421,6 +425,8 @@
 				2C30E65810958AD900605969 /* PreferencesWindowController.m */,
 				2C85DB2E156627E10038CC9E /* MonitorWindowController.h */,
 				2C85DB2F156627E20038CC9E /* MonitorWindowController.m */,
+				2CE248891569349600C78D88 /* ASHTMLController.h */,
+				2CE2488A1569349600C78D88 /* ASHTMLController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C85DB30156627E20038CC9E /* MonitorWindowController.h in Headers */,
+				2CE2488B1569349600C78D88 /* ASHTMLController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +607,7 @@
 				2CD43187108F66A00026C231 /* NDProgrammerUtilities.m in Sources */,
 				2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */,
 				2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */,
+				2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

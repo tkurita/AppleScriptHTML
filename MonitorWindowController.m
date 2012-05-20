@@ -22,6 +22,13 @@ static NSString *windowName = @"MonitorWindow";
 	[[self sharedWindowController] setContent:string type:type];
 }
 
+- (void)dealloc
+{
+	self.contentType = nil;
+	self.content = nil;
+	[super dealloc];
+}
+
 - (void)setContent:(NSString *)string type:(NSString *)type
 {
 	[self setContent:string];

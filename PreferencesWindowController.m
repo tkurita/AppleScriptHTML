@@ -3,17 +3,10 @@
 #import "NSAppleEventDescriptor+NDScriptData.h"
 #import "AppController.h"
 #import "MonitorWindowController.h"
-#import <OSAKit/OSAScript.h>
+#import "ASHTMLController.h"
 
 static PreferencesWindowController *sharedInstance = nil;
 static NSString *frameName = @"PreferencesWindow";
-
-@interface ASKScriptCache : NSObject
-{
-}
-+ (ASKScriptCache *)sharedScriptCache;
-- (OSAScript *)scriptWithName:(NSString *)name;
-@end
 
 @implementation PreferencesWindowController
 
@@ -73,27 +66,6 @@ static NSString *frameName = @"PreferencesWindow";
 
 - (IBAction)generateCSS:(id)sender
 {
-	OSAScript *script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
-	NSDictionary *error_info = nil;
-	NSAppleEventDescriptor *result = 
-	[script executeHandlerWithName:@"generate_css"
-						 arguments:nil error:&error_info];
-	if (error_info) {
-		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
-		if ([err_no intValue] != -128) {
-			[[NSAlert alertWithMessageText:@"AppleScript Error"
-							 defaultButton:@"OK" alternateButton:nil otherButton:nil
-				 informativeTextWithFormat:@"%@\nNumber: %@", 
-			  [error_info objectForKey:OSAScriptErrorMessage],
-			  err_no] runModal];
-#if useLog
-			NSLog(@"%@", [error_info description]);
-#endif			
-		}
-		return;
-	}
-	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
-	[wc showWindow:self];
-	[wc setContent:[result stringValue] type:@"css"];
+	[[ASHTMLController sharedASHTMLController] generateCSS:sender];
 }
 @end
