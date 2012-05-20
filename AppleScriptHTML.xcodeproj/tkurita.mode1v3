@@ -286,29 +286,19 @@
 								<string>2CD975830EC8FAD300024156</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>2CE618A90ECB34CD00445AFE</string>
-								<string>2C5F544A1525BBC1005BED31</string>
-								<string>2C5F544C1525BBC1005BED31</string>
 								<string>2C30E65210958A1100605969</string>
 								<string>2C85DB2B1566273C0038CC9E</string>
 								<string>29B97318FDCFA39411CA2CEA</string>
-								<string>29B97315FDCFA39411CA2CEA</string>
-								<string>19C28FACFE9D520D11CA2CBB</string>
-								<string>1C37FBAC04509CD000000102</string>
-								<string>2CE247E71567F5E300C78D88</string>
-								<string>1C37FAAC04509CD000000102</string>
-								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
-									<integer>8</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 204}, {273, 574}}</string>
+							<string>{{0, 0}, {273, 574}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -429,7 +419,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AppController.h</string>
+								<string>History.rd</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -437,11 +427,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AppController.h</string>
+										<string>History.rd</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2CE2484C1568EC3D00C78D88</string>
+										<string>2CE248841568F03400C78D88</string>
 										<key>history</key>
 										<array>
 											<string>2CC5C86B108C61720037A04C</string>
@@ -487,11 +477,8 @@
 											<string>2C4ACCB61525A566007615FA</string>
 											<string>2C5F547B152B1081005BED31</string>
 											<string>2C5F547C152B1081005BED31</string>
-											<string>2C7004611565D518009E5AF0</string>
 											<string>2C7004631565D518009E5AF0</string>
-											<string>2C7004641565D518009E5AF0</string>
 											<string>2C7004651565D518009E5AF0</string>
-											<string>2C7004681565D518009E5AF0</string>
 											<string>2C70046B1565D518009E5AF0</string>
 											<string>2C70046D1565D518009E5AF0</string>
 											<string>2C70048C1565D928009E5AF0</string>
@@ -499,18 +486,24 @@
 											<string>2C85DAFF1565E6780038CC9E</string>
 											<string>2C85DB001565E6780038CC9E</string>
 											<string>2C85DB6D156640220038CC9E</string>
-											<string>2C85DB6F156640220038CC9E</string>
 											<string>2C85DB861566425E0038CC9E</string>
 											<string>2C85DB871566425E0038CC9E</string>
-											<string>2C85DC6615665D550038CC9E</string>
-											<string>2C85DC7315665E7F0038CC9E</string>
-											<string>2CE248151568E77E00C78D88</string>
 											<string>2CE2481B1568E91400C78D88</string>
 											<string>2CE2481C1568E91400C78D88</string>
-											<string>2CE2481D1568E91400C78D88</string>
-											<string>2CE2484A1568EC3D00C78D88</string>
-											<string>2CE2484B1568EC3D00C78D88</string>
-											<string>2CE248351568EB0600C78D88</string>
+											<string>2CE248651568EF0000C78D88</string>
+											<string>2CE248661568EF0000C78D88</string>
+											<string>2CE248671568EF0000C78D88</string>
+											<string>2CE248681568EF0000C78D88</string>
+											<string>2CE248691568EF0000C78D88</string>
+											<string>2CE2486A1568EF0000C78D88</string>
+											<string>2CE2486B1568EF0000C78D88</string>
+											<string>2CE2486C1568EF0000C78D88</string>
+											<string>2CE2486E1568EF0000C78D88</string>
+											<string>2CE248761568EF9000C78D88</string>
+											<string>2CE248771568EF9000C78D88</string>
+											<string>2CE248811568F03400C78D88</string>
+											<string>2CE248821568F03400C78D88</string>
+											<string>2CE248831568F03400C78D88</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

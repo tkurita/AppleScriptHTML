@@ -3,6 +3,7 @@
 @implementation MonitorWindowController
 
 @synthesize contentType;
+@synthesize content;
 
 static MonitorWindowController *sharedInstance = nil;
 static NSString *windowName = @"MonitorWindow";
@@ -18,16 +19,13 @@ static NSString *windowName = @"MonitorWindow";
 
 + (void)setContent:(NSString *)string type:(NSString *)type
 {
-	if (!sharedInstance) {
-		return;
-	}
-	[sharedInstance setContent:string type:type];
+	[[self sharedWindowController] setContent:string type:type];
 }
 
 - (void)setContent:(NSString *)string type:(NSString *)type
 {
+	[self setContent:string];
 	[self setContentType:type];
-	[monitorTextView setString:string];
 }
 
 - (void)awakeFromNib
@@ -84,8 +82,7 @@ static NSString *windowName = @"MonitorWindow";
 	NSString *actual_type = NSStringPboardType;
 	NSArray *types = [NSArray arrayWithObject:actual_type];
 	[pboard declareTypes:types owner:nil];
-	[pboard setString:[monitorTextView string] forType:actual_type];
-	
+	[pboard setString:[self content] forType:actual_type];
 }
 
 @end
