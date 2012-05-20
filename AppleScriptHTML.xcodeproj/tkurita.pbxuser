@@ -110,7 +110,7 @@
 		indexTemplatePath = "";
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 25D9445407B1533600FF306F /* AppleScriptHTML */;
 		activeTarget = 257572C2072881A4000BE9CA /* AppleScriptHTML */;
 		addToTargets = (
@@ -399,6 +399,9 @@
 			2CE2492B156948F300C78D88 /* PBXTextBookmark */ = 2CE2492B156948F300C78D88 /* PBXTextBookmark */;
 			2CE2492C156948F300C78D88 /* PBXTextBookmark */ = 2CE2492C156948F300C78D88 /* PBXTextBookmark */;
 			2CE2492D156948F300C78D88 /* PBXTextBookmark */ = 2CE2492D156948F300C78D88 /* PBXTextBookmark */;
+			2CE24932156949F900C78D88 /* XCBuildMessageTextBookmark */ = 2CE24932156949F900C78D88 /* XCBuildMessageTextBookmark */;
+			2CE24933156949F900C78D88 /* PBXTextBookmark */ = 2CE24933156949F900C78D88 /* PBXTextBookmark */;
+			2CE24934156949F900C78D88 /* PBXTextBookmark */ = 2CE24934156949F900C78D88 /* PBXTextBookmark */;
 			2CEB827411546DCA0004966F = 2CEB827411546DCA0004966F /* PBXTextBookmark */;
 			2CF2FF050ECA579000BADC90 = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 			DA206CF3015C4E8B03C91932 = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */;
@@ -989,9 +992,9 @@
 	};
 	2C6BE34D108C1067007BBBA7 /* History.rd */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 928}}";
-			sepNavSelRange = "{337, 0}";
-			sepNavVisRange = "{0, 865}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 915}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 871}";
 		};
 	};
 	2C7004631565D518009E5AF0 /* PBXBookmark */ = {
@@ -1888,9 +1891,9 @@
 	};
 	2CE248891569349600C78D88 /* ASHTMLController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 443}}";
-			sepNavSelRange = "{159, 0}";
-			sepNavVisRange = "{0, 324}";
+			sepNavIntBoundsRect = "{{0, 0}, {1053, 366}}";
+			sepNavSelRange = "{315, 0}";
+			sepNavVisRange = "{0, 321}";
 		};
 	};
 	2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {
@@ -2101,7 +2104,7 @@
 		fRef = 2CE248891569349600C78D88 /* ASHTMLController.h */;
 		name = "ASHTMLController.h: 12";
 		rLen = 0;
-		rLoc = 323;
+		rLoc = 320;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 0;
@@ -2218,7 +2221,7 @@
 		fRef = 2C6BE34D108C1067007BBBA7 /* History.rd */;
 		name = "History.rd: 18";
 		rLen = 0;
-		rLoc = 663;
+		rLoc = 639;
 		rType = 0;
 		vrLen = 880;
 		vrLoc = 0;
@@ -2268,7 +2271,7 @@
 		fRef = 2CE248891569349600C78D88 /* ASHTMLController.h */;
 		name = "ASHTMLController.h: 14";
 		rLen = 0;
-		rLoc = 318;
+		rLoc = 315;
 		rType = 0;
 		vrLen = 322;
 		vrLoc = 0;
@@ -2355,7 +2358,7 @@
 		fRef = 2C6BE34D108C1067007BBBA7 /* History.rd */;
 		name = "History.rd: 18";
 		rLen = 0;
-		rLoc = 663;
+		rLoc = 639;
 		rType = 0;
 		vrLen = 880;
 		vrLoc = 0;
@@ -2365,10 +2368,39 @@
 		fRef = 2C6BE34D108C1067007BBBA7 /* History.rd */;
 		name = "History.rd: 12";
 		rLen = 0;
-		rLoc = 337;
+		rLoc = 313;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 0;
+	};
+	2CE24932156949F900C78D88 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected '=', ',', ';', 'asm' or '__attribute__' before 'end'";
+		fRef = 2CE248891569349600C78D88 /* ASHTMLController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 13;
+		rType = 1;
+	};
+	2CE24933156949F900C78D88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE248891569349600C78D88 /* ASHTMLController.h */;
+		name = "ASHTMLController.h: 13";
+		rLen = 0;
+		rLoc = 315;
+		rType = 0;
+		vrLen = 321;
+		vrLoc = 0;
+	};
+	2CE24934156949F900C78D88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C6A28B50EFDF71600624BDC /* EditorController.applescript */;
+		name = "EditorController.applescript: 4";
+		rLen = 12;
+		rLoc = 35;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 890;
 	};
 	2CE617450ECB174300445AFE /* ASFormatting.m:50 */ = {
 		isa = PBXFileBreakpoint;
@@ -2451,9 +2483,9 @@
 	};
 	2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {711, 4219}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 4473}}";
 			sepNavSelRange = "{703, 0}";
-			sepNavVisRange = "{357, 1000}";
+			sepNavVisRange = "{5051, 852}";
 			sepNavVisRect = "{{0, 5304}, {953, 683}}";
 			sepNavWindowFrame = "{{405, 109}, {992, 756}}";
 		};
