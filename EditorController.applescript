@@ -1,8 +1,6 @@
 global ASHTML
 global XFile
 
-global _main_window
-
 property _target_text : missing value
 
 on check_target()

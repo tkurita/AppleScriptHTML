@@ -5,7 +5,6 @@ global HTMLElement
 global DefaultsManager
 global XFile
 global SheetManager
-global _main_window
 global EditorController
 global FileController
 

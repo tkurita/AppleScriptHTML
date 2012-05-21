@@ -20,9 +20,6 @@ property SheetManager : missing value
 property EditorController : missing value
 property FileController : missing value
 
-property _indicator : missing value
-property _main_window : missing value
-
 on import_script(script_name)
 	tell main bundle
 		set script_path to path for script script_name extension "scpt"
@@ -71,13 +68,6 @@ on copy_to_clipboard()
 	return ASHTMLProcessor's copy_to_clipboard()
 end copy_to_clipboard
 
-on awake from nib theObject
-	set a_name to name of theObject
-	if a_name is "MainWindow" then
-		set my _main_window to theObject
-	end if
-end awake from nib
-
 on alert ended theObject with reply withReply
 	SheetManager's sheet_ended(theObject, withReply)
 end alert ended
@@ -89,6 +79,10 @@ end dialog ended
 on panel ended theObject with result withResult
 	SheetManager's sheet_ended(theObject, withResult)
 end panel ended
+
+on awake from nib theObject
+	(*Add your script here.*)
+end awake from nib
 
 on generate_css()
 	return ASHTML's css_as_unicode()

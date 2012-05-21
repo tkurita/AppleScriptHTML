@@ -1,7 +1,6 @@
 global ASHTML
 global XFile
 global DefaultsManager
-global _main_window
 
 property _target_text : missing value
 property _target_path : missing value
