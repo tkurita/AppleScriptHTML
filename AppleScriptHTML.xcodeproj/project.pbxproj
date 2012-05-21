@@ -17,7 +17,6 @@
 				2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */,
 				2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */,
 				2C535EC70ECA81B100C73295 /* DefaultsManager.applescript in AppleScript */,
-				2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */,
 				2C6A28B60EFDF71600624BDC /* EditorController.applescript in AppleScript */,
 				2C6A28BC0EFDF77500624BDC /* FileController.applescript in AppleScript */,
 				2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in AppleScript */,
@@ -76,7 +75,6 @@
 		2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
-		2CE61B060ECBDCEE00445AFE /* SheetManager.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C535EC30ECA800800C73295 /* SheetManager.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CE61C860ECC055B00445AFE /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE61C830ECC055B00445AFE /* SmartActivate.c */; };
 		2CE61C880ECC055B00445AFE /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE61C850ECC055B00445AFE /* SmartActivate.m */; };
 		2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
@@ -682,7 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -711,7 +709,7 @@
 					"$(ARCHS_STANDARD_32_64_BIT)",
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",

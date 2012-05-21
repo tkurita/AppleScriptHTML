@@ -16,7 +16,6 @@ property ASHTML : missing value
 property ScriptLinkMaker : missing value
 property ASHTMLProcessor : missing value
 property DefaultsManager : missing value
-property SheetManager : missing value
 property EditorController : missing value
 property FileController : missing value
 
@@ -32,7 +31,6 @@ on will finish launching theObject
 	set ASFormattingStyle to import_script("ASFormattingStyle")
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
 	set DefaultsManager to import_script("DefaultsManager")
-	set SheetManager to import_script("SheetManager")
 	set EditorController to import_script("EditorController")
 	set FileController to import_script("FileController")
 	set ScriptLinkMaker to import_script("ScriptLinkMaker")
@@ -67,22 +65,6 @@ end save_to_file
 on copy_to_clipboard()
 	return ASHTMLProcessor's copy_to_clipboard()
 end copy_to_clipboard
-
-on alert ended theObject with reply withReply
-	SheetManager's sheet_ended(theObject, withReply)
-end alert ended
-
-on dialog ended theObject with reply withReply
-	SheetManager's sheet_ended(theObject, withReply)
-end dialog ended
-
-on panel ended theObject with result withResult
-	SheetManager's sheet_ended(theObject, withResult)
-end panel ended
-
-on awake from nib theObject
-	(*Add your script here.*)
-end awake from nib
 
 on generate_css()
 	return ASHTML's css_as_unicode()
