@@ -47,15 +47,40 @@ static ASHTMLController *sharedInstance = nil;
 							  arguments:args error:&error_info];
 	if (error_info) {
 		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
-		if ([err_no intValue] != -128) {
-			[[NSAlert alertWithMessageText:@"AppleScript Error"
-							 defaultButton:@"OK" alternateButton:nil otherButton:nil
-				 informativeTextWithFormat:@"%@\nNumber: %@", 
-			  [error_info objectForKey:OSAScriptErrorMessage],
-			  err_no] runModal];
+		NSString *msg = [error_info objectForKey:OSAScriptErrorMessage];
+		NSAlert *alert = nil;
 #if useLog
-			NSLog(@"%@", [error_info description]);
-#endif			
+		NSLog(@"%@", [error_info description]);
+#endif					
+		switch ([err_no intValue]) {
+			case 1500 : //No Target."
+			case 1501 : //"No action is selected." 
+			case 1502 :
+				NSLog(@"%@", error_info);
+				msg = NSLocalizedString(msg, @"");
+				alert = [NSAlert alertWithMessageText:msg
+										defaultButton:@"OK" 
+									alternateButton:nil 
+										otherButton:nil
+							informativeTextWithFormat:@""];
+				
+				
+				break;
+			case -128 :
+				break;
+			default:
+				alert = [NSAlert alertWithMessageText:@"AppleScript Error"
+								 defaultButton:@"OK" alternateButton:nil otherButton:nil
+								informativeTextWithFormat:@"%@\nNumber: %@", 
+						 [error_info objectForKey:OSAScriptErrorMessage],
+						 err_no];
+				break;
+		}
+		if (alert) {
+			[alert beginSheetModalForWindow:mainWindow
+							  modalDelegate:nil
+							 didEndSelector:nil
+								contextInfo:nil];
 		}
 		return nil;
 	}

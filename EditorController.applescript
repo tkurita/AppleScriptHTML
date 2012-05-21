@@ -11,7 +11,7 @@ on check_target()
 	end tell
 	set run_flag to (length of a_list > 0)
 	if not run_flag then
-		display alert "Script Editor is not Launched" attached to _main_window
+		error "AppleScript Editor is not Launched." number 1500
 		return false
 	end if
 	
@@ -20,7 +20,7 @@ on check_target()
 	end tell
 	
 	if not run_flag then
-		display alert "No documents in Script Editor" attached to _main_window
+		error "No documents in AppleScript Editor." number 1500
 		return false
 	end if
 	return true

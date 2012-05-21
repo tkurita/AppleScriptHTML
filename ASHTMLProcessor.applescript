@@ -22,9 +22,7 @@ on do given fullhtml:full_flag
 	set _is_convert to DefaultsManager's value_for("CodeToHTML")
 	set _is_scriptlink to DefaultsManager's value_for("MakeScriptLink")
 	if not (_is_css or _is_convert or _is_scriptlink) then
-		set msg to localized string "No action is selected."
-		display alert msg attached to _main_window default button "OK"
-		error "No Action." number 1501
+		error "No action is selected." number 1501
 	end if
 	set _use_scripteditor to DefaultsManager's value_for("UseScriptEditorSelection")
 	if _use_scripteditor then
@@ -54,7 +52,6 @@ on do given fullhtml:full_flag
 	
 	if (_is_convert or _is_scriptlink) then
 		if not CodeController's check_target() then
-			error "No Target." number 1500
 			return missing value
 		end if
 		set is_multiline to false
@@ -63,8 +60,6 @@ on do given fullhtml:full_flag
 				set script_html to CodeController's markup()
 				--log (script_html's contents_ref()'s item_at(-1)'s element_name())
 			on error number 1480
-				set msg to localized string "No content."
-				display alert msg attached to _main_window default button "OK"
 				error "No Content." number 1502
 			end try
 			
@@ -152,27 +147,13 @@ on do given fullhtml:full_flag
 end do
 
 on copy_to_clipboard()
-	try
-		set a_result to do without fullhtml
-	on error msg number errno
-		if errno is not in {1500, 1501, 1502} then
-			error msg number errno
-		end if
-		return missing value
-	end try
+	set a_result to do without fullhtml
 	set a_result's content to a_result's content's as_unicode()
 	return a_result
 end copy_to_clipboard
 
 on save_to_file()
-	try
-		set a_result to do with fullhtml
-	on error msg number errno
-		if errno is not in {1500, 1501, 1502} then
-			error msg number errno
-		end if
-		return missing value
-	end try
+	set a_result to do with fullhtml
 	set a_result's content to a_result's content's as_unicode()
 	return a_result
 end save_to_file
