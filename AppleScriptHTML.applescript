@@ -64,11 +64,11 @@ on launched theObject
 end launched
 
 on save_to_file()
-	ASHTMLProcessor's save_to_file()
+	return ASHTMLProcessor's save_to_file()
 end save_to_file
 
 on copy_to_clipboard()
-	ASHTMLProcessor's copy_to_clipboard()
+	return ASHTMLProcessor's copy_to_clipboard()
 end copy_to_clipboard
 
 on awake from nib theObject
@@ -89,16 +89,6 @@ end dialog ended
 on panel ended theObject with result withResult
 	SheetManager's sheet_ended(theObject, withResult)
 end panel ended
-
-on start_indicator()
-	set visible of _indicator to true
-	start _indicator
-end start_indicator
-
-on stop_indicator()
-	stop _indicator
-	set visible of _indicator to false
-end stop_indicator
 
 on generate_css()
 	return ASHTML's css_as_unicode()

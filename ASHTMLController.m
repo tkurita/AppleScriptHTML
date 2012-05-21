@@ -87,7 +87,16 @@ static ASHTMLController *sharedInstance = nil;
 - (IBAction)copyToClipboard:(id)sender
 {
 	[self startIndicator];
-	[self runHandlerWithName:@"copy_to_clipboard" arguments:nil];
+	NSAppleEventDescriptor *result = [self runHandlerWithName:@"copy_to_clipboard" 
+													arguments:nil];
+	if ('reco' == [result descriptorType]) {
+		NSString *result_text = [[result descriptorForKeyword:'conT'] stringValue];
+		NSString *content_kind = [[result descriptorForKeyword:'kind'] stringValue]; 
+		NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+		[pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+		[pboard setString:result_text forType:NSStringPboardType];
+		[MonitorWindowController setContent:result_text type:content_kind];
+	}
 	[self stopIndicator];
 }
 

@@ -147,7 +147,7 @@ on do given fullhtml:full_flag
 		end if
 	end if
 	
-	return {content:a_result, type:content_type}
+	return {content:a_result, kind:content_type}
 end do
 
 on copy_to_clipboard()
@@ -157,13 +157,10 @@ on copy_to_clipboard()
 		if errno is not in {1500, 1501, 1502} then
 			error msg number errno
 		end if
-		return false
+		return missing value
 	end try
-	set a_text to a_result's content's as_unicode()
-	tell application (path to frontmost application as Unicode text)
-		set the clipboard to a_text
-	end tell
-	call method "setContent:type:" of class "MonitorWindowController" with parameters {a_text, a_result's type}
+	set a_result's content to a_result's content's as_unicode()
+	return a_result
 end copy_to_clipboard
 
 on save_location()
@@ -293,7 +290,7 @@ on save_to_file()
 				set file type of an_alias to ""
 			end tell
 			-- an_alias does not works after removing a creator and a type  due to unknown reason
-			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_result's content's as_unicode(), a_result's type}
+			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_result's content's as_unicode(), a_result's kind}
 			after_save(a_path)
 		end sheet_ended
 	end script
