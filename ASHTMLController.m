@@ -148,10 +148,26 @@ struct LocationAndName {
 	return result;
 }
 
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode 
+										contextInfo:(void *)contextInfo
+{
+	NSString *file = [(NSString *)contextInfo autorelease];
+	switch (returnCode) {
+		case NSAlertDefaultReturn:
+			[[NSWorkspace sharedWorkspace] openFile:file];
+			break;
+		case  NSAlertOtherReturn:
+			[[NSWorkspace sharedWorkspace] selectFile:file inFileViewerRootedAtPath:@""];
+			break;
+		default:
+			break;
+	}
+}
+
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
 			contextInfo:(void *)contextInfo
 {
-	if (returnCode == NSCancelButton) return;
+	if (returnCode == NSAlertOtherReturn) return;
 	NSError *error = nil;
 	NSString *file = [sheet filename];
 	NSAppleEventDescriptor *html_rec = [(NSAppleEventDescriptor *)contextInfo autorelease];
@@ -171,8 +187,16 @@ struct LocationAndName {
 	NSString *content_kind = [[html_rec descriptorForKeyword:'kind'] stringValue]; 
 	[MonitorWindowController setContent:string type:content_kind];	
 	[self stopIndicator];
-	
-	
+	[sheet orderOut:self];
+	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Success to Make a HTML file.",@"")
+									 defaultButton:NSLocalizedString(@"Open", @"")
+								   alternateButton:NSLocalizedString(@"Cancel",@"")
+									   otherButton:NSLocalizedString(@"Reveal", @"")
+						 informativeTextWithFormat:@""];
+	[alert beginSheetModalForWindow:mainWindow
+					  modalDelegate:self
+					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
+						contextInfo:[file retain]];
 }
 
 - (IBAction)saveToFile:(id)sender

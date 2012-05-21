@@ -98,6 +98,7 @@ on do given fullhtml:full_flag
 			end if
 		end if
 	end if
+	
 	if template_name is not missing value then
 		set template_file to path to resource template_name
 		set a_template to TemplateProcessor's make_with_file(template_file)
@@ -162,101 +163,6 @@ on copy_to_clipboard()
 	set a_result's content to a_result's content's as_unicode()
 	return a_result
 end copy_to_clipboard
-(*
-on save_location()
-	if (_is_css and (not (_is_convert and _is_scriptlink))) then
-		set html_path to choose file name with prompt "Save a CSS file" default name "AppleScript.css"
-	else
-		tell application id "com.apple.ScriptEditor2"
-			set file_path to path of front document
-		end tell
-		
-		try
-			get file_path
-			set is_saved to true
-		on error
-			set is_saved to false
-		end try
-		
-		if is_saved then
-			set a_xfile to XFile's make_with(POSIX file file_path)
-			set a_xfile to a_xfile's change_path_extension("html")
-			set html_path to choose file name with prompt "Save a HTML file" default name a_xfile's item_name() default location (a_xfile's parent_folder()'s as_alias())
-			
-		else
-			set html_path to choose file name with prompt "Save a HTML file" default name "AppleScript HTML.html"
-		end if
-	end if
-	return html_path
-end save_location
-
-on save_location_name()
-	set a_location to missing value
-	set a_name to missing value
-	set save_to_source_location to DefaultsManager's value_for("SaveToSourceLocation")
-	if (_is_css and (not (_is_convert or _is_scriptlink))) then
-		set a_name to "AppleScript.css"
-	else
-		if _use_scripteditor then
-			tell application id "com.apple.ScriptEditor2"
-				set a_path to path of front document
-			end tell
-			
-			try
-				get a_path
-				set is_saved to true
-			on error
-				set is_saved to false
-			end try
-			
-			if is_saved then
-				set a_xfile to XFile's make_with(POSIX file a_path)
-				set a_xfile to a_xfile's change_path_extension("html")
-				set a_name to a_xfile's item_name()
-				if save_to_source_location then
-					set a_location to a_xfile's parent_folder()'s as_alias()
-				end if
-				
-			else
-				set a_name to "AppleScript HTML.html"
-			end if
-		else
-			set a_path to DefaultsManager's value_for("TargetScript")
-			set a_xfile to XFile's make_with(POSIX file a_path)
-			set a_xfile to a_xfile's change_path_extension("html")
-			set a_name to a_xfile's item_name()
-			if save_to_source_location then
-				set a_location to a_xfile's parent_folder()'s as_alias()
-			end if
-		end if
-	end if
-	return {a_location, a_name}
-end save_location_name
-*)
-on after_save(a_path)
-	set reveal_label to localized string "Reveal"
-	set open_label to localized string "Open"
-	set cancel_label to localized string "Cancel"
-	set msg to localized string "Success to Make a HTML file."
-	display alert msg attached to _main_window default button open_label other button reveal_label alternate button cancel_label
-	script AfterAlert
-		on sheet_ended(sender, a_reply)
-			set a_result to button returned of a_reply
-			if a_result is reveal_label then
-				set a_file to (POSIX file a_path) as alias
-				tell application "Finder"
-					reveal a_file
-				end tell
-				--call method "selectFile:inFileViewerRootedAtPath:" of workspace with parameters {a_path, ""}
-				call method "activateAppOfIdentifier:" of class "SmartActivate" with parameter "com.apple.finder"
-			else if a_result is open_label then
-				set workspace to call method "sharedWorkspace" of class "NSWorkspace"
-				call method "openFile:" of workspace with parameter a_path
-			end if
-		end sheet_ended
-	end script
-	register_sheet of SheetManager given attached_to:_main_window, delegate:AfterAlert
-end after_save
 
 on save_to_file()
 	try
@@ -269,37 +175,4 @@ on save_to_file()
 	end try
 	set a_result's content to a_result's content's as_unicode()
 	return a_result
-	(*
-	set {a_location, a_name} to save_location_name()
-	if a_location is missing value then
-		display save panel attached to _main_window with file name a_name
-	else
-		display save panel attached to _main_window with file name a_name in directory a_location
-	end if
-	
-	script FileWriter
-		on sheet_ended(sender, a_replay)
-			close panel sender
-			if a_replay is not 1 then
-				return
-			end if
-			set a_path to path name of sender
-			tell AppleScript
-				set file_ref to a_result's content's write_to_file(POSIX file a_path)
-				set an_alias to (file_ref as alias)
-			end tell
-			tell application "System Events"
-				set creator type of an_alias to ""
-				set file type of an_alias to ""
-			end tell
-			-- an_alias does not works after removing a creator and a type  due to unknown reason
-			call method "setContent:type:" of class "MonitorWindowController" with parameters {a_result's content's as_unicode(), a_result's kind}
-			after_save(a_path)
-		end sheet_ended
-	end script
-	
-	register_sheet of SheetManager given attached_to:_main_window, delegate:FileWriter
-	
-	return true
-	*)
 end save_to_file
