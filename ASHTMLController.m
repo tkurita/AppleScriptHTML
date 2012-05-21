@@ -100,11 +100,97 @@ static ASHTMLController *sharedInstance = nil;
 	[self stopIndicator];
 }
 
+struct LocationAndName {
+	NSString *location;
+	NSString *name;
+	NSString *extension;
+};
+	 
+- (struct LocationAndName)defaultLocationAndName
+{
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	Boolean is_css = [user_defaults boolForKey:@"GenerateCSS"];
+	Boolean is_convert = [user_defaults boolForKey:@"CodeToHTML"];
+	Boolean is_scriptlink = [user_defaults boolForKey:@"MakeScriptLink"];
+	Boolean is_save_to_souce_location = [user_defaults boolForKey:@"SaveToSourceLocation"];
+	Boolean use_scripteditor = [user_defaults boolForKey:@"UseScriptEditorSelection"];
+	NSString *default_name = nil;
+	NSString *default_location = nil;
+	NSString *extension = @"html";
+	if (is_css && (!(is_convert || is_scriptlink))) {
+		default_name = @"AppleScript.css";
+		extension = @"css";
+	} else if (use_scripteditor) {
+		NSAppleEventDescriptor *result = [self runHandlerWithName:@"path_on_scripteditor"
+														arguments:nil];
+		if ('utxt' == [result descriptorType]) {
+			NSString *path = [result stringValue];
+			default_name = [[[path lastPathComponent] 
+									stringByDeletingPathExtension]
+									stringByAppendingPathExtension:@"html"];
+			if (is_save_to_souce_location) {
+				default_location = [path stringByDeletingLastPathComponent];
+			}
+		} else {
+			default_name = @"AppleScript HTML.html";
+		}
+		
+	} else {
+		NSString *path = [user_defaults stringForKey:@"TargetScript"];
+		default_name = [[[path lastPathComponent] 
+						 stringByDeletingPathExtension]
+						stringByAppendingPathExtension:@"html"];
+		if (is_save_to_souce_location) {
+			default_location = [path stringByDeletingLastPathComponent];
+		}		
+	}
+	struct LocationAndName result = {default_location, default_name, extension};
+	return result;
+}
+
+- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
+			contextInfo:(void *)contextInfo
+{
+	if (returnCode == NSCancelButton) return;
+	NSError *error = nil;
+	NSString *file = [sheet filename];
+	NSAppleEventDescriptor *html_rec = [(NSAppleEventDescriptor *)contextInfo autorelease];
+	NSString *string = [[html_rec descriptorForKeyword:'conT'] stringValue];
+	[string writeToFile:file
+			 atomically:NO encoding:NSUTF8StringEncoding
+				  error:&error];
+	if (error) {
+		[sheet orderOut:self];
+		NSAlert *alert = [NSAlert alertWithError:error];
+		[alert beginSheetModalForWindow:mainWindow
+						  modalDelegate:self
+						 didEndSelector:nil
+							contextInfo:nil];
+		return;
+	}
+	NSString *content_kind = [[html_rec descriptorForKeyword:'kind'] stringValue]; 
+	[MonitorWindowController setContent:string type:content_kind];	
+	[self stopIndicator];
+	
+	
+}
+
 - (IBAction)saveToFile:(id)sender
 {
 	[self startIndicator];
-	[self runHandlerWithName:@"save_to_file" arguments:nil];
-	[self stopIndicator];
+	NSAppleEventDescriptor *result = [self runHandlerWithName:@"save_to_file" arguments:nil];
+	struct LocationAndName default_loc_name = [self defaultLocationAndName];
+	NSSavePanel *save_panel = [NSSavePanel savePanel];
+	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:default_loc_name.extension]];
+	[save_panel setCanSelectHiddenExtension:YES];
+	[save_panel beginSheetForDirectory:default_loc_name.location
+								  file:default_loc_name.name
+						modalForWindow:mainWindow
+						 modalDelegate:self
+						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
+						   contextInfo:[result retain]];
+	
+	//[self stopIndicator];
 }
 
 @end

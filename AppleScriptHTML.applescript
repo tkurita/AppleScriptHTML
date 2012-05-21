@@ -93,3 +93,22 @@ end panel ended
 on generate_css()
 	return ASHTML's css_as_unicode()
 end generate_css
+
+on path_on_scripteditor()
+	tell application id "com.apple.ScriptEditor2"
+		set a_path to path of front document
+	end tell
+	
+	try
+		get a_path
+		set is_saved to true
+	on error
+		set is_saved to false
+	end try
+	
+	if is_saved then
+		return a_path
+	else
+		return missing value
+	end if
+end path_on_scripteditor

@@ -4,6 +4,7 @@
 @interface ASHTMLController : NSObject {
 	OSAScript *script;
 	IBOutlet id indicator;
+	IBOutlet id mainWindow;
 }
 @property(retain) OSAScript *script;
 

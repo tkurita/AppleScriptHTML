@@ -162,7 +162,7 @@ on copy_to_clipboard()
 	set a_result's content to a_result's content's as_unicode()
 	return a_result
 end copy_to_clipboard
-
+(*
 on save_location()
 	if (_is_css and (not (_is_convert and _is_scriptlink))) then
 		set html_path to choose file name with prompt "Save a CSS file" default name "AppleScript.css"
@@ -232,7 +232,7 @@ on save_location_name()
 	end if
 	return {a_location, a_name}
 end save_location_name
-
+*)
 on after_save(a_path)
 	set reveal_label to localized string "Reveal"
 	set open_label to localized string "Open"
@@ -265,8 +265,11 @@ on save_to_file()
 		if errno is not in {1500, 1501, 1502} then
 			error msg number errno
 		end if
-		return false
+		return missing value
 	end try
+	set a_result's content to a_result's content's as_unicode()
+	return a_result
+	(*
 	set {a_location, a_name} to save_location_name()
 	if a_location is missing value then
 		display save panel attached to _main_window with file name a_name
@@ -298,4 +301,5 @@ on save_to_file()
 	register_sheet of SheetManager given attached_to:_main_window, delegate:FileWriter
 	
 	return true
+	*)
 end save_to_file

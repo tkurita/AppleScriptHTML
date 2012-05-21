@@ -1903,6 +1903,14 @@
 					</object>
 					<int key="connectionID">732</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mainWindow</string>
+						<reference key="source" ref="416167538"/>
+						<reference key="destination" ref="1046981968"/>
+					</object>
+					<int key="connectionID">733</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3030,9 +3038,7 @@
 							<reference key="object" ref="410574995"/>
 							<int key="appleScriptObjectID">-1</int>
 							<int key="appleScriptScriptScope">0</int>
-							<object class="NSArray" key="appleScriptEventHandlerNames">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-							</object>
+							<reference key="appleScriptEventHandlerNames" ref="0"/>
 							<string key="appleScriptScriptName">AppleScriptHTML.applescript</string>
 							<string key="appleScriptObjectName"/>
 						</object>
@@ -3130,9 +3136,7 @@
 							<reference key="object" ref="456321273"/>
 							<int key="appleScriptObjectID">-1</int>
 							<int key="appleScriptScriptScope">0</int>
-							<object class="NSArray" key="appleScriptEventHandlerNames">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-							</object>
+							<reference key="appleScriptEventHandlerNames" ref="0"/>
 							<string key="appleScriptScriptName">AppleScriptHTML.applescript</string>
 							<string key="appleScriptObjectName"/>
 						</object>
@@ -3235,7 +3239,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">732</int>
+			<int key="maxID">733</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3283,14 +3287,35 @@
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">indicator</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>indicator</string>
+							<string>mainWindow</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">indicator</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">indicator</string>
-							<string key="candidateClassName">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>indicator</string>
+							<string>mainWindow</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">indicator</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mainWindow</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
