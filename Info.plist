@@ -86,9 +86,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleVersion</key>
-	<string>13</string>
+	<string>14</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2b</string>
+	<string>2.2</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2007-2012, Tetsuro KURITA</string>
 	<key>CFBundleGetInfoString</key>
