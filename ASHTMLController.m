@@ -25,11 +25,14 @@ static ASHTMLController *sharedInstance = nil;
 
 - (id)init
 {
-	self = [super init];
-	if (self) {
-		self.script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
+	if (!sharedInstance) {
+		self = [super init];
+		if (self) {
+			self.script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
+		}
+		sharedInstance = self;
 	}
-	return self;
+	return sharedInstance;
 }
 
 - (void)dealloc
