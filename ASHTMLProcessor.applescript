@@ -4,7 +4,6 @@ global TemplateProcessor
 global HTMLElement
 global DefaultsManager
 global XFile
-global SheetManager
 global EditorController
 global FileController
 
