@@ -12,7 +12,6 @@
 			buildActionMask = 2147483647;
 			contextName = "";
 			files = (
-				257572C5072881A4000BE9CA /* AppleScriptHTML.applescript in AppleScript */,
 				2C4D2C870EC99CCE00D09C32 /* ASHTML.applescript in AppleScript */,
 				2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */,
 				2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */,
@@ -20,6 +19,7 @@
 				2C6A28B60EFDF71600624BDC /* EditorController.applescript in AppleScript */,
 				2C6A28BC0EFDF77500624BDC /* FileController.applescript in AppleScript */,
 				2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in AppleScript */,
+				2CD1AEC7156D187C006B64CA /* AppleScriptHTML.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,7 +27,6 @@
 /* End PBXAppleScriptBuildPhase section */
 
 /* Begin PBXBuildFile section */
-		257572C5072881A4000BE9CA /* AppleScriptHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		257572C7072881A4000BE9CA /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		257572CA072881A4000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -64,6 +63,7 @@
 		2CC5C807108C5C2B0037A04C /* StringExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EBB0ECA7FF700C73295 /* StringExtra.m */; };
 		2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
+		2CD1AEC7156D187C006B64CA /* AppleScriptHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD43184108F66620026C231 /* NSAppleEventDescriptor+NDScriptData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */; };
@@ -648,7 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -677,7 +677,7 @@
 					"$(ARCHS_STANDARD_32_64_BIT)",
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",

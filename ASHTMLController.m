@@ -81,6 +81,7 @@ static ASHTMLController *sharedInstance = nil;
 
 - (NSAppleEventDescriptor *)runHandlerWithName:(NSString *)handler
 									arguments:(NSArray *)args
+									sender:(id)sender
 {
 	NSDictionary *error_info = nil;
 	NSAppleEventDescriptor *result = 
@@ -121,7 +122,7 @@ static ASHTMLController *sharedInstance = nil;
 				break;
 		}
 		if (alert) {
-			[alert beginSheetModalForWindow:mainWindow
+			[alert beginSheetModalForWindow:[sender window]
 							  modalDelegate:nil
 							 didEndSelector:nil
 								contextInfo:nil];
@@ -133,7 +134,9 @@ static ASHTMLController *sharedInstance = nil;
 
 - (void)generateCSS:(id)sender
 {
-	NSAppleEventDescriptor *css = [self runHandlerWithName:@"generate_css" arguments:nil];
+	NSAppleEventDescriptor *css = [self runHandlerWithName:@"generate_css" 
+												 arguments:nil
+													sender:sender];
 	if (!css) return;
 		
 	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
@@ -157,7 +160,8 @@ static ASHTMLController *sharedInstance = nil;
 {
 	[self startIndicator];
 	NSAppleEventDescriptor *result = [self runHandlerWithName:@"copy_to_clipboard" 
-													arguments:nil];
+													arguments:nil
+													   sender:sender];
 	if ('reco' == [result descriptorType]) {
 		NSString *result_text = [[result descriptorForKeyword:'conT'] stringValue];
 		NSString *content_kind = [[result descriptorForKeyword:'kind'] stringValue]; 
@@ -175,7 +179,7 @@ struct LocationAndName {
 	NSString *extension;
 };
 	 
-- (struct LocationAndName)defaultLocationAndName
+- (struct LocationAndName)defaultLocationAndName:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	Boolean is_css = [user_defaults boolForKey:@"GenerateCSS"];
@@ -191,7 +195,8 @@ struct LocationAndName {
 		extension = @"css";
 	} else if (use_scripteditor) {
 		NSAppleEventDescriptor *result = [self runHandlerWithName:@"path_on_scripteditor"
-														arguments:nil];
+														arguments:nil
+														   sender:sender];
 		if ('utxt' == [result descriptorType]) {
 			NSString *path = [result stringValue];
 			default_name = [[[path lastPathComponent] 
@@ -271,8 +276,10 @@ struct LocationAndName {
 - (IBAction)saveToFile:(id)sender
 {
 	[self startIndicator];
-	NSAppleEventDescriptor *result = [self runHandlerWithName:@"save_to_file" arguments:nil];
-	struct LocationAndName default_loc_name = [self defaultLocationAndName];
+	NSAppleEventDescriptor *result = [self runHandlerWithName:@"save_to_file" 
+													arguments:nil
+													   sender:sender];
+	struct LocationAndName default_loc_name = [self defaultLocationAndName:sender];
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:default_loc_name.extension]];
 	[save_panel setCanSelectHiddenExtension:YES];
