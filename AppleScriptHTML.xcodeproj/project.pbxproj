@@ -75,8 +75,6 @@
 		2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
-		2CE61C860ECC055B00445AFE /* SmartActivate.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CE61C830ECC055B00445AFE /* SmartActivate.c */; };
-		2CE61C880ECC055B00445AFE /* SmartActivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE61C850ECC055B00445AFE /* SmartActivate.m */; };
 		2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CF3A6430ECACC4800D63AF8 /* template_sourcecode.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */; };
 		2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6410ECACC4800D63AF8 /* template_full.html */; };
@@ -595,8 +593,6 @@
 				2C535ECE0ECA81EA00C73295 /* PathExtra.m in Sources */,
 				2C9492BB0ECA99A600273C7C /* AppController.m in Sources */,
 				2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */,
-				2CE61C860ECC055B00445AFE /* SmartActivate.c in Sources */,
-				2CE61C880ECC055B00445AFE /* SmartActivate.m in Sources */,
 				2C5FCF1B0FD8B0590061CC42 /* HFSTypeUtils.m in Sources */,
 				2CC5C807108C5C2B0037A04C /* StringExtra.m in Sources */,
 				2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */,
@@ -680,7 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -709,7 +705,7 @@
 					"$(ARCHS_STANDARD_32_64_BIT)",
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
