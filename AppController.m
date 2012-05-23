@@ -55,6 +55,8 @@
 													@"scptd", @"PathExtension", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
 													@"scpt", @"PathExtension", nil], 
+		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
+												@"applescript", @"PathExtension", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
 													 @"aplt", @"CreatorCode", nil], 
 		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
@@ -126,7 +128,8 @@
 	[DonationReminder remindDonation];
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	if ([user_defaults boolForKey:@"UseScriptEditorSelection"] ) {
-		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", @"Indicator of ScriptEditor's Selection mode");
+		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
+										@"Indicator of ScriptEditor's Selection mode");
 		[user_defaults setObject:use_se_selection forKey:@"TargetScript"];
 	} else {
 		NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
@@ -183,7 +186,7 @@
 	NSOpenPanel *a_panel = [NSOpenPanel openPanel];
 	[a_panel setResolvesAliases:NO];
 	[a_panel beginSheetForDirectory:nil file:nil 
-			types:[NSArray arrayWithObjects:@"scpt", @"scptd", @"app", nil]
+			types:[NSArray arrayWithObjects:@"scpt", @"scptd", @"applescript", @"app", nil]
 			modalForWindow:mainWindow modalDelegate:self
 			didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:) 
 			contextInfo:nil];
@@ -207,7 +210,8 @@
 {
 	if ([sender state] == NSOnState) {
 		NSString *title_text;
-		NSString *target = [[NSUserDefaults standardUserDefaults] stringForKey:@"TargetScript"];
+		NSString *target = [[NSUserDefaults standardUserDefaults] 
+								stringForKey:@"TargetScript"];
 		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
 												@"Indicator of ScriptEditor's Selection mode");
 		if ([target isEqualToString:use_se_selection]) {
