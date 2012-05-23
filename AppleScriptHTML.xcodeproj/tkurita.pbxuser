@@ -1116,44 +1116,44 @@
 	};
 	2C535EB10ECA7FF700C73295 /* DropBox.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1053, 1690}}";
-			sepNavSelRange = "{2359, 0}";
-			sepNavVisRange = "{2064, 794}";
+			sepNavIntBoundsRect = "{{0, 0}, {654, 1833}}";
+			sepNavSelRange = "{590, 16}";
+			sepNavVisRange = "{376, 1019}";
 		};
 	};
 	2C535EB40ECA7FF700C73295 /* NSURL+NDCarbonUtilities.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 2534}}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 2353}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1321}";
+			sepNavVisRange = "{0, 1216}";
 		};
 	};
 	2C535EB50ECA7FF700C73295 /* NSURL+NDCarbonUtilities.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 2828}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 2600}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 862}";
+			sepNavVisRange = "{0, 773}";
 			sepNavVisRect = "{{0, 2579}, {899, 573}}";
 			sepNavWindowFrame = "{{84, 224}, {938, 646}}";
 		};
 	};
 	2C535EB60ECA7FF700C73295 /* PaletteWindowController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 658}}";
+			sepNavIntBoundsRect = "{{0, 0}, {654, 598}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1031}";
+			sepNavVisRange = "{0, 971}";
 		};
 	};
 	2C535EB70ECA7FF700C73295 /* PaletteWindowController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {792, 4060}}";
-			sepNavSelRange = "{7196, 6}";
-			sepNavVisRange = "{6583, 649}";
+			sepNavIntBoundsRect = "{{0, 0}, {922, 3835}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{54, 760}";
 		};
 	};
 	2C535EB80ECA7FF700C73295 /* PathExtra.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 508}}";
+			sepNavIntBoundsRect = "{{0, 0}, {831, 455}}";
 			sepNavSelRange = "{377, 0}";
 			sepNavVisRange = "{0, 1092}";
 			sepNavVisRect = "{{0, 0}, {899, 573}}";
@@ -1162,75 +1162,65 @@
 	};
 	2C535EB90ECA7FF700C73295 /* PathExtra.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 5838}}";
+			sepNavIntBoundsRect = "{{0, 0}, {824, 5421}}";
 			sepNavSelRange = "{5893, 17}";
-			sepNavVisRange = "{0, 845}";
+			sepNavVisRange = "{59, 786}";
 			sepNavVisRect = "{{0, 0}, {899, 573}}";
 			sepNavWindowFrame = "{{107, 203}, {938, 646}}";
 		};
 	};
 	2C535EBA0ECA7FF700C73295 /* StringExtra.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {780, 406}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 432}}";
 			sepNavSelRange = "{1181, 0}";
 			sepNavVisRange = "{0, 1187}";
 		};
 	};
 	2C535EBB0ECA7FF700C73295 /* StringExtra.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 1862}}";
-			sepNavSelRange = "{3643, 41}";
-			sepNavVisRange = "{3424, 663}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1716}}";
+			sepNavSelRange = "{3629, 208}";
+			sepNavVisRange = "{3059, 1098}";
+		};
+	};
+	2C535EBC0ECA7FF700C73295 /* WindowVisibilityController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {654, 650}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 907}";
 		};
 	};
 	2C535EBD0ECA7FF700C73295 /* WindowVisibilityController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 3878}}";
-			sepNavSelRange = "{5122, 6}";
-			sepNavVisRange = "{4691, 704}";
+			sepNavIntBoundsRect = "{{0, 0}, {796, 3861}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{101, 772}";
 			sepNavVisRect = "{{0, 0}, {835, 485}}";
 			sepNavWindowFrame = "{{222, 186}, {874, 558}}";
 		};
 	};
-	2C535EBF0ECA800800C73295 /* ColorSwitch.applescript */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {791, 530}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 483}";
-			sepNavWindowFrame = "{{15, 331}, {850, 602}}";
-		};
-	};
 	2C535EC10ECA800800C73295 /* DefaultsManager.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 1167}}";
-			sepNavSelRange = "{993, 0}";
-			sepNavVisRange = "{353, 923}";
+			sepNavIntBoundsRect = "{{0, 0}, {744, 1063}}";
+			sepNavSelRange = "{44, 0}";
+			sepNavVisRange = "{481, 795}";
 			sepNavVisRect = "{{0, 0}, {899, 573}}";
 			sepNavWindowFrame = "{{15, 287}, {938, 646}}";
 		};
 	};
-	2C535EC20ECA800800C73295 /* MessageUtility.applescript */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1043, 408}}";
-			sepNavSelRange = "{849, 13}";
-			sepNavVisRange = "{0, 894}";
-		};
-	};
 	2C535EC30ECA800800C73295 /* SheetManager.applescript */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.applescript;
+		name = SheetManager.applescript;
+		path = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/ASStudioScriptLib/SheetManager.applescript;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {746, 904}}";
+			sepNavIntBoundsRect = "{{0, 0}, {654, 937}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1035}";
+			sepNavVisRange = "{0, 968}";
 			sepNavVisRect = "{{0, 158}, {899, 573}}";
 			sepNavWindowFrame = "{{597, 116}, {938, 646}}";
-		};
-	};
-	2C535EC60ECA800800C73295 /* UtilityHandlers.applescript */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {788, 1785}}";
-			sepNavSelRange = "{829, 8}";
-			sepNavVisRect = "{{0, 295}, {788, 278}}";
-			sepNavWindowFrame = "{{15, 287}, {938, 646}}";
 		};
 	};
 	2C58AD93152353D30059F46F /* Japanese */ = {
@@ -1284,14 +1274,14 @@
 	};
 	2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 508}}";
-			sepNavSelRange = "{0, 24}";
+			sepNavIntBoundsRect = "{{0, 0}, {654, 432}}";
+			sepNavSelRange = "{151, 14}";
 			sepNavVisRange = "{0, 311}";
 		};
 	};
 	2C5FCF1A0FD8B0590061CC42 /* HFSTypeUtils.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 508}}";
+			sepNavIntBoundsRect = "{{0, 0}, {654, 432}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 162}";
 		};
@@ -1390,9 +1380,9 @@
 	};
 	2C6BE34D108C1067007BBBA7 /* History.rd */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {669, 1102}}";
-			sepNavSelRange = "{244, 0}";
-			sepNavVisRange = "{0, 858}";
+			sepNavIntBoundsRect = "{{0, 0}, {669, 1115}}";
+			sepNavSelRange = "{265, 0}";
+			sepNavVisRange = "{0, 839}";
 			sepNavWindowFrame = "{{61, 79}, {872, 752}}";
 		};
 	};

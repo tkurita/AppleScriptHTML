@@ -127,14 +127,7 @@
 		2C535EBB0ECA7FF700C73295 /* StringExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtra.m; sourceTree = "<group>"; };
 		2C535EBC0ECA7FF700C73295 /* WindowVisibilityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowVisibilityController.h; sourceTree = "<group>"; };
 		2C535EBD0ECA7FF700C73295 /* WindowVisibilityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowVisibilityController.m; sourceTree = "<group>"; };
-		2C535EBF0ECA800800C73295 /* ColorSwitch.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ColorSwitch.applescript; sourceTree = "<group>"; };
-		2C535EC00ECA800800C73295 /* CommandBuilder.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = CommandBuilder.applescript; sourceTree = "<group>"; };
 		2C535EC10ECA800800C73295 /* DefaultsManager.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = DefaultsManager.applescript; sourceTree = "<group>"; };
-		2C535EC20ECA800800C73295 /* MessageUtility.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = MessageUtility.applescript; sourceTree = "<group>"; };
-		2C535EC30ECA800800C73295 /* SheetManager.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = SheetManager.applescript; sourceTree = "<group>"; };
-		2C535EC40ECA800800C73295 /* TerminalCommander.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalCommander.applescript; sourceTree = "<group>"; };
-		2C535EC50ECA800800C73295 /* TerminalSettings.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = TerminalSettings.applescript; sourceTree = "<group>"; };
-		2C535EC60ECA800800C73295 /* UtilityHandlers.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = UtilityHandlers.applescript; sourceTree = "<group>"; };
 		2C58AD91152353930059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2C58AD92152353A10059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/PreferencesWindow.nib; sourceTree = "<group>"; };
 		2C58AD93152353D30059F46F /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -362,14 +355,7 @@
 		2C535EBE0ECA800800C73295 /* ASStudioScriptLib */ = {
 			isa = PBXGroup;
 			children = (
-				2C535EBF0ECA800800C73295 /* ColorSwitch.applescript */,
-				2C535EC00ECA800800C73295 /* CommandBuilder.applescript */,
 				2C535EC10ECA800800C73295 /* DefaultsManager.applescript */,
-				2C535EC20ECA800800C73295 /* MessageUtility.applescript */,
-				2C535EC30ECA800800C73295 /* SheetManager.applescript */,
-				2C535EC40ECA800800C73295 /* TerminalCommander.applescript */,
-				2C535EC50ECA800800C73295 /* TerminalSettings.applescript */,
-				2C535EC60ECA800800C73295 /* UtilityHandlers.applescript */,
 			);
 			path = ASStudioScriptLib;
 			sourceTree = "<group>";
