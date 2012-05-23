@@ -15,24 +15,60 @@ static ASHTMLController *sharedInstance = nil;
 
 @synthesize script;
 
-+ (id)sharedASHTMLController
++ (ASHTMLController *)sharedASHTMLController
 {
-	if (!sharedInstance) {
-		sharedInstance = [[self alloc] init];
+	@synchronized(self) {
+		if (sharedInstance == nil) {
+			[[self alloc] init]; // ここでは代入していない
+		}
 	}
+	
 	return sharedInstance;
 }
 
++ (id)allocWithZone:(NSZone *)zone
+{
+	@synchronized(self) {
+		if (sharedInstance == nil) {
+			sharedInstance = [super allocWithZone:zone];
+			return sharedInstance;  // 最初の割り当てで代入し、返す
+		}
+	}
+	return nil; // 以降の割り当てではnilを返すようにする
+}
+	
+- (id)copyWithZone:(NSZone *)zone
+{
+	return self;
+}
+	
+- (id)retain
+{
+	return self;
+}
+	
+- (NSUInteger)retainCount
+{
+	return UINT_MAX;  // 解放できないオブジェクトであることを示す
+}
+	
+- (void)release
+{
+	// 何もしない
+}
+	
+- (id)autorelease
+{
+	return self;
+}
+	
 - (id)init
 {
-	if (!sharedInstance) {
-		self = [super init];
-		if (self) {
-			self.script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
-		}
-		sharedInstance = self;
+	self = [super init];
+	if (sharedInstance) {
+		self.script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
 	}
-	return sharedInstance;
+	return self;
 }
 
 - (void)dealloc
