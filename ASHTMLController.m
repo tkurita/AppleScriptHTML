@@ -1,6 +1,8 @@
 #import "ASHTMLController.h"
 #import "MonitorWindowController.h"
 
+#define useLog 0
+
 @interface ASKScriptCache : NSObject
 {
 }
@@ -95,13 +97,16 @@ static ASHTMLController *sharedInstance = nil;
 			case 1500 : //No Target."
 			case 1501 : //"No action is selected." 
 			case 1502 :
+			case 1503 : //"Failed to obtain AppleScript code"
+#if useLog
 				NSLog(@"%@", error_info);
+#endif				
 				msg = NSLocalizedString(msg, @"");
-				alert = [NSAlert alertWithMessageText:msg
+				alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Error :", @"")
 										defaultButton:@"OK" 
 									alternateButton:nil 
 										otherButton:nil
-							informativeTextWithFormat:@""];
+							informativeTextWithFormat:msg];
 				
 				
 				break;
