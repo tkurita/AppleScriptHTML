@@ -1390,9 +1390,9 @@
 	};
 	2C6BE34D108C1067007BBBA7 /* History.rd */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {669, 1020}}";
-			sepNavSelRange = "{204, 0}";
-			sepNavVisRange = "{0, 890}";
+			sepNavIntBoundsRect = "{{0, 0}, {669, 1102}}";
+			sepNavSelRange = "{244, 0}";
+			sepNavVisRange = "{0, 858}";
 			sepNavWindowFrame = "{{61, 79}, {872, 752}}";
 		};
 	};
@@ -2272,6 +2272,12 @@
 		};
 	};
 	2CE61C830ECC055B00445AFE /* SmartActivate.c */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.c;
+		name = SmartActivate.c;
+		path = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/SmartActivateLib/SmartActivate.c;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {803, 1456}}";
 			sepNavSelRange = "{0, 0}";
@@ -2279,19 +2285,16 @@
 		};
 	};
 	2CE61C840ECC055B00445AFE /* SmartActivate.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = SmartActivate.h;
+		path = /Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/SmartActivateLib/SmartActivate.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {957, 432}}";
 			sepNavSelRange = "{1072, 0}";
 			sepNavVisRange = "{0, 1096}";
-		};
-	};
-	2CE61C850ECC055B00445AFE /* SmartActivate.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {654, 1170}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 759}";
-			sepNavVisRect = "{{0, 516}, {1143, 656}}";
-			sepNavWindowFrame = "{{38, 183}, {1182, 729}}";
 		};
 	};
 	2CEB827411546DCA0004966F /* PBXTextBookmark */ = {

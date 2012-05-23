@@ -196,9 +196,6 @@
 		2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHTMLController.m; sourceTree = "<group>"; };
 		2CE618AA0ECB34CD00445AFE /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CE619170ECBB9D700445AFE /* template_full_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_body.html; sourceTree = "<group>"; };
-		2CE61C830ECC055B00445AFE /* SmartActivate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SmartActivate.c; sourceTree = "<group>"; };
-		2CE61C840ECC055B00445AFE /* SmartActivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartActivate.h; sourceTree = "<group>"; };
-		2CE61C850ECC055B00445AFE /* SmartActivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartActivate.m; sourceTree = "<group>"; };
 		2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = sourcecode.applescript; path = ASHTMLProcessor.applescript; sourceTree = "<group>"; };
 		2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode.html; sourceTree = "<group>"; };
 		2CF3A6410ECACC4800D63AF8 /* template_full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full.html; sourceTree = "<group>"; };
@@ -274,7 +271,6 @@
 			children = (
 				2C6BE34D108C1067007BBBA7 /* History.rd */,
 				2CD4316A108F66380026C231 /* NDScript */,
-				2CE61C820ECC055B00445AFE /* SmartActivateLib */,
 				2CF3A6330ECACC1600D63AF8 /* Templates */,
 				2C535EAF0ECA7FF700C73295 /* CocoaLib */,
 				2C535EBE0ECA800800C73295 /* ASStudioScriptLib */,
@@ -425,16 +421,6 @@
 				2CE2488A1569349600C78D88 /* ASHTMLController.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		2CE61C820ECC055B00445AFE /* SmartActivateLib */ = {
-			isa = PBXGroup;
-			children = (
-				2CE61C830ECC055B00445AFE /* SmartActivate.c */,
-				2CE61C840ECC055B00445AFE /* SmartActivate.h */,
-				2CE61C850ECC055B00445AFE /* SmartActivate.m */,
-			);
-			path = SmartActivateLib;
 			sourceTree = "<group>";
 		};
 		2CF3A6330ECACC1600D63AF8 /* Templates */ = {
