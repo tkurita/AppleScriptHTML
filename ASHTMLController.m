@@ -99,6 +99,7 @@ static ASHTMLController *sharedInstance = nil;
 			case 1501 : //"No action is selected." 
 			case 1502 :
 			case 1503 : //"Failed to obtain AppleScript code"
+			case 1504 :
 #if useLog
 				NSLog(@"%@", error_info);
 #endif				

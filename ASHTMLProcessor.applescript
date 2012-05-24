@@ -61,7 +61,7 @@ on do given fullhtml:full_flag
 				set script_html to CodeController's markup()
 				--log (script_html's contents_ref()'s item_at(-1)'s element_name())
 			on error number 1480
-				error "No Content." number 1502
+				error "No content." number 1502
 			end try
 			
 		end if

@@ -6,6 +6,8 @@ property _target_text : missing value
 property _target_path : missing value
 
 on check_target()
+	set my _target_text to missing value
+	set my _target_path to missing value
 	return true
 end check_target
 
