@@ -20,6 +20,7 @@
 				2C6A28BC0EFDF77500624BDC /* FileController.applescript in AppleScript */,
 				2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in AppleScript */,
 				2CD1AEC7156D187C006B64CA /* AppleScriptHTML.applescript in AppleScript */,
+				2C681089156DD19A00AFDDAD /* ClipboardController.applescript in AppleScript */,
 			);
 			isSharedContext = 0;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +48,7 @@
 		2C5F544E1525BBC1005BED31 /* MainMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544A1525BBC1005BED31 /* MainMenu.strings */; };
 		2C5F544F1525BBC1005BED31 /* PreferencesWindow.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */; };
 		2C5FCF1B0FD8B0590061CC42 /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */; };
+		2C681089156DD19A00AFDDAD /* ClipboardController.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C6A28B60EFDF71600624BDC /* EditorController.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C6A28B50EFDF71600624BDC /* EditorController.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C6A28BC0EFDF77500624BDC /* FileController.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C6A28BB0EFDF77500624BDC /* FileController.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C790A06110E100400D23122 /* template_sourcecode_noscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C790A05110E100400D23122 /* template_sourcecode_noscriptlink.html */; };
@@ -136,6 +138,7 @@
 		2C5F544D1525BBC1005BED31 /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
 		2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
 		2C5FCF1A0FD8B0590061CC42 /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
+		2C681088156DD19A00AFDDAD /* ClipboardController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ClipboardController.applescript; sourceTree = "<group>"; };
 		2C6A28B50EFDF71600624BDC /* EditorController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = EditorController.applescript; sourceTree = "<group>"; };
 		2C6A28BB0EFDF77500624BDC /* FileController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FileController.applescript; sourceTree = "<group>"; };
 		2C6BE34D108C1067007BBBA7 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
@@ -224,6 +227,7 @@
 				2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */,
 				DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */,
 				2C6A28BB0EFDF77500624BDC /* FileController.applescript */,
+				2C681088156DD19A00AFDDAD /* ClipboardController.applescript */,
 				2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */,
 			);
 			name = Scripts;

@@ -18,6 +18,7 @@ property ASHTMLProcessor : missing value
 property DefaultsManager : missing value
 property EditorController : missing value
 property FileController : missing value
+property ClipboardController : missing value
 
 on import_script(script_name)
 	tell main bundle
@@ -33,6 +34,7 @@ on will finish launching theObject
 	set DefaultsManager to import_script("DefaultsManager")
 	set EditorController to import_script("EditorController")
 	set FileController to import_script("FileController")
+	set ClipboardController to import_script("ClipboardController")
 	set ScriptLinkMaker to import_script("ScriptLinkMaker")
 end will finish launching
 

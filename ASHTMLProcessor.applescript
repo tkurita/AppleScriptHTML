@@ -6,11 +6,11 @@ global DefaultsManager
 global XFile
 global EditorController
 global FileController
+global ClipboardController
 
 property _is_css : missing value
 property _is_convert : missing value
 property _is_scriptlink : missing value
-property _use_scripteditor : missing value
 
 on do given fullhtml:full_flag
 	--log "start do"
@@ -22,13 +22,16 @@ on do given fullhtml:full_flag
 	if not (_is_css or _is_convert or _is_scriptlink) then
 		error "No action is selected." number 1501
 	end if
-	set _use_scripteditor to DefaultsManager's value_for("UseScriptEditorSelection")
-	if _use_scripteditor then
+	set target_mode to DefaultsManager's value_for("TargetMode")
+	if target_mode is 0 then
+		set CodeController to FileController
+	else if target_mode is 1 then
 		--log "use Script Editor"
 		set CodeController to EditorController
 	else
-		set CodeController to FileController
+		set CodeController to ClipboardController
 	end if
+	
 	set template_name to missing value
 	if _is_css then
 		if (_is_convert) then

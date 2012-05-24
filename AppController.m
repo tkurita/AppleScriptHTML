@@ -19,14 +19,10 @@
 {
 	[[NSUserDefaultsController sharedUserDefaultsController]
 					setValue:a_path forKeyPath:@"values.TargetScript"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
-											@"Indicator of ScriptEditor's Selection mode");
-	if (![a_path isEqualToString:use_se_selection]) {
-		[[NSUserDefaults standardUserDefaults] addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
-		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
-		return YES;
-	}
-	return NO;
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	[user_defaults setObject:[NSNumber numberWithInt:0] forKey:@"TargetMode"];
+	[user_defaults addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
+	return YES;
 }
 
 #pragma mark initilize
@@ -127,17 +123,29 @@
 {
 	[DonationReminder remindDonation];
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	if ([user_defaults boolForKey:@"UseScriptEditorSelection"] ) {
-		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
-										@"Indicator of ScriptEditor's Selection mode");
-		[user_defaults setObject:use_se_selection forKey:@"TargetScript"];
-	} else {
-		NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
-		if (a_path) {
-			if (![a_path fileExists]) {
-				[user_defaults removeObjectForKey:@"TargetScript"];
+	int target_mode = [user_defaults integerForKey:@"TargetMode"];
+	NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
+	//NSString *target_script = nil;
+	switch (target_mode) {
+		case 0:
+			if (a_path) {
+				if (![a_path fileExists]) {
+					[user_defaults removeObjectForKey:@"TargetScript"];
+				}
 			}
-		}
+			break;
+		/*
+		case 1:
+			target_script = NSLocalizedString(@"ScriptEditorSelection", 
+														@"Indicator of ScriptEditor's Selection mode");
+			[user_defaults setObject:target_script forKey:@"TargetScript"];			
+			break;
+		case 2:
+			target_script = NSLocalizedString(@"ClipboardContents", 
+														@"Indicator of Clipbaord Contents mode");
+			[user_defaults setObject:target_script forKey:@"TargetScript"];
+			break;
+		*/
 	}
 	[mainWindow orderFront:self];
 }
@@ -171,10 +179,20 @@
 	[DonationReminder goToDonation];
 }
 
+- (IBAction)useClipboardContents:(id)sender
+{
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+	[user_defaults setObject:[NSNumber numberWithInt:2] forKey:@"TargetMode"];
+	NSString *target_text = NSLocalizedString(@"ClipboardContents", 
+												   @"Indicator of Clipboard Contents mode");
+	[[NSUserDefaultsController sharedUserDefaultsController]
+	 setValue:target_text forKeyPath:@"values.TargetScript"];
+}
+
 - (IBAction)useScriptEditorSelection:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults setBool:YES forKey:@"UseScriptEditorSelection"];
+	[user_defaults setObject:[NSNumber numberWithInt:1] forKey:@"TargetMode"];
 	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
 								@"Indicator of ScriptEditor's Selection mode");
 	[[NSUserDefaultsController sharedUserDefaultsController]
@@ -196,13 +214,13 @@
 {
 	NSString *a_path = [[sender selectedItem] title];
 	UInt32 is_optkey = GetCurrentEventKeyModifiers() & optionKey;
+	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	if ((!is_optkey) && [a_path fileExists]) {
 		[[NSUserDefaultsController sharedUserDefaultsController] 
 						setValue:a_path forKeyPath:@"values.TargetScript"];
-		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
+		[user_defaults setObject:[NSNumber numberWithInt:0] forKey:@"TargetMode"];
 	} else {
-		[[NSUserDefaults standardUserDefaults] removeFromHistory:a_path
-												forKey:@"RecentScripts"];
+		[user_defaults removeFromHistory:a_path forKey:@"RecentScripts"];
 	}
 }
 
@@ -210,13 +228,12 @@
 {
 	if ([sender state] == NSOnState) {
 		NSString *title_text;
-		NSString *target = [[NSUserDefaults standardUserDefaults] 
-								stringForKey:@"TargetScript"];
-		NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
-												@"Indicator of ScriptEditor's Selection mode");
-		if ([target isEqualToString:use_se_selection]) {
+		int target_mode = [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"];
+		if (target_mode != 0) {
 			title_text = @"";			
 		} else {
+			NSString *target = [[NSUserDefaults standardUserDefaults] 
+												stringForKey:@"TargetScript"];
 			title_text = [[target lastPathComponent] stringByDeletingPathExtension];
 		}
 		[[scriptLinkTitleComboBox cell] setObjectValue:@""];

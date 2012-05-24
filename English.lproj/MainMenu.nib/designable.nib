@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="2"/>
+			<integer value="231"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -175,7 +175,7 @@
 										<object class="NSButton" id="869975676">
 											<reference key="NSNextResponder" ref="921863335"/>
 											<int key="NSvFlags">289</int>
-											<string key="NSFrame">{{199, 1}, {80, 20}}</string>
+											<string key="NSFrame">{{58, 2}, {80, 20}}</string>
 											<reference key="NSSuperview" ref="921863335"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="33066505">
@@ -195,7 +195,7 @@
 										<object class="NSPopUpButton" id="636779103">
 											<reference key="NSNextResponder" ref="921863335"/>
 											<int key="NSvFlags">289</int>
-											<string key="NSFrame">{{181, 1}, {19, 20}}</string>
+											<string key="NSFrame">{{40, 2}, {19, 20}}</string>
 											<reference key="NSSuperview" ref="921863335"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSPopUpButtonCell" key="NSCell" id="1015913708">
@@ -275,7 +275,7 @@
 										<object class="NSButton" id="677062305">
 											<reference key="NSNextResponder" ref="921863335"/>
 											<int key="NSvFlags">289</int>
-											<string key="NSFrame">{{278, 1}, {216, 20}}</string>
+											<string key="NSFrame">{{137, 2}, {197, 20}}</string>
 											<reference key="NSSuperview" ref="921863335"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="201741301">
@@ -303,6 +303,33 @@
 											<reference key="NSSuperview" ref="921863335"/>
 											<int key="NSpiFlags">20490</int>
 											<double key="NSMaxValue">100</double>
+										</object>
+										<object class="NSButton" id="185902169">
+											<reference key="NSNextResponder" ref="921863335"/>
+											<int key="NSvFlags">289</int>
+											<string key="NSFrame">{{334, 2}, {159, 20}}</string>
+											<reference key="NSSuperview" ref="921863335"/>
+											<bool key="NSEnabled">YES</bool>
+											<object class="NSButtonCell" key="NSCell" id="564113947">
+												<int key="NSCellFlags">67239424</int>
+												<int key="NSCellFlags2">134217728</int>
+												<string key="NSContents">Clipboard Contents</string>
+												<object class="NSFont" key="NSSupport">
+													<string key="NSName">HiraKakuProN-W3</string>
+													<double key="NSSize">11</double>
+													<int key="NSfFlags">16</int>
+												</object>
+												<reference key="NSControlView" ref="185902169"/>
+												<int key="NSButtonFlags">-2036973313</int>
+												<int key="NSButtonFlags2">34</int>
+												<reference key="NSAlternateImage" ref="26"/>
+												<string key="NSAlternateContents"/>
+												<object class="NSMutableString" key="NSKeyEquivalent">
+													<characters key="NS.bytes"/>
+												</object>
+												<int key="NSPeriodicDelay">200</int>
+												<int key="NSPeriodicInterval">25</int>
+											</object>
 										</object>
 									</object>
 									<string key="NSFrame">{{2, 2}, {495, 71}}</string>
@@ -1911,6 +1938,14 @@
 					</object>
 					<int key="connectionID">733</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">useClipboardContents:</string>
+						<reference key="source" ref="844556157"/>
+						<reference key="destination" ref="185902169"/>
+					</object>
+					<int key="connectionID">738</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2006,10 +2041,11 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="17220147"/>
-							<reference ref="677062305"/>
 							<reference ref="382430833"/>
 							<reference ref="869975676"/>
 							<reference ref="636779103"/>
+							<reference ref="677062305"/>
+							<reference ref="185902169"/>
 						</object>
 						<reference key="parent" ref="372874447"/>
 					</object>
@@ -2740,6 +2776,20 @@
 						<reference key="parent" ref="0"/>
 						<string key="objectName">ASHTMLController</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">734</int>
+						<reference key="object" ref="185902169"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="564113947"/>
+						</object>
+						<reference key="parent" ref="970798030"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">735</int>
+						<reference key="object" ref="564113947"/>
+						<reference key="parent" ref="185902169"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2861,6 +2911,7 @@
 					<string>244.ImportedFromIB2</string>
 					<string>250.ImportedFromIB2</string>
 					<string>258.IBPluginDependency</string>
+					<string>258.IBViewBoundsToFrameTransform</string>
 					<string>258.ImportedFromIB2</string>
 					<string>281.IBAttributePlaceholdersKey</string>
 					<string>281.IBPluginDependency</string>
@@ -2938,6 +2989,9 @@
 					<string>729.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
+					<string>734.IBPluginDependency</string>
+					<string>734.IBViewBoundsToFrameTransform</string>
+					<string>734.ImportedFromIB2</string>
 					<string>79.IBPluginDependency</string>
 					<string>79.ImportedFromIB2</string>
 					<string>81.IBPluginDependency</string>
@@ -3067,12 +3121,12 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDVwAAwZgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCtAAAwZgAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDRQAAwZgAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCkAAAwZgAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3095,6 +3149,9 @@
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDCQAAwZgAAA</bytes>
+					</object>
 					<boolean value="YES"/>
 					<object class="NSMutableDictionary">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3183,6 +3240,11 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDCQAAwZgAAA</bytes>
+					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
@@ -3210,7 +3272,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">733</int>
+			<int key="maxID">738</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3306,11 +3368,13 @@
 							<string>selectTarget:</string>
 							<string>showMonitorWindow:</string>
 							<string>showSettingWindow:</string>
+							<string>useClipboardContents:</string>
 							<string>useFileName:</string>
 							<string>useScriptEditorSelection:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3329,6 +3393,7 @@
 							<string>selectTarget:</string>
 							<string>showMonitorWindow:</string>
 							<string>showSettingWindow:</string>
+							<string>useClipboardContents:</string>
 							<string>useFileName:</string>
 							<string>useScriptEditorSelection:</string>
 						</object>
@@ -3352,6 +3417,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">showSettingWindow:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">useClipboardContents:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
