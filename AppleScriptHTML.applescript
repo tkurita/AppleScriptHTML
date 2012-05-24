@@ -21,10 +21,8 @@ property FileController : missing value
 property ClipboardController : missing value
 
 on import_script(script_name)
-	tell main bundle
-		set script_path to path for script script_name extension "scpt"
-	end tell
-	return load script POSIX file script_path
+	set script_path to path to resource script_name & ".scpt" in directory "Scripts"
+	return load script script_path
 end import_script
 
 on will finish launching theObject
