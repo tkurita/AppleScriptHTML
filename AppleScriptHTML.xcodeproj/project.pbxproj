@@ -68,9 +68,6 @@
 		2CD1AEC7156D187C006B64CA /* AppleScriptHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* AppleScriptHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
-		2CD43184108F66620026C231 /* NSAppleEventDescriptor+NDScriptData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43179108F66380026C231 /* NSAppleEventDescriptor+NDScriptData.m */; };
-		2CD43186108F66900026C231 /* NSURL+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43181108F66380026C231 /* NSURL+NDCarbonUtilities.m */; };
-		2CD43187108F66A00026C231 /* NDProgrammerUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43170108F66380026C231 /* NDProgrammerUtilities.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
 		2CE2488B1569349600C78D88 /* ASHTMLController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE248891569349600C78D88 /* ASHTMLController.h */; };
@@ -572,9 +569,6 @@
 				2C5FCF1B0FD8B0590061CC42 /* HFSTypeUtils.m in Sources */,
 				2CC5C807108C5C2B0037A04C /* StringExtra.m in Sources */,
 				2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */,
-				2CD43184108F66620026C231 /* NSAppleEventDescriptor+NDScriptData.m in Sources */,
-				2CD43186108F66900026C231 /* NSURL+NDCarbonUtilities.m in Sources */,
-				2CD43187108F66A00026C231 /* NDProgrammerUtilities.m in Sources */,
 				2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */,
 				2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */,
 				2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */,
@@ -652,7 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -681,7 +675,7 @@
 					"$(ARCHS_STANDARD_32_64_BIT)",
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
