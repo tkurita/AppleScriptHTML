@@ -50,7 +50,7 @@ static NSString *windowName = @"MonitorWindow";
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
 				contextInfo:(void *)contextInfo
 {
-	if (returnCode == NSCancelButton) return;
+	if (returnCode != NSOKButton) return;
 	NSError *error = nil;
 	NSString *string = [monitorTextView string];
 	NSString *file = [sheet filename];

@@ -231,7 +231,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2C474BCE1573C1B6007F8992</string>
+						<string>2C474BE51573C5F9007F8992</string>
 						<key>history</key>
 						<array>
 							<string>2C474BA31573C0CA007F8992</string>
@@ -329,6 +329,10 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>2CE618A90ECB34CD00445AFE</string>
 								<string>29B97318FDCFA39411CA2CEA</string>
+								<string>29B97323FDCFA39411CA2CEA</string>
+								<string>1058C7A0FEA54F0111CA2CBB</string>
+								<string>DA206CF1015C4E2903C91932</string>
+								<string>2C474B851573BE34007F8992</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
@@ -337,14 +341,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>34</integer>
-									<integer>32</integer>
-									<integer>24</integer>
+									<integer>16</integer>
+									<integer>6</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 336}, {273, 523}}</string>
+							<string>{{0, 36}, {273, 523}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -475,7 +478,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2C474BCD1573C1B6007F8992</string>
+										<string>2C474BE41573C5F9007F8992</string>
 										<key>history</key>
 										<array>
 											<string>2CC5C8A2108C83650037A04C</string>
@@ -524,19 +527,19 @@
 											<string>2C26681E156DFE860067F563</string>
 											<string>2CE2868F156E19AC00C30029</string>
 											<string>2CE28690156E19AC00C30029</string>
-											<string>2CE28692156E19AC00C30029</string>
 											<string>2CE28695156E19AC00C30029</string>
 											<string>2C9C8DBD15727BC4007F0BE5</string>
 											<string>2C9C8DBE15727BC4007F0BE5</string>
-											<string>2C474BA81573C11F007F8992</string>
 											<string>2C474BA91573C11F007F8992</string>
 											<string>2C474BAA1573C11F007F8992</string>
 											<string>2C474BAB1573C11F007F8992</string>
 											<string>2C474BAC1573C11F007F8992</string>
 											<string>2C474BAD1573C11F007F8992</string>
 											<string>2C474BC21573C177007F8992</string>
-											<string>2C474BCA1573C1B6007F8992</string>
-											<string>2C474BCC1573C1B6007F8992</string>
+											<string>2C474BE01573C5F9007F8992</string>
+											<string>2C474BE11573C5F9007F8992</string>
+											<string>2C474BE21573C5F9007F8992</string>
+											<string>2C474BE31573C5F9007F8992</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -756,11 +759,11 @@
 	<array>
 		<string>2C474BBB1573C13C007F8992</string>
 		<string>2C474BBC1573C13C007F8992</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>2C87B4F30EDA4EB1006B8DB3</string>
 		<string>2C474BB01573C11F007F8992</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/tkurita/Dev/Projects/AppleScriptHTML/AppleScriptHTML/trunk/AppleScriptHTML.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -1067,7 +1070,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D57069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
