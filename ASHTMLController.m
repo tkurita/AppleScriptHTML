@@ -242,7 +242,7 @@ struct LocationAndName {
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
 			contextInfo:(void *)contextInfo
 {
-	if (returnCode == NSAlertOtherReturn) return;
+	if (returnCode != NSAlertDefaultReturn) return;
 	NSError *error = nil;
 	NSString *file = [sheet filename];
 	NSAppleEventDescriptor *html_rec = [(NSAppleEventDescriptor *)contextInfo autorelease];
