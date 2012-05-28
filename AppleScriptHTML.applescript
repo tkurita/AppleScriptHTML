@@ -25,7 +25,7 @@ on import_script(script_name)
 	return load script script_path
 end import_script
 
-on will finish launching theObject
+on setup_modules()
 	set ASHTML to import_script("ASHTML")
 	set ASFormattingStyle to import_script("ASFormattingStyle")
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
@@ -34,29 +34,11 @@ on will finish launching theObject
 	set FileController to import_script("FileController")
 	set ClipboardController to import_script("ClipboardController")
 	set ScriptLinkMaker to import_script("ScriptLinkMaker")
-end will finish launching
+end setup_modules
 
-on launched theObject
-	(*
-	set formats to call method "styles" of class "ASFormatting"
-	log formats
-	set a_list to call method "styleNames" of class "ASFormatting"
-	log a_list
-	--display dialog item 1 of a_list
-	log length of formats
-	log length of a_list
-	log (call method "styleRunsForSource:" of class "ASFormatting" with parameter "display dialog {1,2,3} as string")
-	
-	set a_script to call method "importScript" of class "ScriptLoader"
-	set a_script2 to call method "onemore" of class "ScriptLoader"
-	set a_script's _message to "hello"
-	log a_script's _message
-	log a_script2's _message
-	*)
-	--ASHTML's initialize()
-	--log ASHTML's process_text("tell hello" & return & "display dialog {1,2,3} as text" & return & "beep" & return & "end tell", true)
-	
-end launched
+on will finish launching theObject
+	setup_modules()
+end will finish launching
 
 on save_to_file()
 	return ASHTMLProcessor's save_to_file()

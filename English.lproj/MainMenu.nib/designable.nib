@@ -3012,7 +3012,6 @@
 							<int key="appleScriptScriptScope">0</int>
 							<object class="NSArray" key="appleScriptEventHandlerNames">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<string>DidFinishLaunching</string>
 								<string>WillFinishLaunching</string>
 							</object>
 							<string key="appleScriptScriptName">AppleScriptHTML.applescript</string>
@@ -3525,13 +3524,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">NDScript/NSAppleEventDescriptor+NDScriptData.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
