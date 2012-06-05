@@ -64,37 +64,7 @@ static ASHTMLController *sharedInstance = nil;
 	return self;
 }
 	
-- (id)init
-{
-	self = [super init];
-	if (sharedInstance) {
-		/*self.script = [[ASKScriptCache sharedScriptCache] 
-									scriptWithName:@"AppleScriptHTML"];
-		 */
-		
-		/*
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"AppleScriptHTML"
-												ofType:@"scpt" inDirectory:@"Scripts"];
-		
-		
-		NSDictionary *err_info = nil;
-		script = [[OSAScript alloc] initWithContentsOfURL:
-									[NSURL fileURLWithPath:path]
-												error:&err_info];
-		
-		[script executeHandlerWithName:@"setup_modules"
-							 arguments:nil error:&err_info];
-		if (err_info) {
-			NSLog(@"Error : %@", [err_info description]);
-			NSLog(@"%@", err_info);
-			[NSApp activateIgnoringOtherApps:YES];
-			NSRunAlertPanel(nil, [err_info objectForKey:OSAScriptErrorMessage], 
-							@"OK", nil, nil);
-		}
-		 */
-	}
-	return self;
-}
+
 
 - (void)dealloc
 {
