@@ -1259,12 +1259,6 @@
 				</object>
 				<string key="NSName">_NSMainMenu</string>
 			</object>
-			<object class="ASKNibObjectInfoManager" id="849233141">
-				<string key="$0"/>
-				<object class="NSMutableArray" key="$1">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-			</object>
 			<object class="NSUserDefaultsController" id="640962847">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
@@ -2537,15 +2531,6 @@
 						<reference key="parent" ref="28997960"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">226</int>
-						<reference key="object" ref="849233141"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">AppleScript Info</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">244</int>
 						<reference key="object" ref="640962847"/>
 						<reference key="parent" ref="0"/>
@@ -2871,7 +2856,6 @@
 					<string>21.ImportedFromIB2</string>
 					<string>21.windowTemplate.hasMinSize</string>
 					<string>21.windowTemplate.minSize</string>
-					<string>226.ImportedFromIB2</string>
 					<string>229.IBPluginDependency</string>
 					<string>229.ImportedFromIB2</string>
 					<string>23.IBPluginDependency</string>
@@ -3096,7 +3080,6 @@
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<string>{533, 290}</string>
-					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
