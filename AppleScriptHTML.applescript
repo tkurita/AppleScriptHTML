@@ -21,11 +21,15 @@ property FileController : missing value
 property ClipboardController : missing value
 
 on import_script(script_name)
-	set script_path to path to resource script_name & ".scpt" in directory "Scripts"
+	--set script_path to path to resource (script_name & ".scpt") in directory "Scripts"
+	tell main bundle
+		set script_path to path for script script_name extension "scpt"
+	end tell
 	return load script script_path
 end import_script
 
 on setup_modules()
+	--log "start setup_modules"
 	set ASHTML to import_script("ASHTML")
 	set ASFormattingStyle to import_script("ASFormattingStyle")
 	set ASHTMLProcessor to import_script("ASHTMLProcessor")
@@ -34,11 +38,8 @@ on setup_modules()
 	set FileController to import_script("FileController")
 	set ClipboardController to import_script("ClipboardController")
 	set ScriptLinkMaker to import_script("ScriptLinkMaker")
+	--log "end setup_modules"
 end setup_modules
-
-on will finish launching theObject
-	setup_modules()
-end will finish launching
 
 on save_to_file()
 	return ASHTMLProcessor's save_to_file()

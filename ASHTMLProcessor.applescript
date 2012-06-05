@@ -13,7 +13,6 @@ property _is_convert : missing value
 property _is_scriptlink : missing value
 
 on do given fullhtml:full_flag
-	--log "start do"
 	ASHTML's initialize()
 	set content_type to "html"
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
@@ -31,7 +30,6 @@ on do given fullhtml:full_flag
 	else
 		set CodeController to ClipboardController
 	end if
-	
 	set template_name to missing value
 	if _is_css then
 		if (_is_convert) then
@@ -50,7 +48,6 @@ on do given fullhtml:full_flag
 			set template_name to "template_sourcecode.html"
 		end if
 	end if
-	
 	if (_is_convert or _is_scriptlink) then
 		if not CodeController's check_target() then
 			return missing value
@@ -94,9 +91,11 @@ on do given fullhtml:full_flag
 			end if
 		end if
 	end if
-	
 	if template_name is not missing value then
-		set template_file to path to resource template_name
+		tell main bundle
+			set template_file to path for resource template_name
+		end tell
+		--set template_file to path to resource template_name
 		set a_template to TemplateProcessor's make_with_file(template_file)
 		if (_is_convert) then a_template's insert_text("$BODY", script_html's as_unicode())
 		if (_is_css) then
@@ -104,7 +103,10 @@ on do given fullhtml:full_flag
 			a_template's insert_text("$TITLE", doc_name)
 		else
 			if full_flag then
-				set template_file to path to resource "template_full_body.html"
+				--set template_file to path to resource "template_full_body.html"
+				tell main bundle
+					set template_file to path for resource "template_full_body.html"
+				end tell
 				set a_template2 to TemplateProcessor's make_with_file(template_file)
 				a_template2's insert_text("$BODY", a_template's as_unicode())
 				a_template2's insert_text("$TITLE", doc_name)
@@ -130,20 +132,25 @@ on do given fullhtml:full_flag
 			end if
 			
 			if full_flag then
-				set template_file to path to resource "template_full_body.html"
+				--set template_file to path to resource "template_full_body.html"
+				tell main bundle
+					set template_file to path for resource "template_full_body.html"
+				end tell
 				set a_template to TemplateProcessor's make_with_file(template_file)
 				a_template's insert_text("$BODY", a_result's as_unicode())
 				a_template's insert_text("$TITLE", doc_name)
 				set a_result to a_template
 			else if CodeController's is_multiparagraph() then
-				set template_file to path to resource "template_sourcecode_noscriptlink.html"
+				--set template_file to path to resource "template_sourcecode_noscriptlink.html"
+				tell main bundle
+					set template_file to path for resource "template_sourcecode_noscriptlink.html"
+				end tell
 				set a_template to TemplateProcessor's make_with_file(template_file)
 				a_template's insert_text("$BODY", a_result's as_unicode())
 				set a_result to a_template
 			end if
 		end if
 	end if
-	
 	return {content:a_result, kind:content_type}
 end do
 

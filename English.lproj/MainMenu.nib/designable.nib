@@ -12,7 +12,6 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="231"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -48,7 +47,7 @@
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<string key="NSWindowContentMinSize">{533, 290}</string>
 				<object class="NSView" key="NSWindowView" id="372874447">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -175,7 +174,7 @@
 										<object class="NSButton" id="869975676">
 											<reference key="NSNextResponder" ref="921863335"/>
 											<int key="NSvFlags">289</int>
-											<string key="NSFrame">{{58, 2}, {80, 20}}</string>
+											<string key="NSFrame">{{59, 2}, {80, 20}}</string>
 											<reference key="NSSuperview" ref="921863335"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="33066505">
@@ -275,7 +274,7 @@
 										<object class="NSButton" id="677062305">
 											<reference key="NSNextResponder" ref="921863335"/>
 											<int key="NSvFlags">289</int>
-											<string key="NSFrame">{{137, 2}, {197, 20}}</string>
+											<string key="NSFrame">{{138, 2}, {197, 20}}</string>
 											<reference key="NSSuperview" ref="921863335"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSButtonCell" key="NSCell" id="201741301">
@@ -729,7 +728,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{533, 290}</string>
-					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMinSize">{533, 312}</string>
@@ -3004,18 +3002,10 @@
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSMutableDictionary">
-						<string key="NS.key.0">IBAppleScriptAttributeName</string>
-						<object class="IBAppleScriptInfoAttribute" key="NS.object.0">
-							<string key="name">IBAppleScriptAttributeName</string>
-							<reference key="object" ref="404847655"/>
-							<int key="appleScriptObjectID">-1</int>
-							<int key="appleScriptScriptScope">0</int>
-							<object class="NSArray" key="appleScriptEventHandlerNames">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<string>WillFinishLaunching</string>
-							</object>
-							<string key="appleScriptScriptName">AppleScriptHTML.applescript</string>
-							<string key="appleScriptObjectName"/>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<reference key="dict.sortedKeys" ref="0"/>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

@@ -68,7 +68,30 @@ static ASHTMLController *sharedInstance = nil;
 {
 	self = [super init];
 	if (sharedInstance) {
-		self.script = [[ASKScriptCache sharedScriptCache] scriptWithName:@"AppleScriptHTML"];
+		/*self.script = [[ASKScriptCache sharedScriptCache] 
+									scriptWithName:@"AppleScriptHTML"];
+		 */
+		
+		/*
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"AppleScriptHTML"
+												ofType:@"scpt" inDirectory:@"Scripts"];
+		
+		
+		NSDictionary *err_info = nil;
+		script = [[OSAScript alloc] initWithContentsOfURL:
+									[NSURL fileURLWithPath:path]
+												error:&err_info];
+		
+		[script executeHandlerWithName:@"setup_modules"
+							 arguments:nil error:&err_info];
+		if (err_info) {
+			NSLog(@"Error : %@", [err_info description]);
+			NSLog(@"%@", err_info);
+			[NSApp activateIgnoringOtherApps:YES];
+			NSRunAlertPanel(nil, [err_info objectForKey:OSAScriptErrorMessage], 
+							@"OK", nil, nil);
+		}
+		 */
 	}
 	return self;
 }
@@ -79,13 +102,55 @@ static ASHTMLController *sharedInstance = nil;
 	[super dealloc];
 }
 
+
+void showError(NSDictionary *err_info)
+{
+	NSLog(@"Error : %@", [err_info description]);
+	NSLog(@"%@", err_info);
+	[NSApp activateIgnoringOtherApps:YES];
+	NSRunAlertPanel(nil, [err_info objectForKey:OSAScriptErrorMessage], 
+					@"OK", nil, nil);	
+}
+
+- (OSAScript *)script
+{
+	if (script) {
+		return script;
+	}
+	
+	NSDictionary *err_info = nil;	
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"AppleScriptHTML"
+										 ofType:@"scpt" inDirectory:@"Scripts"];
+		
+	OSAScript *scpt = [[OSAScript alloc] initWithContentsOfURL:
+						[NSURL fileURLWithPath:path] error:&err_info];
+		
+	if (err_info) {
+		showError(err_info);
+		if (scpt) [scpt release];
+		return nil;
+	}
+		
+	[scpt executeHandlerWithName:@"setup_modules"
+						 arguments:nil error:&err_info];
+	if (err_info) {
+		showError(err_info);
+		if (scpt) [scpt release];
+	}
+	script = scpt;
+	return script;
+}
+
 - (NSAppleEventDescriptor *)runHandlerWithName:(NSString *)handler
 									arguments:(NSArray *)args
 									sender:(id)sender
 {
+	OSAScript *scpt = [self script];
+	if (!scpt) return nil;
+	
 	NSDictionary *error_info = nil;
 	NSAppleEventDescriptor *result = 
-	[script executeHandlerWithName:handler
+			[scpt executeHandlerWithName:handler
 							  arguments:args error:&error_info];
 	if (error_info) {
 		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
