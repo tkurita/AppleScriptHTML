@@ -1,4 +1,3 @@
-global ASHTML
 global XFile
 
 property _target_text : missing value
@@ -26,9 +25,9 @@ end check_target
 
 on markup()
 	--log "start markup in EditorController"
-	ASHTML's set_wrap_with_block(false)
-	set a_result to ASHTML's process_document(front document of application id "com.apple.ScriptEditor2")
-	set my _target_text to ASHTML's target_text()
+	my _ashtml's set_wrap_with_block(false)
+	set a_result to my _ashtml's process_document(front document of application id "com.apple.ScriptEditor2")
+	set my _target_text to my _ashtml's target_text()
 	return a_result
 end markup
 
@@ -62,3 +61,13 @@ end doc_name
 on is_multiparagraph()
 	return (count paragraphs of target_text()) > 1
 end is_multiparagraph
+
+on make_with(an_ashtml)
+	set self to me
+	script EditorControllerCore
+		property parent : self
+		property _ashtml : an_ashtml
+		property _target_text : missing value
+	end script
+	return result
+end make_with

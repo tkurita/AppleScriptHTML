@@ -1,5 +1,3 @@
-global ASHTML
-
 property _target_text : missing value
 
 on check_target() -- required
@@ -9,9 +7,9 @@ end check_target
 
 on markup() -- required
 	--log "start markup in ClipboardController"
-	ASHTML's set_wrap_with_block(false)
+	my _ashtml's set_wrap_with_block(false)
 	set a_text to target_text()
-	set a_result to ASHTML's process_text(a_text, false)
+	set a_result to my _ashtml's process_text(a_text, false)
 	--log "end markup in ClipboardController"
 	return a_result
 end markup
@@ -36,3 +34,13 @@ end doc_name
 on is_multiparagraph() -- required
 	return (count paragraphs of target_text()) > 1
 end is_multiparagraph
+
+on make_with(an_ashtml)
+	set self to me
+	script ClipboardControllerCore
+		property parent : self
+		property _ashtml : an_ashtml
+		property _target_text : missing value
+	end script
+	return result
+end make_with

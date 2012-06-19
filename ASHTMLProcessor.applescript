@@ -13,7 +13,8 @@ property _is_convert : missing value
 property _is_scriptlink : missing value
 
 on do given fullhtml:full_flag
-	ASHTML's initialize()
+	--ASHTML's initialize()
+	set an_ashtml to make ASHTML
 	set content_type to "html"
 	set _is_css to DefaultsManager's value_for("GenerateCSS")
 	set _is_convert to DefaultsManager's value_for("CodeToHTML")
@@ -23,12 +24,12 @@ on do given fullhtml:full_flag
 	end if
 	set target_mode to DefaultsManager's value_for("TargetMode")
 	if target_mode is 0 then
-		set CodeController to FileController
+		set CodeController to FileController's make_with(an_ashtml)
 	else if target_mode is 1 then
 		--log "use Script Editor"
-		set CodeController to EditorController
+		set CodeController to EditorController's make_with(an_ashtml)
 	else
-		set CodeController to ClipboardController
+		set CodeController to ClipboardController's make_with(an_ashtml)
 	end if
 	set template_name to missing value
 	if _is_css then
@@ -99,7 +100,7 @@ on do given fullhtml:full_flag
 		set a_template to TemplateProcessor's make_with_file(template_file)
 		if (_is_convert) then a_template's insert_text("$BODY", script_html's as_unicode())
 		if (_is_css) then
-			a_template's insert_text("$CSS", ASHTML's css_as_unicode())
+			a_template's insert_text("$CSS", an_ashtml's css_as_unicode())
 			a_template's insert_text("$TITLE", doc_name)
 		else
 			if full_flag then
@@ -122,7 +123,7 @@ on do given fullhtml:full_flag
 		set a_result to a_template
 	else
 		if _is_css then
-			set a_result to ASHTML's formatting_style()'s as_css()
+			set a_result to an_ashtml's formatting_style()'s as_css()
 			set content_type to "css"
 		else
 			if _is_scriptlink then

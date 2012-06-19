@@ -1,4 +1,3 @@
-global ASHTML
 global XFile
 global DefaultsManager
 
@@ -13,10 +12,10 @@ end check_target
 
 on markup()
 	--log "start markup in FileController"
-	ASHTML's set_wrap_with_block(false)
+	my _ashtml's set_wrap_with_block(false)
 	set my _target_path to DefaultsManager's value_for("TargetScript")
-	set a_result to ASHTML's process_file(my _target_path, false)
-	set my _target_text to ASHTML's target_text()
+	set a_result to my _ashtml's process_file(my _target_path, false)
+	set my _target_text to my _ashtml's target_text()
 	--log "end markup in FileController"
 	return a_result
 end markup
@@ -46,3 +45,14 @@ end doc_name
 on is_multiparagraph()
 	return true
 end is_multiparagraph
+
+on make_with(an_ashtml)
+	set self to me
+	script FileControllerCore
+		property parent : self
+		property _ashtml : an_ashtml
+		property _target_text : missing value
+		property _target_path : missing value
+	end script
+	return result
+end make_with
