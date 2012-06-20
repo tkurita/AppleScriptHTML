@@ -708,13 +708,13 @@
 						<object class="NSTextField" id="920885652">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{196, 163}, {103, 22}}</string>
+							<string key="NSFrame">{{189, 164}, {118, 22}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="845235768">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">71303168</int>
-								<string key="NSContents"> Style Sheet :</string>
+								<string key="NSContents">Style Sheet :</string>
 								<reference key="NSSupport" ref="930020665"/>
 								<reference key="NSControlView" ref="920885652"/>
 								<reference key="NSBackgroundColor" ref="564352686"/>
@@ -724,7 +724,7 @@
 						<object class="NSPopUpButton" id="614854014">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{301, 162}, {208, 26}}</string>
+							<string key="NSFrame">{{309, 162}, {200, 26}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPopUpButtonCell" key="NSCell" id="476694711">
@@ -2061,8 +2061,8 @@
 							<reference ref="245085828"/>
 							<reference ref="443703146"/>
 							<reference ref="1043102028"/>
-							<reference ref="920885652"/>
 							<reference ref="614854014"/>
+							<reference ref="920885652"/>
 						</object>
 						<reference key="parent" ref="1046981968"/>
 					</object>

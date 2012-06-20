@@ -55,7 +55,6 @@
 		2C85DB1715660BB20038CC9E /* Save.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB1615660BB20038CC9E /* Save.icns */; };
 		2C85DB1915660BBE0038CC9E /* Copy.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB1815660BBE0038CC9E /* Copy.icns */; };
 		2C85DB2D1566273C0038CC9E /* MonitorWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB2B1566273C0038CC9E /* MonitorWindow.nib */; };
-		2C85DB30156627E20038CC9E /* MonitorWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C85DB2E156627E10038CC9E /* MonitorWindowController.h */; };
 		2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85DB2F156627E20038CC9E /* MonitorWindowController.m */; };
 		2C9492BB0ECA99A600273C7C /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9492B90ECA99A600273C7C /* AppController.m */; };
 		2C9492E20ECAA18700273C7C /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9492E10ECAA18700273C7C /* DonationReminder.framework */; };
@@ -74,7 +73,6 @@
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
-		2CE2488B1569349600C78D88 /* ASHTMLController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE248891569349600C78D88 /* ASHTMLController.h */; };
 		2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */; };
 		2CE618AB0ECB34CD00445AFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE618A90ECB34CD00445AFE /* Localizable.strings */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
@@ -385,8 +383,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C85DB30156627E20038CC9E /* MonitorWindowController.h in Headers */,
-				2CE2488B1569349600C78D88 /* ASHTMLController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,9 +499,9 @@
 				"$(SRCROOT)/Japanese.lproj/MonitorWindow.strings",
 			);
 			outputPaths = (
-				"$(SRCROOT)/Japanese/MainMenu.nib",
-				"$(SRCROOT)/Japanese/PreferencesWindow.nib",
-				"$(SRCROOT)/Japanese/MonitorWindow.nib",
+				"$(SRCROOT)/Japanese.lproj/MainMenu.nib",
+				"$(SRCROOT)/Japanese.lproj/PreferencesWindow.nib",
+				"$(SRCROOT)/Japanese.lproj/MonitorWindow.nib",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -604,7 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -633,7 +629,7 @@
 					"$(ARCHS_STANDARD_32_64_BIT)",
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
