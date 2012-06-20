@@ -4,8 +4,6 @@
 <dict>
 	<key>CodeToHTML</key>
 	<true/>
-	<key>GenerateCSS</key>
-	<true/>
 	<key>HistoryMax</key>
 	<integer>20</integer>
 	<key>MakeScriptLink</key>
@@ -14,6 +12,8 @@
 	<true/>
 	<key>TargetMode</key>
 	<integer>1</integer>
+	<key>CSSModeIndex</key>
+	<integer>0</integer>
 	<key>ObtainScriptLinkTitleFromFilename</key>
 	<true/>
 	<key>ScriptLinkModeIndex</key>
