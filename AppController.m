@@ -62,7 +62,7 @@
 	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
 		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
 		[a_cell setObjectValue:@""];
-		if (![user_defaults boolForKey:@"UseScriptEditorSelection"] ) {
+		if (0 == [user_defaults integerForKey:@"TargetMode"]) {
 			NSString *target = [user_defaults stringForKey:@"TargetScript"];
 			[a_cell setPlaceholderString:[[target lastPathComponent] stringByDeletingPathExtension]];
 		}
@@ -86,7 +86,7 @@
 		NSDictionary *alias_info = [a_path infoResolvingAliasFile];
 		if (alias_info) {
 			[self setTargetScript:[alias_info objectForKey:@"ResolvedPath"] ];
-			[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"UseScriptEditorSelection"];
+			[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
 		} else {
 			[panel orderOut:self];
 			NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"

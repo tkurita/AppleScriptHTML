@@ -3,7 +3,6 @@ global ASHTML
 global TemplateProcessor
 global HTMLElement
 global DefaultsManager
-global XFile
 global EditorController
 global FileController
 global ClipboardController

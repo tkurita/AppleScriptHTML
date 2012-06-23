@@ -198,7 +198,7 @@ void showError(NSDictionary *err_info)
 	NSAppleEventDescriptor *result = [self runHandlerWithName:@"copy_to_clipboard" 
 													arguments:nil
 													   sender:sender];
-	if ('reco' == [result descriptorType]) {
+	if (result && ('reco' == [result descriptorType])) {
 		NSString *result_text = [[result descriptorForKeyword:'conT'] stringValue];
 		NSString *content_kind = [[result descriptorForKeyword:'kind'] stringValue]; 
 		NSPasteboard *pboard = [NSPasteboard generalPasteboard];
@@ -218,22 +218,22 @@ struct LocationAndName {
 - (struct LocationAndName)defaultLocationAndName:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	Boolean is_css = [user_defaults boolForKey:@"GenerateCSS"];
+	int css_mode_index = [user_defaults integerForKey:@"CSSModeIndex"];
 	Boolean is_convert = [user_defaults boolForKey:@"CodeToHTML"];
 	Boolean is_scriptlink = [user_defaults boolForKey:@"MakeScriptLink"];
 	Boolean is_save_to_souce_location = [user_defaults boolForKey:@"SaveToSourceLocation"];
-	Boolean use_scripteditor = [user_defaults boolForKey:@"UseScriptEditorSelection"];
+	int target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *default_name = nil;
 	NSString *default_location = nil;
 	NSString *extension = @"html";
-	if (is_css && (!(is_convert || is_scriptlink))) {
+	if ((css_mode_index == 0) && (!(is_convert || is_scriptlink))) {
 		default_name = @"AppleScript.css";
 		extension = @"css";
-	} else if (use_scripteditor) {
+	} else if (target_mode == 1) { // target is script editor's selection
 		NSAppleEventDescriptor *result = [self runHandlerWithName:@"path_on_scripteditor"
 														arguments:nil
 														   sender:sender];
-		if ('utxt' == [result descriptorType]) {
+		if (result && ('utxt' == [result descriptorType])) {
 			NSString *path = [result stringValue];
 			default_name = [[[path lastPathComponent] 
 									stringByDeletingPathExtension]
@@ -245,6 +245,9 @@ struct LocationAndName {
 			default_name = @"AppleScript HTML.html";
 		}
 		
+	} else if (target_mode == 2) { // clipbpoard
+		default_name = @"Clipboard.html";
+		extension = @"html";	
 	} else {
 		NSString *path = [user_defaults stringForKey:@"TargetScript"];
 		default_name = [[[path lastPathComponent] 
@@ -318,6 +321,10 @@ struct LocationAndName {
 	NSAppleEventDescriptor *result = [self runHandlerWithName:@"save_to_file" 
 													arguments:nil
 													   sender:sender];
+	if (!result) {
+		[self stopIndicator];
+		return;
+	}
 	struct LocationAndName default_loc_name = [self defaultLocationAndName:sender];
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:default_loc_name.extension]];
@@ -328,8 +335,6 @@ struct LocationAndName {
 						 modalDelegate:self
 						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
 						   contextInfo:[result retain]];
-	
-	//[self stopIndicator];
 }
 
 @end
