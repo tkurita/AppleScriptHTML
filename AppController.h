@@ -15,5 +15,4 @@
 - (IBAction)useClipboardContents:(id)sender;
 - (IBAction)showMonitorWindow:(id)sender;
 - (IBAction)showSettingWindow:(id)sender;
-
 @end

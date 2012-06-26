@@ -9,7 +9,40 @@
 
 #define useLog 0
 
+@interface IsCSSGenerateTransformer : NSValueTransformer
+{}
+@end
+
+@implementation IsCSSGenerateTransformer
+
++ (Class)transformedValueClass
+{
+	return [NSNumber class];
+}
+
++ (BOOL)allowsReverseTransformation
+{
+	return NO;
+}
+
+- (id)transformedValue:(id)value
+{
+	
+	id css_mode_index = [[NSUserDefaultsController sharedUserDefaultsController] 
+						 valueForKeyPath:@"values.CSSModeIndex"];
+	
+	return [NSNumber numberWithBool:([css_mode_index intValue] != 2)];
+}
+
+@end
+
 @implementation AppController
+
++ (void)initialize
+{	
+	NSValueTransformer *transformer = [[[IsCSSGenerateTransformer alloc] init] autorelease];
+	[NSValueTransformer setValueTransformer:transformer forName:@"IsCSSGenerateTransformer"];
+}
 
 #pragma mark services for scripts
 
