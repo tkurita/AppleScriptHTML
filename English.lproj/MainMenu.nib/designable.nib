@@ -708,7 +708,7 @@
 						<object class="NSTextField" id="920885652">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{189, 164}, {118, 22}}</string>
+							<string key="NSFrame">{{189, 162}, {118, 22}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="845235768">
@@ -724,7 +724,7 @@
 						<object class="NSPopUpButton" id="614854014">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{309, 163}, {200, 26}}</string>
+							<string key="NSFrame">{{309, 161}, {200, 26}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPopUpButtonCell" key="NSCell" id="476694711">
@@ -1325,10 +1325,6 @@
 				<string key="NSName">_NSMainMenu</string>
 			</object>
 			<object class="NSUserDefaultsController" id="640962847">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>CSSModeIndex</string>
-				</object>
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="844556157">
@@ -1754,23 +1750,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.ScriptLinkTitle</string>
-						<reference key="source" ref="878371651"/>
-						<reference key="destination" ref="640962847"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="878371651"/>
-							<reference key="NSDestination" ref="640962847"/>
-							<string key="NSLabel">value: values.ScriptLinkTitle</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.ScriptLinkTitle</string>
-							<reference key="NSPreviousConnector" ref="271522341"/>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">360</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: values.ObtainScriptLinkTitleFromFilename</string>
 						<reference key="source" ref="245085828"/>
 						<reference key="destination" ref="640962847"/>
@@ -2008,6 +1987,27 @@
 						</object>
 					</object>
 					<int key="connectionID">767</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.ScriptLinkTitle</string>
+						<reference key="source" ref="878371651"/>
+						<reference key="destination" ref="640962847"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="878371651"/>
+							<reference key="NSDestination" ref="640962847"/>
+							<string key="NSLabel">value: values.ScriptLinkTitle</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.ScriptLinkTitle</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<reference key="NSPreviousConnector" ref="271522341"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">770</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3354,12 +3354,12 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDPQAAwzcAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDPQAAwzgAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDmoAAwzoAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDmoAAwzsAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>{{360, 622}, {233, 63}}</string>
@@ -3396,7 +3396,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">767</int>
+			<int key="maxID">770</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
