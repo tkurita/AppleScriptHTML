@@ -741,11 +741,10 @@
 								</object>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
-								<object class="NSMenuItem" key="NSMenuItem" id="739694563">
+								<object class="NSMenuItem" key="NSMenuItem" id="513473945">
 									<reference key="NSMenu" ref="10379958"/>
-									<string key="NSTitle">Internal</string>
+									<string key="NSTitle">None (Only class names)</string>
 									<string key="NSKeyEquiv"/>
-									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<int key="NSState">1</int>
 									<reference key="NSOnImage" ref="386257705"/>
@@ -760,7 +759,17 @@
 									</object>
 									<object class="NSMutableArray" key="NSMenuItems">
 										<bool key="EncodedWithXMLCoder">YES</bool>
-										<reference ref="739694563"/>
+										<object class="NSMenuItem" id="739694563">
+											<reference key="NSMenu" ref="10379958"/>
+											<string key="NSTitle">Internal</string>
+											<string key="NSKeyEquiv"/>
+											<int key="NSKeyEquivModMask">1048576</int>
+											<int key="NSMnemonicLoc">2147483647</int>
+											<reference key="NSOnImage" ref="386257705"/>
+											<reference key="NSMixedImage" ref="484514633"/>
+											<string key="NSAction">_popUpItemAction:</string>
+											<reference key="NSTarget" ref="476694711"/>
+										</object>
 										<object class="NSMenuItem" id="892092939">
 											<reference key="NSMenu" ref="10379958"/>
 											<string key="NSTitle">Inline</string>
@@ -772,18 +781,10 @@
 											<string key="NSAction">_popUpItemAction:</string>
 											<reference key="NSTarget" ref="476694711"/>
 										</object>
-										<object class="NSMenuItem" id="513473945">
-											<reference key="NSMenu" ref="10379958"/>
-											<string key="NSTitle">None (Only class names)</string>
-											<string key="NSKeyEquiv"/>
-											<int key="NSMnemonicLoc">2147483647</int>
-											<reference key="NSOnImage" ref="386257705"/>
-											<reference key="NSMixedImage" ref="484514633"/>
-											<string key="NSAction">_popUpItemAction:</string>
-											<reference key="NSTarget" ref="476694711"/>
-										</object>
+										<reference ref="513473945"/>
 									</object>
 								</object>
+								<int key="NSSelectedIndex">2</int>
 								<int key="NSPreferredEdge">3</int>
 								<bool key="NSUsesItemFromMenu">YES</bool>
 								<bool key="NSAltersState">YES</bool>
@@ -2976,6 +2977,7 @@
 					<string>229.ImportedFromIB2</string>
 					<string>23.IBPluginDependency</string>
 					<string>23.ImportedFromIB2</string>
+					<string>230.IBAttributePlaceholdersKey</string>
 					<string>230.IBPluginDependency</string>
 					<string>230.ImportedFromIB2</string>
 					<string>231.CustomClassName</string>
@@ -2983,9 +2985,11 @@
 					<string>231.ImportedFromIB2</string>
 					<string>233.IBPluginDependency</string>
 					<string>233.ImportedFromIB2</string>
+					<string>234.IBAttributePlaceholdersKey</string>
 					<string>234.IBPluginDependency</string>
 					<string>234.IBViewBoundsToFrameTransform</string>
 					<string>234.ImportedFromIB2</string>
+					<string>235.IBAttributePlaceholdersKey</string>
 					<string>235.IBPluginDependency</string>
 					<string>235.IBViewBoundsToFrameTransform</string>
 					<string>235.ImportedFromIB2</string>
@@ -3006,6 +3010,7 @@
 					<string>244.IBPluginDependency</string>
 					<string>244.ImportedFromIB2</string>
 					<string>250.ImportedFromIB2</string>
+					<string>258.IBAttributePlaceholdersKey</string>
 					<string>258.IBPluginDependency</string>
 					<string>258.IBViewBoundsToFrameTransform</string>
 					<string>258.ImportedFromIB2</string>
@@ -3021,10 +3026,13 @@
 					<string>310.ImportedFromIB2</string>
 					<string>313.IBPluginDependency</string>
 					<string>313.ImportedFromIB2</string>
+					<string>314.IBEditorWindowLastContentRect</string>
 					<string>314.IBPluginDependency</string>
 					<string>314.ImportedFromIB2</string>
+					<string>316.IBAttributePlaceholdersKey</string>
 					<string>316.IBPluginDependency</string>
 					<string>316.ImportedFromIB2</string>
+					<string>317.IBAttributePlaceholdersKey</string>
 					<string>317.IBPluginDependency</string>
 					<string>317.ImportedFromIB2</string>
 					<string>319.IBPluginDependency</string>
@@ -3034,8 +3042,10 @@
 					<string>320.ImportedFromIB2</string>
 					<string>323.IBPluginDependency</string>
 					<string>323.ImportedFromIB2</string>
+					<string>333.IBAttributePlaceholdersKey</string>
 					<string>333.IBPluginDependency</string>
 					<string>333.ImportedFromIB2</string>
+					<string>363.IBAttributePlaceholdersKey</string>
 					<string>363.IBPluginDependency</string>
 					<string>363.ImportedFromIB2</string>
 					<string>374.IBPluginDependency</string>
@@ -3087,6 +3097,7 @@
 					<string>729.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
+					<string>734.IBAttributePlaceholdersKey</string>
 					<string>734.IBPluginDependency</string>
 					<string>734.IBViewBoundsToFrameTransform</string>
 					<string>734.ImportedFromIB2</string>
@@ -3099,10 +3110,13 @@
 					<string>743.IBEditorWindowLastContentRect</string>
 					<string>743.IBPluginDependency</string>
 					<string>743.ImportedFromIB2</string>
+					<string>744.IBAttributePlaceholdersKey</string>
 					<string>744.IBPluginDependency</string>
 					<string>744.ImportedFromIB2</string>
+					<string>745.IBAttributePlaceholdersKey</string>
 					<string>745.IBPluginDependency</string>
 					<string>745.ImportedFromIB2</string>
+					<string>749.IBAttributePlaceholdersKey</string>
 					<string>749.IBPluginDependency</string>
 					<string>79.IBPluginDependency</string>
 					<string>79.ImportedFromIB2</string>
@@ -3214,6 +3228,14 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="849234226"/>
+							<string key="toolTip">The script link allow to edit the script dieplayed in the browser by the AppleScript Editor.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>DropBox</string>
@@ -3221,11 +3243,27 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="869975676"/>
+							<string key="toolTip">Choose a file as a target.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCtAAAwZgAAA</bytes>
 					</object>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="636779103"/>
+							<string key="toolTip">Recent files.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCkAAAwZgAAA</bytes>
@@ -3248,6 +3286,14 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="677062305"/>
+							<string key="toolTip">The selection in the forntmost document will be a target. If no selection in the frontmost document, all contents of the document will be a taget.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDCQAAwZgAAA</bytes>
@@ -3277,10 +3323,27 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{350, 238}, {119, 63}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="472316629"/>
+							<string key="toolTip">The script is opened in the new document in AppleScript Editor.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="724379495"/>
+							<string key="toolTip">The script is inserted at the selection in the frontmost document of AppleScript Editor.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3292,8 +3355,24 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="245085828"/>
+							<string key="toolTip">Use target file name for the title of the script link button.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="673420563"/>
+							<string key="toolTip">The script is appended to the frontmost document of AppleScript Editor.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3347,6 +3426,14 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="185902169"/>
+							<string key="toolTip">Process text in the clipboard as AppleScript code.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDCQAAwZgAAA</bytes>
@@ -3362,13 +3449,37 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABDmoAAwzsAAA</bytes>
 					</object>
 					<boolean value="YES"/>
-					<string>{{360, 622}, {233, 63}}</string>
+					<string>{{498, 322}, {233, 63}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="892092939"/>
+							<string key="toolTip">CSS is built into each tags.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="739694563"/>
+							<string key="toolTip">CSS is placed in the head element.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="513473945"/>
+							<string key="toolTip">CSS class names are built into each tag. But CSS code is not attached to the output.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
