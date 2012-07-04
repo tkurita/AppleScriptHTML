@@ -55,13 +55,13 @@
 						<object class="NSButton" id="410574995">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">289</int>
-							<string key="NSFrame">{{346, 12}, {180, 32}}</string>
+							<string key="NSFrame">{{339, 12}, {187, 32}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="851382510">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Copy to Clipboard</string>
+								<string key="NSContents">Copy to the Clipboard</string>
 								<object class="NSFont" key="NSSupport" id="930020665">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -145,7 +145,7 @@
 											<object class="NSTextFieldCell" key="NSCell" id="225129067">
 												<int key="NSCellFlags">-2078147071</int>
 												<int key="NSCellFlags2">272760832</int>
-												<string key="NSContents">the Target</string>
+												<string key="NSContents">the source</string>
 												<object class="NSFont" key="NSSupport" id="26">
 													<string key="NSName">LucidaGrande</string>
 													<double key="NSSize">11</double>
@@ -342,7 +342,7 @@
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">Target Script</string>
+								<string key="NSContents">Source Script</string>
 								<reference key="NSSupport" ref="930020665"/>
 								<reference key="NSBackgroundColor" ref="246992494"/>
 								<object class="NSColor" key="NSTextColor">
@@ -381,13 +381,13 @@
 						<object class="NSButton" id="456321273">
 							<reference key="NSNextResponder" ref="372874447"/>
 							<int key="NSvFlags">289</int>
-							<string key="NSFrame">{{159, 12}, {180, 32}}</string>
+							<string key="NSFrame">{{152, 12}, {180, 32}}</string>
 							<reference key="NSSuperview" ref="372874447"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="168675795">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Save to File</string>
+								<string key="NSContents">Save to a File</string>
 								<reference key="NSSupport" ref="930020665"/>
 								<reference key="NSControlView" ref="456321273"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -2055,12 +2055,10 @@
 						<reference key="object" ref="372874447"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="410574995"/>
 							<reference ref="727124742"/>
 							<reference ref="849234226"/>
 							<reference ref="970798030"/>
 							<reference ref="287608157"/>
-							<reference ref="456321273"/>
 							<reference ref="698820737"/>
 							<reference ref="1066205879"/>
 							<reference ref="505498204"/>
@@ -2070,6 +2068,8 @@
 							<reference ref="1043102028"/>
 							<reference ref="920885652"/>
 							<reference ref="614854014"/>
+							<reference ref="410574995"/>
+							<reference ref="456321273"/>
 						</object>
 						<reference key="parent" ref="1046981968"/>
 					</object>
@@ -2965,6 +2965,7 @@
 					<string>2.ImportedFromIB2</string>
 					<string>202.IBAttributePlaceholdersKey</string>
 					<string>202.IBPluginDependency</string>
+					<string>202.IBViewBoundsToFrameTransform</string>
 					<string>202.ImportedFromIB2</string>
 					<string>21.IBAttributePlaceholdersKey</string>
 					<string>21.IBEditorWindowLastContentRect</string>
@@ -2973,6 +2974,7 @@
 					<string>21.ImportedFromIB2</string>
 					<string>21.windowTemplate.hasMinSize</string>
 					<string>21.windowTemplate.minSize</string>
+					<string>229.IBAttributePlaceholdersKey</string>
 					<string>229.IBPluginDependency</string>
 					<string>229.ImportedFromIB2</string>
 					<string>23.IBPluginDependency</string>
@@ -2982,6 +2984,7 @@
 					<string>230.ImportedFromIB2</string>
 					<string>231.CustomClassName</string>
 					<string>231.IBPluginDependency</string>
+					<string>231.IBViewBoundsToFrameTransform</string>
 					<string>231.ImportedFromIB2</string>
 					<string>233.IBPluginDependency</string>
 					<string>233.ImportedFromIB2</string>
@@ -3019,11 +3022,13 @@
 					<string>281.ImportedFromIB2</string>
 					<string>288.IBAttributePlaceholdersKey</string>
 					<string>288.IBPluginDependency</string>
+					<string>288.IBViewBoundsToFrameTransform</string>
 					<string>288.ImportedFromIB2</string>
 					<string>29.IBPluginDependency</string>
 					<string>29.ImportedFromIB2</string>
 					<string>310.IBPluginDependency</string>
 					<string>310.ImportedFromIB2</string>
+					<string>313.IBAttributePlaceholdersKey</string>
 					<string>313.IBPluginDependency</string>
 					<string>313.ImportedFromIB2</string>
 					<string>314.IBEditorWindowLastContentRect</string>
@@ -3040,6 +3045,7 @@
 					<string>320.IBPluginDependency</string>
 					<string>320.IBViewBoundsToFrameTransform</string>
 					<string>320.ImportedFromIB2</string>
+					<string>323.IBAttributePlaceholdersKey</string>
 					<string>323.IBPluginDependency</string>
 					<string>323.ImportedFromIB2</string>
 					<string>333.IBAttributePlaceholdersKey</string>
@@ -3052,6 +3058,7 @@
 					<string>374.ImportedFromIB2</string>
 					<string>375.IBPluginDependency</string>
 					<string>375.ImportedFromIB2</string>
+					<string>390.IBAttributePlaceholdersKey</string>
 					<string>390.IBPluginDependency</string>
 					<string>390.IBViewBoundsToFrameTransform</string>
 					<string>390.ImportedFromIB2</string>
@@ -3104,6 +3111,7 @@
 					<string>739.IBPluginDependency</string>
 					<string>739.IBViewBoundsToFrameTransform</string>
 					<string>739.ImportedFromIB2</string>
+					<string>741.IBAttributePlaceholdersKey</string>
 					<string>741.IBPluginDependency</string>
 					<string>741.IBViewBoundsToFrameTransform</string>
 					<string>741.ImportedFromIB2</string>
@@ -3203,13 +3211,17 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<object class="NSMutableDictionary">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<reference key="dict.sortedKeys" ref="0"/>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="410574995"/>
+							<string key="toolTip">Copy the output into the clipboard</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDrQAAwigAAA</bytes>
+					</object>
 					<boolean value="YES"/>
 					<object class="NSMutableDictionary">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3224,6 +3236,14 @@
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<string>{533, 290}</string>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="727124742"/>
+							<string key="toolTip">Generate HTML representing AppleScript code.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3240,6 +3260,9 @@
 					<boolean value="YES"/>
 					<string>DropBox</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUGIAABDPwAAA</bytes>
+					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
@@ -3248,7 +3271,7 @@
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
 							<reference key="object" ref="869975676"/>
-							<string key="toolTip">Choose a file as a target.</string>
+							<string key="toolTip">Choose a file as a source.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3261,7 +3284,7 @@
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
 							<reference key="object" ref="636779103"/>
-							<string key="toolTip">Recent files.</string>
+							<string key="toolTip">Choose a source script from recent files.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3291,7 +3314,7 @@
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
 							<reference key="object" ref="677062305"/>
-							<string key="toolTip">The selection in the forntmost document will be a target. If no selection in the frontmost document, all contents of the document will be a taget.</string>
+							<string key="toolTip">The selection in the forntmost document will be a source. If no selection in the frontmost document, all contents of the document will be a source.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3309,18 +3332,30 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<object class="NSMutableDictionary">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<reference key="dict.sortedKeys" ref="0"/>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="456321273"/>
+							<string key="toolTip">Save the output into a file.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDHwAAwigAAA</bytes>
+					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="698820737"/>
+							<string key="toolTip">The behavior when the script link button is clicked.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>{{350, 238}, {119, 63}}</string>
@@ -3353,6 +3388,14 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABCeAAAwsQAAA</bytes>
 					</object>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="878371651"/>
+							<string key="toolTip">A button title of script link button.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<object class="NSMutableDictionary">
@@ -3360,7 +3403,7 @@
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
 							<reference key="object" ref="245085828"/>
-							<string key="toolTip">Use target file name for the title of the script link button.</string>
+							<string key="toolTip">Use source file name for the title of the script link button.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3379,6 +3422,14 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="443703146"/>
+							<string key="toolTip">The position of a script link button.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDsgAAwsoAAA</bytes>
@@ -3431,7 +3482,7 @@
 						<object class="IBToolTipAttribute" key="NS.object.0">
 							<string key="name">ToolTip</string>
 							<reference key="object" ref="185902169"/>
-							<string key="toolTip">Process text in the clipboard as AppleScript code.</string>
+							<string key="toolTip">Process the text in the clipboard as AppleScript code.</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3444,6 +3495,14 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABDPQAAwzgAAA</bytes>
 					</object>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="614854014"/>
+							<string key="toolTip">Choose a method to attach style sheets.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDmoAAwzsAAA</bytes>

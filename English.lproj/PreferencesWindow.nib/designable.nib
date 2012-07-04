@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="422"/>
+			<integer value="421"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -60,7 +60,7 @@
 							<object class="NSButtonCell" key="NSCell" id="493951912">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">The default location to save files is same to the souce script.</string>
+								<string key="NSContents">The default location to save files is same to the source script.</string>
 								<object class="NSFont" key="NSSupport" id="694897170">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -312,7 +312,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="631401729">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">Style Sheet Settings :</string>
+								<string key="NSContents">Style Sheets Settings :</string>
 								<reference key="NSSupport" ref="694897170"/>
 								<reference key="NSControlView" ref="546574402"/>
 								<object class="NSColor" key="NSBackgroundColor" id="716766252">
@@ -343,13 +343,13 @@
 						<object class="NSButton" id="933232832">
 							<reference key="NSNextResponder" ref="832591967"/>
 							<int key="NSvFlags">289</int>
-							<string key="NSFrame">{{187, 85}, {249, 32}}</string>
+							<string key="NSFrame">{{213, 85}, {223, 32}}</string>
 							<reference key="NSSuperview" ref="832591967"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="825107084">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Generate Style Sheet</string>
+								<string key="NSContents">Generate Style Sheets</string>
 								<reference key="NSSupport" ref="694897170"/>
 								<reference key="NSControlView" ref="933232832"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -706,9 +706,11 @@
 					<string>420.windowTemplate.minSize</string>
 					<string>421.IBPluginDependency</string>
 					<string>421.ImportedFromIB2</string>
+					<string>422.IBAttributePlaceholdersKey</string>
 					<string>422.IBPluginDependency</string>
 					<string>422.IBViewBoundsToFrameTransform</string>
 					<string>422.ImportedFromIB2</string>
+					<string>503.IBAttributePlaceholdersKey</string>
 					<string>503.IBPluginDependency</string>
 					<string>503.ImportedFromIB2</string>
 					<string>505.IBPluginDependency</string>
@@ -731,6 +733,7 @@
 					<string>626.IBPluginDependency</string>
 					<string>626.IBViewBoundsToFrameTransform</string>
 					<string>626.ImportedFromIB2</string>
+					<string>710.IBAttributePlaceholdersKey</string>
 					<string>710.IBPluginDependency</string>
 					<string>711.IBPluginDependency</string>
 					<string>712.IBPluginDependency</string>
@@ -740,6 +743,7 @@
 					<string>716.IBShouldRemoveOnLegacySave</string>
 					<string>717.IBPluginDependency</string>
 					<string>717.IBShouldRemoveOnLegacySave</string>
+					<string>724.IBAttributePlaceholdersKey</string>
 					<string>724.IBPluginDependency</string>
 					<string>724.IBViewBoundsToFrameTransform</string>
 					<string>725.IBPluginDependency</string>
@@ -774,11 +778,27 @@
 					<string>{450, 294}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="767881171"/>
+							<string key="toolTip">If a source of a script is a file, the default location of the save panel will be same to the file.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABBkAAAwqIAAA</bytes>
 					</object>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="403556671"/>
+							<string key="toolTip">Define CSS class name corresponded to AppleScript's style category.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -805,6 +825,13 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABBiAAAwtAAAA</bytes>
 					</object>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<reference key="dict.sortedKeys" ref="0"/>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -814,6 +841,14 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<object class="NSMutableDictionary">
+						<string key="NS.key.0">ToolTip</string>
+						<object class="IBToolTipAttribute" key="NS.object.0">
+							<string key="name">ToolTip</string>
+							<reference key="object" ref="933232832"/>
+							<string key="toolTip">Generate cascading style sheets accoding to the settings in the table.</string>
+						</object>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDQwAAwuYAAA</bytes>
