@@ -2,7 +2,7 @@ global TemplateProcessor
 
 on href_with_text(a_text, an_action)
 	--set escaped_text to URI Escape a_text additional "'&"
-	set escaped_text to call method "stringByAddingPercentEscapesUsingEncoding:leavings:additionals:" of a_text with parameters {134217984, "", "&'"}
+	set escaped_text to call method "stringByAddingPercentEscapesUsingEncoding:leavings:additionals:" of a_text with parameters {134217984, "", "&'+"}
 	set href_text to "applescript://com.apple.scripteditor?action=" & an_action & "%26script=" & escaped_text
 	return href_text
 end href_with_text
