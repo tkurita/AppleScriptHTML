@@ -38,6 +38,7 @@
 		2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */; };
 		2C4D2C870EC99CCE00D09C32 /* ASHTML.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = 2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		2C4FD80416644BC800FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FD80316644BC800FBA7AC /* template_full_onlyscriptlink_inline.html */; };
 		2C506D2E0FE67C8500C1CA94 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
 		2C506D310FE67CA000C1CA94 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
 		2C506D520FE67FE300C1CA94 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2C506D510FE67FE300C1CA94 /* dsa_pub.pem */; };
@@ -114,6 +115,8 @@
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
 		2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASFormattingStyle.applescript; sourceTree = "<group>"; };
+		2C4FD7F416644ABB00FBA7AC /* Japanese */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/MonitorWindow.strings; sourceTree = "<group>"; };
+		2C4FD80316644BC800FBA7AC /* template_full_onlyscriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink_inline.html; sourceTree = "<group>"; };
 		2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		2C506D510FE67FE300C1CA94 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		2C535EB00ECA7FF700C73295 /* DropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBox.h; sourceTree = "<group>"; };
@@ -281,6 +284,7 @@
 				2C9493320ECAA3DC00273C7C /* FactorySettings.plist */,
 				2C5F544A1525BBC1005BED31 /* MainMenu.strings */,
 				2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */,
+				2C4FD7F316644ABB00FBA7AC /* MonitorWindow.strings */,
 				2C30E65210958A1100605969 /* PreferencesWindow.nib */,
 				2C85DB2B1566273C0038CC9E /* MonitorWindow.nib */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
@@ -361,6 +365,7 @@
 		2CF3A6330ECACC1600D63AF8 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				2C4FD80316644BC800FBA7AC /* template_full_onlyscriptlink_inline.html */,
 				2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */,
 				2CE619170ECBB9D700445AFE /* template_full_body.html */,
 				2CF3A6A60ECAD3B400D63AF8 /* template_full_scriptlink.html */,
@@ -466,6 +471,7 @@
 				2CC90BB41591508900B067EF /* template_sourcecode_inline.html in Resources */,
 				2CC90BB51591508900B067EF /* template_sourcecode_noscriptlink_inline.html in Resources */,
 				2CC90C2A15917E9800B067EF /* template_sourcecode_onlyscriptlink_inline.html in Resources */,
+				2C4FD80416644BC800FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +554,14 @@
 				2C58AD92152353A10059F46F /* Japanese */,
 			);
 			name = PreferencesWindow.nib;
+			sourceTree = "<group>";
+		};
+		2C4FD7F316644ABB00FBA7AC /* MonitorWindow.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C4FD7F416644ABB00FBA7AC /* Japanese */,
+			);
+			name = MonitorWindow.strings;
 			sourceTree = "<group>";
 		};
 		2C58AD95152353E20059F46F /* InfoPlist.strings */ = {
