@@ -5,6 +5,7 @@
 	OSAScript *script;
 	IBOutlet id indicator;
 	IBOutlet id mainWindow;
+	IBOutlet id ASHTMLProcessor;
 }
 @property(retain) OSAScript *script;
 

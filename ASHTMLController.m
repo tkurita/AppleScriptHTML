@@ -82,34 +82,7 @@ void showError(NSDictionary *err_info)
 					@"OK", nil, nil);	
 }
 
-- (OSAScript *)script
-{
-	if (script) {
-		return script;
-	}
-	
-	NSDictionary *err_info = nil;	
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"AppleScriptHTML"
-										 ofType:@"scpt" inDirectory:@"Scripts"];
-		
-	OSAScript *scpt = [[OSAScript alloc] initWithContentsOfURL:
-						[NSURL fileURLWithPath:path] error:&err_info];
-		
-	if (err_info) {
-		showError(err_info);
-		if (scpt) [scpt release];
-		return nil;
-	}
-		
-	[scpt executeHandlerWithName:@"setup_modules"
-						 arguments:nil error:&err_info];
-	if (err_info) {
-		showError(err_info);
-		if (scpt) [scpt release];
-	}
-	script = scpt;
-	return script;
-}
+
 
 - (NSAppleEventDescriptor *)runHandlerWithName:(NSString *)handler
 									arguments:(NSArray *)args
@@ -170,14 +143,12 @@ void showError(NSDictionary *err_info)
 
 - (void)generateCSS:(id)sender
 {
-	NSAppleEventDescriptor *css = [self runHandlerWithName:@"generate_css" 
-												 arguments:nil
-													sender:sender];
-	if (!css) return;
+	NSString *css = [ASHTMLProcessor generateCSS];
+	 if (!css) return;
 		
 	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
 	[wc showWindow:self];
-	[wc setContent:[css stringValue] type:@"css"];
+	[wc setContent:css type:@"css"];
 }
 
 - (void)startIndicator
@@ -195,17 +166,15 @@ void showError(NSDictionary *err_info)
 - (IBAction)copyToClipboard:(id)sender
 {
 	[self startIndicator];
-	NSAppleEventDescriptor *result = [self runHandlerWithName:@"copy_to_clipboard" 
-													arguments:nil
-													   sender:sender];
-	if (result && ('reco' == [result descriptorType])) {
-		NSString *result_text = [[result descriptorForKeyword:'conT'] stringValue];
-		NSString *content_kind = [[result descriptorForKeyword:'kind'] stringValue]; 
-		NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-		[pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-		[pboard setString:result_text forType:NSStringPboardType];
-		[MonitorWindowController setContent:result_text type:content_kind];
-	}
+	NSDictionary *result = [ASHTMLProcessor copyToClipboard];
+	if (!result) goto bail;
+	NSString *result_text = [result objectForKey:@"content"];
+	NSString *content_kind = [result objectForKey:@"kind"];
+	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+	[pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+	[pboard setString:result_text forType:NSStringPboardType];
+	[MonitorWindowController setContent:result_text type:content_kind];
+bail:	
 	[self stopIndicator];
 }
 
@@ -230,11 +199,8 @@ struct LocationAndName {
 		default_name = @"AppleScript.css";
 		extension = @"css";
 	} else if (target_mode == 1) { // target is script editor's selection
-		NSAppleEventDescriptor *result = [self runHandlerWithName:@"path_on_scripteditor"
-														arguments:nil
-														   sender:sender];
-		if (result && ('utxt' == [result descriptorType])) {
-			NSString *path = [result stringValue];
+		NSString *path = [ASHTMLProcessor pathOnScriptEditor];
+		if (path) {
 			default_name = [[[path lastPathComponent] 
 									stringByDeletingPathExtension]
 									stringByAppendingPathExtension:@"html"];
@@ -286,8 +252,8 @@ struct LocationAndName {
 	}
 	NSError *error = nil;
 	NSString *file = [sheet filename];
-	NSAppleEventDescriptor *html_rec = [(NSAppleEventDescriptor *)contextInfo autorelease];
-	NSString *string = [[html_rec descriptorForKeyword:'conT'] stringValue];
+	NSDictionary *html_rec = [(NSDictionary *)contextInfo autorelease];
+	NSString *string = [html_rec objectForKey:@"content"];
 	[string writeToFile:file
 			 atomically:NO encoding:NSUTF8StringEncoding
 				  error:&error];
@@ -300,7 +266,7 @@ struct LocationAndName {
 							contextInfo:nil];
 		return;
 	}
-	NSString *content_kind = [[html_rec descriptorForKeyword:'kind'] stringValue]; 
+	NSString *content_kind = [html_rec objectForKey:@"kind"];
 	[MonitorWindowController setContent:string type:content_kind];	
 	[self stopIndicator];
 	[sheet orderOut:self];
@@ -318,9 +284,7 @@ struct LocationAndName {
 - (IBAction)saveToFile:(id)sender
 {
 	[self startIndicator];
-	NSAppleEventDescriptor *result = [self runHandlerWithName:@"save_to_file" 
-													arguments:nil
-													   sender:sender];
+	NSDictionary *result = [ASHTMLProcessor saveToFile];
 	if (!result) {
 		[self stopIndicator];
 		return;

@@ -58,6 +58,57 @@
 	return YES;
 }
 
+#pragma mark methods for singleton
+static AppController *sharedInstance = nil;
+
++ (AppController *)sharedAppController
+{
+	@synchronized(self) {
+		if (sharedInstance == nil) {
+			[[self alloc] init]; // ここでは代入していない
+		}
+	}
+	
+	return sharedInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone
+{
+	@synchronized(self) {
+		if (sharedInstance == nil) {
+			sharedInstance = [super allocWithZone:zone];
+			return sharedInstance;  // 最初の割り当てで代入し、返す
+		}
+	}
+	return nil; // 以降の割り当てではnilを返すようにする
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+	return self;
+}
+
+- (id)retain
+{
+	return self;
+}
+
+- (NSUInteger)retainCount
+{
+	return UINT_MAX;  // 解放できないオブジェクトであることを示す
+}
+
+- (void)release
+{
+	// 何もしない
+}
+
+- (id)autorelease
+{
+	return self;
+}
+
+
 #pragma mark initilize
 
 - (void)awakeFromNib
