@@ -18,7 +18,6 @@
 		2C4D2C9C0EC99ED700D09C32 /* ASFormattingStyle.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C4FD8291664548100FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FD8281664548100FBA7AC /* template_full_onlyscriptlink_inline.html */; };
 		2C4FD88416645E4D00FBA7AC /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4FD88316645E4D00FBA7AC /* AppleScriptObjC.framework */; };
-		2C4FD80416644BC800FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FD80316644BC800FBA7AC /* template_full_onlyscriptlink_inline.html */; };
 		2C506D2E0FE67C8500C1CA94 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
 		2C506D310FE67CA000C1CA94 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C506D2D0FE67C8500C1CA94 /* Sparkle.framework */; };
 		2C506D520FE67FE300C1CA94 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2C506D510FE67FE300C1CA94 /* dsa_pub.pem */; };
