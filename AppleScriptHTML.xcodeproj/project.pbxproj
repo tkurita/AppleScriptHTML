@@ -24,8 +24,6 @@
 		2C535EC90ECA81C100C73295 /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB10ECA7FF700C73295 /* DropBox.m */; };
 		2C535ECE0ECA81EA00C73295 /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB90ECA7FF700C73295 /* PathExtra.m */; };
 		2C58AD96152353E20059F46F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C58AD95152353E20059F46F /* InfoPlist.strings */; };
-		2C5F544E1525BBC1005BED31 /* MainMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544A1525BBC1005BED31 /* MainMenu.strings */; };
-		2C5F544F1525BBC1005BED31 /* PreferencesWindow.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C5F544C1525BBC1005BED31 /* PreferencesWindow.strings */; };
 		2C5FCF1B0FD8B0590061CC42 /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FCF190FD8B0590061CC42 /* HFSTypeUtils.m */; };
 		2C681089156DD19A00AFDDAD /* ClipboardController.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */; settings = {ATTRIBUTES = (); }; };
 		2C6A28B60EFDF71600624BDC /* EditorController.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A28B50EFDF71600624BDC /* EditorController.applescript */; settings = {ATTRIBUTES = (); }; };
@@ -88,6 +86,7 @@
 		2C30E65310958A1100605969 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PreferencesWindow.nib; sourceTree = "<group>"; };
 		2C30E65710958AD900605969 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		2C30E65810958AD900605969 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		2C383F701732347600B1B6F0 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = System/Library/Frameworks/AppleScriptKit.framework; sourceTree = SDKROOT; };
 		2C437EE910956ABA00E9F76F /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
@@ -207,6 +206,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C383F701732347600B1B6F0 /* AppleScriptKit.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 			);
@@ -440,8 +440,6 @@
 				2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */,
 				2C790A06110E100400D23122 /* template_sourcecode_noscriptlink.html in Resources */,
 				2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */,
-				2C5F544E1525BBC1005BED31 /* MainMenu.strings in Resources */,
-				2C5F544F1525BBC1005BED31 /* PreferencesWindow.strings in Resources */,
 				2C85DB1715660BB20038CC9E /* Save.icns in Resources */,
 				2C85DB1915660BBE0038CC9E /* Copy.icns in Resources */,
 				2C85DB2D1566273C0038CC9E /* MonitorWindow.nib in Resources */,
@@ -590,7 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -621,7 +619,7 @@
 					ppc,
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",

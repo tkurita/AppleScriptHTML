@@ -238,3 +238,4 @@ script ASHTMLProcessor
 		end if
 	end pathOnScriptEditor
 end script
+

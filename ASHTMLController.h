@@ -1,6 +1,13 @@
 #import <Cocoa/Cocoa.h>
 #import <OSAKit/OSAScript.h>
 
+@interface NSObject (ASHTMLProcessor)
+- (NSString *)generateCSS;
+- (NSDictionary *)copyToClipboard;
+- (NSString *)pathOnScriptEditor;
+- (NSDictionary *)saveToFile;
+@end
+
 @interface ASHTMLController : NSObject {
 	OSAScript *script;
 	IBOutlet id indicator;
