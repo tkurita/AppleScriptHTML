@@ -10,6 +10,7 @@
 		257572C7072881A4000BE9CA /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		257572CA072881A4000BE9CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2C00E314173DDBD3004EA381 /* NSURL+NDCarbonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C535EB50ECA7FF700C73295 /* NSURL+NDCarbonUtilities.m */; };
 		2C30E65410958A1100605969 /* PreferencesWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30E65210958A1100605969 /* PreferencesWindow.nib */; };
 		2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C30E65810958AD900605969 /* PreferencesWindowController.m */; };
 		2C437EEA10956ABA00E9F76F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2C437EE910956ABA00E9F76F /* Credits.rtf */; };
@@ -506,6 +507,7 @@
 				2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */,
 				2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */,
 				2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */,
+				2C00E314173DDBD3004EA381 /* NSURL+NDCarbonUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +590,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -619,7 +621,7 @@
 					ppc,
 				);
 				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "ppc i386 ppc64 x86_64";
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",

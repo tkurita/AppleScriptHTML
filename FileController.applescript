@@ -13,9 +13,8 @@ end check_target
 on markup()
 	--log "start markup in FileController"
 	my _ashtml's set_wrap_with_block(false)
-	--set my _target_path to DefaultsManager's value_for("TargetScript")
 	tell current application's class "NSUserDefaults"'s standardUserDefaults()
-		set my _target_paths to stringForKey_("TargetScript") as text
+		set my _target_path to stringForKey_("TargetScript") as text
 	end tell
 	set a_result to my _ashtml's process_file(my _target_path, false)
 	set my _target_text to my _ashtml's target_text()
@@ -27,7 +26,6 @@ on resolve_target_path()
 	if my _target_path is not missing value then
 		return
 	end if
-	--set my _target_path to DefaultsManager's value_for("TargetScript")
 	tell current application's class "NSUserDefaults"'s standardUserDefaults()
 		set my _target_path to stringForKey_("TargetScript") as text
 	end tell
@@ -37,7 +35,6 @@ on target_text()
 	--log "start target_text in FileController"
 	if my _target_text is missing value then
 		resolve_target_path()
-		-- set my _target_text to call method "scriptSource:" of class "ASFormatting" with parameter my _target_path
 		tell current application's class "ASFormatting"
 			set my _target_text to scriptSource_(my _target_path) as text
 		end tell
@@ -47,12 +44,12 @@ on target_text()
 end target_text
 
 on doc_name()
-	log "start doc_name"
+	--log "start doc_name"
 	resolve_target_path()
-	log my _target_path
+	--log my _target_path
 	set a_name to XFile's make_with((my _target_path) as POSIX file)'s basename()
-	log a_name
-	log "end doc_name"
+	--log a_name
+	--log "end doc_name"
 	return a_name
 end doc_name
 

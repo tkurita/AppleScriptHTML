@@ -44,7 +44,6 @@ script ASHTMLProcessor
 	
 	on do given fullhtml:full_flag
 		--log "start do in ASHTMLProcessor"
-		--ASHTML's initialize()
 		set content_type to "html"
 		set user_defaults to current application's class "NSUserDefaults"'s standardUserDefaults()
 		tell user_defaults
@@ -71,7 +70,6 @@ script ASHTMLProcessor
 		else
 			set CodeController to ClipboardController's make_with(an_ashtml)
 		end if
-		
 		set template_name to missing value
 		if css_mode is 0 then
 			if (is_convert) then
@@ -103,7 +101,6 @@ script ASHTMLProcessor
 				end if
 			end if
 		end if
-		
 		if (is_convert or is_scriptlink) then
 			if not CodeController's check_target() then
 				return missing value
@@ -147,7 +144,6 @@ script ASHTMLProcessor
 				end if
 			end if
 		end if
-		
 		if template_name is not missing value then
 			set template_file to path to resource template_name
 			set a_template to TemplateProcessor's make_with_file(template_file)
