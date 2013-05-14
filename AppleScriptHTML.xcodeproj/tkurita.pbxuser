@@ -134,6 +134,7 @@
 			2CD3A0951741B7A80026904E /* MonitorWindowController.m:86 */,
 			2CD3A0A11741B8070026904E /* MonitorWindowController.m:22 */,
 			2CD3A0A61741B8540026904E /* ASHTMLController.m:169 */,
+			2C2A4AB01741D5CE00CA7C4D /* ASHTMLController.m:289 */,
 		);
 		codeSenseManager = 25D9445B07B1533700FF306F /* Code sense */;
 		executables = (
@@ -342,6 +343,34 @@
 			2C2A4A8E1741BE2000CA7C4D = 2C2A4A8E1741BE2000CA7C4D /* PBXTextBookmark */;
 			2C2A4A8F1741BE2000CA7C4D = 2C2A4A8F1741BE2000CA7C4D /* PBXTextBookmark */;
 			2C2A4A901741BE2000CA7C4D = 2C2A4A901741BE2000CA7C4D /* PBXTextBookmark */;
+			2C2A4AB21741D5E800CA7C4D /* PBXTextBookmark */ = 2C2A4AB21741D5E800CA7C4D /* PBXTextBookmark */;
+			2C2A4AB31741D5E800CA7C4D /* PBXTextBookmark */ = 2C2A4AB31741D5E800CA7C4D /* PBXTextBookmark */;
+			2C2A4ABC1741D60200CA7C4D /* PBXTextBookmark */ = 2C2A4ABC1741D60200CA7C4D /* PBXTextBookmark */;
+			2C2A4ABF1741D61000CA7C4D /* PBXTextBookmark */ = 2C2A4ABF1741D61000CA7C4D /* PBXTextBookmark */;
+			2C2A4AC21741D6FA00CA7C4D /* PBXTextBookmark */ = 2C2A4AC21741D6FA00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC31741D6FA00CA7C4D /* PBXTextBookmark */ = 2C2A4AC31741D6FA00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC41741D6FA00CA7C4D /* PBXTextBookmark */ = 2C2A4AC41741D6FA00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC51741D6FA00CA7C4D /* PBXTextBookmark */ = 2C2A4AC51741D6FA00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC61741D6FA00CA7C4D /* PBXTextBookmark */ = 2C2A4AC61741D6FA00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC71741D71700CA7C4D /* PBXTextBookmark */ = 2C2A4AC71741D71700CA7C4D /* PBXTextBookmark */;
+			2C2A4AC81741D72F00CA7C4D /* PBXTextBookmark */ = 2C2A4AC81741D72F00CA7C4D /* PBXTextBookmark */;
+			2C2A4AC91741D72F00CA7C4D /* PBXTextBookmark */ = 2C2A4AC91741D72F00CA7C4D /* PBXTextBookmark */;
+			2C2A4ACC1741D80D00CA7C4D /* PBXTextBookmark */ = 2C2A4ACC1741D80D00CA7C4D /* PBXTextBookmark */;
+			2C2A4ACD1741D80D00CA7C4D /* PBXTextBookmark */ = 2C2A4ACD1741D80D00CA7C4D /* PBXTextBookmark */;
+			2C2A4ACE1741D80D00CA7C4D /* PBXTextBookmark */ = 2C2A4ACE1741D80D00CA7C4D /* PBXTextBookmark */;
+			2C2A4ACF1741D82600CA7C4D /* PBXTextBookmark */ = 2C2A4ACF1741D82600CA7C4D /* PBXTextBookmark */;
+			2C2A4AD21741DBA200CA7C4D /* PBXTextBookmark */ = 2C2A4AD21741DBA200CA7C4D /* PBXTextBookmark */;
+			2C2A4AD51741DBE700CA7C4D /* PBXTextBookmark */ = 2C2A4AD51741DBE700CA7C4D /* PBXTextBookmark */;
+			2C2A4AD61741DC1400CA7C4D /* PBXTextBookmark */ = 2C2A4AD61741DC1400CA7C4D /* PBXTextBookmark */;
+			2C2A4AD71741DC1400CA7C4D /* PBXTextBookmark */ = 2C2A4AD71741DC1400CA7C4D /* PBXTextBookmark */;
+			2C2A4AD81741DC3000CA7C4D /* PBXTextBookmark */ = 2C2A4AD81741DC3000CA7C4D /* PBXTextBookmark */;
+			2C2A4AD91741DC3000CA7C4D /* PBXTextBookmark */ = 2C2A4AD91741DC3000CA7C4D /* PBXTextBookmark */;
+			2C2A4ADA1741DC3000CA7C4D /* PBXTextBookmark */ = 2C2A4ADA1741DC3000CA7C4D /* PBXTextBookmark */;
+			2C2A4ADB1741DC3000CA7C4D /* PBXTextBookmark */ = 2C2A4ADB1741DC3000CA7C4D /* PBXTextBookmark */;
+			2C2A4ADE1741DDD100CA7C4D /* PBXTextBookmark */ = 2C2A4ADE1741DDD100CA7C4D /* PBXTextBookmark */;
+			2C2A4ADF1741DDD100CA7C4D /* PBXTextBookmark */ = 2C2A4ADF1741DDD100CA7C4D /* PBXTextBookmark */;
+			2C2A4AE01741DDD100CA7C4D /* PBXTextBookmark */ = 2C2A4AE01741DDD100CA7C4D /* PBXTextBookmark */;
+			2C2A4AE11741DDD100CA7C4D /* PBXTextBookmark */ = 2C2A4AE11741DDD100CA7C4D /* PBXTextBookmark */;
 			2C383F211731638800B1B6F0 = 2C383F211731638800B1B6F0 /* PBXTextBookmark */;
 			2C383F5B17322BA600B1B6F0 = 2C383F5B17322BA600B1B6F0 /* PBXTextBookmark */;
 			2C383F5C17322BA600B1B6F0 = 2C383F5C17322BA600B1B6F0 /* PBXTextBookmark */;
@@ -407,6 +436,7 @@
 			2CD3A0C71741BBD90026904E = 2CD3A0C71741BBD90026904E /* PBXTextBookmark */;
 			2CD3A0C81741BBD90026904E = 2CD3A0C81741BBD90026904E /* PBXTextBookmark */;
 			2CD975EE0EC9013500024156 = 2CD975EE0EC9013500024156 /* ASFormatting.m */;
+			2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		};
 		sourceControlManager = 25D9445A07B1533700FF306F /* Source Control */;
 		userBookmarkGroup = 2CCF87590EE75C8800EA6824 /* PBXBookmarkGroup */;
@@ -436,7 +466,7 @@
 		ignoreCount = 0;
 		lineNumber = 168;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.593766;
+		modificationTime = 390190544.647786;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -564,8 +594,8 @@
 		isa = PBXTextBookmark;
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 132";
-		rLen = 6;
-		rLoc = 4421;
+		rLen = 0;
+		rLoc = 4414;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 3999;
@@ -591,9 +621,9 @@
 		ignoreCount = 0;
 		lineNumber = 309;
 		location = AppleScriptHTML;
-		modificationTime = 390183892.262914;
+		modificationTime = 390190544.647081;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	2C1BDF130ED316E1000C68F9 /* TitleBoxController.m */ = {
 		isa = PBXFileReference;
@@ -616,9 +646,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 55;
-		modificationTime = 390183892.2623061;
+		modificationTime = 390190544.646644;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	2C1FBA7E10956DE9008991AD /* AppController.m:50 */ = {
 		isa = PBXFileBreakpoint;
@@ -634,7 +664,7 @@
 		ignoreCount = 0;
 		lineNumber = 50;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.513159;
+		modificationTime = 390190544.646881;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -643,7 +673,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 215";
 		rLen = 0;
-		rLoc = 7299;
+		rLoc = 7239;
 		rType = 0;
 		vrLen = 541;
 		vrLoc = 6892;
@@ -653,7 +683,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 215";
 		rLen = 0;
-		rLoc = 7299;
+		rLoc = 7239;
 		rType = 0;
 		vrLen = 541;
 		vrLoc = 6892;
@@ -663,7 +693,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 240";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 6427;
@@ -673,7 +703,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 240";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 545;
 		vrLoc = 6892;
@@ -683,7 +713,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 240";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 6427;
@@ -693,7 +723,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 238";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 593;
 		vrLoc = 6892;
@@ -703,7 +733,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 238";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 6427;
@@ -713,7 +743,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 238";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 587;
 		vrLoc = 6677;
@@ -723,7 +753,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 238";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 3735;
@@ -753,10 +783,308 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 238";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 6427;
+	};
+	2C2A4AB01741D5CE00CA7C4D /* ASHTMLController.m:289 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		functionName = "-saveToFile:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 289;
+		location = AppleScriptHTML;
+		modificationTime = 390190570.229444;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	2C2A4AB21741D5E800CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 287";
+		rLen = 33;
+		rLoc = 7419;
+		rType = 0;
+		vrLen = 875;
+		vrLoc = 7110;
+	};
+	2C2A4AB31741D5E800CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 287";
+		rLen = 33;
+		rLoc = 7419;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 7277;
+	};
+	2C2A4ABC1741D60200CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 290";
+		rLen = 6;
+		rLoc = 7494;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 7277;
+	};
+	2C2A4ABF1741D61000CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 290";
+		rLen = 6;
+		rLoc = 7494;
+		rType = 0;
+		vrLen = 309;
+		vrLoc = 7277;
+	};
+	2C2A4AC21741D6FA00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 291";
+		rLen = 0;
+		rLoc = 7548;
+		rType = 0;
+		vrLen = 1177;
+		vrLoc = 6994;
+	};
+	2C2A4AC31741D6FA00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C6A28B50EFDF71600624BDC /* EditorController.applescript */;
+		name = "EditorController.applescript: 55";
+		rLen = 0;
+		rLoc = 1535;
+		rType = 0;
+		vrLen = 726;
+		vrLoc = 584;
+	};
+	2C2A4AC41741D6FA00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */;
+		name = "ClipboardController.applescript: 16";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 0;
+	};
+	2C2A4AC51741D6FA00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 121";
+		rLen = 0;
+		rLoc = 3911;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 3661;
+	};
+	2C2A4AC61741D6FA00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 239";
+		rLen = 0;
+		rLoc = 7644;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 3749;
+	};
+	2C2A4AC71741D71700CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 141";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 3749;
+	};
+	2C2A4AC81741D72F00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 141";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 4489;
+	};
+	2C2A4AC91741D72F00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
+		name = "ASHTMLController.m: 290";
+		rLen = 6;
+		rLoc = 7494;
+		rType = 0;
+		vrLen = 527;
+		vrLoc = 7277;
+	};
+	2C2A4ACC1741D80D00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 141";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 1410;
+		vrLoc = 3836;
+	};
+	2C2A4ACD1741D80D00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 25";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1142;
+		vrLoc = 0;
+	};
+	2C2A4ACE1741D80D00CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 24";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 0;
+	};
+	2C2A4ACF1741D82600CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 24";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 0;
+	};
+	2C2A4AD21741DBA200CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 27";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1302;
+		vrLoc = 0;
+	};
+	2C2A4AD51741DBE700CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 22";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 0;
+	};
+	2C2A4AD61741DC1400CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 141";
+		rLen = 0;
+		rLoc = 4721;
+		rType = 0;
+		vrLen = 506;
+		vrLoc = 4489;
+	};
+	2C2A4AD71741DC1400CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 21";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 910;
+		vrLoc = 63;
+	};
+	2C2A4AD81741DC3000CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */;
+		name = "ScriptLinkMaker.applescript: 21";
+		rLen = 0;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 973;
+		vrLoc = 0;
+	};
+	2C2A4AD91741DC3000CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C6A28BB0EFDF77500624BDC /* FileController.applescript */;
+		name = "FileController.applescript: 14";
+		rLen = 6;
+		rLoc = 253;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 0;
+	};
+	2C2A4ADA1741DC3000CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */;
+		name = "ClipboardController.applescript: 16";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 910;
+		vrLoc = 0;
+	};
+	2C2A4ADB1741DC3000CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */;
+		name = "ClipboardController.applescript: 26";
+		rLen = 0;
+		rLoc = 680;
+		rType = 0;
+		vrLen = 914;
+		vrLoc = 0;
+	};
+	2C2A4ADE1741DDD100CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C6A28BB0EFDF77500624BDC /* FileController.applescript */;
+		name = "FileController.applescript: 14";
+		rLen = 6;
+		rLoc = 253;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 0;
+	};
+	2C2A4ADF1741DDD100CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
+		name = "ASHTMLProcessor.applescript: 233";
+		rLen = 0;
+		rLoc = 7644;
+		rType = 0;
+		vrLen = 1420;
+		vrLoc = 3259;
+	};
+	2C2A4AE01741DDD100CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */;
+		name = "ClipboardController.applescript: 26";
+		rLen = 0;
+		rLoc = 680;
+		rType = 0;
+		vrLen = 914;
+		vrLoc = 0;
+	};
+	2C2A4AE11741DDD100CA7C4D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C681088156DD19A00AFDDAD /* ClipboardController.applescript */;
+		name = "ClipboardController.applescript: 46";
+		rLen = 0;
+		rLoc = 1145;
+		rType = 0;
+		vrLen = 866;
+		vrLoc = 0;
 	};
 	2C30E65710958AD900605969 /* PreferencesWindowController.h */ = {
 		uiCtxt = {
@@ -786,7 +1114,7 @@
 		ignoreCount = 0;
 		lineNumber = 257;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.58013;
+		modificationTime = 390190544.647682;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -883,7 +1211,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 29;
-		modificationTime = 390183813.854709;
+		modificationTime = 390190544.647579;
 		originalNumberOfMultipleMatches = 0;
 		state = 1;
 	};
@@ -909,7 +1237,7 @@
 		ignoreCount = 0;
 		lineNumber = 67;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.539935;
+		modificationTime = 390190544.64733;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -952,9 +1280,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 9;
-		modificationTime = 390183892.262728;
+		modificationTime = 390190544.646392;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	2C4FD8281664548100FBA7AC /* template_full_onlyscriptlink_inline.html */ = {
 		uiCtxt = {
@@ -1104,7 +1432,7 @@
 		ignoreCount = 0;
 		lineNumber = 326;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.550338;
+		modificationTime = 390190544.647479;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1158,24 +1486,24 @@
 	};
 	2C681088156DD19A00AFDDAD /* ClipboardController.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {867, 690}}";
-			sepNavSelRange = "{186, 19}";
-			sepNavVisRange = "{0, 669}";
+			sepNavIntBoundsRect = "{{0, 0}, {867, 680}}";
+			sepNavSelRange = "{1145, 0}";
+			sepNavVisRange = "{0, 866}";
 		};
 	};
 	2C6A28B50EFDF71600624BDC /* EditorController.applescript */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {867, 1114}}";
 			sepNavSelRange = "{1535, 0}";
-			sepNavVisRange = "{472, 838}";
+			sepNavVisRange = "{584, 726}";
 			sepNavWindowFrame = "{{739, 110}, {689, 766}}";
 		};
 	};
 	2C6A28BB0EFDF77500624BDC /* FileController.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {867, 944}}";
-			sepNavSelRange = "{1807, 0}";
-			sepNavVisRange = "{0, 748}";
+			sepNavIntBoundsRect = "{{0, 0}, {867, 947}}";
+			sepNavSelRange = "{253, 6}";
+			sepNavVisRange = "{0, 992}";
 			sepNavWindowFrame = "{{63, 160}, {720, 718}}";
 		};
 	};
@@ -1223,7 +1551,7 @@
 		ignoreCount = 0;
 		lineNumber = 58;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.523443;
+		modificationTime = 390190544.646987;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1273,9 +1601,9 @@
 	};
 	2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1024, 469}}";
-			sepNavSelRange = "{1142, 0}";
-			sepNavVisRange = "{0, 1142}";
+			sepNavIntBoundsRect = "{{0, 0}, {867, 523}}";
+			sepNavSelRange = "{973, 0}";
+			sepNavVisRange = "{0, 973}";
 		};
 	};
 	2CC5C936108CA6160037A04C /* ASFormatting.m:8 */ = {
@@ -1292,7 +1620,7 @@
 		ignoreCount = 0;
 		lineNumber = 8;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.483003;
+		modificationTime = 390190544.646756;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1371,7 +1699,7 @@
 		ignoreCount = 0;
 		lineNumber = 235;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.6035861;
+		modificationTime = 390190544.647901;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1594,7 +1922,7 @@
 		ignoreCount = 0;
 		lineNumber = 86;
 		location = AppleScriptHTML;
-		modificationTime = 390183814.611716;
+		modificationTime = 390190544.648055;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1676,11 +2004,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 2C85DB2F156627E20038CC9E /* MonitorWindowController.m */;
 		functionName = "+setContent:type:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 22;
 		location = AppleScriptHTML;
-		modificationTime = 390183890.737638;
+		modificationTime = 390190544.648164;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1724,11 +2052,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 2CE2488A1569349600C78D88 /* ASHTMLController.m */;
 		functionName = "-copyToClipboard:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = AppleScriptHTML;
-		modificationTime = 390183824.6941429;
+		modificationTime = 390190544.648271;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1833,7 +2161,7 @@
 		isa = PBXTextBookmark;
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		rLen = 15;
-		rLoc = 7132;
+		rLoc = 7072;
 		rType = 0;
 	};
 	2CD3A0B51741BB340026904E /* PBXTextBookmark */ = {
@@ -1841,7 +2169,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 202";
 		rLen = 15;
-		rLoc = 6991;
+		rLoc = 6931;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 6572;
@@ -1891,7 +2219,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 239";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 615;
 		vrLoc = 6883;
@@ -1901,7 +2229,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 239";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 1170;
 		vrLoc = 6435;
@@ -1911,7 +2239,7 @@
 		fRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */;
 		name = "ASHTMLProcessor.applescript: 239";
 		rLen = 0;
-		rLoc = 7704;
+		rLoc = 7644;
 		rType = 0;
 		vrLen = 615;
 		vrLoc = 6883;
@@ -1999,9 +2327,9 @@
 	};
 	2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {867, 4263}}";
-			sepNavSelRange = "{3386, 15}";
-			sepNavVisRange = "{3065, 776}";
+			sepNavIntBoundsRect = "{{0, 0}, {1256, 3848}}";
+			sepNavSelRange = "{7494, 6}";
+			sepNavVisRange = "{7236, 378}";
 			sepNavWindowFrame = "{{207, 89}, {1233, 741}}";
 		};
 	};
@@ -2025,9 +2353,9 @@
 	};
 	2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {933, 3380}}";
-			sepNavSelRange = "{7704, 0}";
-			sepNavVisRange = "{6427, 1201}";
+			sepNavIntBoundsRect = "{{0, 0}, {867, 3190}}";
+			sepNavSelRange = "{7644, 0}";
+			sepNavVisRange = "{3259, 1420}";
 			sepNavVisRect = "{{0, 5304}, {953, 683}}";
 			sepNavWindowFrame = "{{391, 122}, {992, 756}}";
 		};

@@ -128,11 +128,6 @@ script ASHTMLProcessor
 						user_defaults's addToHistory_forKey_(doc_name, "ScriptLinkTitleHistory")
 					end if
 				end if
-				(*
-			log a_code
-			log doc_name
-			log mode_text
-			*)
 				set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
 				if css_mode is not 2 then
 					set pos_index to user_defaults's integerForKey_("ScriptLinkPositionIndex") as integer
