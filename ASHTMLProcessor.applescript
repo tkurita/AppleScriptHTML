@@ -196,7 +196,7 @@ script ASHTMLProcessor
 			end if
 		end if
 		--log "end do in ASHTMLProcessor"
-		return {content:a_result, kind:content_type}
+		return {content:a_result, |kind|:content_type}
 	end do
 	
 	on copyToClipboard()

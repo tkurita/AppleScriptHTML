@@ -230,7 +230,7 @@ struct LocationAndName {
 - (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode 
 										contextInfo:(void *)contextInfo
 {
-	NSString *file = [(NSString *)contextInfo autorelease];
+	NSString *file = (NSString *)contextInfo;
 	switch (returnCode) {
 		case NSAlertDefaultReturn:
 			[[NSWorkspace sharedWorkspace] openFile:file];
@@ -241,6 +241,7 @@ struct LocationAndName {
 		default:
 			break;
 	}
+	CFRelease(file);
 }
 
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
@@ -252,7 +253,7 @@ struct LocationAndName {
 	}
 	NSError *error = nil;
 	NSString *file = [sheet filename];
-	NSDictionary *html_rec = [(NSDictionary *)contextInfo autorelease];
+	NSDictionary *html_rec = (NSDictionary *)contextInfo;
 	NSString *string = [html_rec objectForKey:@"content"];
 	[string writeToFile:file
 			 atomically:NO encoding:NSUTF8StringEncoding
@@ -264,7 +265,7 @@ struct LocationAndName {
 						  modalDelegate:self
 						 didEndSelector:nil
 							contextInfo:nil];
-		return;
+		goto bail;
 	}
 	NSString *content_kind = [html_rec objectForKey:@"kind"];
 	[MonitorWindowController setContent:string type:content_kind];	
@@ -278,7 +279,9 @@ struct LocationAndName {
 	[alert beginSheetModalForWindow:mainWindow
 					  modalDelegate:self
 					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-						contextInfo:[file retain]];
+						contextInfo:(void *)CFRetain(file)];
+bail:
+	CFRelease(html_rec);
 }
 
 - (IBAction)saveToFile:(id)sender
@@ -298,7 +301,7 @@ struct LocationAndName {
 						modalForWindow:mainWindow
 						 modalDelegate:self
 						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
-						   contextInfo:[result retain]];
+						   contextInfo:(void *)CFRetain(result)];
 }
 
 @end
