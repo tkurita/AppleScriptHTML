@@ -6,7 +6,7 @@ on href_with_text(a_text, an_action)
 		set escaped_text to stringByAddingPercentEscapesUsingEncoding_leavings_additionals_(134217984, "", "&'+") as text
 	end tell
 	--set escaped_text to a_text's stringByAddingPercentEscapesUsingEncoding_leavings_additionals_(134217984, "", "&'+") as text
-	set href_text to "applescript://com.apple.scripteditor?action=" & an_action & "%26script=" & escaped_text
+	set href_text to "applescript://com.apple.scripteditor?action=" & an_action & "&amp;script=" & escaped_text
 	--log "end href_with_text"
 	return href_text
 end href_with_text
