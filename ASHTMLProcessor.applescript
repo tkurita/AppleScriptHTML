@@ -25,6 +25,8 @@ script ASHTMLProcessor
 	property FileController : missing value
 	property ClipboardController : missing value
 	
+	property _error_info : missing value
+	
 	on import_script(a_name)
 		--log a_name
 		return load script (path to resource a_name & ".scpt")
@@ -41,6 +43,10 @@ script ASHTMLProcessor
 		set ScriptLinkMaker to import_script("ScriptLinkMaker")
 		--log "end awakeFromNib"
 	end awakeFromNib
+	
+	on errorInfo()
+		return my _error_info
+	end errorInfo
 	
 	on do given fullhtml:full_flag
 		--log "start do in ASHTMLProcessor"
@@ -195,13 +201,23 @@ script ASHTMLProcessor
 	end do
 	
 	on copyToClipboard()
-		set a_result to do without fullhtml
+		try
+			set a_result to do with fullhtml
+		on error msg number 1503
+			set my _error_info to {|message|:msg, |number|:1503}
+			return missing value
+		end try
 		set a_result's content to a_result's content's as_unicode()
 		return a_result
 	end copyToClipboard
 	
 	on saveToFile()
-		set a_result to do with fullhtml
+		try
+			set a_result to do with fullhtml
+		on error msg number 1503
+			set my _error_info to {|message|:msg, |number|:1503}
+			return missing value
+		end try
 		set a_result's content to a_result's content's as_unicode()
 		return a_result
 	end saveToFile

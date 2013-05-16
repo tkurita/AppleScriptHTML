@@ -167,7 +167,21 @@ void showError(NSDictionary *err_info)
 {
 	[self startIndicator];
 	NSDictionary *result = [ASHTMLProcessor copyToClipboard];
-	if (!result) goto bail;
+	if (!result) {
+		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
+		NSString *message = NSLocalizedString([error_info objectForKey:@"message"], @"");
+		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
+											 code:[[error_info objectForKey:@"number"] intValue]
+										 userInfo:(void *)[NSDictionary dictionaryWithObject:message
+																					  forKey:NSLocalizedDescriptionKey]];
+		NSAlert *alert = [NSAlert alertWithError:error];
+		[alert beginSheetModalForWindow:mainWindow
+						  modalDelegate:self
+						 didEndSelector:nil
+							contextInfo:nil];
+		[self stopIndicator];
+		return;
+	}
 	NSString *result_text = [result objectForKey:@"content"];
 	NSString *content_kind = [result objectForKey:@"kind"];
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
@@ -289,6 +303,17 @@ bail:
 	[self startIndicator];
 	NSDictionary *result = [ASHTMLProcessor saveToFile];
 	if (!result) {
+		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
+		NSString *message = NSLocalizedString([error_info objectForKey:@"message"], @"");
+		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
+											 code:[[error_info objectForKey:@"number"] intValue]
+						  userInfo:(void *)[NSDictionary dictionaryWithObject:message
+															   forKey:NSLocalizedDescriptionKey]];
+		NSAlert *alert = [NSAlert alertWithError:error];
+		[alert beginSheetModalForWindow:mainWindow
+						  modalDelegate:self
+						 didEndSelector:nil
+							contextInfo:nil];
 		[self stopIndicator];
 		return;
 	}

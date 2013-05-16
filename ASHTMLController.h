@@ -6,6 +6,7 @@
 - (NSDictionary *)copyToClipboard;
 - (NSString *)pathOnScriptEditor;
 - (NSDictionary *)saveToFile;
+- (NSDictionary *)errorInfo;
 @end
 
 @interface ASHTMLController : NSObject {

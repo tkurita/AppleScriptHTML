@@ -1,5 +1,4 @@
 global XFile
---global DefaultsManager
 
 property _target_text : missing value
 property _target_path : missing value
@@ -11,14 +10,14 @@ on check_target()
 end check_target
 
 on markup()
-	--log "start markup in FileController"
+	log "start markup in FileController"
 	my _ashtml's set_wrap_with_block(false)
 	tell current application's class "NSUserDefaults"'s standardUserDefaults()
 		set my _target_path to stringForKey_("TargetScript") as text
 	end tell
 	set a_result to my _ashtml's process_file(my _target_path, false)
 	set my _target_text to my _ashtml's target_text()
-	--log "end markup in FileController"
+	log "end markup in FileController"
 	return a_result
 end markup
 
