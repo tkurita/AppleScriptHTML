@@ -66,6 +66,14 @@ static NSString *windowName = @"MonitorWindow";
 						contextInfo:nil];
 }
 
+
+- (void)printDocument:(id)sender
+{
+    NSPrintOperation *printOperation = [NSPrintOperation printOperationWithView:monitorTextView];
+    [printOperation runOperationModalForWindow: [self window] delegate: nil didRunSelector: NULL contextInfo:
+	 NULL];
+}
+
 - (void)saveDocument:(id)sender
 {
 	NSString *type = [self contentType];
