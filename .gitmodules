@@ -1,0 +1,9 @@
+[submodule "ASHTMLLib"]
+	path = ASHTMLLib
+	url = https://github.com/tkurita/ASHTMLLib.git
+[submodule "PathExtra"]
+	path = PathExtra
+	url = https://github.com/tkurita/PathExtra.git
+[submodule "DropBox"]
+	path = DropBox
+	url = https://github.com/tkurita/DropBox.git
