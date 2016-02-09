@@ -98,7 +98,7 @@ static AppController *sharedInstance = nil;
 	return UINT_MAX;  // 解放できないオブジェクトであることを示す
 }
 
-- (void)release
+- (oneway void)release
 {
 	// 何もしない
 }
@@ -166,8 +166,8 @@ static AppController *sharedInstance = nil;
 												contextInfo:(void  *)contextInfo
 {
 	if (returnCode == NSOKButton) {
-		NSString *a_path = [panel filename];
-		NSDictionary *alias_info = [a_path infoResolvingAliasFile];
+        NSURL *an_url = [panel URL];
+		NSDictionary *alias_info = [an_url infoResolvingAliasFile];
 		if (alias_info) {
 			[self setTargetScript:[alias_info objectForKey:@"ResolvedPath"] ];
 			[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
@@ -175,7 +175,7 @@ static AppController *sharedInstance = nil;
 			[panel orderOut:self];
 			NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"
 							defaultButton:@"OK" alternateButton:nil otherButton:nil
-							informativeTextWithFormat:@"No original item of '%@'",a_path ];
+							informativeTextWithFormat:@"No original item of '%@'",[an_url path] ];
 			[an_alert beginSheetModalForWindow:mainWindow modalDelegate:self
 														didEndSelector:nil contextInfo:nil];
 		}

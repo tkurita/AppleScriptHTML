@@ -54,7 +54,7 @@ static ASHTMLController *sharedInstance = nil;
 	return UINT_MAX;  // 解放できないオブジェクトであることを示す
 }
 	
-- (void)release
+- (oneway void)release
 {
 	// 何もしない
 }
@@ -116,7 +116,7 @@ void showError(NSDictionary *err_info)
 										defaultButton:@"OK" 
 									alternateButton:nil 
 										otherButton:nil
-							informativeTextWithFormat:msg];
+							informativeTextWithFormat:@"%@", msg];
 				
 				
 				break;
@@ -266,10 +266,10 @@ struct LocationAndName {
 		return;
 	}
 	NSError *error = nil;
-	NSString *file = [sheet filename];
+    NSURL *an_url = [sheet URL];
 	NSDictionary *html_rec = (NSDictionary *)contextInfo;
 	NSString *string = [html_rec objectForKey:@"content"];
-	[string writeToFile:file
+	[string writeToURL:an_url
 			 atomically:NO encoding:NSUTF8StringEncoding
 				  error:&error];
 	if (error) {
@@ -293,7 +293,7 @@ struct LocationAndName {
 	[alert beginSheetModalForWindow:mainWindow
 					  modalDelegate:self
 					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-						contextInfo:(void *)CFRetain(file)];
+						contextInfo:(void *)CFRetain(an_url)];
 bail:
 	CFRelease(html_rec);
 }

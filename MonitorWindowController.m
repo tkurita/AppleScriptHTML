@@ -53,8 +53,8 @@ static NSString *windowName = @"MonitorWindow";
 	if (returnCode != NSOKButton) return;
 	NSError *error = nil;
 	NSString *string = [monitorTextView string];
-	NSString *file = [sheet filename];
-	[string writeToFile:file
+	NSURL *an_url = [sheet URL];
+	[string writeToURL:an_url
 			 atomically:NO encoding:NSUTF8StringEncoding
 									error:&error];
 	if (!error) return;
