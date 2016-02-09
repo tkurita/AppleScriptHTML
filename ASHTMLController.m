@@ -244,7 +244,7 @@ struct LocationAndName {
 - (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode 
 										contextInfo:(void *)contextInfo
 {
-	NSString *file = (NSString *)contextInfo;
+	NSString *file = [(NSURL *)contextInfo path];
 	switch (returnCode) {
 		case NSAlertDefaultReturn:
 			[[NSWorkspace sharedWorkspace] openFile:file];
@@ -257,6 +257,7 @@ struct LocationAndName {
 	}
 	CFRelease(file);
 }
+/*
 
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
 			contextInfo:(void *)contextInfo
@@ -297,6 +298,30 @@ struct LocationAndName {
 bail:
 	CFRelease(html_rec);
 }
+*/
+
+- (void)saveASHTML:(NSDictionary *)ASTHMLDict toURL:(NSURL *)anURL error:(NSError **)err
+{
+	NSString *string = [ASTHMLDict objectForKey:@"content"];
+	[string writeToURL:anURL
+            atomically:NO encoding:NSUTF8StringEncoding
+                 error:err];
+	if (err) {
+        return;
+	}
+	NSString *content_kind = [ASTHMLDict objectForKey:@"kind"];
+	[MonitorWindowController setContent:string type:content_kind];	
+	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Success to Make a HTML file.",@"")
+									 defaultButton:NSLocalizedString(@"Open", @"")
+								   alternateButton:NSLocalizedString(@"Cancel",@"")
+									   otherButton:NSLocalizedString(@"Reveal", @"")
+						 informativeTextWithFormat:@""];
+	
+    [alert beginSheetModalForWindow:mainWindow
+					  modalDelegate:self
+					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
+						contextInfo:(void *)CFRetain(anURL)];
+}
 
 - (IBAction)saveToFile:(id)sender
 {
@@ -321,12 +346,21 @@ bail:
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:default_loc_name.extension]];
 	[save_panel setCanSelectHiddenExtension:YES];
-	[save_panel beginSheetForDirectory:default_loc_name.location
-								  file:default_loc_name.name
-						modalForWindow:mainWindow
-						 modalDelegate:self
-						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
-						   contextInfo:(void *)CFRetain(result)];
+    [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name.location]];
+    [save_panel setNameFieldStringValue:default_loc_name.name];
+    [save_panel beginSheetModalForWindow:mainWindow
+                       completionHandler:^(NSInteger result) {
+                [self stopIndicator];
+                if (result != NSOKButton) {
+                    return;
+                }
+                NSError *error = nil;
+                [save_panel orderOut:self];
+                [self saveASHTML:result toURL:[save_panel URL] error:&error];
+                if (error) {
+                    [NSApp presentError:error];
+                }
+            }];
 }
 
 @end

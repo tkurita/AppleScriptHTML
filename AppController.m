@@ -287,11 +287,32 @@ static AppController *sharedInstance = nil;
 {
 	NSOpenPanel *a_panel = [NSOpenPanel openPanel];
 	[a_panel setResolvesAliases:NO];
+    [a_panel setAllowedFileTypes:@[@"scpt", @"scptd", @"applescript", @"app"]];
+    [a_panel beginSheetModalForWindow:mainWindow
+                    completionHandler:^(NSInteger result)
+     {
+         if (result != NSOKButton) return;
+         NSURL *an_url = [a_panel URL];
+         NSDictionary *alias_info = [an_url infoResolvingAliasFile];
+         if (alias_info) {
+             [self setTargetScript:[alias_info objectForKey:@"ResolvedPath"] ];
+             [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
+         } else {
+             [a_panel orderOut:self];
+             NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"
+                                                 defaultButton:@"OK" alternateButton:nil otherButton:nil
+                                     informativeTextWithFormat:@"No original item of '%@'",[an_url path] ];
+             [an_alert beginSheetModalForWindow:mainWindow modalDelegate:self
+                                 didEndSelector:nil contextInfo:nil];
+         }
+     }];
+    /*
 	[a_panel beginSheetForDirectory:nil file:nil 
 			types:[NSArray arrayWithObjects:@"scpt", @"scptd", @"applescript", @"app", nil]
 			modalForWindow:mainWindow modalDelegate:self
-			didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:) 
+			didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:)
 			contextInfo:nil];
+     */
 }
 
 - (IBAction)popUpRecents:(id)sender

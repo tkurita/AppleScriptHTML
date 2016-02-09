@@ -47,6 +47,7 @@ static NSString *windowName = @"MonitorWindow";
 	[[self window] saveFrameUsingName:windowName];
 }
 
+/*
 - (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
 				contextInfo:(void *)contextInfo
 {
@@ -65,7 +66,7 @@ static NSString *windowName = @"MonitorWindow";
 					 didEndSelector:nil
 						contextInfo:nil];
 }
-
+*/
 
 - (void)printDocument:(id)sender
 {
@@ -81,12 +82,26 @@ static NSString *windowName = @"MonitorWindow";
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:type]];
 	[save_panel setCanSelectHiddenExtension:YES];
-	[save_panel beginSheetForDirectory:nil
-								  file:[@"Untitled" stringByAppendingPathExtension:type]
-						modalForWindow:[self window]
-						 modalDelegate:self
-						didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:)
-						   contextInfo:nil];
+    [save_panel setNameFieldStringValue:[@"Untitled" stringByAppendingPathExtension:type]];
+    
+    [save_panel beginSheetModalForWindow:[self window]
+                       completionHandler:^(NSInteger result)
+     {
+         if (result != NSOKButton) return;
+         NSError *error = nil;
+         NSString *string = [monitorTextView string];
+         NSURL *an_url = [save_panel URL];
+         [string writeToURL:an_url
+                 atomically:NO encoding:NSUTF8StringEncoding
+                      error:&error];
+         if (!error) return;
+         [save_panel orderOut:self];
+         NSAlert *alert = [NSAlert alertWithError:error];
+         [alert beginSheetModalForWindow:[self window]
+                           modalDelegate:self
+                          didEndSelector:nil
+                             contextInfo:nil];
+     }];
 }
 
 - (IBAction)copyAll:(id)sender
