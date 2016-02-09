@@ -257,48 +257,6 @@ struct LocationAndName {
 	}
 	CFRelease(file);
 }
-/*
-
-- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
-			contextInfo:(void *)contextInfo
-{
-	if (returnCode != NSOKButton) {
-		[self stopIndicator];
-		return;
-	}
-	NSError *error = nil;
-    NSURL *an_url = [sheet URL];
-	NSDictionary *html_rec = (NSDictionary *)contextInfo;
-	NSString *string = [html_rec objectForKey:@"content"];
-	[string writeToURL:an_url
-			 atomically:NO encoding:NSUTF8StringEncoding
-				  error:&error];
-	if (error) {
-		[sheet orderOut:self];
-		NSAlert *alert = [NSAlert alertWithError:error];
-		[alert beginSheetModalForWindow:mainWindow
-						  modalDelegate:self
-						 didEndSelector:nil
-							contextInfo:nil];
-		goto bail;
-	}
-	NSString *content_kind = [html_rec objectForKey:@"kind"];
-	[MonitorWindowController setContent:string type:content_kind];	
-	[self stopIndicator];
-	[sheet orderOut:self];
-	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Success to Make a HTML file.",@"")
-									 defaultButton:NSLocalizedString(@"Open", @"")
-								   alternateButton:NSLocalizedString(@"Cancel",@"")
-									   otherButton:NSLocalizedString(@"Reveal", @"")
-						 informativeTextWithFormat:@""];
-	[alert beginSheetModalForWindow:mainWindow
-					  modalDelegate:self
-					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-						contextInfo:(void *)CFRetain(an_url)];
-bail:
-	CFRelease(html_rec);
-}
-*/
 
 - (void)saveASHTML:(NSDictionary *)ASTHMLDict toURL:(NSURL *)anURL error:(NSError **)err
 {
@@ -326,8 +284,8 @@ bail:
 - (IBAction)saveToFile:(id)sender
 {
 	[self startIndicator];
-	NSDictionary *result = [ASHTMLProcessor saveToFile];
-	if (!result) {
+	NSDictionary *result_ASHTML = [ASHTMLProcessor saveToFile];
+	if (!result_ASHTML) {
 		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
 		NSString *message = NSLocalizedString([error_info objectForKey:@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
@@ -356,9 +314,13 @@ bail:
                 }
                 NSError *error = nil;
                 [save_panel orderOut:self];
-                [self saveASHTML:result toURL:[save_panel URL] error:&error];
+                [self saveASHTML:result_ASHTML toURL:[save_panel URL] error:&error];
                 if (error) {
-                    [NSApp presentError:error];
+                    NSAlert *alert = [NSAlert alertWithError:error];
+                    [alert beginSheetModalForWindow:mainWindow
+                                      modalDelegate:self
+                                     didEndSelector:nil
+                                        contextInfo:nil];
                 }
             }];
 }

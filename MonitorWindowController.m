@@ -47,27 +47,6 @@ static NSString *windowName = @"MonitorWindow";
 	[[self window] saveFrameUsingName:windowName];
 }
 
-/*
-- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode 
-				contextInfo:(void *)contextInfo
-{
-	if (returnCode != NSOKButton) return;
-	NSError *error = nil;
-	NSString *string = [monitorTextView string];
-	NSURL *an_url = [sheet URL];
-	[string writeToURL:an_url
-			 atomically:NO encoding:NSUTF8StringEncoding
-									error:&error];
-	if (!error) return;
-	[sheet orderOut:self];
-	NSAlert *alert = [NSAlert alertWithError:error];
-	[alert beginSheetModalForWindow:[self window]
-					  modalDelegate:self
-					 didEndSelector:nil
-						contextInfo:nil];
-}
-*/
-
 - (void)printDocument:(id)sender
 {
     NSPrintOperation *printOperation = [NSPrintOperation printOperationWithView:monitorTextView];

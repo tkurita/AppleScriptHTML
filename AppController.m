@@ -169,7 +169,7 @@ static AppController *sharedInstance = nil;
         NSURL *an_url = [panel URL];
 		NSDictionary *alias_info = [an_url infoResolvingAliasFile];
 		if (alias_info) {
-			[self setTargetScript:[alias_info objectForKey:@"ResolvedPath"] ];
+			[self setTargetScript:[alias_info[@"ResolvedURL"] path]];
 			[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
 		} else {
 			[panel orderOut:self];
@@ -295,7 +295,7 @@ static AppController *sharedInstance = nil;
          NSURL *an_url = [a_panel URL];
          NSDictionary *alias_info = [an_url infoResolvingAliasFile];
          if (alias_info) {
-             [self setTargetScript:[alias_info objectForKey:@"ResolvedPath"] ];
+             [self setTargetScript:[alias_info[@"ResolvedURL"] path]];
              [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
          } else {
              [a_panel orderOut:self];
@@ -306,13 +306,6 @@ static AppController *sharedInstance = nil;
                                  didEndSelector:nil contextInfo:nil];
          }
      }];
-    /*
-	[a_panel beginSheetForDirectory:nil file:nil 
-			types:[NSArray arrayWithObjects:@"scpt", @"scptd", @"applescript", @"app", nil]
-			modalForWindow:mainWindow modalDelegate:self
-			didEndSelector:@selector(openPanelDidEnd:returnCode:contextInfo:)
-			contextInfo:nil];
-     */
 }
 
 - (IBAction)popUpRecents:(id)sender

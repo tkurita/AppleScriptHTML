@@ -10,3 +10,6 @@
 [submodule "DonationReminder"]
 	path = DonationReminder
 	url = https://github.com/tkurita/DonationReminder.git
+[submodule "StringExtra"]
+	path = StringExtra
+	url = https://github.com/tkurita/StringExtra.git

@@ -35,9 +35,7 @@
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
 		2C952AB01C69B366008E097B /* PathExtra_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C952AAB1C69B366008E097B /* PathExtra_Localizable.strings */; };
 		2C952AB21C69B366008E097B /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AAF1C69B366008E097B /* PathExtra.m */; };
-		2C952AB81C69B399008E097B /* DropBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB41C69B399008E097B /* DropBox.h */; };
 		2C952AB91C69B399008E097B /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB51C69B399008E097B /* DropBox.m */; };
-		2C952ABA1C69B399008E097B /* HFSTypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB61C69B399008E097B /* HFSTypeUtils.h */; };
 		2C952ABB1C69B399008E097B /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB71C69B399008E097B /* HFSTypeUtils.m */; };
 		2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */; settings = {ATTRIBUTES = (); }; };
 		2CC90BB31591508900B067EF /* template_full_scriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CC90BAD1591508900B067EF /* template_full_scriptlink_inline.html */; };
@@ -47,6 +45,10 @@
 		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
 		2CD14C151C69F32E009EACDB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; };
 		2CD14C161C69F361009EACDB /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; };
+		2CD14C1B1C6A0594009EACDB /* StringExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD14C191C6A0594009EACDB /* StringExtra.m */; };
+		2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB61C69B399008E097B /* HFSTypeUtils.h */; };
+		2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB41C69B399008E097B /* DropBox.h */; };
+		2CD14C1E1C6A05D1009EACDB /* StringExtra.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD14C181C6A0594009EACDB /* StringExtra.h */; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
@@ -155,6 +157,8 @@
 		2CC90C2915917E9800B067EF /* template_sourcecode_onlyscriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode_onlyscriptlink_inline.html; sourceTree = "<group>"; };
 		2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink.html; sourceTree = "<group>"; };
 		2CD14C141C69F32E009EACDB /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		2CD14C181C6A0594009EACDB /* StringExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringExtra.h; sourceTree = "<group>"; };
+		2CD14C191C6A0594009EACDB /* StringExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtra.m; sourceTree = "<group>"; };
 		2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppleScriptHTML.icns; sourceTree = "<group>"; };
 		2CD43146108F5C4F0026C231 /* ASFormattingExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormattingExtensions.h; sourceTree = "<group>"; };
 		2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormattingExtensions.m; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6BE34D108C1067007BBBA7 /* History.rd */,
+				2CD14C171C6A0594009EACDB /* StringExtra */,
 				2C952AB31C69B399008E097B /* DropBox */,
 				2C952AAA1C69B366008E097B /* PathExtra */,
 				2CF3A6330ECACC1600D63AF8 /* Templates */,
@@ -346,6 +351,15 @@
 			path = DropBox;
 			sourceTree = "<group>";
 		};
+		2CD14C171C6A0594009EACDB /* StringExtra */ = {
+			isa = PBXGroup;
+			children = (
+				2CD14C181C6A0594009EACDB /* StringExtra.h */,
+				2CD14C191C6A0594009EACDB /* StringExtra.m */,
+			);
+			path = StringExtra;
+			sourceTree = "<group>";
+		};
 		2CD975830EC8FAD300024156 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,8 +403,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C952AB81C69B399008E097B /* DropBox.h in Headers */,
-				2C952ABA1C69B399008E097B /* HFSTypeUtils.h in Headers */,
+				2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */,
+				2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */,
+				2CD14C1E1C6A05D1009EACDB /* StringExtra.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +564,7 @@
 				2C952AB21C69B366008E097B /* PathExtra.m in Sources */,
 				2C952AB91C69B399008E097B /* DropBox.m in Sources */,
 				2C952ABB1C69B399008E097B /* HFSTypeUtils.m in Sources */,
+				2CD14C1B1C6A0594009EACDB /* StringExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
