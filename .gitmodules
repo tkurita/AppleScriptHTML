@@ -7,3 +7,6 @@
 [submodule "DropBox"]
 	path = DropBox
 	url = https://github.com/tkurita/DropBox.git
+[submodule "DonationReminder"]
+	path = DonationReminder
+	url = https://github.com/tkurita/DonationReminder.git
