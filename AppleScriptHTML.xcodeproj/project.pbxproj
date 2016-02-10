@@ -33,7 +33,6 @@
 		2C9492BB0ECA99A600273C7C /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9492B90ECA99A600273C7C /* AppController.m */; };
 		2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */; };
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
-		2C952AB01C69B366008E097B /* PathExtra_Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C952AAB1C69B366008E097B /* PathExtra_Localizable.strings */; };
 		2C952AB21C69B366008E097B /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AAF1C69B366008E097B /* PathExtra.m */; };
 		2C952AB91C69B399008E097B /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB51C69B399008E097B /* DropBox.m */; };
 		2C952ABB1C69B399008E097B /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB71C69B399008E097B /* HFSTypeUtils.m */; };
@@ -506,7 +505,6 @@
 				2CC90BB51591508900B067EF /* template_sourcecode_noscriptlink_inline.html in Resources */,
 				2CC90C2A15917E9800B067EF /* template_sourcecode_onlyscriptlink_inline.html in Resources */,
 				2C4FD8291664548100FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */,
-				2C952AB01C69B366008E097B /* PathExtra_Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
