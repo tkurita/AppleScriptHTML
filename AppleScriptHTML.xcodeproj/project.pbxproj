@@ -49,6 +49,10 @@
 		2CD14C301C6AF31B009EACDB /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C281C6AF31B009EACDB /* MainMenu.nib */; };
 		2CD14C311C6AF31B009EACDB /* MonitorWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C2A1C6AF31B009EACDB /* MonitorWindow.nib */; };
 		2CD14C321C6AF31B009EACDB /* PreferencesWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C2C1C6AF31B009EACDB /* PreferencesWindow.nib */; };
+		2CD14C441C6AF493009EACDB /* localize.mk in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C401C6AF493009EACDB /* localize.mk */; };
+		2CD14C451C6AF493009EACDB /* localize_ib.mk in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C411C6AF493009EACDB /* localize_ib.mk */; };
+		2CD14C461C6AF493009EACDB /* localize_ib.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C421C6AF493009EACDB /* localize_ib.sh */; };
+		2CD14C471C6AF493009EACDB /* require_strings_file.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C431C6AF493009EACDB /* require_strings_file.sh */; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
@@ -109,10 +113,6 @@
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
 		2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASFormattingStyle.applescript; sourceTree = "<group>"; };
 		2C4FD8281664548100FBA7AC /* template_full_onlyscriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink_inline.html; sourceTree = "<group>"; };
-		2C4FD87D1664562C00FBA7AC /* localize_ib.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize_ib.mk; sourceTree = "<group>"; };
-		2C4FD87E1664562C00FBA7AC /* localize_ib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = localize_ib.sh; sourceTree = "<group>"; };
-		2C4FD87F1664562C00FBA7AC /* localize.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize.mk; sourceTree = "<group>"; };
-		2C4FD8801664562C00FBA7AC /* require_strings_file.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = require_strings_file.sh; sourceTree = "<group>"; };
 		2C4FD88316645E4D00FBA7AC /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		2C506D510FE67FE300C1CA94 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		2C681088156DD19A00AFDDAD /* ClipboardController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ClipboardController.applescript; sourceTree = "<group>"; };
@@ -160,6 +160,10 @@
 		2CD14C391C6AF349009EACDB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		2CD14C3B1C6AF349009EACDB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MonitorWindow.strings; sourceTree = "<group>"; };
 		2CD14C3D1C6AF349009EACDB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PreferencesWindow.strings; sourceTree = "<group>"; };
+		2CD14C401C6AF493009EACDB /* localize.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize.mk; sourceTree = "<group>"; };
+		2CD14C411C6AF493009EACDB /* localize_ib.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize_ib.mk; sourceTree = "<group>"; };
+		2CD14C421C6AF493009EACDB /* localize_ib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = localize_ib.sh; sourceTree = "<group>"; };
+		2CD14C431C6AF493009EACDB /* require_strings_file.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = require_strings_file.sh; sourceTree = "<group>"; };
 		2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppleScriptHTML.icns; sourceTree = "<group>"; };
 		2CD43146108F5C4F0026C231 /* ASFormattingExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormattingExtensions.h; sourceTree = "<group>"; };
 		2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormattingExtensions.m; sourceTree = "<group>"; };
@@ -248,8 +252,8 @@
 				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				2C4FD87C166455FB00FBA7AC /* localize tools */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				2CD14C3F1C6AF493009EACDB /* LocalizeTools */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				2C8975861C69F1D4008D8B56 /* DonationReminder.xcodeproj */,
 			);
@@ -310,17 +314,6 @@
 			path = ASHTMLLib;
 			sourceTree = "<group>";
 		};
-		2C4FD87C166455FB00FBA7AC /* localize tools */ = {
-			isa = PBXGroup;
-			children = (
-				2C4FD87D1664562C00FBA7AC /* localize_ib.mk */,
-				2C4FD87E1664562C00FBA7AC /* localize_ib.sh */,
-				2C4FD87F1664562C00FBA7AC /* localize.mk */,
-				2C4FD8801664562C00FBA7AC /* require_strings_file.sh */,
-			);
-			name = "localize tools";
-			sourceTree = "<group>";
-		};
 		2C8975871C69F1D4008D8B56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +350,17 @@
 				2CD14C191C6A0594009EACDB /* StringExtra.m */,
 			);
 			path = StringExtra;
+			sourceTree = "<group>";
+		};
+		2CD14C3F1C6AF493009EACDB /* LocalizeTools */ = {
+			isa = PBXGroup;
+			children = (
+				2CD14C401C6AF493009EACDB /* localize.mk */,
+				2CD14C411C6AF493009EACDB /* localize_ib.mk */,
+				2CD14C421C6AF493009EACDB /* localize_ib.sh */,
+				2CD14C431C6AF493009EACDB /* require_strings_file.sh */,
+			);
+			path = LocalizeTools;
 			sourceTree = "<group>";
 		};
 		2CD975830EC8FAD300024156 /* Classes */ = {
@@ -505,6 +509,10 @@
 				2CD14C301C6AF31B009EACDB /* MainMenu.nib in Resources */,
 				2CD14C311C6AF31B009EACDB /* MonitorWindow.nib in Resources */,
 				2CD14C321C6AF31B009EACDB /* PreferencesWindow.nib in Resources */,
+				2CD14C441C6AF493009EACDB /* localize.mk in Resources */,
+				2CD14C451C6AF493009EACDB /* localize_ib.mk in Resources */,
+				2CD14C461C6AF493009EACDB /* localize_ib.sh in Resources */,
+				2CD14C471C6AF493009EACDB /* require_strings_file.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
