@@ -38,7 +38,7 @@ static NSString *frameName = @"PreferencesWindow";
 																  attributes:attributes[n]];
 
 		[a_result addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-							 [styled_name autorelease], @"styleName", 
+							 styled_name, @"styleName", 
 							 cname, @"className", nil]];
 	}
 	return a_result;

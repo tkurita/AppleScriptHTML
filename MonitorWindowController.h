@@ -3,8 +3,8 @@
 @interface MonitorWindowController : NSWindowController {
 	IBOutlet id monitorTextView;
 }
-@property(retain) NSString* contentType;
-@property(retain) NSString* content;
+@property(strong) NSString* contentType;
+@property(strong) NSString* content;
 
 + (id)sharedWindowController;
 + (void)setContent:(NSString *)string type:(NSString *)type;

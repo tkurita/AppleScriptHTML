@@ -17,57 +17,12 @@ static ASHTMLController *sharedInstance = nil;
 
 + (ASHTMLController *)sharedASHTMLController
 {
-	@synchronized(self) {
-		if (sharedInstance == nil) {
-			[[self alloc] init]; // ここでは代入していない
-		}
-	}
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[ASHTMLController alloc] init];
+    });
 	
 	return sharedInstance;
-}
-
-+ (id)allocWithZone:(NSZone *)zone
-{
-	@synchronized(self) {
-		if (sharedInstance == nil) {
-			sharedInstance = [super allocWithZone:zone];
-			return sharedInstance;  // 最初の割り当てで代入し、返す
-		}
-	}
-	return nil; // 以降の割り当てではnilを返すようにする
-}
-	
-- (id)copyWithZone:(NSZone *)zone
-{
-	return self;
-}
-	
-- (id)retain
-{
-	return self;
-}
-	
-- (NSUInteger)retainCount
-{
-	return UINT_MAX;  // 解放できないオブジェクトであることを示す
-}
-	
-- (oneway void)release
-{
-	// 何もしない
-}
-	
-- (id)autorelease
-{
-	return self;
-}
-	
-
-
-- (void)dealloc
-{
-	self.script = nil;
-	[super dealloc];
 }
 
 
@@ -79,8 +34,6 @@ void showError(NSDictionary *err_info)
 	NSRunAlertPanel(nil, err_info[OSAScriptErrorMessage], 
 					@"OK", nil, nil);	
 }
-
-
 
 - (NSAppleEventDescriptor *)runHandlerWithName:(NSString *)handler
 									arguments:(NSArray *)args
@@ -169,7 +122,7 @@ void showError(NSDictionary *err_info)
 		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
 											 code:[error_info[@"number"] intValue]
-										 userInfo:(void *)@{NSLocalizedDescriptionKey: message}];
+										 userInfo:@{NSLocalizedDescriptionKey: message}];
 		NSAlert *alert = [NSAlert alertWithError:error];
 		[alert beginSheetModalForWindow:mainWindow
 						  modalDelegate:self
@@ -187,14 +140,8 @@ void showError(NSDictionary *err_info)
 bail:	
 	[self stopIndicator];
 }
-
-struct LocationAndName {
-	NSString *location;
-	NSString *name;
-	NSString *extension;
-};
 	 
-- (struct LocationAndName)defaultLocationAndName:(id)sender
+- (NSDictionary *)defaultLocationAndName:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	int css_mode_index = [user_defaults integerForKey:@"CSSModeIndex"];
@@ -233,14 +180,13 @@ struct LocationAndName {
 			default_location = [path stringByDeletingLastPathComponent];
 		}		
 	}
-	struct LocationAndName result = {default_location, default_name, extension};
-	return result;
+	return @{@"location": default_location, @"name": default_name, @"extension":extension};
 }
 
 - (void) alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode 
 										contextInfo:(void *)contextInfo
 {
-	NSString *file = [(NSURL *)contextInfo path];
+	NSString *file = [(__bridge_transfer NSURL *)contextInfo path];
 	switch (returnCode) {
 		case NSAlertDefaultReturn:
 			[[NSWorkspace sharedWorkspace] openFile:file];
@@ -251,7 +197,6 @@ struct LocationAndName {
 		default:
 			break;
 	}
-	CFRelease(file);
 }
 
 - (void)saveASHTML:(NSDictionary *)ASTHMLDict toURL:(NSURL *)anURL error:(NSError **)err
@@ -274,7 +219,7 @@ struct LocationAndName {
     [alert beginSheetModalForWindow:mainWindow
 					  modalDelegate:self
 					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
-						contextInfo:(void *)CFRetain(anURL)];
+						contextInfo:(__bridge_retained void *)anURL];
 }
 
 - (IBAction)saveToFile:(id)sender
@@ -286,7 +231,7 @@ struct LocationAndName {
 		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
 											 code:[error_info[@"number"] intValue]
-						  userInfo:(void *)@{NSLocalizedDescriptionKey: message}];
+                                         userInfo:@{NSLocalizedDescriptionKey: message}];
 		NSAlert *alert = [NSAlert alertWithError:error];
 		[alert beginSheetModalForWindow:mainWindow
 						  modalDelegate:self
@@ -295,12 +240,12 @@ struct LocationAndName {
 		[self stopIndicator];
 		return;
 	}
-	struct LocationAndName default_loc_name = [self defaultLocationAndName:sender];
+	NSDictionary *default_loc_name = [self defaultLocationAndName:sender];
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	[save_panel setAllowedFileTypes:@[default_loc_name.extension]];
+	[save_panel setAllowedFileTypes:@[default_loc_name[@"extension"]]];
 	[save_panel setCanSelectHiddenExtension:YES];
-    [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name.location]];
-    [save_panel setNameFieldStringValue:default_loc_name.name];
+    [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name[@"location"]]];
+    [save_panel setNameFieldStringValue:default_loc_name[@"name"]];
     [save_panel beginSheetModalForWindow:mainWindow
                        completionHandler:^(NSInteger result) {
                 [self stopIndicator];

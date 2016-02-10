@@ -14,7 +14,7 @@
 	IBOutlet id mainWindow;
 	IBOutlet id ASHTMLProcessor;
 }
-@property(retain) OSAScript *script;
+@property(strong) OSAScript *script;
 
 + (id)sharedASHTMLController;
 - (void)generateCSS:(id)sender;
