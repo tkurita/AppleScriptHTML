@@ -662,20 +662,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"\"$(SRCROOT)\"",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
 				PRODUCT_NAME = AppleScriptHTML;
+				PRODUCT_VERSION = 2.6;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -686,18 +687,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CURRENT_PROJECT_VERSION = 32;
+				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
+				CURRENT_PROJECT_VERSION = 33;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"\"$(SRCROOT)\"",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/..\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
-				OTHER_OSAFLAGS = "-x";
 				PRODUCT_NAME = AppleScriptHTML;
+				PRODUCT_VERSION = 2.6;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
