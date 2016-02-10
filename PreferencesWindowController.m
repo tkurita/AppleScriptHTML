@@ -30,12 +30,12 @@ static NSString *frameName = @"PreferencesWindow";
 	for (int n=0; n < nmax; n++) {
 		NSString *cname = @"";
 		if ([class_names count] > n) {
-			cname = [class_names objectAtIndex:n];
+			cname = class_names[n];
 			if (!cname) cname = @"";
 		}
 		NSString *a_name = [[style_names_descriptor descriptorAtIndex:(n+1)] stringValue];
 		NSAttributedString *styled_name = [[NSAttributedString alloc] initWithString:a_name
-																  attributes:[attributes objectAtIndex:n]];
+																  attributes:attributes[n]];
 
 		[a_result addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
 							 [styled_name autorelease], @"styleName", 

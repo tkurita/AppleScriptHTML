@@ -76,7 +76,7 @@ void showError(NSDictionary *err_info)
 	NSLog(@"Error : %@", [err_info description]);
 	NSLog(@"%@", err_info);
 	[NSApp activateIgnoringOtherApps:YES];
-	NSRunAlertPanel(nil, [err_info objectForKey:OSAScriptErrorMessage], 
+	NSRunAlertPanel(nil, err_info[OSAScriptErrorMessage], 
 					@"OK", nil, nil);	
 }
 
@@ -93,8 +93,8 @@ void showError(NSDictionary *err_info)
 			[_script executeHandlerWithName:handler
 							  arguments:args error:&error_info];
 	if (error_info) {
-		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
-		NSString *msg = [error_info objectForKey:OSAScriptErrorMessage];
+		NSNumber *err_no = error_info[OSAScriptErrorNumber];
+		NSString *msg = error_info[OSAScriptErrorMessage];
 		NSAlert *alert = nil;
 #if useLog
 		NSLog(@"%@", [error_info description]);
@@ -123,7 +123,7 @@ void showError(NSDictionary *err_info)
 				alert = [NSAlert alertWithMessageText:@"AppleScript Error"
 								 defaultButton:@"OK" alternateButton:nil otherButton:nil
 								informativeTextWithFormat:@"%@\nNumber: %@", 
-						 [error_info objectForKey:OSAScriptErrorMessage],
+						 error_info[OSAScriptErrorMessage],
 						 err_no];
 				break;
 		}
@@ -166,11 +166,10 @@ void showError(NSDictionary *err_info)
 	NSDictionary *result = [ASHTMLProcessor copyToClipboard];
 	if (!result) {
 		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
-		NSString *message = NSLocalizedString([error_info objectForKey:@"message"], @"");
+		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
-											 code:[[error_info objectForKey:@"number"] intValue]
-										 userInfo:(void *)[NSDictionary dictionaryWithObject:message
-																					  forKey:NSLocalizedDescriptionKey]];
+											 code:[error_info[@"number"] intValue]
+										 userInfo:(void *)@{NSLocalizedDescriptionKey: message}];
 		NSAlert *alert = [NSAlert alertWithError:error];
 		[alert beginSheetModalForWindow:mainWindow
 						  modalDelegate:self
@@ -179,10 +178,10 @@ void showError(NSDictionary *err_info)
 		[self stopIndicator];
 		return;
 	}
-	NSString *result_text = [result objectForKey:@"content"];
-	NSString *content_kind = [result objectForKey:@"kind"];
+	NSString *result_text = result[@"content"];
+	NSString *content_kind = result[@"kind"];
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-	[pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
+	[pboard declareTypes:@[NSStringPboardType] owner:nil];
 	[pboard setString:result_text forType:NSStringPboardType];
 	[MonitorWindowController setContent:result_text type:content_kind];
 bail:	
@@ -257,14 +256,14 @@ struct LocationAndName {
 
 - (void)saveASHTML:(NSDictionary *)ASTHMLDict toURL:(NSURL *)anURL error:(NSError **)err
 {
-	NSString *string = [ASTHMLDict objectForKey:@"content"];
+	NSString *string = ASTHMLDict[@"content"];
 	[string writeToURL:anURL
             atomically:NO encoding:NSUTF8StringEncoding
                  error:err];
 	if (err) {
         return;
 	}
-	NSString *content_kind = [ASTHMLDict objectForKey:@"kind"];
+	NSString *content_kind = ASTHMLDict[@"kind"];
 	[MonitorWindowController setContent:string type:content_kind];	
 	NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Success to Make a HTML file.",@"")
 									 defaultButton:NSLocalizedString(@"Open", @"")
@@ -284,11 +283,10 @@ struct LocationAndName {
 	NSDictionary *result_ASHTML = [ASHTMLProcessor saveToFile];
 	if (!result_ASHTML) {
 		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
-		NSString *message = NSLocalizedString([error_info objectForKey:@"message"], @"");
+		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
-											 code:[[error_info objectForKey:@"number"] intValue]
-						  userInfo:(void *)[NSDictionary dictionaryWithObject:message
-															   forKey:NSLocalizedDescriptionKey]];
+											 code:[error_info[@"number"] intValue]
+						  userInfo:(void *)@{NSLocalizedDescriptionKey: message}];
 		NSAlert *alert = [NSAlert alertWithError:error];
 		[alert beginSheetModalForWindow:mainWindow
 						  modalDelegate:self
@@ -299,7 +297,7 @@ struct LocationAndName {
 	}
 	struct LocationAndName default_loc_name = [self defaultLocationAndName:sender];
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:default_loc_name.extension]];
+	[save_panel setAllowedFileTypes:@[default_loc_name.extension]];
 	[save_panel setCanSelectHiddenExtension:YES];
     [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name.location]];
     [save_panel setNameFieldStringValue:default_loc_name.name];

@@ -675,6 +675,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
 				PRODUCT_NAME = AppleScriptHTML;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
 			};
@@ -695,6 +696,7 @@
 				INSTALL_PATH = /Applications;
 				OTHER_OSAFLAGS = "-x";
 				PRODUCT_NAME = AppleScriptHTML;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
 			};

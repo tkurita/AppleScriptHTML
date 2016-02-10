@@ -56,7 +56,7 @@ static NSString *windowName = @"MonitorWindow";
 	NSString *type = _contentType;
 	if (!type) return;
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:type]];
+	[save_panel setAllowedFileTypes:@[type]];
 	[save_panel setCanSelectHiddenExtension:YES];
     [save_panel setNameFieldStringValue:[@"Untitled" stringByAppendingPathExtension:type]];
     
@@ -86,7 +86,7 @@ static NSString *windowName = @"MonitorWindow";
 	if (!type) return;
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
 	NSString *actual_type = NSStringPboardType;
-	NSArray *types = [NSArray arrayWithObject:actual_type];
+	NSArray *types = @[actual_type];
 	[pboard declareTypes:types owner:nil];
 	[pboard setString:_content forType:actual_type];
 }

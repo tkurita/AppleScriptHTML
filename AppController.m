@@ -53,7 +53,7 @@
 	[[NSUserDefaultsController sharedUserDefaultsController]
 					setValue:a_path forKeyPath:@"values.TargetScript"];
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults setObject:[NSNumber numberWithInt:0] forKey:@"TargetMode"];
+	[user_defaults setObject:@0 forKey:@"TargetMode"];
 	[user_defaults addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
 	return YES;
 }
@@ -130,18 +130,16 @@ static AppController *sharedInstance = nil;
 	[a_cell setArrowPosition:NSPopUpArrowAtCenter];
 	[a_cell setUsesItemFromMenu:NO];
 	
-	[targetScriptBox setAcceptFileInfo:[NSArray arrayWithObjects:
-		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeDirectory, @"FileType",
-													@"scptd", @"PathExtension", nil], 
-		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
-													@"scpt", @"PathExtension", nil], 
-		[NSDictionary dictionaryWithObjectsAndKeys:NSFileTypeRegular, @"FileType",
-												@"applescript", @"PathExtension", nil], 
-		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
-													 @"aplt", @"CreatorCode", nil], 
-		[NSDictionary dictionaryWithObjectsAndKeys:@"app", @"PathExtension",
-										 @"dplt", @"CreatorCode", nil], 										
-										nil]];
+	[targetScriptBox setAcceptFileInfo:@[@{@"FileType": NSFileTypeDirectory,
+													@"PathExtension": @"scptd"}, 
+		@{@"FileType": NSFileTypeRegular,
+													@"PathExtension": @"scpt"}, 
+		@{@"FileType": NSFileTypeRegular,
+												@"PathExtension": @"applescript"}, 
+		@{@"PathExtension": @"app",
+													 @"CreatorCode": @"aplt"}, 
+		@{@"PathExtension": @"app",
+										 @"CreatorCode": @"dplt"}]];
 		
 	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
 		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
@@ -158,7 +156,7 @@ static AppController *sharedInstance = nil;
 #pragma mark delegate methods for somethings
 - (BOOL)dropBox:(NSView *)dbv acceptDrop:(id <NSDraggingInfo>)info item:(id)item
 {
-	item = [[item infoResolvingAliasFile] objectForKey:@"ResolvedPath"];
+	item = [item infoResolvingAliasFile][@"ResolvedPath"];
 	return [self setTargetScript:item];
 }
 
@@ -266,7 +264,7 @@ static AppController *sharedInstance = nil;
 - (IBAction)useClipboardContents:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults setObject:[NSNumber numberWithInt:2] forKey:@"TargetMode"];
+	[user_defaults setObject:@2 forKey:@"TargetMode"];
 	NSString *target_text = NSLocalizedString(@"ClipboardContents", 
 												   @"Indicator of Clipboard Contents mode");
 	[[NSUserDefaultsController sharedUserDefaultsController]
@@ -276,7 +274,7 @@ static AppController *sharedInstance = nil;
 - (IBAction)useScriptEditorSelection:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults setObject:[NSNumber numberWithInt:1] forKey:@"TargetMode"];
+	[user_defaults setObject:@1 forKey:@"TargetMode"];
 	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
 								@"Indicator of ScriptEditor's Selection mode");
 	[[NSUserDefaultsController sharedUserDefaultsController]
@@ -316,7 +314,7 @@ static AppController *sharedInstance = nil;
 	if ((!is_optkey) && [a_path fileExists]) {
 		[[NSUserDefaultsController sharedUserDefaultsController] 
 						setValue:a_path forKeyPath:@"values.TargetScript"];
-		[user_defaults setObject:[NSNumber numberWithInt:0] forKey:@"TargetMode"];
+		[user_defaults setObject:@0 forKey:@"TargetMode"];
 	} else {
 		[user_defaults removeFromHistory:a_path forKey:@"RecentScripts"];
 	}
