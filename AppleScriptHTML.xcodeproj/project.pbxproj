@@ -534,7 +534,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$BUILD_STYLE\" = 'Release' ]; then\ncd $BUILT_PRODUCTS_DIR\nSetupHelpBook $FULL_PRODUCT_NAME\nfi\n";
+			shellScript = "if [ ! \"$CONFIGURATION\" = 'Release' ]; then\necho \"HelpBook setup script will run only with Release configuration\";\nexit 0\nfi\n\ncd \"$BUILT_PRODUCTS_DIR\"\nSetupHelpBook \"$FULL_PRODUCT_NAME\"\n";
 		};
 		2C58ADF7152355060059F46F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
