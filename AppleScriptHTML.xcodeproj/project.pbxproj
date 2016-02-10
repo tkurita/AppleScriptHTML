@@ -31,6 +31,7 @@
 		2C952AB21C69B366008E097B /* PathExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AAF1C69B366008E097B /* PathExtra.m */; };
 		2C952AB91C69B399008E097B /* DropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB51C69B399008E097B /* DropBox.m */; };
 		2C952ABB1C69B399008E097B /* HFSTypeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C952AB71C69B399008E097B /* HFSTypeUtils.m */; };
+		2CAFD55F1C6B1D87000F4A94 /* AppleScriptHTMLHelp in Resources */ = {isa = PBXBuildFile; fileRef = 2CAFD55E1C6B1D87000F4A94 /* AppleScriptHTMLHelp */; };
 		2CC5C80D108C5C970037A04C /* ScriptLinkMaker.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */; settings = {ATTRIBUTES = (); }; };
 		2CC90BB31591508900B067EF /* template_full_scriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CC90BAD1591508900B067EF /* template_full_scriptlink_inline.html */; };
 		2CC90BB41591508900B067EF /* template_sourcecode_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CC90BAE1591508900B067EF /* template_sourcecode_inline.html */; };
@@ -118,7 +119,7 @@
 		2C681088156DD19A00AFDDAD /* ClipboardController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ClipboardController.applescript; sourceTree = "<group>"; };
 		2C6A28B50EFDF71600624BDC /* EditorController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = EditorController.applescript; sourceTree = "<group>"; };
 		2C6A28BB0EFDF77500624BDC /* FileController.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = FileController.applescript; sourceTree = "<group>"; };
-		2C6BE34D108C1067007BBBA7 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = History.rd; path = ../../History.rd; sourceTree = SOURCE_ROOT; };
+		2C6BE34D108C1067007BBBA7 /* History.rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = History.rd; path = ../History.rd; sourceTree = SOURCE_ROOT; };
 		2C790A05110E100400D23122 /* template_sourcecode_noscriptlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode_noscriptlink.html; sourceTree = "<group>"; };
 		2C85DB1615660BB20038CC9E /* Save.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Save.icns; sourceTree = "<group>"; };
 		2C85DB1815660BBE0038CC9E /* Copy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Copy.icns; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		2C952AB51C69B399008E097B /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2C952AB61C69B399008E097B /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
 		2C952AB71C69B399008E097B /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
+		2CAFD55E1C6B1D87000F4A94 /* AppleScriptHTMLHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppleScriptHTMLHelp; sourceTree = "<group>"; };
 		2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = ScriptLinkMaker.applescript; sourceTree = "<group>"; };
 		2CC90BAD1591508900B067EF /* template_full_scriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_scriptlink_inline.html; sourceTree = "<group>"; };
 		2CC90BAE1591508900B067EF /* template_sourcecode_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode_inline.html; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CAFD55E1C6B1D87000F4A94 /* AppleScriptHTMLHelp */,
 				2CD14C381C6AF349009EACDB /* MainMenu.strings */,
 				2CD14C3A1C6AF349009EACDB /* MonitorWindow.strings */,
 				2CD14C3C1C6AF349009EACDB /* PreferencesWindow.strings */,
@@ -513,6 +516,7 @@
 				2CD14C451C6AF493009EACDB /* localize_ib.mk in Resources */,
 				2CD14C461C6AF493009EACDB /* localize_ib.sh in Resources */,
 				2CD14C471C6AF493009EACDB /* require_strings_file.sh in Resources */,
+				2CAFD55F1C6B1D87000F4A94 /* AppleScriptHTMLHelp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

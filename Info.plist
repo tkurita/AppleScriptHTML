@@ -95,6 +95,8 @@
 	<string>${PRODUCT_VERSION} ${COPYRIGHT}</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>AppleScriptHTMLHelp</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Scriptfactory.AppleScriptHTML.help</string>
 	<key>CFBundleIconFile</key>
 	<string>AppleScriptHTML</string>
 	<key>CFBundleIdentifier</key>
