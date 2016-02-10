@@ -43,3 +43,6 @@
 [submodule "LibraryScripts/CSSBuilder.scptd"]
 	path = LibraryScripts/CSSBuilder.scptd
 	url = https://github.com/tkurita/CSSBuilder.scptd.git
+[submodule "LocalizeTools"]
+	path = LocalizeTools
+	url = http://github.com/tkurita/LocalizeTools.git
