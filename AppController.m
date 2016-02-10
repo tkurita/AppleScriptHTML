@@ -1,6 +1,6 @@
 #import <Carbon/Carbon.h>
 #import "AppController.h"
-#import <DonationReminder/DonationReminder.h>
+#import "DonationReminder/DonationReminder.h"
 #import "PathExtra.h"
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"

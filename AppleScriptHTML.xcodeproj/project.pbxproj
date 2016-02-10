@@ -28,7 +28,6 @@
 		2C85DB1915660BBE0038CC9E /* Copy.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB1815660BBE0038CC9E /* Copy.icns */; };
 		2C85DB2D1566273C0038CC9E /* MonitorWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB2B1566273C0038CC9E /* MonitorWindow.nib */; };
 		2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85DB2F156627E20038CC9E /* MonitorWindowController.m */; };
-		2C89758E1C69F1FA008D8B56 /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; };
 		2C89758F1C69F218008D8B56 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; };
 		2C9492BB0ECA99A600273C7C /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9492B90ECA99A600273C7C /* AppController.m */; };
 		2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */; };
@@ -48,6 +47,7 @@
 		2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB61C69B399008E097B /* HFSTypeUtils.h */; };
 		2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB41C69B399008E097B /* DropBox.h */; };
 		2CD14C1E1C6A05D1009EACDB /* StringExtra.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD14C181C6A0594009EACDB /* StringExtra.h */; };
+		2CD14C211C6AF0BB009EACDB /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
@@ -182,11 +182,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C89758E1C69F1FA008D8B56 /* DonationReminder.framework in Frameworks */,
 				257572CC072881A4000BE9CA /* Cocoa.framework in Frameworks */,
 				2CD976040EC912B700024156 /* Carbon.framework in Frameworks */,
 				2C4D2C1F0EC979C300D09C32 /* OSAKit.framework in Frameworks */,
 				2C4FD88416645E4D00FBA7AC /* AppleScriptObjC.framework in Frameworks */,
+				2CD14C211C6AF0BB009EACDB /* DonationReminder.framework in Frameworks */,
 				2CD14C151C69F32E009EACDB /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -720,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
