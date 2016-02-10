@@ -2,9 +2,6 @@
 
 @implementation MonitorWindowController
 
-@synthesize contentType;
-@synthesize content;
-
 static MonitorWindowController *sharedInstance = nil;
 static NSString *windowName = @"MonitorWindow";
 
@@ -31,8 +28,8 @@ static NSString *windowName = @"MonitorWindow";
 
 - (void)setContent:(NSString *)string type:(NSString *)type
 {
-	[self setContent:string];
-	[self setContentType:type];
+	self.content = string;
+	self.contentType = type;
 }
 
 - (void)awakeFromNib
@@ -56,7 +53,7 @@ static NSString *windowName = @"MonitorWindow";
 
 - (void)saveDocument:(id)sender
 {
-	NSString *type = [self contentType];
+	NSString *type = _contentType;
 	if (!type) return;
 	NSSavePanel *save_panel = [NSSavePanel savePanel];
 	[save_panel setAllowedFileTypes:[NSArray arrayWithObject:type]];
@@ -85,13 +82,13 @@ static NSString *windowName = @"MonitorWindow";
 
 - (IBAction)copyAll:(id)sender
 {
-	NSString *type = [self contentType];
+	NSString *type = _contentType;
 	if (!type) return;
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
 	NSString *actual_type = NSStringPboardType;
 	NSArray *types = [NSArray arrayWithObject:actual_type];
 	[pboard declareTypes:types owner:nil];
-	[pboard setString:[self content] forType:actual_type];
+	[pboard setString:_content forType:actual_type];
 }
 
 @end

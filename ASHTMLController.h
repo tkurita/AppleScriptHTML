@@ -10,7 +10,6 @@
 @end
 
 @interface ASHTMLController : NSObject {
-	OSAScript *script;
 	IBOutlet id indicator;
 	IBOutlet id mainWindow;
 	IBOutlet id ASHTMLProcessor;

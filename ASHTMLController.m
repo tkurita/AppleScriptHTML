@@ -15,8 +15,6 @@
 
 static ASHTMLController *sharedInstance = nil;
 
-@synthesize script;
-
 + (ASHTMLController *)sharedASHTMLController
 {
 	@synchronized(self) {
@@ -88,12 +86,11 @@ void showError(NSDictionary *err_info)
 									arguments:(NSArray *)args
 									sender:(id)sender
 {
-	OSAScript *scpt = [self script];
-	if (!scpt) return nil;
+	if (!_script) return nil;
 	
 	NSDictionary *error_info = nil;
 	NSAppleEventDescriptor *result = 
-			[scpt executeHandlerWithName:handler
+			[_script executeHandlerWithName:handler
 							  arguments:args error:&error_info];
 	if (error_info) {
 		NSNumber *err_no = [error_info objectForKey:OSAScriptErrorNumber];
