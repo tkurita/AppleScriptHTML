@@ -17,14 +17,32 @@ static ASHTMLController *sharedInstance = nil;
 
 + (ASHTMLController *)sharedASHTMLController
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[ASHTMLController alloc] init];
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        (void)[[self alloc] init];
     });
 	
 	return sharedInstance;
 }
 
+
++ (id)allocWithZone:(NSZone *)zone {
+	
+	__block id ret = nil;
+	
+	static dispatch_once_t once;
+	dispatch_once( &once, ^{
+		sharedInstance = [super allocWithZone:zone];
+		ret = sharedInstance;
+	});
+	
+	return  ret;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
 
 void showError(NSDictionary *err_info)
 {

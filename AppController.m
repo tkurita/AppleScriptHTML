@@ -63,11 +63,29 @@ static AppController *sharedInstance = nil;
 
 + (AppController *)sharedAppController
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[AppController alloc] init];
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        (void)[[AppController alloc] init];
     });
     return sharedInstance;
+}
+
++ (id)allocWithZone:(NSZone *)zone {
+	
+	__block id ret = nil;
+	
+	static dispatch_once_t once;
+	dispatch_once(&once, ^{
+		sharedInstance = [super allocWithZone:zone];
+		ret = sharedInstance;
+	});
+	
+	return  ret;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 
