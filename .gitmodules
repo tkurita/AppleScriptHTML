@@ -46,3 +46,6 @@
 [submodule "LocalizeTools"]
 	path = LocalizeTools
 	url = http://github.com/tkurita/LocalizeTools.git
+[submodule "LibraryScripts/TemplateProcessor.scptd"]
+	path = LibraryScripts/TemplateProcessor.scptd
+	url = http://github.com/tkurita/TemplateProcessor.scptd.git
