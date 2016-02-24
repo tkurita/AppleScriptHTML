@@ -204,20 +204,17 @@ script ASHTMLProcessor
 		--log "end do in ASHTMLProcessor"
 		return {|content|:a_result, |kind|:content_type}
 	end do
-	
-	on copyToClipboard()
-		try
+    
+    on generateContents()
+        try
 			set a_result to do without fullhtml
-		on error msg number 1503
+            on error msg number 1503
 			set my _error_info to {|message|:msg, |number|:1503}
 			return missing value
 		end try
 		set a_result's |content| to a_result's |content|'s as_unicode()
-        (* Return NSDictionary istead of AppleScript's record to avoid EXC_BAD_ACCESS error in the callar.
-         But it looks returnning AppleScript's record raise any problems in the saveToFile handler. *)
-        return NSDictionary's dictionaryWithDictionary_(a_result)
-        --return a_result
-	end copyToClipboard
+		return a_result
+    end
 	
 	on saveToFile()
 		try

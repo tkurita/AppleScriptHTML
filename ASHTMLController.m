@@ -3,6 +3,14 @@
 
 #define useLog 0
 
+@interface ASHTMLProcessor : NSObject
+- (NSString *)generateCSS;
+- (NSDictionary *)generateContents;
+- (NSString *)pathOnScriptEditor;
+- (NSDictionary *)saveToFile;
+- (NSDictionary *)errorInfo;
+@end
+
 @implementation ASHTMLController
 
 static ASHTMLController *sharedInstance = nil;
@@ -103,7 +111,7 @@ void showError(NSDictionary *err_info)
 
 - (void)generateCSS:(id)sender
 {
-	NSString *css = [ASHTMLProcessor generateCSS];
+	NSString *css = [ashtmlProcessor generateCSS];
 	 if (!css) return;
 		
 	MonitorWindowController *wc = [MonitorWindowController sharedWindowController];
@@ -125,10 +133,10 @@ void showError(NSDictionary *err_info)
 
 - (IBAction)copyToClipboard:(id)sender
 {
-	[self startIndicator];
-	NSDictionary *result = [ASHTMLProcessor copyToClipboard];
+	//[self startIndicator];
+	NSDictionary *result = [ashtmlProcessor generateContents];
 	if (!result) {
-		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
+		NSDictionary *error_info = [ashtmlProcessor errorInfo];
 		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
 											 code:[error_info[@"number"] intValue]
@@ -165,7 +173,7 @@ void showError(NSDictionary *err_info)
 		default_name = @"AppleScript.css";
 		extension = @"css";
 	} else if (target_mode == 1) { // target is script editor's selection
-		NSString *path = [ASHTMLProcessor pathOnScriptEditor];
+		NSString *path = [ashtmlProcessor pathOnScriptEditor];
 		if (path) {
 			default_name = [[[path lastPathComponent] 
 									stringByDeletingPathExtension]
@@ -234,9 +242,9 @@ void showError(NSDictionary *err_info)
 - (IBAction)saveToFile:(id)sender
 {
 	[self startIndicator];
-	NSDictionary *result_ASHTML = [ASHTMLProcessor saveToFile];
+	NSDictionary *result_ASHTML = [ashtmlProcessor saveToFile];
 	if (!result_ASHTML) {
-		NSDictionary *error_info = [ASHTMLProcessor errorInfo];
+		NSDictionary *error_info = [ashtmlProcessor errorInfo];
 		NSString *message = NSLocalizedString(error_info[@"message"], @"");
 		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
 											 code:[error_info[@"number"] intValue]
