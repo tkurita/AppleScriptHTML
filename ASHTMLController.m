@@ -3,14 +3,6 @@
 
 #define useLog 0
 
-@interface ASKScriptCache : NSObject
-{
-}
-+ (ASKScriptCache *)sharedScriptCache;
-- (OSAScript *)scriptWithName:(NSString *)name;
-@end
-
-
 @implementation ASHTMLController
 
 static ASHTMLController *sharedInstance = nil;
@@ -155,7 +147,6 @@ void showError(NSDictionary *err_info)
 	[pboard declareTypes:@[NSStringPboardType] owner:nil];
 	[pboard setString:result_text forType:NSStringPboardType];
 	[MonitorWindowController setContent:result_text type:content_kind];
-bail:	
 	[self stopIndicator];
 }
 	 
