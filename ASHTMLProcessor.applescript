@@ -27,6 +27,9 @@ script ASHTMLProcessor
 	
 	property _error_info : missing value
 	
+    property NSUserDefaults : class "NSUserDefaults"
+    property NSDictionary : class "NSDictionary"
+    
 	on import_script(a_name)
 		--log a_name
 		return load script (path to resource a_name & ".scpt")
@@ -51,7 +54,7 @@ script ASHTMLProcessor
 	on do given fullhtml:full_flag
 		--log "start do in ASHTMLProcessor"
 		set content_type to "html"
-		set user_defaults to current application's class "NSUserDefaults"'s standardUserDefaults()
+		set user_defaults to NSUserDefaults's standardUserDefaults()
 		tell user_defaults
 			set css_mode to integerForKey_("CSSModeIndex") as integer
 			-- 0: internal, 1:inline, 2: only class names
@@ -107,6 +110,7 @@ script ASHTMLProcessor
 				end if
 			end if
 		end if
+        
 		if (is_convert or is_scriptlink) then
 			if not CodeController's check_target() then
 				return missing value
@@ -145,6 +149,7 @@ script ASHTMLProcessor
 				end if
 			end if
 		end if
+        
 		if template_name is not missing value then
 			set template_file to path to resource template_name
 			set a_template to TemplateProcessor's make_with_file(template_file)
@@ -197,7 +202,7 @@ script ASHTMLProcessor
 			end if
 		end if
 		--log "end do in ASHTMLProcessor"
-		return {content:a_result, |kind|:content_type}
+		return {|content|:a_result, |kind|:content_type}
 	end do
 	
 	on copyToClipboard()
@@ -207,8 +212,11 @@ script ASHTMLProcessor
 			set my _error_info to {|message|:msg, |number|:1503}
 			return missing value
 		end try
-		set a_result's content to a_result's content's as_unicode()
-		return a_result
+		set a_result's |content| to a_result's |content|'s as_unicode()
+        (* Return NSDictionary istead of AppleScript's record to avoid EXC_BAD_ACCESS error in the callar.
+         But it looks returnning AppleScript's record raise any problems in the saveToFile handler. *)
+        return NSDictionary's dictionaryWithDictionary_(a_result)
+        --return a_result
 	end copyToClipboard
 	
 	on saveToFile()
@@ -218,7 +226,7 @@ script ASHTMLProcessor
 			set my _error_info to {|message|:msg, |number|:1503}
 			return missing value
 		end try
-		set a_result's content to a_result's content's as_unicode()
+		set a_result's |content| to a_result's |content|'s as_unicode()
 		return a_result
 	end saveToFile
 	
