@@ -121,8 +121,8 @@ void showError(NSDictionary *err_info)
 
 - (void)startIndicator
 {
-	[indicator setHidden:NO];
-	[indicator startAnimation:self];	
+    [indicator setHidden:NO];
+	[indicator startAnimation:self];
 }
 
 - (void)stopIndicator
@@ -131,31 +131,43 @@ void showError(NSDictionary *err_info)
 	[indicator setHidden:YES];
 }
 
+- (void)copyToClipboardEndOfTask:(NSDictionary *)result
+{
+    if (!result) {
+        NSDictionary *error_info = [ashtmlProcessor errorInfo];
+        NSString *message = NSLocalizedString(error_info[@"message"], @"");
+        NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
+                                             code:[error_info[@"number"] intValue]
+                                         userInfo:@{NSLocalizedDescriptionKey: message}];
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert beginSheetModalForWindow:mainWindow
+                          modalDelegate:self
+                         didEndSelector:nil
+                            contextInfo:nil];
+        [self stopIndicator];
+        return;
+    }
+    NSString *result_text = result[@"content"];
+    NSString *content_kind = result[@"kind"];
+    NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+    [pboard declareTypes:@[NSStringPboardType] owner:nil];
+    [pboard setString:result_text forType:NSStringPboardType];
+    [MonitorWindowController setContent:result_text type:content_kind];
+    [self stopIndicator];
+}
+
+- (void)copyToClipboardInThread:(id)sender
+{
+    NSDictionary *result = [ashtmlProcessor generateContents];
+    [self performSelectorOnMainThread:@selector(copyToClipboardEndOfTask:)
+                           withObject:result waitUntilDone:NO];
+}
+
 - (IBAction)copyToClipboard:(id)sender
 {
-	//[self startIndicator];
-	NSDictionary *result = [ashtmlProcessor generateContents];
-	if (!result) {
-		NSDictionary *error_info = [ashtmlProcessor errorInfo];
-		NSString *message = NSLocalizedString(error_info[@"message"], @"");
-		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
-											 code:[error_info[@"number"] intValue]
-										 userInfo:@{NSLocalizedDescriptionKey: message}];
-		NSAlert *alert = [NSAlert alertWithError:error];
-		[alert beginSheetModalForWindow:mainWindow
-						  modalDelegate:self
-						 didEndSelector:nil
-							contextInfo:nil];
-		[self stopIndicator];
-		return;
-	}
-	NSString *result_text = result[@"content"];
-	NSString *content_kind = result[@"kind"];
-	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-	[pboard declareTypes:@[NSStringPboardType] owner:nil];
-	[pboard setString:result_text forType:NSStringPboardType];
-	[MonitorWindowController setContent:result_text type:content_kind];
-	[self stopIndicator];
+	[self startIndicator];
+    [NSThread detachNewThreadSelector:@selector(copyToClipboardInThread:)
+                             toTarget:self withObject:sender];
 }
 	 
 - (NSDictionary *)defaultLocationAndName:(id)sender
@@ -239,47 +251,61 @@ void showError(NSDictionary *err_info)
 						contextInfo:(__bridge_retained void *)anURL];
 }
 
-- (IBAction)saveToFile:(id)sender
+
+-(void)saveToFileEndOfTask:(NSDictionary *)result_ASHTML
 {
-	[self startIndicator];
-	NSDictionary *result_ASHTML = [ashtmlProcessor saveToFile];
-	if (!result_ASHTML) {
-		NSDictionary *error_info = [ashtmlProcessor errorInfo];
-		NSString *message = NSLocalizedString(error_info[@"message"], @"");
-		NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
-											 code:[error_info[@"number"] intValue]
+    if (!result_ASHTML) {
+        NSDictionary *error_info = [ashtmlProcessor errorInfo];
+        NSString *message = NSLocalizedString(error_info[@"message"], @"");
+        NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
+                                             code:[error_info[@"number"] intValue]
                                          userInfo:@{NSLocalizedDescriptionKey: message}];
-		NSAlert *alert = [NSAlert alertWithError:error];
-		[alert beginSheetModalForWindow:mainWindow
-						  modalDelegate:self
-						 didEndSelector:nil
-							contextInfo:nil];
-		[self stopIndicator];
-		return;
-	}
-	NSDictionary *default_loc_name = [self defaultLocationAndName:sender];
-	NSSavePanel *save_panel = [NSSavePanel savePanel];
-	[save_panel setAllowedFileTypes:@[default_loc_name[@"extension"]]];
-	[save_panel setCanSelectHiddenExtension:YES];
+        NSAlert *alert = [NSAlert alertWithError:error];
+        [alert beginSheetModalForWindow:mainWindow
+                          modalDelegate:self
+                         didEndSelector:nil
+                            contextInfo:nil];
+        [self stopIndicator];
+        return;
+    }
+    NSDictionary *default_loc_name = [self defaultLocationAndName:self];
+    NSSavePanel *save_panel = [NSSavePanel savePanel];
+    [save_panel setAllowedFileTypes:@[default_loc_name[@"extension"]]];
+    [save_panel setCanSelectHiddenExtension:YES];
     [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name[@"location"]]];
     [save_panel setNameFieldStringValue:default_loc_name[@"name"]];
     [save_panel beginSheetModalForWindow:mainWindow
                        completionHandler:^(NSInteger result) {
-                [self stopIndicator];
-                if (result != NSOKButton) {
-                    return;
-                }
-                NSError *error = nil;
-                [save_panel orderOut:self];
-                [self saveASHTML:result_ASHTML toURL:[save_panel URL] error:&error];
-                if (error) {
-                    NSAlert *alert = [NSAlert alertWithError:error];
-                    [alert beginSheetModalForWindow:mainWindow
-                                      modalDelegate:self
-                                     didEndSelector:nil
-                                        contextInfo:nil];
-                }
-            }];
+                           [self stopIndicator];
+                           if (result != NSOKButton) {
+                               return;
+                           }
+                           NSError *error = nil;
+                           [save_panel orderOut:self];
+                           [self saveASHTML:result_ASHTML toURL:[save_panel URL] error:&error];
+                           if (error) {
+                               NSAlert *alert = [NSAlert alertWithError:error];
+                               [alert beginSheetModalForWindow:mainWindow
+                                                 modalDelegate:self
+                                                didEndSelector:nil
+                                                   contextInfo:nil];
+                           }
+                       }];
+}
+
+
+- (void)saveToFileInThread:(id)sender
+{
+    NSDictionary *result_ASHTML = [ashtmlProcessor saveToFile];
+    [self performSelectorOnMainThread:@selector(saveToFileEndOfTask:)
+                           withObject:result_ASHTML waitUntilDone:NO];
+}
+
+- (IBAction)saveToFile:(id)sender
+{
+	[self startIndicator];
+	[NSThread detachNewThreadSelector:@selector(saveToFileInThread:)
+                             toTarget:self withObject:sender];
 }
 
 @end

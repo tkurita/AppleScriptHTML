@@ -208,8 +208,10 @@ script ASHTMLProcessor
     on generateContents()
         try
 			set a_result to do without fullhtml
-            on error msg number 1503
-			set my _error_info to {|message|:msg, |number|:1503}
+        --on error msg number 1503
+			--set my _error_info to {|message|:msg, |number|:1503}
+        on error msg number errno
+            set my _error_info to {|message|:msg, |number|:errno}
 			return missing value
 		end try
 		set a_result's |content| to a_result's |content|'s as_unicode()
