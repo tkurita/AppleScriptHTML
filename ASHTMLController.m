@@ -184,7 +184,7 @@ void showError(NSDictionary *err_info)
 	Boolean is_save_to_souce_location = [user_defaults boolForKey:@"SaveToSourceLocation"];
 	int target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *default_name = nil;
-	NSString *default_location = nil;
+	NSString *default_location = @"";
 	NSString *extension = @"html";
 	if ((css_mode_index == 0) && (!(is_convert || is_scriptlink))) {
 		default_name = @"AppleScript.css";
@@ -277,7 +277,9 @@ void showError(NSDictionary *err_info)
     NSSavePanel *save_panel = [NSSavePanel savePanel];
     [save_panel setAllowedFileTypes:@[default_loc_name[@"extension"]]];
     [save_panel setCanSelectHiddenExtension:YES];
-    [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name[@"location"]]];
+    if (! [default_loc_name[@"location"] isEqual:@""] ){
+        [save_panel setDirectoryURL:[NSURL fileURLWithPath:default_loc_name[@"location"]]];
+    }
     [save_panel setNameFieldStringValue:default_loc_name[@"name"]];
     [save_panel beginSheetModalForWindow:mainWindow
                        completionHandler:^(NSInteger result) {
