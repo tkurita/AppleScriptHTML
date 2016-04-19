@@ -49,8 +49,13 @@ void showError(NSDictionary *err_info)
 	NSLog(@"Error : %@", [err_info description]);
 	NSLog(@"%@", err_info);
 	[NSApp activateIgnoringOtherApps:YES];
-	NSRunAlertPanel(nil, err_info[OSAScriptErrorMessage], 
-					@"OK", nil, nil);	
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Error"
+                                     defaultButton:nil
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@"%@",
+                      err_info[OSAScriptErrorMessage]];
+    [alert runModal];
 }
 
 - (NSAppleEventDescriptor *)runHandlerWithName:(NSString *)handler
