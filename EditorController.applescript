@@ -3,10 +3,7 @@ global XFile
 property _target_text : missing value
 
 on check_target()
-	tell application "System Events"
-		set a_list to application processes whose bundle identifier is "com.apple.ScriptEditor2"
-	end tell
-	set run_flag to (length of a_list > 0)
+    set run_flag to (application id "com.apple.ScriptEditor2" is running)
 	if not run_flag then
 		error "AppleScript Editor is not Launched." number 1500
 		return false
