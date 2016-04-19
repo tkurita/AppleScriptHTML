@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,7 @@
 		2C85DB1715660BB20038CC9E /* Save.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB1615660BB20038CC9E /* Save.icns */; };
 		2C85DB1915660BBE0038CC9E /* Copy.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C85DB1815660BBE0038CC9E /* Copy.icns */; };
 		2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85DB2F156627E20038CC9E /* MonitorWindowController.m */; };
-		2C89758F1C69F218008D8B56 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; };
+		2C89758F1C69F218008D8B56 /* DonationReminder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2C9492BB0ECA99A600273C7C /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9492B90ECA99A600273C7C /* AppController.m */; };
 		2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9493010ECAA28100273C7C /* NSUserDefaultsExtensions.m */; };
 		2C9493330ECAA3DC00273C7C /* FactorySettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9493320ECAA3DC00273C7C /* FactorySettings.plist */; };
@@ -42,7 +42,7 @@
 		2CC90C2A15917E9800B067EF /* template_sourcecode_onlyscriptlink_inline.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CC90C2915917E9800B067EF /* template_sourcecode_onlyscriptlink_inline.html */; };
 		2CCF880C0EE767DB00EA6824 /* template_full_onlyscriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF880B0EE767DB00EA6824 /* template_full_onlyscriptlink.html */; };
 		2CD14C151C69F32E009EACDB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; };
-		2CD14C161C69F361009EACDB /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; };
+		2CD14C161C69F361009EACDB /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2CD14C1B1C6A0594009EACDB /* StringExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD14C191C6A0594009EACDB /* StringExtra.m */; };
 		2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB61C69B399008E097B /* HFSTypeUtils.h */; };
 		2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB41C69B399008E097B /* DropBox.h */; };
@@ -440,10 +440,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 4E71A80908A2C90C0034BBD9 /* Build configuration list for PBXProject "AppleScriptHTML" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -647,6 +647,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.AppleScriptHTML;
 				PRODUCT_NAME = AppleScriptHTML;
 				PRODUCT_VERSION = 2.6.2;
 				SDKROOT = macosx;
@@ -670,6 +671,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
+				PRODUCT_BUNDLE_IDENTIFIER = Scriptfactory.AppleScriptHTML;
 				PRODUCT_NAME = AppleScriptHTML;
 				PRODUCT_VERSION = 2.6.2;
 				SDKROOT = macosx;
@@ -681,12 +683,13 @@
 		4E71A80A08A2C90C0034BBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -694,7 +697,6 @@
 		4E71A80B08A2C90C0034BBD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
