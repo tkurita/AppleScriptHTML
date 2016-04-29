@@ -44,16 +44,9 @@
 		2CD14C151C69F32E009EACDB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; };
 		2CD14C161C69F361009EACDB /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CD14C141C69F32E009EACDB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2CD14C1B1C6A0594009EACDB /* StringExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD14C191C6A0594009EACDB /* StringExtra.m */; };
-		2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB61C69B399008E097B /* HFSTypeUtils.h */; };
-		2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C952AB41C69B399008E097B /* DropBox.h */; };
-		2CD14C1E1C6A05D1009EACDB /* StringExtra.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD14C181C6A0594009EACDB /* StringExtra.h */; };
 		2CD14C211C6AF0BB009EACDB /* DonationReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89758B1C69F1D5008D8B56 /* DonationReminder.framework */; };
 		2CD14C2E1C6AF31B009EACDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C241C6AF31B009EACDB /* InfoPlist.strings */; };
 		2CD14C2F1C6AF31B009EACDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C261C6AF31B009EACDB /* Localizable.strings */; };
-		2CD14C441C6AF493009EACDB /* localize.mk in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C401C6AF493009EACDB /* localize.mk */; };
-		2CD14C451C6AF493009EACDB /* localize_ib.mk in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C411C6AF493009EACDB /* localize_ib.mk */; };
-		2CD14C461C6AF493009EACDB /* localize_ib.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C421C6AF493009EACDB /* localize_ib.sh */; };
-		2CD14C471C6AF493009EACDB /* require_strings_file.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2CD14C431C6AF493009EACDB /* require_strings_file.sh */; };
 		2CD1E1DF114E560A00342740 /* AppleScriptHTML.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */; };
 		2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */; };
 		2CD975F00EC9013500024156 /* ASFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD975EE0EC9013500024156 /* ASFormatting.m */; };
@@ -159,10 +152,6 @@
 		2CD14C191C6A0594009EACDB /* StringExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringExtra.m; sourceTree = "<group>"; };
 		2CD14C331C6AF320009EACDB /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CD14C341C6AF324009EACDB /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2CD14C401C6AF493009EACDB /* localize.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize.mk; sourceTree = "<group>"; };
-		2CD14C411C6AF493009EACDB /* localize_ib.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localize_ib.mk; sourceTree = "<group>"; };
-		2CD14C421C6AF493009EACDB /* localize_ib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = localize_ib.sh; sourceTree = "<group>"; };
-		2CD14C431C6AF493009EACDB /* require_strings_file.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = require_strings_file.sh; sourceTree = "<group>"; };
 		2CD1E1DE114E560A00342740 /* AppleScriptHTML.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppleScriptHTML.icns; sourceTree = "<group>"; };
 		2CD43146108F5C4F0026C231 /* ASFormattingExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormattingExtensions.h; sourceTree = "<group>"; };
 		2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormattingExtensions.m; sourceTree = "<group>"; };
@@ -254,7 +243,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
-				2CD14C3F1C6AF493009EACDB /* LocalizeTools */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				2C8975861C69F1D4008D8B56 /* DonationReminder.xcodeproj */,
 			);
@@ -351,17 +339,6 @@
 			path = StringExtra;
 			sourceTree = "<group>";
 		};
-		2CD14C3F1C6AF493009EACDB /* LocalizeTools */ = {
-			isa = PBXGroup;
-			children = (
-				2CD14C401C6AF493009EACDB /* localize.mk */,
-				2CD14C411C6AF493009EACDB /* localize_ib.mk */,
-				2CD14C421C6AF493009EACDB /* localize_ib.sh */,
-				2CD14C431C6AF493009EACDB /* require_strings_file.sh */,
-			);
-			path = LocalizeTools;
-			sourceTree = "<group>";
-		};
 		2CD975830EC8FAD300024156 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,9 +382,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD14C1C1C6A05AF009EACDB /* HFSTypeUtils.h in Headers */,
-				2CD14C1D1C6A05B5009EACDB /* DropBox.h in Headers */,
-				2CD14C1E1C6A05D1009EACDB /* StringExtra.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,10 +498,6 @@
 				2C4FD8291664548100FBA7AC /* template_full_onlyscriptlink_inline.html in Resources */,
 				2CD14C2E1C6AF31B009EACDB /* InfoPlist.strings in Resources */,
 				2CD14C2F1C6AF31B009EACDB /* Localizable.strings in Resources */,
-				2CD14C441C6AF493009EACDB /* localize.mk in Resources */,
-				2CD14C451C6AF493009EACDB /* localize_ib.mk in Resources */,
-				2CD14C461C6AF493009EACDB /* localize_ib.sh in Resources */,
-				2CD14C471C6AF493009EACDB /* require_strings_file.sh in Resources */,
 				2CAFD55F1C6B1D87000F4A94 /* AppleScriptHTMLHelp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,8 +619,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
@@ -677,8 +645,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
 				CURRENT_PROJECT_VERSION = 35;
