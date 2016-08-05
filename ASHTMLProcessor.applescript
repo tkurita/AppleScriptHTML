@@ -134,9 +134,12 @@ script ASHTMLProcessor
 				if not user_defaults's boolForKey_("ObtainScriptLinkTitleFromFilename") as boolean then
 					set a_title to user_defaults's stringForKey_("ScriptLinkTitle") as text
 					if length of a_title is not 0 then
-						set doc_name to a_title
-						user_defaults's addToHistory_forKey_(doc_name, "ScriptLinkTitleHistory")
+						user_defaults's addToHistory_forKey_(a_title, "ScriptLinkTitleHistory")
+                        tell XText
+                            set doc_name to replace for a_text from "%s" by doc_name
+                        end tell
 					end if
+
 				end if
 				set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
 				if css_mode is not 2 then
