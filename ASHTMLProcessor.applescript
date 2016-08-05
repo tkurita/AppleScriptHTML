@@ -136,7 +136,7 @@ script ASHTMLProcessor
 					if length of a_title is not 0 then
 						user_defaults's addToHistory_forKey_(a_title, "ScriptLinkTitleHistory")
                         tell XText
-                            set doc_name to replace for a_text from "%s" by doc_name
+                            set doc_name to replace for a_title from "%s" by doc_name
                         end tell
 					end if
 
