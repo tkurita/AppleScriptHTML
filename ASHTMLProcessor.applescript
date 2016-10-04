@@ -126,7 +126,7 @@ script ASHTMLProcessor
 			end if
 			
 			set doc_name to CodeController's doc_name()
-			set button_position to missing value
+			set button_style to missing value
 			if (is_scriptlink) then
 				set a_code to CodeController's target_text()
 				set mode_index to user_defaults's integerForKey_("ScriptLinkModeIndex") as integer
@@ -145,9 +145,11 @@ script ASHTMLProcessor
 				if css_mode is not 2 then
 					set pos_index to user_defaults's integerForKey_("ScriptLinkPositionIndex") as integer
 					if pos_index is 0 then
-						set button_position to "top : 0.5em"
+						set button_style to "float:right;"
+                        set frame_style to ""
 					else
-						set button_position to "bottom : 0.5em"
+						set button_style to "position:absolute; right:1em; bottom:0.5em;"
+                        set frame_style to "position:relative;"
 					end if
 				end if
 			end if
@@ -172,8 +174,9 @@ script ASHTMLProcessor
 			
 			if (is_scriptlink) then
 				a_template's insert_text("$SCRIPTBUTTON", a_scriptlink's as_unicode())
-				if (button_position is not missing value) and (is_convert or (css_mode is not 2)) then
-					a_template's insert_text("$BUTTONPOSITION", button_position)
+				if (button_style is not missing value) and (is_convert or (css_mode is not 2)) then
+					a_template's insert_text("$BUTTONSTYLE", button_style)
+                    a_template's insert_text("$FRAMESTYLE", frame_style)
 				end if
 			end if
 			set a_result to a_template
