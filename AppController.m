@@ -1,6 +1,5 @@
 #import <Carbon/Carbon.h>
 #import "AppController.h"
-#import "DonationReminder/DonationReminder.h"
 #import "PathExtra.h"
 #import "NSUserDefaultsExtensions.h"
 #import "DropBox.h"
@@ -184,7 +183,6 @@ static AppController *sharedInstance = nil;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	[DonationReminder remindDonation];
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	int target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
@@ -235,11 +233,6 @@ static AppController *sharedInstance = nil;
 {
 	PreferencesWindowController *wc = [PreferencesWindowController sharedPreferencesWindowController];
 	[wc showWindow:self];
-}
-
-- (IBAction)makeDonation:(id)sender
-{
-	[DonationReminder goToDonation];
 }
 
 - (IBAction)useClipboardContents:(id)sender

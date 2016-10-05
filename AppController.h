@@ -8,7 +8,6 @@
 	IBOutlet id scriptLinkTitleComboBox;
 }
 - (IBAction)selectTarget:(id)sender;
-- (IBAction)makeDonation:(id)sender;
 - (IBAction)popUpRecents:(id)sender;
 - (IBAction)useScriptEditorSelection:(id)sender;
 - (IBAction)useFileName:(id)sender;
