@@ -104,6 +104,7 @@
 		2C4D2C1E0EC979C300D09C32 /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = /System/Library/Frameworks/OSAKit.framework; sourceTree = "<absolute>"; };
 		2C4D2C860EC99CCE00D09C32 /* ASHTML.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASHTML.applescript; sourceTree = "<group>"; };
 		2C4D2C9B0EC99ED700D09C32 /* ASFormattingStyle.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = ASFormattingStyle.applescript; sourceTree = "<group>"; };
+		2C4E71AA1DA47D80007100F2 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		2C4FD8281664548100FBA7AC /* template_full_onlyscriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_onlyscriptlink_inline.html; sourceTree = "<group>"; };
 		2C4FD88316645E4D00FBA7AC /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
 		2C506D510FE67FE300C1CA94 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -244,6 +245,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				2C4E71AA1DA47D80007100F2 /* Makefile */,
 				2C8975861C69F1D4008D8B56 /* DonationReminder.xcodeproj */,
 				A965AFE88ACD247DEE7935B4 /* Pods */,
 			);
