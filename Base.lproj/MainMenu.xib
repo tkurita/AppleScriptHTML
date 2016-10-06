@@ -229,7 +229,7 @@ DQ
                     <button toolTip="Use source file name for the title of the script link button." id="333">
                         <rect key="frame" x="375" y="109" width="140" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="check" title="Use FIle Name" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="707">
+                        <buttonCell key="cell" type="check" title="Use File Name" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="707">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
