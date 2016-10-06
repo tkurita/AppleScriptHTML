@@ -48,7 +48,7 @@ DQ
                             <binding destination="244" name="value" keyPath="values.CodeToHTML" id="246"/>
                         </connections>
                     </button>
-                    <button toolTip="The script link allow to edit the script dieplayed in the browser by the AppleScript Editor." id="230">
+                    <button toolTip="The script link allow to edit the script dieplayed in the browser by the Script Editor." id="230">
                         <rect key="frame" x="29" y="134" width="225" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="check" title="Make Script Link" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="696">
@@ -112,7 +112,7 @@ DQ
                                     <rect key="frame" x="138" y="2" width="197" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <string key="toolTip">The selection in the forntmost document will be a source. If no selection in the frontmost document, all contents of the document will be a source.</string>
-                                    <buttonCell key="cell" type="smallSquare" title="AppleScript Editor 's Selection" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="700">
+                                    <buttonCell key="cell" type="smallSquare" title="Script Editor 's Selection" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="700">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
@@ -129,7 +129,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <buttonCell key="cell" type="smallSquare" title="Clipboard Contents" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="735">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" size="11" name="HiraKakuProN-W3"/>
+                                        <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
                                     <connections>
                                         <action selector="useClipboardContents:" target="250" id="738"/>
@@ -165,14 +165,14 @@ DQ
                     <popUpButton toolTip="The behavior when the script link button is clicked." verticalHuggingPriority="750" id="313">
                         <rect key="frame" x="161" y="77" width="94" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="New" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="316" id="703">
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="703">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="314">
                                 <items>
-                                    <menuItem title="New" state="on" toolTip="The script is opened in the new document in AppleScript Editor." id="316"/>
-                                    <menuItem title="Insert" toolTip="The script is inserted at the selection in the frontmost document of AppleScript Editor." id="317"/>
-                                    <menuItem title="Append" toolTip="The script is appended to the frontmost document of AppleScript Editor." id="363"/>
+                                    <menuItem title="New" toolTip="The script is opened in the new document in Script Editor." id="316"/>
+                                    <menuItem title="Insert" toolTip="The script is inserted at the selection in the frontmost document of Script Editor." id="317"/>
+                                    <menuItem title="Append" toolTip="The script is appended to the frontmost document of Script Editor." id="363"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>

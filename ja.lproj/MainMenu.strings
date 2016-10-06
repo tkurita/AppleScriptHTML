@@ -120,7 +120,7 @@
 "229.ibShadowedToolTip" = "AppleScript コードを HTML に変換します。";
 
 /* Class = "NSButton"; ibShadowedToolTip = "スクリプトリンクを使うと、ブラウザで表示されているスクリプトを AppleScript エディタで編集できます。"; ObjectID = "230"; */
-"230.ibShadowedToolTip" = "スクリプトリンクを使うと、ブラウザで表示されているスクリプトを AppleScript エディタで編集できます。";
+"230.ibShadowedToolTip" = "スクリプトリンクを使うと、ブラウザで表示されているスクリプトをスクリプトエディタで編集できます。";
 
 /* Class = "NSBox"; title = "ソーススクリプト"; ObjectID = "231"; */
 "231.title" = "ソーススクリプト";
@@ -143,8 +143,8 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "241"; */
 "241.title" = "Box";
 
-/* Class = "NSButton"; ibShadowedToolTip = "AppleScript エディタの一番手前の書類の選択部分を変換元とします。もし選択部分が無かったら、一番手前の書類のすべての内容を変換元とします。"; ObjectID = "258"; */
-"258.ibShadowedToolTip" = "AppleScript エディタの一番手前の書類の選択部分を変換元とします。もし選択部分が無かったら、一番手前の書類のすべての内容を変換元とします。";
+/* Class = "NSButton"; ibShadowedToolTip = "スクリプトエディタの一番手前の書類の選択部分を変換元とします。もし選択部分が無かったら、一番手前の書類のすべての内容を変換元とします。"; ObjectID = "258"; */
+"258.ibShadowedToolTip" = "スクリプトエディタの一番手前の書類の選択部分を変換元とします。もし選択部分が無かったら、一番手前の書類のすべての内容を変換元とします。";
 
 /* Class = "NSButton"; ibShadowedToolTip = "出力をファイルに保存する。"; ObjectID = "288"; */
 "288.ibShadowedToolTip" = "出力をファイルに保存する。";
@@ -158,14 +158,14 @@
 /* Class = "NSMenu"; title = "OtherViews"; ObjectID = "314"; */
 "314.title" = "OtherViews";
 
-/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトは AppleScript エディタの新規書類で開かれます。"; ObjectID = "316"; */
-"316.ibShadowedToolTip" = "スクリプトは AppleScript エディタの新規書類で開かれます。";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトはスクリプトエディタの新規書類で開かれます。"; ObjectID = "316"; */
+"316.ibShadowedToolTip" = "スクリプトはスクリプトエディタの新規書類として開かれます。";
 
 /* Class = "NSMenuItem"; title = "新規"; ObjectID = "316"; */
 "316.title" = "新規";
 
-/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトは、AppleScript エディタの前面の書類に挿入されます。"; ObjectID = "317"; */
-"317.ibShadowedToolTip" = "スクリプトは、AppleScript エディタの前面の書類に挿入されます。";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトは、スクリプトエディタの前面の書類に挿入されます。"; ObjectID = "317"; */
+"317.ibShadowedToolTip" = "スクリプトは、スクリプトエディタの前面の書類に挿入されます。";
 
 /* Class = "NSMenuItem"; title = "挿入"; ObjectID = "317"; */
 "317.title" = "挿入";
@@ -176,8 +176,8 @@
 /* Class = "NSButton"; ibShadowedToolTip = "ファイル名をスクリプトリンクのタイトルにします。"; ObjectID = "333"; */
 "333.ibShadowedToolTip" = "ファイル名をスクリプトリンクのタイトルにします。";
 
-/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトは、AppleScript エディタの前面の書類の末尾に付け加わります。"; ObjectID = "363"; */
-"363.ibShadowedToolTip" = "スクリプトは、AppleScript エディタの前面の書類の末尾に付け加わります。";
+/* Class = "NSMenuItem"; ibShadowedToolTip = "スクリプトは、スクリプトエディタの前面の書類の末尾に付け加わります。"; ObjectID = "363"; */
+"363.ibShadowedToolTip" = "スクリプトは、スクリプトエディタの前面の書類の末尾に付け加わります。";
 
 /* Class = "NSMenuItem"; title = "追加"; ObjectID = "363"; */
 "363.title" = "追加";
@@ -239,8 +239,8 @@
 /* Class = "NSButtonCell"; title = "選択..."; ObjectID = "698"; */
 "698.title" = "選択...";
 
-/* Class = "NSButtonCell"; title = "AppleScript エディタの選択を対象"; ObjectID = "700"; */
-"700.title" = "AppleScript エディタの選択を対象";
+/* Class = "NSButtonCell"; title = "スクリプトエディタの選択を対象"; ObjectID = "700"; */
+"700.title" = "スクリプトエディタの選択を対象";
 
 /* Class = "NSButtonCell"; title = "ファイルに保存"; ObjectID = "702"; */
 "702.title" = "ファイルに保存";
