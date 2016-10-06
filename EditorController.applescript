@@ -5,7 +5,7 @@ property _target_text : missing value
 on check_target()
     set run_flag to (application id "com.apple.ScriptEditor2" is running)
 	if not run_flag then
-		error "AppleScript Editor is not Launched." number 1500
+		error "Script Editor is not Launched." number 1500
 		return false
 	end if
 	
@@ -14,7 +14,7 @@ on check_target()
 	end tell
 	
 	if not run_flag then
-		error "No documents in AppleScript Editor." number 1500
+		error "No documents in Script Editor." number 1500
 		return false
 	end if
 	return true
