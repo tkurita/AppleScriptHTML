@@ -696,7 +696,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.6.2;
+				PRODUCT_VERSION = 2.7;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -722,7 +722,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.6.2;
+				PRODUCT_VERSION = 2.7;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
