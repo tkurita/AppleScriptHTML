@@ -239,7 +239,7 @@ void showError(NSDictionary *err_info)
 	[string writeToURL:anURL
             atomically:NO encoding:NSUTF8StringEncoding
                  error:err];
-	if (err) {
+	if (*err) {
         return;
 	}
 	NSString *content_kind = ASTHMLDict[@"kind"];
