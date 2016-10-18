@@ -684,7 +684,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -696,7 +696,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.7;
+				PRODUCT_VERSION = 2.7.1;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -711,7 +711,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2016, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -722,7 +722,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.7;
+				PRODUCT_VERSION = 2.7.1;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;

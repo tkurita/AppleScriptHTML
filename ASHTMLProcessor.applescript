@@ -142,16 +142,14 @@ script ASHTMLProcessor
 
 				end if
 				set a_scriptlink to ScriptLinkMaker's button_with_template(a_code, doc_name, mode_text, "button_template.html")
-				if css_mode is not 2 then
-					set pos_index to user_defaults's integerForKey_("ScriptLinkPositionIndex") as integer
-					if pos_index is 0 then
-						set button_style to "float:right;"
-                        set frame_style to ""
-					else
-						set button_style to "position:absolute; right:1em; bottom:0.5em;"
-                        set frame_style to "position:relative;"
-					end if
-				end if
+                set pos_index to user_defaults's integerForKey_("ScriptLinkPositionIndex") as integer
+                if pos_index is 0 then
+                    set button_style to "float:right;"
+                    set frame_style to ""
+                else
+                    set button_style to "position:absolute; right:1em; bottom:0.5em;"
+                    set frame_style to "position:relative;"
+                end if
 			end if
 		end if
         

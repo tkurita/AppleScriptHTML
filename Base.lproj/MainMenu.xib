@@ -253,15 +253,6 @@ DQ
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <binding destination="244" name="enabled2" keyPath="values.CSSModeIndex" previousBinding="397" id="767">
-                                <dictionary key="options">
-                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                    <string key="NSValueTransformerName">IsCSSGenerateTransformer</string>
-                                </dictionary>
-                            </binding>
                             <binding destination="244" name="enabled" keyPath="values.MakeScriptLink" id="397"/>
                             <binding destination="244" name="selectedIndex" keyPath="values.ScriptLinkPositionIndex" id="398"/>
                         </connections>
