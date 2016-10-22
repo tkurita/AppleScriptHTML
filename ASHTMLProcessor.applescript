@@ -1,3 +1,6 @@
+property NSUserDefaults : class "NSUserDefaults"
+property NSDictionary : class "NSDictionary"
+
 on boot_for(a_script)
 	boot (module loader of application (get "AppleScriptHTMLLib")) for a_script
 	return
@@ -26,9 +29,6 @@ script ASHTMLProcessor
 	property ClipboardController : missing value
 	
 	property _error_info : missing value
-	
-    property NSUserDefaults : class "NSUserDefaults"
-    property NSDictionary : class "NSDictionary"
     
 	on import_script(a_name)
 		--log a_name

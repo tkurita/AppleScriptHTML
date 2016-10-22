@@ -1,5 +1,6 @@
 global XFile
 
+property NSUserDefaults : class "NSUserDefaults"
 property _target_text : missing value
 property _target_path : missing value
 
@@ -12,7 +13,7 @@ end check_target
 on markup()
 	--log "start markup in FileController"
 	my _ashtml's set_wrap_with_block(false)
-	tell current application's class "NSUserDefaults"'s standardUserDefaults()
+	tell NSUserDefaults's standardUserDefaults()
 		set my _target_path to stringForKey_("TargetScript") as text
 	end tell
 	set a_result to my _ashtml's process_file(my _target_path, false)
@@ -25,7 +26,7 @@ on resolve_target_path()
 	if my _target_path is not missing value then
 		return
 	end if
-	tell current application's class "NSUserDefaults"'s standardUserDefaults()
+	tell NSUserDefaults's standardUserDefaults()
 		set my _target_path to stringForKey_("TargetScript") as text
 	end tell
 end resolve_target_path
