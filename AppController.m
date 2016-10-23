@@ -88,8 +88,25 @@ static AppController *sharedInstance = nil;
 }
 
 
-
 #pragma mark initilize
+void setTargetScriptTextForMode(int mode)
+{
+    NSString *target_script_text = nil;
+    switch (mode) {
+        case 1:
+            target_script_text = NSLocalizedString(@"ScriptEditorSelection",
+                                                   @"Indicator of ScriptEditor's Selection mode");
+            break;
+        case 2:
+            target_script_text = NSLocalizedString(@"ClipboardContents",
+                                                      @"Indicator of Clipboard Contents mode");
+            break;
+        default:
+            return;
+    }
+    [[NSUserDefaultsController sharedUserDefaultsController]
+        setValue:target_script_text forKeyPath:@"values.TargetScript"];
+}
 
 - (void)awakeFromNib
 {
@@ -129,6 +146,7 @@ static AppController *sharedInstance = nil;
 			[a_cell setPlaceholderString:[[target lastPathComponent] stringByDeletingPathExtension]];
 		}
 	}
+    
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
 }
@@ -186,7 +204,6 @@ static AppController *sharedInstance = nil;
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	int target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
-	//NSString *target_script = nil;
 	switch (target_mode) {
 		case 0:
 			if (a_path) {
@@ -195,18 +212,8 @@ static AppController *sharedInstance = nil;
 				}
 			}
 			break;
-		/*
-		case 1:
-			target_script = NSLocalizedString(@"ScriptEditorSelection", 
-														@"Indicator of ScriptEditor's Selection mode");
-			[user_defaults setObject:target_script forKey:@"TargetScript"];			
-			break;
-		case 2:
-			target_script = NSLocalizedString(@"ClipboardContents", 
-														@"Indicator of Clipbaord Contents mode");
-			[user_defaults setObject:target_script forKey:@"TargetScript"];
-			break;
-		*/
+        default:
+            setTargetScriptTextForMode(target_mode);
 	}
 	[mainWindow orderFront:self];
 }
@@ -239,20 +246,14 @@ static AppController *sharedInstance = nil;
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@2 forKey:@"TargetMode"];
-	NSString *target_text = NSLocalizedString(@"ClipboardContents", 
-												   @"Indicator of Clipboard Contents mode");
-	[[NSUserDefaultsController sharedUserDefaultsController]
-	 setValue:target_text forKeyPath:@"values.TargetScript"];
+    setTargetScriptTextForMode(2);
 }
 
 - (IBAction)useScriptEditorSelection:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@1 forKey:@"TargetMode"];
-	NSString *use_se_selection = NSLocalizedString(@"ScriptEditorSelection", 
-								@"Indicator of ScriptEditor's Selection mode");
-	[[NSUserDefaultsController sharedUserDefaultsController]
-				setValue:use_se_selection forKeyPath:@"values.TargetScript"];
+    setTargetScriptTextForMode(1);
 }
 
 - (IBAction)selectTarget:(id)sender
