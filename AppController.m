@@ -1,8 +1,8 @@
 #import <Carbon/Carbon.h>
 #import "AppController.h"
-#import "PathExtra.h"
+#import "PathExtra/PathExtra.h"
 #import "NSUserDefaultsExtensions.h"
-#import "DropBox.h"
+#import "DropBox/DropBox.h"
 #import "PreferencesWindowController.h"
 #import "MonitorWindowController.h"
 
@@ -149,6 +149,11 @@ void setTargetScriptTextForMode(int mode)
     
 	[mainWindow center];
 	[mainWindow setFrameAutosaveName:@"Main"];
+    
+   
+    if (NSAppKitVersionNumber > 1500) {
+        [NSWindow setAllowsAutomaticWindowTabbing: NO];
+    }
 }
 
 #pragma mark delegate methods for somethings
