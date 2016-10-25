@@ -134,7 +134,7 @@ script ASHTMLProcessor
 				if not user_defaults's boolForKey_("ObtainScriptLinkTitleFromFilename") as boolean then
 					set a_title to user_defaults's stringForKey_("ScriptLinkTitle") as text
 					if length of a_title is not 0 then
-						user_defaults's addToHistory_forKey_(a_title, "ScriptLinkTitleHistory")
+                        user_defaults's addToScriptLinkTitleHistoryInMainThread_(a_title)
                         tell XText
                             set doc_name to replace for a_title from "%s" by doc_name
                         end tell
