@@ -11,31 +11,42 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.C44EEC23-26FE-4F90-A1C3-B8C6AD4BFBFD</string>
+	<string>com.apple.ScriptEditor.id.AppleScriptHTMLLib</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>AppleScriptHTMLLib</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>aplt</string>
+	<key>LSMinimumSystemVersionByArchitecture</key>
+	<dict>
+		<key>x86_64</key>
+		<string>10.6</string>
+	</dict>
 	<key>LSRequiresCarbon</key>
 	<true/>
 	<key>WindowState</key>
 	<dict>
+		<key>bundleDividerCollapsed</key>
+		<true/>
+		<key>bundlePositionOfDivider</key>
+		<real>0.0</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
-		<integer>-1</integer>
+		<integer>2</integer>
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>274</real>
+		<real>421</real>
 		<key>savedFrame</key>
-		<string>659 226 439 476 0 0 1440 878 </string>
-		<key>selectedTabView</key>
-		<string>event log</string>
+		<string>74 190 700 672 0 0 1440 877 </string>
+		<key>selectedTab</key>
+		<string>description</string>
 	</dict>
 </dict>
 </plist>
