@@ -42,7 +42,7 @@
     }
 
 	[a_history insertObject:value atIndex:ins_index];
-	unsigned int history_max = [self integerForKey:@"HistoryMax"];
+	NSInteger history_max = [self integerForKey:@"HistoryMax"];
 
 	if ([a_history count] > history_max) {
 		[a_history removeLastObject];

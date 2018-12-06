@@ -26,7 +26,7 @@ static NSString *frameName = @"PreferencesWindow";
 	}	
 	NSArray *attributes = [ASFormatting sourceAttributes];
 	NSMutableArray *a_result = [NSMutableArray array];
-	int nmax = [style_names_descriptor numberOfItems];
+	NSInteger nmax = [style_names_descriptor numberOfItems];
 	for (int n=0; n < nmax; n++) {
 		NSString *cname = @"";
 		if ([class_names count] > n) {

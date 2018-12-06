@@ -178,11 +178,11 @@ void showError(NSDictionary *err_info)
 - (NSDictionary *)defaultLocationAndName:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	int css_mode_index = [user_defaults integerForKey:@"CSSModeIndex"];
+	NSInteger css_mode_index = [user_defaults integerForKey:@"CSSModeIndex"];
 	Boolean is_convert = [user_defaults boolForKey:@"CodeToHTML"];
 	Boolean is_scriptlink = [user_defaults boolForKey:@"MakeScriptLink"];
 	Boolean is_save_to_souce_location = [user_defaults boolForKey:@"SaveToSourceLocation"];
-	int target_mode = [user_defaults integerForKey:@"TargetMode"];
+	NSInteger target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *default_name = nil;
 	NSString *default_location = @"";
 	NSString *extension = @"html";

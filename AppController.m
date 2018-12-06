@@ -89,7 +89,7 @@ static AppController *sharedInstance = nil;
 
 
 #pragma mark initilize
-void setTargetScriptTextForMode(int mode)
+void setTargetScriptTextForMode(NSInteger mode)
 {
     NSString *target_script_text = nil;
     switch (mode) {
@@ -207,7 +207,7 @@ void setTargetScriptTextForMode(int mode)
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	int target_mode = [user_defaults integerForKey:@"TargetMode"];
+	NSInteger target_mode = [user_defaults integerForKey:@"TargetMode"];
 	NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
 	switch (target_mode) {
 		case 0:
@@ -304,7 +304,7 @@ void setTargetScriptTextForMode(int mode)
 {
 	if ([sender state] == NSOnState) {
 		NSString *title_text;
-		int target_mode = [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"];
+		NSInteger target_mode = [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"];
 		if (target_mode != 0) {
 			title_text = @"";			
 		} else {
