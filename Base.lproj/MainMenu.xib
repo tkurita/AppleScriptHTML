@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -106,7 +107,11 @@ DQ
                                     </popUpButtonCell>
                                     <connections>
                                         <action selector="popUpRecents:" target="250" id="307"/>
-                                        <binding destination="244" name="contentValues" keyPath="values.RecentScripts" id="309"/>
+                                        <binding destination="244" name="contentValues" keyPath="values.RecentScriptBookmarks" id="MWA-ko-Phz">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">BookmarkToPathTransformer</string>
+                                            </dictionary>
+                                        </binding>
                                     </connections>
                                 </popUpButton>
                                 <button verticalHuggingPriority="750" id="258">
@@ -138,19 +143,14 @@ DQ
                                 </button>
                             </subviews>
                         </view>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                         <connections>
                             <outlet property="delegate" destination="250" id="253"/>
                         </connections>
                     </box>
-                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="241">
+                    <box verticalHuggingPriority="750" boxType="separator" id="241">
                         <rect key="frame" x="20" y="58" width="500" height="5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <font key="titleFont" metaFont="system"/>
                     </box>
                     <button toolTip="Save the output into a file." verticalHuggingPriority="750" id="288">
                         <rect key="frame" x="152" y="12" width="180" height="32"/>
@@ -546,6 +546,8 @@ DQ
         <userDefaultsController representsSharedInstance="YES" id="244" userLabel="Shared Defaults"/>
         <customObject id="250" userLabel="AppController" customClass="AppController">
             <connections>
+                <outlet property="checkForUpdatesMenuItem" destination="467" id="S7n-zP-nro"/>
+                <outlet property="donationMenuItem" destination="310" id="hj0-nm-IiB"/>
                 <outlet property="mainWindow" destination="21" id="255"/>
                 <outlet property="recentScriptsButton" destination="235" id="257"/>
                 <outlet property="scriptLinkTitleComboBox" destination="323" id="326"/>

@@ -8,6 +8,15 @@
 
 #define useLog 0
 
+#ifndef SANDBOX
+#define SANDBOX 0
+#endif
+
+#if !SANDBOX
+#import "Sparkle/SUUpdater.h"
+#import "DonationReminder/DonationReminder.h"
+#endif
+
 @interface IsCSSGenerateTransformer : NSValueTransformer
 {}
 @end
@@ -45,19 +54,27 @@
 
 #pragma mark services for scripts
 
-#pragma mark private methods
+//MARK: private methods
 
-- (BOOL)setTargetScript:(NSString *)a_path
+- (BOOL)updateTargetScriptURL:(NSURL *)an_url
 {
-	[[NSUserDefaultsController sharedUserDefaultsController]
-					setValue:a_path forKeyPath:@"values.TargetScript"];
-	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	[user_defaults setObject:@0 forKey:@"TargetMode"];
-	[user_defaults addToHistory:a_path forKey:@"RecentScripts" emptyFirst:YES];
-	return YES;
+    NSError *error = nil;
+    NSData *bmdata = [an_url bookmarkDataWithOptions:NSURLBookmarkCreationWithSecurityScope
+                      includingResourceValuesForKeys:nil
+                                       relativeToURL:nil
+                                               error:&error];
+    NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+    [[NSUserDefaultsController sharedUserDefaultsController]
+					setValue:an_url.path forKeyPath:@"values.TargetScript"];
+    [user_defaults setObject:bmdata forKey:@"TargetScriptBookmark"];
+    [user_defaults setObject:@0 forKey:@"TargetMode"];
+    [user_defaults addToHistory:bmdata forKey:@"RecentScriptBookmarks" emptyFirst:YES];
+    
+    return YES;
 }
 
-#pragma mark methods for singleton
+
+//MARK: methods for singleton
 static AppController *sharedInstance = nil;
 
 + (AppController *)sharedAppController
@@ -89,7 +106,7 @@ static AppController *sharedInstance = nil;
 
 
 #pragma mark initilize
-void setTargetScriptTextForMode(NSInteger mode)
+- (void)setTargetScriptTextForMode:(NSInteger) mode
 {
     NSString *target_script_text = nil;
     switch (mode) {
@@ -104,8 +121,10 @@ void setTargetScriptTextForMode(NSInteger mode)
         default:
             return;
     }
+    
     [[NSUserDefaultsController sharedUserDefaultsController]
         setValue:target_script_text forKeyPath:@"values.TargetScript"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"TargetScriptBookmark"];
 }
 
 - (void)awakeFromNib
@@ -121,6 +140,16 @@ void setTargetScriptTextForMode(NSInteger mode)
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults registerDefaults:factory_defaults];
 	
+    // setup updater
+#if SANDBOX
+    [[checkForUpdatesMenuItem menu] removeItem:checkForUpdatesMenuItem];
+    [[donationMenuItem menu] removeItem:donationMenuItem];
+#else
+    self.updater = [[SUUpdater alloc] init];
+    checkForUpdatesMenuItem.action = @selector(checkForUpdates:);
+    checkForUpdatesMenuItem.target = _updater;
+#endif
+    
 	// set recentScriptsButton
 	NSPopUpButtonCell *a_cell = [recentScriptsButton cell];
 	[a_cell setBezelStyle:NSSmallSquareBezelStyle];
@@ -142,7 +171,7 @@ void setTargetScriptTextForMode(NSInteger mode)
 		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
 		[a_cell setObjectValue:@""];
 		if (0 == [user_defaults integerForKey:@"TargetMode"]) {
-			NSString *target = [user_defaults stringForKey:@"TargetScript"];
+            NSString *target = [user_defaults stringForKey:@"TargetScript"];
 			[a_cell setPlaceholderString:[[target lastPathComponent] stringByDeletingPathExtension]];
 		}
 	}
@@ -159,8 +188,8 @@ void setTargetScriptTextForMode(NSInteger mode)
 #pragma mark delegate methods for somethings
 - (BOOL)dropBox:(NSView *)dbv acceptDrop:(id <NSDraggingInfo>)info item:(id)item
 {
-	item = [item infoResolvingAliasFile][@"ResolvedPath"];
-	return [self setTargetScript:item];
+	NSURL *an_url = [item infoResolvingAliasFile][@"ResolvedURL"];
+	return [self updateTargetScriptURL:an_url];
 }
 
 - (void)openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode 
@@ -170,7 +199,7 @@ void setTargetScriptTextForMode(NSInteger mode)
         NSURL *an_url = [panel URL];
 		NSDictionary *alias_info = [an_url infoResolvingAliasFile];
 		if (alias_info) {
-			[self setTargetScript:[alias_info[@"ResolvedURL"] path]];
+			[self updateTargetScriptURL:alias_info[@"ResolvedURL"]];
 			[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
 		} else {
 			[panel orderOut:self];
@@ -192,9 +221,9 @@ void setTargetScriptTextForMode(NSInteger mode)
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
 #if useLog
-	NSLog(filename);
+	NSLog(@"application:openFile:%@", filename);
 #endif
-	return [self setTargetScript:filename];
+	return [self updateTargetScriptURL:[filename fileURL]];
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
@@ -208,18 +237,36 @@ void setTargetScriptTextForMode(NSInteger mode)
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	NSInteger target_mode = [user_defaults integerForKey:@"TargetMode"];
-	NSString *a_path = [user_defaults stringForKey:@"TargetScript"];
+    
+    NSError *error = nil;
+    NSData *bmdata = nil;
+    NSURL *an_url = nil;
+    BOOL is_stale = NO;
 	switch (target_mode) {
 		case 0:
-			if (a_path) {
-				if (![a_path fileExists]) {
-					[user_defaults removeObjectForKey:@"TargetScript"];
-				}
-			}
+            bmdata = [user_defaults dataForKey:@"TargetScriptBookmark"];
+            if (!bmdata) goto bail;
+            
+            an_url = [NSURL URLByResolvingBookmarkData:bmdata
+                                options:NSURLBookmarkResolutionWithoutUI|NSURLBookmarkResolutionWithSecurityScope
+                                                     relativeToURL:nil
+                                               bookmarkDataIsStale:&is_stale
+                                                             error:&error];
+            if ((is_stale || error)
+                    || (![an_url checkResourceIsReachableAndReturnError:&error])) {
+                [user_defaults removeObjectForKey:@"TargetScriptBookmark"];
+                [user_defaults removeObjectForKey:@"TargetScript"];
+                goto bail;
+            }
+            
+             [[NSUserDefaultsController sharedUserDefaultsController]
+                                setValue:an_url.path forKeyPath:@"values.TargetScript"];
+            
 			break;
         default:
-            setTargetScriptTextForMode(target_mode);
+            [self setTargetScriptTextForMode:target_mode];
 	}
+bail:
 	[mainWindow orderFront:self];
 }
 
@@ -233,7 +280,7 @@ void setTargetScriptTextForMode(NSInteger mode)
 	[mainWindow saveFrameUsingName:@"Main"];
 }
 
-#pragma mark actions
+//MARK: actions
 
 - (IBAction)showMonitorWindow:(id)sender
 {
@@ -251,14 +298,14 @@ void setTargetScriptTextForMode(NSInteger mode)
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@2 forKey:@"TargetMode"];
-    setTargetScriptTextForMode(2);
+    [self setTargetScriptTextForMode:2];
 }
 
 - (IBAction)useScriptEditorSelection:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@1 forKey:@"TargetMode"];
-    setTargetScriptTextForMode(1);
+    [self setTargetScriptTextForMode:1];
 }
 
 - (IBAction)selectTarget:(id)sender
@@ -273,7 +320,7 @@ void setTargetScriptTextForMode(NSInteger mode)
          NSURL *an_url = [a_panel URL];
          NSDictionary *alias_info = [an_url infoResolvingAliasFile];
          if (alias_info) {
-             [self setTargetScript:[alias_info[@"ResolvedURL"] path]];
+             [self updateTargetScriptURL:alias_info[@"ResolvedURL"]];
              [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
          } else {
              [a_panel orderOut:self];
@@ -288,15 +335,25 @@ void setTargetScriptTextForMode(NSInteger mode)
 
 - (IBAction)popUpRecents:(id)sender
 {
-	NSString *a_path = [[sender selectedItem] title];
+    NSInteger selidx = [sender indexOfSelectedItem];
+    if (selidx < 1) return;
+    
 	UInt32 is_optkey = GetCurrentEventKeyModifiers() & optionKey;
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	if ((!is_optkey) && [a_path fileExists]) {
+    NSData *bmdata = [user_defaults objectInHistoryAtIndex:selidx forKey:@"RecentScriptBookmarks"];
+    BOOL is_slate = NO;
+    NSError *error = nil;
+    NSURL *url = [NSURL URLByResolvingBookmarkData:bmdata
+                                           options:NSURLBookmarkResolutionWithSecurityScope
+                                     relativeToURL:nil bookmarkDataIsStale:&is_slate
+                                             error:&error];
+	if ((!is_optkey) && (!(is_slate || error))) {
 		[[NSUserDefaultsController sharedUserDefaultsController] 
-						setValue:a_path forKeyPath:@"values.TargetScript"];
+						setValue:url.path forKeyPath:@"values.TargetScript"];
 		[user_defaults setObject:@0 forKey:@"TargetMode"];
+        [user_defaults setObject:bmdata forKey:@"TargetScriptBookmark"];
 	} else {
-		[user_defaults removeFromHistory:a_path forKey:@"RecentScripts"];
+		[user_defaults removeFromHistoryAtIndex:selidx forKey:@"RecentScripts"];
 	}
 }
 
@@ -304,12 +361,12 @@ void setTargetScriptTextForMode(NSInteger mode)
 {
 	if ([sender state] == NSOnState) {
 		NSString *title_text;
-		NSInteger target_mode = [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"];
+        NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
+		NSInteger target_mode = [user_defaults integerForKey:@"TargetMode"];
 		if (target_mode != 0) {
 			title_text = @"";			
 		} else {
-			NSString *target = [[NSUserDefaults standardUserDefaults] 
-												stringForKey:@"TargetScript"];
+            NSString *target = [user_defaults stringForKey:@"TargetScript"];
 			title_text = [[target lastPathComponent] stringByDeletingPathExtension];
 		}
 		[[scriptLinkTitleComboBox cell] setObjectValue:@""];

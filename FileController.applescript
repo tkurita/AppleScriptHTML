@@ -1,6 +1,7 @@
 global XFile
 
 property NSUserDefaults : class "NSUserDefaults"
+property NSURL : class "NSURL"
 property _target_text : missing value
 property _target_path : missing value
 
@@ -14,10 +15,17 @@ on markup()
 	--log "start markup in FileController"
 	my _ashtml's set_wrap_with_block(false)
 	tell NSUserDefaults's standardUserDefaults()
-		set my _target_path to stringForKey_("TargetScript") as text
+        set bmdata to its dataForKey:"TargetScriptBookmark"
 	end tell
-	set a_result to my _ashtml's process_file(my _target_path, false)
+    set opt to (current application's NSURLBookmarkResolutionWithoutUI as integer) + (current application's NSURLBookmarkResolutionWithSecurityScope as integer)
+    tell NSURL's URLByResolvingBookmarkData:bmdata options:opt relativeToURL:(missing value) bookmarkDataIsStale:(missing value) |error|:(missing value)
+        its startAccessingSecurityScopedResource
+        set an_url to it
+        set my _target_path to its |path|() as text
+    end tell
+    set a_result to my _ashtml's process_url(an_url, false)
 	set my _target_text to my _ashtml's target_text()
+    an_url's stopAccessingSecurityScopedResource()
 	--log "end markup in FileController"
 	return a_result
 end markup

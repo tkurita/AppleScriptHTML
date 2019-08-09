@@ -68,4 +68,23 @@
 	}
 	
 }
+
+- (void)removeFromHistoryAtIndex:(NSInteger)index forKey:(NSString *)key
+{
+    if (index < 0) return;
+    NSMutableArray *a_history = [self objectForKey:key];
+    if (!a_history) return;
+    a_history = [a_history mutableCopy];
+    [a_history removeObjectAtIndex:index];
+    [self setObject:a_history forKey:key];
+}
+
+- (id)objectInHistoryAtIndex:(NSInteger)index forKey:(NSString *)key;
+{
+    if (index < 0) nil;
+    NSArray *a_history = [self objectForKey:key];
+    if (!a_history) return nil;
+    return [a_history objectAtIndex:index];
+}
+
 @end

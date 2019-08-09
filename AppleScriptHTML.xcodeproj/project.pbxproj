@@ -51,6 +51,8 @@
 		2CD976040EC912B700024156 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD976030EC912B700024156 /* Carbon.framework */; };
 		2CE2488C1569349600C78D88 /* ASHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2488A1569349600C78D88 /* ASHTMLController.m */; };
 		2CE619180ECBB9D700445AFE /* template_full_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CE619170ECBB9D700445AFE /* template_full_body.html */; };
+		2CF0166722FC91AF006A9E35 /* BookmarkToPathTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF0166522FC91AF006A9E35 /* BookmarkToPathTransformer.h */; };
+		2CF0166822FC91AF006A9E35 /* BookmarkToPathTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF0166622FC91AF006A9E35 /* BookmarkToPathTransformer.m */; };
 		2CF2FF060ECA579000BADC90 /* ASHTMLProcessor.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */; settings = {ATTRIBUTES = (); }; };
 		2CF3A6430ECACC4800D63AF8 /* template_sourcecode.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */; };
 		2CF3A6440ECACC4800D63AF8 /* template_full.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6410ECACC4800D63AF8 /* template_full.html */; };
@@ -160,6 +162,8 @@
 		2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHTMLController.m; sourceTree = "<group>"; };
 		2CE2CF2B1CC5C6F500873DBB /* AppleScriptHTML.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppleScriptHTML.entitlements; sourceTree = "<group>"; };
 		2CE619170ECBB9D700445AFE /* template_full_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_body.html; sourceTree = "<group>"; };
+		2CF0166522FC91AF006A9E35 /* BookmarkToPathTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkToPathTransformer.h; sourceTree = "<group>"; };
+		2CF0166622FC91AF006A9E35 /* BookmarkToPathTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkToPathTransformer.m; sourceTree = "<group>"; };
 		2CF2FF050ECA579000BADC90 /* ASHTMLProcessor.applescript */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = sourcecode.applescript; path = ASHTMLProcessor.applescript; sourceTree = "<group>"; };
 		2CF3A6400ECACC4800D63AF8 /* template_sourcecode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_sourcecode.html; sourceTree = "<group>"; };
 		2CF3A6410ECACC4800D63AF8 /* template_full.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full.html; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.debug.xcconfig"; sourceTree = "<group>"; };
 		7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.release.xcconfig"; sourceTree = "<group>"; };
 		B0F5AC8F6C61F954D94FD288 /* libPods-AppleScriptHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppleScriptHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.macappstore.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.macappstore.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +245,8 @@
 				2CF3A6330ECACC1600D63AF8 /* Templates */,
 				2C4D2C7E0EC99C5D00D09C32 /* ASHTMLLib */,
 				2CD975830EC8FAD300024156 /* Classes */,
-				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				080E96DDFE201D6D7F000001 /* Scripts */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -351,6 +356,8 @@
 				2C9492B90ECA99A600273C7C /* AppController.m */,
 				2C30E65710958AD900605969 /* PreferencesWindowController.h */,
 				2C30E65810958AD900605969 /* PreferencesWindowController.m */,
+				2CF0166522FC91AF006A9E35 /* BookmarkToPathTransformer.h */,
+				2CF0166622FC91AF006A9E35 /* BookmarkToPathTransformer.m */,
 				2C85DB2E156627E10038CC9E /* MonitorWindowController.h */,
 				2C85DB2F156627E20038CC9E /* MonitorWindowController.m */,
 				2CE248891569349600C78D88 /* ASHTMLController.h */,
@@ -383,6 +390,7 @@
 			children = (
 				58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */,
 				7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */,
+				CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -394,6 +402,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF0166722FC91AF006A9E35 /* BookmarkToPathTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,14 +442,13 @@
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					257572C2072881A4000BE9CA = {
-						DevelopmentTeam = N3YK2F43T4;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
 							};
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -590,6 +598,7 @@
 				2CD975F00EC9013500024156 /* ASFormatting.m in Sources */,
 				2C9492BB0ECA99A600273C7C /* AppController.m in Sources */,
 				2C9493030ECAA28100273C7C /* NSUserDefaultsExtensions.m in Sources */,
+				2CF0166822FC91AF006A9E35 /* BookmarkToPathTransformer.m in Sources */,
 				2CD43149108F5C4F0026C231 /* ASFormattingExtensions.m in Sources */,
 				2C30E65A10958AD900605969 /* PreferencesWindowController.m in Sources */,
 				2C85DB31156627E20038CC9E /* MonitorWindowController.m in Sources */,
@@ -669,17 +678,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2C8F30A922D87BD700FB5328 /* MacAppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = MacAppStore;
+		};
+		2C8F30AA22D87BD700FB5328 /* MacAppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
+				CURRENT_PROJECT_VERSION = 44;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Sparkle\"",
+					"-DSANDBOX=1",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
+				PRODUCT_NAME = AppleScriptHTML;
+				PRODUCT_VERSION = 2.8;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = apple_generic;
+				WRAPPER_EXTENSION = app;
+			};
+			name = MacAppStore;
+		};
 		4E71A80608A2C90C0034BBD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPYRIGHT = "Copyright 2007-2018, Tetsuro KURITA";
+				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 43;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				CURRENT_PROJECT_VERSION = 44;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -691,7 +765,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.7.3;
+				PRODUCT_VERSION = 2.8;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -703,11 +777,12 @@
 			baseConfigurationReference = 7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				COPYRIGHT = "Copyright 2007-2018, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 43;
-				DEVELOPMENT_TEAM = N3YK2F43T4;
+				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
+				CURRENT_PROJECT_VERSION = 44;
+				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -718,7 +793,7 @@
 				INSTALL_PATH = /Applications;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AppleScriptHTML";
 				PRODUCT_NAME = AppleScriptHTML;
-				PRODUCT_VERSION = 2.7.3;
+				PRODUCT_VERSION = 2.8;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -791,6 +866,7 @@
 			buildConfigurations = (
 				4E71A80608A2C90C0034BBD9 /* Debug */,
 				4E71A80708A2C90C0034BBD9 /* Release */,
+				2C8F30AA22D87BD700FB5328 /* MacAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -800,6 +876,7 @@
 			buildConfigurations = (
 				4E71A80A08A2C90C0034BBD9 /* Debug */,
 				4E71A80B08A2C90C0034BBD9 /* Release */,
+				2C8F30A922D87BD700FB5328 /* MacAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

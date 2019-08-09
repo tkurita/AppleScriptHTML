@@ -6,6 +6,8 @@
 	IBOutlet id mainWindow;
 	IBOutlet id targetScriptBox;
 	IBOutlet id scriptLinkTitleComboBox;
+    IBOutlet NSMenuItem *checkForUpdatesMenuItem;
+    IBOutlet NSMenuItem *donationMenuItem;
 }
 - (IBAction)selectTarget:(id)sender;
 - (IBAction)popUpRecents:(id)sender;
@@ -14,4 +16,9 @@
 - (IBAction)useClipboardContents:(id)sender;
 - (IBAction)showMonitorWindow:(id)sender;
 - (IBAction)showSettingWindow:(id)sender;
+
+#if !SANDBOX
+@property (nonatomic ,strong) id updater;
+#endif
+
 @end
