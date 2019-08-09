@@ -459,8 +459,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
 				French,
 				German,
 				en,
