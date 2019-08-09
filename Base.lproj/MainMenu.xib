@@ -312,9 +312,6 @@ DQ
                             </menuItem>
                             <menuItem title="Check for Updates..." id="467">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="checkForUpdates:" target="466" id="468"/>
-                                </connections>
                             </menuItem>
                             <menuItem title="Make a Donation" id="310">
                                 <connections>
@@ -554,7 +551,6 @@ DQ
                 <outlet property="targetScriptBox" destination="231" id="256"/>
             </connections>
         </customObject>
-        <customObject id="466" userLabel="Updater" customClass="SUUpdater"/>
         <customObject id="729" userLabel="ASHTMLController" customClass="ASHTMLController">
             <connections>
                 <outlet property="ashtmlProcessor" destination="771" id="798"/>
