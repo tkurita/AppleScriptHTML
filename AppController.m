@@ -233,6 +233,13 @@ static AppController *sharedInstance = nil;
 #endif
 }
 
+- (IBAction)makeDonation:(id)sender
+{
+#if !SANDBOX
+    [DonationReminder goToDonation];
+#endif
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
@@ -268,6 +275,10 @@ static AppController *sharedInstance = nil;
 	}
 bail:
 	[mainWindow orderFront:self];
+
+#if !SANDBOX
+    [DonationReminder remindDonation];
+#endif
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication

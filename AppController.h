@@ -16,6 +16,7 @@
 - (IBAction)useClipboardContents:(id)sender;
 - (IBAction)showMonitorWindow:(id)sender;
 - (IBAction)showSettingWindow:(id)sender;
+- (IBAction)makeDonation:(id)sender;
 
 #if !SANDBOX
 @property (nonatomic ,strong) id updater;

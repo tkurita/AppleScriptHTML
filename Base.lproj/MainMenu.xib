@@ -315,7 +315,7 @@ DQ
                             </menuItem>
                             <menuItem title="Make a Donation" id="310">
                                 <connections>
-                                    <action selector="makeDonation:" target="Jjt-an-BxN" id="CBz-Et-gZQ"/>
+                                    <action selector="makeDonation:" target="250" id="VJv-5n-iFr"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="427"/>
@@ -563,6 +563,5 @@ DQ
             <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
             <autoresizingMask key="autoresizingMask"/>
         </view>
-        <customObject id="Jjt-an-BxN" customClass="DonationReminderController"/>
     </objects>
 </document>

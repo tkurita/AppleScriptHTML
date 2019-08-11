@@ -17,6 +17,8 @@
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
 			<true/>
+			<key>LSHandlerRank</key>
+			<string>None</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -33,6 +35,8 @@
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
 			<false/>
+			<key>LSHandlerRank</key>
+			<string>None</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -49,6 +53,8 @@
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
 			<false/>
+			<key>LSHandlerRank</key>
+			<string>None</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -65,6 +71,8 @@
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
 			<false/>
+			<key>LSHandlerRank</key>
+			<string>None</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
@@ -81,6 +89,8 @@
 			<string>Viewer</string>
 			<key>LSTypeIsPackage</key>
 			<true/>
+			<key>LSHandlerRank</key>
+			<string>None</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -106,7 +116,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>44</string>
+	<string>49</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
@@ -125,7 +135,7 @@
 	<key>SUCheckAtStartup</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://www.script-factory.net/appcast/AppleScriptHTML.xml</string>
+	<string>https://www.script-factory.net/appcast/AppleScriptHTML.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 </dict>
