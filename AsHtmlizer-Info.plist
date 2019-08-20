@@ -98,9 +98,9 @@
 	<key>CFBundleGetInfoString</key>
 	<string>${PRODUCT_VERSION} ${COPYRIGHT}</string>
 	<key>CFBundleHelpBookFolder</key>
-	<string>AppleScriptHTMLHelp</string>
+	<string>AsHtmlizerHelp</string>
 	<key>CFBundleHelpBookName</key>
-	<string>net.script-factory.AppleScriptHTML.help</string>
+	<string>net.script-factory.AsHtmlizer.help</string>
 	<key>CFBundleIconFile</key>
 	<string>AppleScriptHTML</string>
 	<key>CFBundleIdentifier</key>
@@ -135,7 +135,7 @@
 	<key>SUCheckAtStartup</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://www.script-factory.net/appcast/AppleScriptHTML.xml</string>
+	<string>https://www.script-factory.net/appcast/AsHtmlizer.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 </dict>

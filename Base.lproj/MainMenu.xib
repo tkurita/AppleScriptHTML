@@ -298,6 +298,9 @@ DQ
                     </popUpButton>
                 </subviews>
             </view>
+            <connections>
+                <binding destination="250" name="title" keyPath="bundleName" id="Kwq-zK-b4m"/>
+            </connections>
         </window>
         <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>
@@ -308,6 +311,7 @@ DQ
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                    <binding destination="250" name="title" keyPath="aboutMenuTitle" id="p5K-44-EaJ"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Check for Updates..." id="467">
@@ -336,6 +340,7 @@ DQ
                             <menuItem title="Hide AppleScriptHTML" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-2" id="152"/>
+                                    <binding destination="250" name="title" keyPath="hideMenuTitle" id="mMZ-RK-4gv"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Hide Others" keyEquivalent="h" id="145">
@@ -355,10 +360,14 @@ DQ
                             <menuItem title="Quit AppleScriptHTML" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-2" id="139"/>
+                                    <binding destination="250" name="title" keyPath="quitMenuTitle" id="lng-Jj-V18"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <binding destination="250" name="title" keyPath="bundleName" id="Utq-rQ-flq"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="File" id="83">
                     <menu key="submenu" title="File" id="81">
@@ -533,6 +542,7 @@ DQ
                             <menuItem title="AppleScriptHTML Help" keyEquivalent="?" id="111">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="122"/>
+                                    <binding destination="250" name="title" keyPath="helpMenuTitle" id="XIJ-4V-jkR"/>
                                 </connections>
                             </menuItem>
                         </items>

@@ -385,4 +385,36 @@ bail:
 	}
 }
 
+//MARK: Menu Titles
+
+- (NSString *)bundleName
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+}
+
+- (NSString *)buildMenuTitle:(NSString *)localizedStringName
+{
+    return [NSString stringWithFormat:NSLocalizedString(localizedStringName, @""), [self bundleName]];
+}
+
+- (NSString *)aboutMenuTitle
+{
+    return [self buildMenuTitle:@"AboutMenuTitle"];
+}
+
+- (NSString *)hideMenuTitle
+{
+    return [self buildMenuTitle:@"HideMenuTitle"];
+}
+
+- (NSString *)quitMenuTitle
+{
+    return [self buildMenuTitle:@"QuitMenuTitle"];
+}
+
+- (NSString *)helpMenuTitle
+{
+    return [self buildMenuTitle:@"HelpMenuTitle"];
+}
+
 @end
