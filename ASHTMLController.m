@@ -170,9 +170,17 @@ void showError(NSDictionary *err_info)
 
 - (IBAction)copyToClipboard:(id)sender
 {
-	[self startIndicator];
-    [NSThread detachNewThreadSelector:@selector(copyToClipboardInThread:)
-                             toTarget:self withObject:sender];
+    void (^handler)(BOOL) = ^(BOOL result){ if (! result) return;
+        [self startIndicator];
+        [NSThread detachNewThreadSelector:@selector(copyToClipboardInThread:)
+                                 toTarget:self withObject:sender];
+    };
+    
+    if (DropScriptFile == [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"]){
+        [appController selectTargetWithCompletionHandler:handler];
+    } else {
+        handler(YES);
+    }
 }
 	 
 - (NSDictionary *)defaultLocationAndName:(id)sender
@@ -310,9 +318,17 @@ void showError(NSDictionary *err_info)
 
 - (IBAction)saveToFile:(id)sender
 {
-	[self startIndicator];
-	[NSThread detachNewThreadSelector:@selector(saveToFileInThread:)
-                             toTarget:self withObject:sender];
+    void (^save_to_file)(BOOL) = ^(BOOL result){ if (! result) return;
+        [self startIndicator];
+        [NSThread detachNewThreadSelector:@selector(saveToFileInThread:)
+                                 toTarget:self withObject:sender];
+    };
+    
+    if (DropScriptFile == [[NSUserDefaults standardUserDefaults] integerForKey:@"TargetMode"]){
+        [appController selectTargetWithCompletionHandler:save_to_file];
+    } else {
+        save_to_file(YES);
+    }
 }
 
 @end

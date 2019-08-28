@@ -106,17 +106,21 @@ static AppController *sharedInstance = nil;
 
 
 #pragma mark initilize
-- (void)setTargetScriptTextForMode:(NSInteger) mode
+- (void)setTargetScriptTextForMode:(TargetMode) mode
 {
     NSString *target_script_text = nil;
     switch (mode) {
-        case 1:
+        case ScriptEditorSelection:
             target_script_text = NSLocalizedString(@"ScriptEditorSelection",
                                                    @"Indicator of ScriptEditor's Selection mode");
             break;
-        case 2:
+        case ClipboardContents:
             target_script_text = NSLocalizedString(@"ClipboardContents",
                                                       @"Indicator of Clipboard Contents mode");
+            break;
+        case DropScriptFile:
+            target_script_text = NSLocalizedString(@"DropScriptFile",
+                                                   @"Indicator of File Drop mode");
             break;
         default:
             return;
@@ -142,6 +146,17 @@ static AppController *sharedInstance = nil;
 	
     // setup updater
 #if SANDBOX
+    /* remove script editor's selection button */
+    NSRect ses_frame = scriptEditorSelectionButton.frame;
+    [scriptEditorSelectionButton removeFromSuperview];
+    NSRect frame = selectButton.frame;
+    frame.origin.x += ses_frame.size.width;
+    selectButton.frame = frame;
+    frame = recentScriptsButton.frame;
+    frame.origin.x += ses_frame.size.width;
+    recentScriptsButton.frame = frame;
+    
+    /* remove donation menu and check for updates menu */
     [[checkForUpdatesMenuItem menu] removeItem:checkForUpdatesMenuItem];
     [[donationMenuItem menu] removeItem:donationMenuItem];
 #else
@@ -167,7 +182,7 @@ static AppController *sharedInstance = nil;
 		@{@"PathExtension": @"app",
 										 @"CreatorCode": @"dplt"}]];
 		
-	if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
+    if ([user_defaults boolForKey:@"ObtainScriptLinkTitleFromFilename"]) {
 		NSComboBoxCell *a_cell = [scriptLinkTitleComboBox cell];
 		[a_cell setObjectValue:@""];
 		if (0 == [user_defaults integerForKey:@"TargetMode"]) {
@@ -200,7 +215,7 @@ static AppController *sharedInstance = nil;
 		NSDictionary *alias_info = [an_url infoResolvingAliasFile];
 		if (alias_info) {
 			[self updateTargetScriptURL:alias_info[@"ResolvedURL"]];
-			[[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
+			[[NSUserDefaults standardUserDefaults] setInteger:FileSelected forKey:@"TargetMode"];
 		} else {
 			[panel orderOut:self];
 			NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"
@@ -243,36 +258,42 @@ static AppController *sharedInstance = nil;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
-	NSInteger target_mode = [user_defaults integerForKey:@"TargetMode"];
+	TargetMode target_mode = (TargetMode)[user_defaults integerForKey:@"TargetMode"];
     
     NSError *error = nil;
     NSData *bmdata = nil;
     NSURL *an_url = nil;
     BOOL is_stale = NO;
 	switch (target_mode) {
-		case 0:
+		case FileSelected:
             bmdata = [user_defaults dataForKey:@"TargetScriptBookmark"];
-            if (!bmdata) goto bail;
-            
-            an_url = [NSURL URLByResolvingBookmarkData:bmdata
-                                options:NSURLBookmarkResolutionWithoutUI|NSURLBookmarkResolutionWithSecurityScope
-                                                     relativeToURL:nil
-                                               bookmarkDataIsStale:&is_stale
-                                                             error:&error];
-            if ((is_stale || error)
-                    || (![an_url checkResourceIsReachableAndReturnError:&error])) {
-                [user_defaults removeObjectForKey:@"TargetScriptBookmark"];
-                [user_defaults removeObjectForKey:@"TargetScript"];
-                goto bail;
+            if (bmdata) {
+                an_url = [NSURL URLByResolvingBookmarkData:bmdata
+                                    options:NSURLBookmarkResolutionWithoutUI|NSURLBookmarkResolutionWithSecurityScope
+                                                         relativeToURL:nil
+                                                   bookmarkDataIsStale:&is_stale
+                                                                 error:&error];
+                if ((is_stale || error)
+                        || (![an_url checkResourceIsReachableAndReturnError:&error])) {
+                    [user_defaults removeObjectForKey:@"TargetScriptBookmark"];
+                    [user_defaults removeObjectForKey:@"TargetScript"];
+                } else {
+                    [[NSUserDefaultsController sharedUserDefaultsController]
+                     setValue:an_url.path forKeyPath:@"values.TargetScript"];
+                    break;
+                }
             }
-            
-             [[NSUserDefaultsController sharedUserDefaultsController]
-                                setValue:an_url.path forKeyPath:@"values.TargetScript"];
-            
-			break;
+            target_mode = DropScriptFile;
+            [[NSUserDefaults standardUserDefaults] setInteger:target_mode forKey:@"TargetMode"];
+#if SANDBOX
+        case ScriptEditorSelection:
+            target_mode = DropScriptFile;
+            [[NSUserDefaults standardUserDefaults] setInteger:target_mode forKey:@"TargetMode"];
+#endif
         default:
             [self setTargetScriptTextForMode:target_mode];
 	}
+    
 bail:
 	[mainWindow orderFront:self];
 
@@ -309,20 +330,20 @@ bail:
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@2 forKey:@"TargetMode"];
-    [self setTargetScriptTextForMode:2];
+    [self setTargetScriptTextForMode:ClipboardContents];
 }
 
 - (IBAction)useScriptEditorSelection:(id)sender
 {
 	NSUserDefaults *user_defaults = [NSUserDefaults standardUserDefaults];
 	[user_defaults setObject:@1 forKey:@"TargetMode"];
-    [self setTargetScriptTextForMode:1];
+    [self setTargetScriptTextForMode:ScriptEditorSelection];
 }
 
-- (IBAction)selectTarget:(id)sender
+- (void)selectTargetWithCompletionHandler:(void (^)(BOOL result))handler
 {
-	NSOpenPanel *a_panel = [NSOpenPanel openPanel];
-	[a_panel setResolvesAliases:NO];
+    NSOpenPanel *a_panel = [NSOpenPanel openPanel];
+    [a_panel setResolvesAliases:NO];
     [a_panel setAllowedFileTypes:@[@"scpt", @"scptd", @"applescript", @"app"]];
     [a_panel beginSheetModalForWindow:mainWindow
                     completionHandler:^(NSInteger result)
@@ -332,7 +353,8 @@ bail:
          NSDictionary *alias_info = [an_url infoResolvingAliasFile];
          if (alias_info) {
              [self updateTargetScriptURL:alias_info[@"ResolvedURL"]];
-             [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"TargetMode"];
+             [[NSUserDefaults standardUserDefaults] setInteger:FileSelected forKey:@"TargetMode"];
+             if (handler) handler(YES);
          } else {
              [a_panel orderOut:self];
              NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"
@@ -340,8 +362,14 @@ bail:
                                      informativeTextWithFormat:@"No original item of '%@'",[an_url path] ];
              [an_alert beginSheetModalForWindow:mainWindow modalDelegate:self
                                  didEndSelector:nil contextInfo:nil];
+             if (handler) handler(NO);
          }
      }];
+}
+
+- (IBAction)selectTarget:(id)sender
+{
+    [self selectTargetWithCompletionHandler:nil];
 }
 
 - (IBAction)popUpRecents:(id)sender

@@ -229,6 +229,7 @@
 		2CD43147108F5C4F0026C231 /* ASFormattingExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormattingExtensions.m; sourceTree = "<group>"; };
 		2CD975EE0EC9013500024156 /* ASFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFormatting.m; sourceTree = "<group>"; };
 		2CD976030EC912B700024156 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		2CDC863B2317D726007258B3 /* AsHtmlizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AsHtmlizer.entitlements; sourceTree = "<group>"; };
 		2CDDB3690EC9D8E8001A0A19 /* ASFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFormatting.h; sourceTree = "<group>"; };
 		2CE248891569349600C78D88 /* ASHTMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHTMLController.h; sourceTree = "<group>"; };
 		2CE2488A1569349600C78D88 /* ASHTMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHTMLController.m; sourceTree = "<group>"; };
@@ -325,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE2CF2B1CC5C6F500873DBB /* AppleScriptHTML.entitlements */,
+				2CDC863B2317D726007258B3 /* AsHtmlizer.entitlements */,
 				2C6BE34D108C1067007BBBA7 /* History.rd */,
 				2CD14C171C6A0594009EACDB /* StringExtra */,
 				2C952AB31C69B399008E097B /* DropBox */,
@@ -541,9 +543,9 @@
 				2C06B49123043EC60034E74B /* Sources */,
 				2C06B4A623043EC60034E74B /* Frameworks */,
 				2C06B4AD23043EC60034E74B /* CopyFiles */,
+				2C06B4C6230569100034E74B /* ShellScript */,
 				2C06B4AF23043EC60034E74B /* ShellScript */,
 				2C06B4B023043EC60034E74B /* [CP] Embed Pods Frameworks */,
-				2C06B4C6230569100034E74B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -572,6 +574,13 @@
 							};
 							com.apple.Sandbox = {
 								enabled = 1;
+							};
+						};
+					};
+					2C06B47123043EC60034E74B = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
 							};
 						};
 					};
@@ -731,7 +740,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -l";
-			shellScript = "if ! echo \"Release MacAppStore\" | grep \"$CONFIGURATION\"; then\necho \"HelpBook setup script will run only with Release or MacAppStore configuration\";\nexit 0\nfi\n\ncd \"$BUILT_PRODUCTS_DIR\"\nsource='/Users/tkurita/Factories/Websites/scriptfactory/web-content/software/ScriptEditor/AsHtmlizer/manual';\nSetupHelpBook \"$FULL_PRODUCT_NAME\" --source $source --newlayout --localized\n\n#if [ \"MacAppStore\" = \"$CONFIGURATION\" ]; then\n#    rm -rf \"${FRAMEWORKS_FOLDER_PATH}/DonationReminder.framework\"\n#fi\n";
+			shellScript = "if ! echo \"Release MacAppStore\" | grep \"$CONFIGURATION\"; then\necho \"HelpBook setup script will run only with Release or MacAppStore configuration\";\nexit 0\nfi\ncd \"$BUILT_PRODUCTS_DIR\"\nSetupHelpBook \"$FULL_PRODUCT_NAME\"\n\n#if [ \"MacAppStore\" = \"$CONFIGURATION\" ]; then\n#    rm -rf \"${FRAMEWORKS_FOLDER_PATH}/DonationReminder.framework\"\n#fi\n";
 		};
 		2C06B4B023043EC60034E74B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -764,7 +773,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "fname=HelpSetup.plist\nplist=`cat \"${SRCROOT}/${fname}\"`\neval echo \\\"$plist\\\" > \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${fname}\"";
+			shellScript = "fname=HelpSetup.plist\n\ncase \"$CONFIGURATION\" in\n    \"MacAppStore\" )\n        MANUAL_DIR='mas' ;;\n    * )\n        MANUAL_DIR='manual' ;;\nesac\n\nplist=`cat \"${SRCROOT}/${fname}\"`\neval echo \\\"$plist\\\" > \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${fname}\"";
 		};
 		2C25E53C152B2ACD00FB2B09 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -937,7 +946,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -948,6 +957,14 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "AsHtmlizer-Info.plist";
 				INSTALL_PATH = /Applications;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Sparkle\"",
+					"-DSANDBOX=1",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AsHtmlizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PRODUCT_VERSION = 2.8;
@@ -966,7 +983,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,11 +1007,11 @@
 			baseConfigurationReference = CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AsHtmlizer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -1056,7 +1073,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1095,7 +1112,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1124,7 +1141,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 51;
+				CURRENT_PROJECT_VERSION = 55;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

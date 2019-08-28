@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1080" identifier="macosx"/>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +19,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="206" y="547" width="533" height="290"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="533" height="290"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="533" height="290"/>
@@ -68,7 +68,7 @@ DQ
                             <rect key="frame" x="2" y="2" width="495" height="71"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" id="233">
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="233">
                                     <rect key="frame" x="7" y="11" width="475" height="52"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="the source" id="697">
@@ -182,7 +182,7 @@ DQ
                             <binding destination="244" name="selectedIndex" keyPath="values.ScriptLinkModeIndex" id="327"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" id="319">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="319">
                         <rect key="frame" x="62" y="113" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=" Title :" id="704">
@@ -191,7 +191,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="320">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="320">
                         <rect key="frame" x="62" y="83" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=" Mode :" id="705">
@@ -258,7 +258,7 @@ DQ
                             <binding destination="244" name="selectedIndex" keyPath="values.ScriptLinkPositionIndex" id="398"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" id="395">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="395">
                         <rect key="frame" x="257" y="83" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Position :" id="709">
@@ -267,7 +267,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="739">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="739">
                         <rect key="frame" x="189" y="162" width="118" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Style Sheet :" id="740">
@@ -557,12 +557,15 @@ DQ
                 <outlet property="donationMenuItem" destination="310" id="hj0-nm-IiB"/>
                 <outlet property="mainWindow" destination="21" id="255"/>
                 <outlet property="recentScriptsButton" destination="235" id="257"/>
+                <outlet property="scriptEditorSelectionButton" destination="258" id="FmI-p4-sLf"/>
                 <outlet property="scriptLinkTitleComboBox" destination="323" id="326"/>
+                <outlet property="selectButton" destination="234" id="5Is-0P-40V"/>
                 <outlet property="targetScriptBox" destination="231" id="256"/>
             </connections>
         </customObject>
         <customObject id="729" userLabel="ASHTMLController" customClass="ASHTMLController">
             <connections>
+                <outlet property="appController" destination="250" id="7Cf-Mz-rLn"/>
                 <outlet property="ashtmlProcessor" destination="771" id="798"/>
                 <outlet property="indicator" destination="281" id="730"/>
                 <outlet property="mainWindow" destination="21" id="733"/>

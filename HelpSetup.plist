@@ -5,7 +5,7 @@
 	<key>IsLocalized</key>
 	<true/>
 	<key>ManualFolder</key>
-	<string>/Users/tkurita/Factories/Websites/scriptfactory/web-content/software/ScriptEditor/${PRODUCT_NAME}/manual</string>
+	<string>/Users/tkurita/Factories/Websites/scriptfactory/web-content/software/ScriptEditor/${PRODUCT_NAME}/${MANUAL_DIR}</string>
 	<key>NewLayout</key>
 	<true/>
 </dict>
