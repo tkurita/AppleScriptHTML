@@ -360,7 +360,7 @@ bail:
              NSAlert *an_alert = [NSAlert alertWithMessageText:@"Can't resolving alias"
                                                  defaultButton:@"OK" alternateButton:nil otherButton:nil
                                      informativeTextWithFormat:@"No original item of '%@'",[an_url path] ];
-             [an_alert beginSheetModalForWindow:mainWindow modalDelegate:self
+             [an_alert beginSheetModalForWindow:self->mainWindow modalDelegate:self
                                  didEndSelector:nil contextInfo:nil];
              if (handler) handler(NO);
          }

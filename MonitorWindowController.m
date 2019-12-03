@@ -59,7 +59,7 @@ static NSString *windowName = @"MonitorWindow";
      {
          if (result != NSOKButton) return;
          NSError *error = nil;
-         NSString *string = [monitorTextView string];
+        NSString *string = [self->monitorTextView string];
          NSURL *an_url = [save_panel URL];
          [string writeToURL:an_url
                  atomically:NO encoding:NSUTF8StringEncoding

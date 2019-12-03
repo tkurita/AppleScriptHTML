@@ -10,7 +10,7 @@ typedef enum
 
 @interface AppController : NSObject {
     IBOutlet NSButton *recentScriptsButton;
-	IBOutlet id mainWindow;
+	IBOutlet NSWindow *mainWindow;
 	IBOutlet id targetScriptBox;
 	IBOutlet id scriptLinkTitleComboBox;
     IBOutlet NSMenuItem *checkForUpdatesMenuItem;

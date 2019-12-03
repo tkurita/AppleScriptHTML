@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <deployment version="1090" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +13,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="AppleScriptHTML" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="21" userLabel="Window">
+        <window title="AppleScriptHTML" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="21" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -25,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="533" height="290"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button toolTip="Copy the output into the clipboard" verticalHuggingPriority="750" id="202">
+                    <button toolTip="Copy the output into the clipboard" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="202">
                         <rect key="frame" x="339" y="12" width="187" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Copy to the Clipboard" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="694">
@@ -39,7 +38,7 @@ DQ
                             <action selector="copyToClipboard:" target="729" id="731"/>
                         </connections>
                     </button>
-                    <button toolTip="Generate HTML representing AppleScript code." id="229">
+                    <button toolTip="Generate HTML representing AppleScript code." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="229">
                         <rect key="frame" x="29" y="166" width="162" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="check" title="Convert Code to HTML" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="695">
@@ -50,7 +49,7 @@ DQ
                             <binding destination="244" name="value" keyPath="values.CodeToHTML" id="246"/>
                         </connections>
                     </button>
-                    <button toolTip="The script link allow to edit the script dieplayed in the browser by the Script Editor." id="230">
+                    <button toolTip="The script link allow to edit the script dieplayed in the browser by the Script Editor." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="230">
                         <rect key="frame" x="29" y="134" width="225" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="check" title="Make Script Link" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="696">
@@ -61,15 +60,15 @@ DQ
                             <binding destination="244" name="value" keyPath="values.MakeScriptLink" id="267"/>
                         </connections>
                     </button>
-                    <box title="Source Script" id="231" customClass="DropBox">
+                    <box fixedFrame="YES" title="Source Script" translatesAutoresizingMaskIntoConstraints="NO" id="231" customClass="DropBox">
                         <rect key="frame" x="17" y="191" width="499" height="91"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <view key="contentView" id="hLn-Dv-sFo">
-                            <rect key="frame" x="2" y="2" width="495" height="71"/>
+                            <rect key="frame" x="3" y="3" width="493" height="71"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="233">
-                                    <rect key="frame" x="7" y="11" width="475" height="52"/>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="233">
+                                    <rect key="frame" x="7" y="11" width="473" height="52"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <textFieldCell key="cell" controlSize="small" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="the source" id="697">
                                         <font key="font" metaFont="smallSystem"/>
@@ -80,8 +79,8 @@ DQ
                                         <binding destination="244" name="value" keyPath="values.TargetScript" id="249"/>
                                     </connections>
                                 </textField>
-                                <button toolTip="Choose a file as a source." verticalHuggingPriority="750" id="234">
-                                    <rect key="frame" x="59" y="2" width="80" height="20"/>
+                                <button toolTip="Choose a file as a source." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="234">
+                                    <rect key="frame" x="57" y="2" width="80" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <buttonCell key="cell" type="smallSquare" title="Select..." bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="698">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -91,8 +90,8 @@ DQ
                                         <action selector="selectTarget:" target="250" id="252"/>
                                     </connections>
                                 </button>
-                                <popUpButton toolTip="Choose a source script from recent files." id="235">
-                                    <rect key="frame" x="40" y="2" width="19" height="20"/>
+                                <popUpButton toolTip="Choose a source script from recent files." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="235">
+                                    <rect key="frame" x="38" y="2" width="19" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="238" id="699">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -114,8 +113,8 @@ DQ
                                         </binding>
                                     </connections>
                                 </popUpButton>
-                                <button verticalHuggingPriority="750" id="258">
-                                    <rect key="frame" x="138" y="2" width="197" height="20"/>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="258">
+                                    <rect key="frame" x="136" y="2" width="197" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <string key="toolTip">The selection in the forntmost document will be a source. If no selection in the frontmost document, all contents of the document will be a source.</string>
                                     <buttonCell key="cell" type="smallSquare" title="Script Editor 's Selection" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="700">
@@ -126,12 +125,12 @@ DQ
                                         <action selector="useScriptEditorSelection:" target="250" id="259"/>
                                     </connections>
                                 </button>
-                                <progressIndicator hidden="YES" wantsLayer="YES" canDrawConcurrently="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" id="281">
-                                    <rect key="frame" x="452" y="28" width="32" height="32"/>
+                                <progressIndicator hidden="YES" wantsLayer="YES" canDrawConcurrently="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="281">
+                                    <rect key="frame" x="450" y="28" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </progressIndicator>
-                                <button toolTip="Process the text in the clipboard as AppleScript code." verticalHuggingPriority="750" id="734">
-                                    <rect key="frame" x="334" y="2" width="159" height="20"/>
+                                <button toolTip="Process the text in the clipboard as AppleScript code." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="734">
+                                    <rect key="frame" x="332" y="2" width="159" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     <buttonCell key="cell" type="smallSquare" title="Clipboard Contents" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="735">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -148,11 +147,11 @@ DQ
                             <outlet property="delegate" destination="250" id="253"/>
                         </connections>
                     </box>
-                    <box verticalHuggingPriority="750" boxType="separator" id="241">
+                    <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="241">
                         <rect key="frame" x="20" y="58" width="500" height="5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </box>
-                    <button toolTip="Save the output into a file." verticalHuggingPriority="750" id="288">
+                    <button toolTip="Save the output into a file." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="288">
                         <rect key="frame" x="152" y="12" width="180" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Save to a File" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="702">
@@ -163,7 +162,7 @@ DQ
                             <action selector="saveToFile:" target="729" id="732"/>
                         </connections>
                     </button>
-                    <popUpButton toolTip="The behavior when the script link button is clicked." verticalHuggingPriority="750" id="313">
+                    <popUpButton toolTip="The behavior when the script link button is clicked." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="313">
                         <rect key="frame" x="161" y="77" width="94" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="703">
@@ -182,7 +181,7 @@ DQ
                             <binding destination="244" name="selectedIndex" keyPath="values.ScriptLinkModeIndex" id="327"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="319">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="319">
                         <rect key="frame" x="62" y="113" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=" Title :" id="704">
@@ -191,7 +190,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="320">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="320">
                         <rect key="frame" x="62" y="83" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title=" Mode :" id="705">
@@ -200,7 +199,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <comboBox toolTip="A button title of script link button." verticalHuggingPriority="750" id="323">
+                    <comboBox toolTip="A button title of script link button." verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="323">
                         <rect key="frame" x="164" y="106" width="197" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="706">
@@ -227,7 +226,7 @@ DQ
                             <binding destination="244" name="contentValues" keyPath="values.ScriptLinkTitleHistory" id="325"/>
                         </connections>
                     </comboBox>
-                    <button toolTip="Use source file name for the title of the script link button." id="333">
+                    <button toolTip="Use source file name for the title of the script link button." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="333">
                         <rect key="frame" x="375" y="109" width="140" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="check" title="Use File Name" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="707">
@@ -240,7 +239,7 @@ DQ
                             <binding destination="244" name="value" keyPath="values.ObtainScriptLinkTitleFromFilename" id="361"/>
                         </connections>
                     </button>
-                    <popUpButton toolTip="The position of a script link button." verticalHuggingPriority="750" id="390">
+                    <popUpButton toolTip="The position of a script link button." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="390">
                         <rect key="frame" x="356" y="77" width="94" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Top" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="394" id="708">
@@ -258,7 +257,7 @@ DQ
                             <binding destination="244" name="selectedIndex" keyPath="values.ScriptLinkPositionIndex" id="398"/>
                         </connections>
                     </popUpButton>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="395">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="395">
                         <rect key="frame" x="257" y="83" width="97" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Position :" id="709">
@@ -267,7 +266,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="739">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="739">
                         <rect key="frame" x="189" y="162" width="118" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Style Sheet :" id="740">
@@ -276,7 +275,7 @@ DQ
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <popUpButton toolTip="Choose a method to attach style sheets." verticalHuggingPriority="750" id="741">
+                    <popUpButton toolTip="Choose a method to attach style sheets." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="741">
                         <rect key="frame" x="309" y="161" width="200" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="None (Only class names)" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="749" id="742">
@@ -301,6 +300,7 @@ DQ
             <connections>
                 <binding destination="250" name="title" keyPath="bundleName" id="Kwq-zK-b4m"/>
             </connections>
+            <point key="canvasLocation" x="139" y="147"/>
         </window>
         <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
             <items>

@@ -300,7 +300,7 @@ void showError(NSDictionary *err_info)
                            [self saveASHTML:result_ASHTML toURL:[save_panel URL] error:&error];
                            if (error) {
                                NSAlert *alert = [NSAlert alertWithError:error];
-                               [alert beginSheetModalForWindow:mainWindow
+                               [alert beginSheetModalForWindow:self->mainWindow
                                                  modalDelegate:self
                                                 didEndSelector:nil
                                                    contextInfo:nil];

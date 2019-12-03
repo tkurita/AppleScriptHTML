@@ -1,22 +1,23 @@
 property NSUserDefaults : class "NSUserDefaults"
 property NSDictionary : class "NSDictionary"
 
+
 on boot_for(a_script)
-	boot (module loader of application (get "AppleScriptHTMLLib")) for a_script
+    application (get "AppleScriptHTMLLib")'s loader()'s setup(me)
 	return
 end boot_for
 
 script ASHTMLProcessor
-	property HTMLElement : module
-	property XCharacterSet : module
-	property XDict : module
-	property XList : module
-	property XText : module
-	property RGBColor : module
-	property XFile : module
-	property CSSBuilder : module
-	property TemplateProcessor : module
-	property only local : true
+	property HTMLElement : "@module"
+	property XCharacterSet : "@module"
+	property XDict : "@module"
+	property XList : "@module"
+	property XText : "@module"
+	property RGBColor : "@module"
+	property XFile : "@module"
+	property CSSBuilder : "@module"
+	property TemplateProcessor : "@module"
+	property _only_local_ : true
 	
 	property _ : boot_for(me)
 	

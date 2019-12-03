@@ -112,6 +112,7 @@
 		2CF3A6A70ECAD3B400D63AF8 /* template_full_scriptlink.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3A6A60ECAD3B400D63AF8 /* template_full_scriptlink.html */; };
 		2CF85C840EDB732700F0BFE1 /* HelpSetup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CF85C830EDB732600F0BFE1 /* HelpSetup.plist */; };
 		8049840A27481A5CA959E108 /* libPods-AppleScriptHTML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F5AC8F6C61F954D94FD288 /* libPods-AppleScriptHTML.a */; };
+		A25E19A1576DD55A074359DD /* libPods-AsHtmlizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 328E895636DF6DB9E13D9FD2 /* libPods-AsHtmlizer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		2C952AB51C69B399008E097B /* DropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBox.m; sourceTree = "<group>"; };
 		2C952AB61C69B399008E097B /* HFSTypeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFSTypeUtils.h; sourceTree = "<group>"; };
 		2C952AB71C69B399008E097B /* HFSTypeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFSTypeUtils.m; sourceTree = "<group>"; };
+		2C9C00F6238E3A3000E57158 /* AsHtmlizerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AsHtmlizerRelease.entitlements; sourceTree = "<group>"; };
 		2CAFD55E1C6B1D87000F4A94 /* AppleScriptHTMLHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppleScriptHTMLHelp; sourceTree = "<group>"; };
 		2CC5C80C108C5C970037A04C /* ScriptLinkMaker.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; lineEnding = 0; path = ScriptLinkMaker.applescript; sourceTree = "<group>"; };
 		2CC90BAD1591508900B067EF /* template_full_scriptlink_inline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_scriptlink_inline.html; sourceTree = "<group>"; };
@@ -244,8 +246,12 @@
 		2CF3A6420ECACC4800D63AF8 /* button_template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = button_template.html; sourceTree = "<group>"; };
 		2CF3A6A60ECAD3B400D63AF8 /* template_full_scriptlink.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template_full_scriptlink.html; sourceTree = "<group>"; };
 		2CF85C830EDB732600F0BFE1 /* HelpSetup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpSetup.plist; sourceTree = "<group>"; };
+		328E895636DF6DB9E13D9FD2 /* libPods-AsHtmlizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AsHtmlizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A8CC2CE33A4A680138B465 /* Pods-AsHtmlizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsHtmlizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsHtmlizer/Pods-AsHtmlizer.debug.xcconfig"; sourceTree = "<group>"; };
 		58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.debug.xcconfig"; sourceTree = "<group>"; };
 		7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.release.xcconfig"; sourceTree = "<group>"; };
+		9EAF7AD2BE0B9D0A36C6C6EE /* Pods-AsHtmlizer.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsHtmlizer.macappstore.xcconfig"; path = "Pods/Target Support Files/Pods-AsHtmlizer/Pods-AsHtmlizer.macappstore.xcconfig"; sourceTree = "<group>"; };
+		A0DDA5E3DF3F7AEFF0CF3894 /* Pods-AsHtmlizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsHtmlizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsHtmlizer/Pods-AsHtmlizer.release.xcconfig"; sourceTree = "<group>"; };
 		B0F5AC8F6C61F954D94FD288 /* libPods-AppleScriptHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppleScriptHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleScriptHTML.macappstore.xcconfig"; path = "Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML.macappstore.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +280,7 @@
 				2C06B4AA23043EC60034E74B /* AppleScriptObjC.framework in Frameworks */,
 				2C06B4AB23043EC60034E74B /* DonationReminder.framework in Frameworks */,
 				2C06B4AC23043EC60034E74B /* libPods-AppleScriptHTML.a in Frameworks */,
+				A25E19A1576DD55A074359DD /* libPods-AsHtmlizer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +332,7 @@
 		29B97314FDCFA39411CA2CEA /* AppleScriptHTML */ = {
 			isa = PBXGroup;
 			children = (
+				2C9C00F6238E3A3000E57158 /* AsHtmlizerRelease.entitlements */,
 				2CE2CF2B1CC5C6F500873DBB /* AppleScriptHTML.entitlements */,
 				2CDC863B2317D726007258B3 /* AsHtmlizer.entitlements */,
 				2C6BE34D108C1067007BBBA7 /* History.rd */,
@@ -384,6 +392,7 @@
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 				B0F5AC8F6C61F954D94FD288 /* libPods-AppleScriptHTML.a */,
+				328E895636DF6DB9E13D9FD2 /* libPods-AsHtmlizer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -483,6 +492,9 @@
 				58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */,
 				7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */,
 				CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */,
+				38A8CC2CE33A4A680138B465 /* Pods-AsHtmlizer.debug.xcconfig */,
+				A0DDA5E3DF3F7AEFF0CF3894 /* Pods-AsHtmlizer.release.xcconfig */,
+				9EAF7AD2BE0B9D0A36C6C6EE /* Pods-AsHtmlizer.macappstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -546,6 +558,7 @@
 				2C06B4C6230569100034E74B /* ShellScript */,
 				2C06B4AF23043EC60034E74B /* ShellScript */,
 				2C06B4B023043EC60034E74B /* [CP] Embed Pods Frameworks */,
+				2CE485E52390C68F00F934FB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -564,7 +577,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1120;
 				TargetAttributes = {
 					257572C2072881A4000BE9CA = {
 						ProvisioningStyle = Automatic;
@@ -588,14 +601,14 @@
 			};
 			buildConfigurationList = 4E71A80908A2C90C0034BBD9 /* Build configuration list for PBXProject "AppleScriptHTML" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				French,
-				German,
 				en,
 				ja,
 				Base,
+				fr,
+				de,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* AppleScriptHTML */;
 			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
@@ -708,7 +721,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = 'MacAppStore' ]; then\nexit 0\nfi\n\"${SRCROOT}/Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2C06B47423043EC60034E74B /* [CP] Check Pods Manifest.lock */ = {
@@ -722,7 +735,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppleScriptHTML-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AsHtmlizer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -748,7 +761,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-AsHtmlizer/Pods-AsHtmlizer-frameworks.sh",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
 			);
@@ -759,7 +772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" = 'MacAppStore' ]; then\nexit 0\nfi\n\"${SRCROOT}/Pods/Target Support Files/Pods-AppleScriptHTML/Pods-AppleScriptHTML-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AsHtmlizer/Pods-AsHtmlizer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2C06B4C6230569100034E74B /* ShellScript */ = {
@@ -773,7 +786,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "fname=HelpSetup.plist\n\ncase \"$CONFIGURATION\" in\n    \"MacAppStore\" )\n        MANUAL_DIR='mas' ;;\n    * )\n        MANUAL_DIR='manual' ;;\nesac\n\nplist=`cat \"${SRCROOT}/${fname}\"`\neval echo \\\"$plist\\\" > \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${fname}\"";
+			shellScript = "fname=HelpSetup.plist\n\ncase \"$CONFIGURATION\" in\n    \"MacAppStore\" )\n        MANUAL_DIR='mas' ;;\n    * )\n        MANUAL_DIR='manual' ;;\nesac\n\nplist=`cat \"${SRCROOT}/${fname}\"`\neval echo \\\"$plist\\\" > \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/${fname}\"\n";
 		};
 		2C25E53C152B2ACD00FB2B09 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -787,6 +800,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/bash -l";
 			shellScript = "if ! echo \"Release MacAppStore\" | grep \"$CONFIGURATION\"; then\necho \"HelpBook setup script will run only with Release or MacAppStore configuration\";\nexit 0\nfi\n\ncd \"$BUILT_PRODUCTS_DIR\"\nSetupHelpBook \"$FULL_PRODUCT_NAME\"\n\n#if [ \"MacAppStore\" = \"$CONFIGURATION\" ]; then\n#    rm -rf \"${FRAMEWORKS_FOLDER_PATH}/DonationReminder.framework\"\n#fi\n";
+		};
+		2CE485E52390C68F00F934FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verbose --force --deep -o runtime \\\n--sign \"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\" \\\n\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/AutoUpdate.app\"\n";
 		};
 		D786927139F8595752B84828 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -938,7 +968,7 @@
 /* Begin XCBuildConfiguration section */
 		2C06B4B223043EC60034E74B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58ECE5025F6061960E6A8C0F /* Pods-AppleScriptHTML.debug.xcconfig */;
+			baseConfigurationReference = 38A8CC2CE33A4A680138B465 /* Pods-AsHtmlizer.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
@@ -946,8 +976,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -957,6 +988,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "AsHtmlizer-Info.plist";
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -967,7 +999,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AsHtmlizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PRODUCT_VERSION = 2.8;
+				PRODUCT_VERSION = 2.8.1;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -976,15 +1008,16 @@
 		};
 		2C06B4B323043EC60034E74B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7109F81D8F466C74E392E8F7 /* Pods-AppleScriptHTML.release.xcconfig */;
+			baseConfigurationReference = A0DDA5E3DF3F7AEFF0CF3894 /* Pods-AsHtmlizer.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_ENTITLEMENTS = AppleScriptHTML.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AsHtmlizerRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -993,9 +1026,10 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = "AsHtmlizer-Info.plist";
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AsHtmlizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PRODUCT_VERSION = 2.8;
+				PRODUCT_VERSION = 2.8.1;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -1004,20 +1038,22 @@
 		};
 		2C06B4B423043EC60034E74B /* MacAppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEA96A2333BC3A1C89E65EFB /* Pods-AppleScriptHTML.macappstore.xcconfig */;
+			baseConfigurationReference = 9EAF7AD2BE0B9D0A36C6C6EE /* Pods-AsHtmlizer.macappstore.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = AsHtmlizer.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=0";
 				INFOPLIST_FILE = "AsHtmlizer-Info.plist";
 				INSTALL_PATH = /Applications;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -1029,7 +1065,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.script-factory.AsHtmlizer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PRODUCT_VERSION = 2.8;
+				PRODUCT_VERSION = 2.8.1;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = apple_generic;
 				WRAPPER_EXTENSION = app;
@@ -1040,12 +1076,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1059,7 +1103,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = MacAppStore;
@@ -1073,8 +1117,9 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1112,8 +1157,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1141,8 +1187,9 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPYRIGHT = "Copyright 2007-2019, Tetsuro KURITA";
-				CURRENT_PROJECT_VERSION = 55;
+				CURRENT_PROJECT_VERSION = 56;
 				DEVELOPMENT_TEAM = 5VBC6385DN;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -1164,12 +1211,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1184,7 +1239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -1194,12 +1249,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1213,7 +1276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;

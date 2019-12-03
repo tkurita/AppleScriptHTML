@@ -7,42 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BF95203A6BA53F5CBF1C036F53ED328 /* Pods-AppleScriptHTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B12047F9E1CA4C09B5D204786C55697E /* Pods-AppleScriptHTML-dummy.m */; };
+		560E701728711D8C1726B576D3732180 /* Pods-AsHtmlizer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3360D3962661663A257FA729A3F85B /* Pods-AsHtmlizer-dummy.m */; };
+		9BF95203A6BA53F5CBF1C036F53ED328 /* Pods-AppleScriptHTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F37DC8D6E757811ACE3133B5CED73BA4 /* Pods-AppleScriptHTML-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C35D3B67263C8CAA3310711496AF850 /* Pods-AppleScriptHTML.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.macappstore.xcconfig"; sourceTree = "<group>"; };
+		12B7BDFDE98F84A8CFAF6B3E32A85F20 /* Pods-AppleScriptHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.debug.xcconfig"; sourceTree = "<group>"; };
 		1435BC5214DA1A005B6F29884A54DD1B /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
+		350B5C10BDB3AE455BA5935DAF72FF76 /* Pods-AppleScriptHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.release.xcconfig"; sourceTree = "<group>"; };
 		388E57F0C100EB1F8C0418C5BCA465AF /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
 		3E02014EA02087931C60AEA4FD7A8B7C /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
+		40FB0E63347E20EFB2F11C3F4D4F2AA0 /* Pods-AsHtmlizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AsHtmlizer.debug.xcconfig"; sourceTree = "<group>"; };
 		4BA01FD3C958AA00DDA14DB20E2F3711 /* SPUDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloader.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloader.h; sourceTree = "<group>"; };
+		526EEDC7394DD0F7A5EA6DAD024136F2 /* Pods-AsHtmlizer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AsHtmlizer-acknowledgements.plist"; sourceTree = "<group>"; };
+		57AB3A1FFBFD0B83BB836A055B3A9E86 /* Pods-AppleScriptHTML-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppleScriptHTML-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5D1B317366CF1F9BC1BDFF1C2FF0828B /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
-		5D43E4737FB2C88920EED23EACC5CCEF /* Pods-AppleScriptHTML-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppleScriptHTML-acknowledgements.plist"; sourceTree = "<group>"; };
 		5E8A9498946CD578CF3EB1E70812FCB7 /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
+		5F8146B51676327C01A1E4DE901197DD /* libPods-AsHtmlizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AsHtmlizer.a"; path = "libPods-AsHtmlizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		608109473F2F95E17E01B509BAC8C486 /* libPods-AppleScriptHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AppleScriptHTML.a"; path = "libPods-AppleScriptHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		608E6C1CAABFF9ED447AB49D34A004FB /* Pods-AppleScriptHTML-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppleScriptHTML-resources.sh"; sourceTree = "<group>"; };
 		6E31C20758F5BF039A336FE43E8FDA58 /* SPUDownloaderDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDeprecated.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDeprecated.h; sourceTree = "<group>"; };
 		72D32DE0FDBBB31E9D2497DF07AE2B95 /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
-		8065789B96107845F7E639118EEC0B0A /* Pods-AppleScriptHTML-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppleScriptHTML-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7D3360D3962661663A257FA729A3F85B /* Pods-AsHtmlizer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AsHtmlizer-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1E833F8FC700AC57C7A41DF3A2DE107 /* Pods-AppleScriptHTML-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppleScriptHTML-frameworks.sh"; sourceTree = "<group>"; };
 		A68009A847394EEF2C767D15138F2098 /* SPUDownloadData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloadData.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloadData.h; sourceTree = "<group>"; };
 		AA265FBE0F086C923339A74C5325DE72 /* SPUDownloaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderProtocol.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderProtocol.h; sourceTree = "<group>"; };
 		AF40391A53A276A8FBD72DBB23140F91 /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
-		B12047F9E1CA4C09B5D204786C55697E /* Pods-AppleScriptHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppleScriptHTML-dummy.m"; sourceTree = "<group>"; };
-		B88DB106E4B057886E43946C04FC9808 /* Pods-AppleScriptHTML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.release.xcconfig"; sourceTree = "<group>"; };
 		CA144FB5912171E7298D965B6E96AAC5 /* SPUDownloaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDelegate.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDelegate.h; sourceTree = "<group>"; };
+		CD78187E7D1FE6C48A70063AEB71B109 /* Pods-AsHtmlizer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AsHtmlizer-resources.sh"; sourceTree = "<group>"; };
 		CD8AB33A79CDEAA28013FAABD0B059D7 /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
-		CFBF9EB9289A89F216DC3B9749132FBB /* Pods-AppleScriptHTML-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppleScriptHTML-resources.sh"; sourceTree = "<group>"; };
 		D0058DB20FD96593D809EE30AC4F3A13 /* SPUDownloaderSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderSession.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderSession.h; sourceTree = "<group>"; };
+		D1698393219569970201874E8D6F3C45 /* Pods-AsHtmlizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AsHtmlizer.release.xcconfig"; sourceTree = "<group>"; };
 		D6A62A52BDEFF47EBDD2BEA4F712F30C /* SUCodeSigningVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUCodeSigningVerifier.h; path = Sparkle.framework/Versions/A/Headers/SUCodeSigningVerifier.h; sourceTree = "<group>"; };
 		D835BE907A04B0C1349F32BEF93415D0 /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
 		DB0ED87255CA13EFDFBAB599E1A76785 /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
 		DB496E41B24D9BDF43D66AB9FA9F9B7F /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		DEB78E19D50E154AB2A87DFDA4FBF131 /* Pods-AsHtmlizer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AsHtmlizer-frameworks.sh"; sourceTree = "<group>"; };
 		E1716BAFA0C973150E1E34B9E801B3B4 /* SPUURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUURLRequest.h; path = Sparkle.framework/Versions/A/Headers/SPUURLRequest.h; sourceTree = "<group>"; };
-		F2F982804F337786CC5FE7D2FC884980 /* libPods-AppleScriptHTML.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AppleScriptHTML.a"; path = "libPods-AppleScriptHTML.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6ECBD140DD274F960BF5D2DC9DF644A /* Pods-AppleScriptHTML.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.macappstore.xcconfig"; sourceTree = "<group>"; };
-		F7EBA5E8E562112126EE6DA6ED456E49 /* Pods-AppleScriptHTML.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppleScriptHTML.debug.xcconfig"; sourceTree = "<group>"; };
-		F871EE98F61C1B25720F77DDB73BDDBB /* Pods-AppleScriptHTML-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppleScriptHTML-frameworks.sh"; sourceTree = "<group>"; };
+		E1AB5BF3574081C0206F64B1A68186D3 /* Pods-AsHtmlizer.macappstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AsHtmlizer.macappstore.xcconfig"; sourceTree = "<group>"; };
+		F37DC8D6E757811ACE3133B5CED73BA4 /* Pods-AppleScriptHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppleScriptHTML-dummy.m"; sourceTree = "<group>"; };
+		F96331524DD5C9930DE02738B235FEF4 /* Pods-AsHtmlizer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AsHtmlizer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FDE728E6369C177F4208BD2F385668EE /* Pods-AppleScriptHTML-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppleScriptHTML-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		01346EB06B8C7640842E70B147A90120 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72F93C22D5EEDDCF3E23BE524E092801 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,22 +112,14 @@
 			path = Sparkle;
 			sourceTree = "<group>";
 		};
-		6E11A384ACF45C4F51EB0715BA6639E6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F2F982804F337786CC5FE7D2FC884980 /* libPods-AppleScriptHTML.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
 				86329C8452D06620F62F3DF08174C837 /* Pods */,
-				6E11A384ACF45C4F51EB0715BA6639E6 /* Products */,
-				9B3CE6D9D3485D861C3DD302A75951C8 /* Targets Support Files */,
+				90441D1B0E11610641C249E7C441E7AB /* Products */,
+				FC618CEAF36274148A4F8D640E620FE4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,26 +131,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8EEC7EB05422C2A292AF4F1A31A77B0B /* Pods-AppleScriptHTML */ = {
+		90441D1B0E11610641C249E7C441E7AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8065789B96107845F7E639118EEC0B0A /* Pods-AppleScriptHTML-acknowledgements.markdown */,
-				5D43E4737FB2C88920EED23EACC5CCEF /* Pods-AppleScriptHTML-acknowledgements.plist */,
-				B12047F9E1CA4C09B5D204786C55697E /* Pods-AppleScriptHTML-dummy.m */,
-				F871EE98F61C1B25720F77DDB73BDDBB /* Pods-AppleScriptHTML-frameworks.sh */,
-				CFBF9EB9289A89F216DC3B9749132FBB /* Pods-AppleScriptHTML-resources.sh */,
-				F7EBA5E8E562112126EE6DA6ED456E49 /* Pods-AppleScriptHTML.debug.xcconfig */,
-				F6ECBD140DD274F960BF5D2DC9DF644A /* Pods-AppleScriptHTML.macappstore.xcconfig */,
-				B88DB106E4B057886E43946C04FC9808 /* Pods-AppleScriptHTML.release.xcconfig */,
+				608109473F2F95E17E01B509BAC8C486 /* libPods-AppleScriptHTML.a */,
+				5F8146B51676327C01A1E4DE901197DD /* libPods-AsHtmlizer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2648A6B0FFB1DCB876679078488DB36 /* Pods-AppleScriptHTML */ = {
+			isa = PBXGroup;
+			children = (
+				57AB3A1FFBFD0B83BB836A055B3A9E86 /* Pods-AppleScriptHTML-acknowledgements.markdown */,
+				FDE728E6369C177F4208BD2F385668EE /* Pods-AppleScriptHTML-acknowledgements.plist */,
+				F37DC8D6E757811ACE3133B5CED73BA4 /* Pods-AppleScriptHTML-dummy.m */,
+				A1E833F8FC700AC57C7A41DF3A2DE107 /* Pods-AppleScriptHTML-frameworks.sh */,
+				608E6C1CAABFF9ED447AB49D34A004FB /* Pods-AppleScriptHTML-resources.sh */,
+				12B7BDFDE98F84A8CFAF6B3E32A85F20 /* Pods-AppleScriptHTML.debug.xcconfig */,
+				0C35D3B67263C8CAA3310711496AF850 /* Pods-AppleScriptHTML.macappstore.xcconfig */,
+				350B5C10BDB3AE455BA5935DAF72FF76 /* Pods-AppleScriptHTML.release.xcconfig */,
 			);
 			name = "Pods-AppleScriptHTML";
 			path = "Target Support Files/Pods-AppleScriptHTML";
 			sourceTree = "<group>";
 		};
-		9B3CE6D9D3485D861C3DD302A75951C8 /* Targets Support Files */ = {
+		CF4A49CC73EEEC7087E072D2D1F1F090 /* Pods-AsHtmlizer */ = {
 			isa = PBXGroup;
 			children = (
-				8EEC7EB05422C2A292AF4F1A31A77B0B /* Pods-AppleScriptHTML */,
+				F96331524DD5C9930DE02738B235FEF4 /* Pods-AsHtmlizer-acknowledgements.markdown */,
+				526EEDC7394DD0F7A5EA6DAD024136F2 /* Pods-AsHtmlizer-acknowledgements.plist */,
+				7D3360D3962661663A257FA729A3F85B /* Pods-AsHtmlizer-dummy.m */,
+				DEB78E19D50E154AB2A87DFDA4FBF131 /* Pods-AsHtmlizer-frameworks.sh */,
+				CD78187E7D1FE6C48A70063AEB71B109 /* Pods-AsHtmlizer-resources.sh */,
+				40FB0E63347E20EFB2F11C3F4D4F2AA0 /* Pods-AsHtmlizer.debug.xcconfig */,
+				E1AB5BF3574081C0206F64B1A68186D3 /* Pods-AsHtmlizer.macappstore.xcconfig */,
+				D1698393219569970201874E8D6F3C45 /* Pods-AsHtmlizer.release.xcconfig */,
+			);
+			name = "Pods-AsHtmlizer";
+			path = "Target Support Files/Pods-AsHtmlizer";
+			sourceTree = "<group>";
+		};
+		FC618CEAF36274148A4F8D640E620FE4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2648A6B0FFB1DCB876679078488DB36 /* Pods-AppleScriptHTML */,
+				CF4A49CC73EEEC7087E072D2D1F1F090 /* Pods-AsHtmlizer */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -149,6 +184,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33CF6BDA7386BE26716C00F7E7A42AC3 /* Pods-AsHtmlizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1AC5940B2BCBF67F49421A56A9C0649 /* Build configuration list for PBXNativeTarget "Pods-AsHtmlizer" */;
+			buildPhases = (
+				56CFB1C4FF021E195A8DB17444100323 /* Sources */,
+				01346EB06B8C7640842E70B147A90120 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AsHtmlizer";
+			productName = "Pods-AsHtmlizer";
+			productReference = 5F8146B51676327C01A1E4DE901197DD /* libPods-AsHtmlizer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		65AB71FFF9BC8FD9409D67FA62AF43CF /* Pods-AppleScriptHTML */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAEE7FC0FD9F6C58E66ECB2F2363ED24 /* Build configuration list for PBXNativeTarget "Pods-AppleScriptHTML" */;
@@ -162,7 +213,7 @@
 			);
 			name = "Pods-AppleScriptHTML";
 			productName = "Pods-AppleScriptHTML";
-			productReference = F2F982804F337786CC5FE7D2FC884980 /* libPods-AppleScriptHTML.a */;
+			productReference = 608109473F2F95E17E01B509BAC8C486 /* libPods-AppleScriptHTML.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -182,16 +233,25 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6E11A384ACF45C4F51EB0715BA6639E6 /* Products */;
+			productRefGroup = 90441D1B0E11610641C249E7C441E7AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				65AB71FFF9BC8FD9409D67FA62AF43CF /* Pods-AppleScriptHTML */,
+				33CF6BDA7386BE26716C00F7E7A42AC3 /* Pods-AsHtmlizer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		56CFB1C4FF021E195A8DB17444100323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560E701728711D8C1726B576D3732180 /* Pods-AsHtmlizer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C4C40C909B83BF0B1EDB7E2F0AC44CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,67 +263,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		8E03F570C23A74D027C54016929A9F69 /* MacAppStore */ = {
+		055FC80328978053701FF65CF534CB47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_MAC_APP_STORE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = MacAppStore;
-		};
-		91B6C5A0FD0A0242BF52162D3ADD07C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7EBA5E8E562112126EE6DA6ED456E49 /* Pods-AppleScriptHTML.debug.xcconfig */;
+			baseConfigurationReference = 350B5C10BDB3AE455BA5935DAF72FF76 /* Pods-AppleScriptHTML.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -272,7 +274,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -280,9 +282,30 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		972FBC02E2BEF346DB80570351F6FA83 /* Debug */ = {
+		1934E4DED47980259F14376DEDA54677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1698393219569970201874E8D6F3C45 /* Pods-AsHtmlizer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		542C02DDC92653F795BD7053CE5F9D73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -335,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -345,7 +368,86 @@
 			};
 			name = Debug;
 		};
-		A29FB93790A41BC808B0BC6BE8A77CF2 /* Release */ = {
+		6BEA828B55D719D77ECA2B643196AC79 /* MacAppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_MAC_APP_STORE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = MacAppStore;
+		};
+		8EBAF74507F4512268648B84795ED757 /* MacAppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1AB5BF3574081C0206F64B1A68186D3 /* Pods-AsHtmlizer.macappstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = MacAppStore;
+		};
+		9680D5C47B34B2CB63E3B05348B50E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -395,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -403,9 +505,9 @@
 			};
 			name = Release;
 		};
-		DAFA885D7F5AF234BCB8A058A0CC2BA7 /* Release */ = {
+		CB1FAA654C5804E0D8EFD8F663071A50 /* MacAppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B88DB106E4B057886E43946C04FC9808 /* Pods-AppleScriptHTML.release.xcconfig */;
+			baseConfigurationReference = 0C35D3B67263C8CAA3310711496AF850 /* Pods-AppleScriptHTML.macappstore.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -414,28 +516,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E261C31D589E56BF5C6A38B57DED6E03 /* MacAppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6ECBD140DD274F960BF5D2DC9DF644A /* Pods-AppleScriptHTML.macappstore.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -445,15 +526,67 @@
 			};
 			name = MacAppStore;
 		};
+		F2A83CA079B98AE394ECC3BF26255CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FB0E63347E20EFB2F11C3F4D4F2AA0 /* Pods-AsHtmlizer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FEA86C86DF42F84EA4BA71CAB3A478B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B7BDFDE98F84A8CFAF6B3E32A85F20 /* Pods-AppleScriptHTML.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				972FBC02E2BEF346DB80570351F6FA83 /* Debug */,
-				8E03F570C23A74D027C54016929A9F69 /* MacAppStore */,
-				A29FB93790A41BC808B0BC6BE8A77CF2 /* Release */,
+				542C02DDC92653F795BD7053CE5F9D73 /* Debug */,
+				6BEA828B55D719D77ECA2B643196AC79 /* MacAppStore */,
+				9680D5C47B34B2CB63E3B05348B50E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1AC5940B2BCBF67F49421A56A9C0649 /* Build configuration list for PBXNativeTarget "Pods-AsHtmlizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A83CA079B98AE394ECC3BF26255CEB /* Debug */,
+				8EBAF74507F4512268648B84795ED757 /* MacAppStore */,
+				1934E4DED47980259F14376DEDA54677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -461,9 +594,9 @@
 		CAEE7FC0FD9F6C58E66ECB2F2363ED24 /* Build configuration list for PBXNativeTarget "Pods-AppleScriptHTML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91B6C5A0FD0A0242BF52162D3ADD07C8 /* Debug */,
-				E261C31D589E56BF5C6A38B57DED6E03 /* MacAppStore */,
-				DAFA885D7F5AF234BCB8A058A0CC2BA7 /* Release */,
+				FEA86C86DF42F84EA4BA71CAB3A478B6 /* Debug */,
+				CB1FAA654C5804E0D8EFD8F663071A50 /* MacAppStore */,
+				055FC80328978053701FF65CF534CB47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
