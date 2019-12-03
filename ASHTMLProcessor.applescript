@@ -3,7 +3,7 @@ property NSDictionary : class "NSDictionary"
 
 
 on boot_for(a_script)
-    application (get "AppleScriptHTMLLib")'s loader()'s setup(me)
+    application (get "AppleScriptHTMLLib")'s loader()'s setup(a_script)
 	return
 end boot_for
 
