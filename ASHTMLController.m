@@ -141,9 +141,12 @@ void showError(NSDictionary *err_info)
     if (!result) {
         NSDictionary *error_info = [ashtmlProcessor errorInfo];
         NSString *message = NSLocalizedString(error_info[@"message"], @"");
+        NSString *more_info = error_info[@"more_info"];
         NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
                                              code:[error_info[@"number"] intValue]
-                                         userInfo:@{NSLocalizedDescriptionKey: message}];
+                                         userInfo:@{NSLocalizedDescriptionKey: message ,
+                                                    NSLocalizedRecoverySuggestionErrorKey: more_info
+                                         }];
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert beginSheetModalForWindow:mainWindow
                           modalDelegate:self
@@ -270,9 +273,12 @@ void showError(NSDictionary *err_info)
     if (!result_ASHTML) {
         NSDictionary *error_info = [ashtmlProcessor errorInfo];
         NSString *message = NSLocalizedString(error_info[@"message"], @"");
+        NSString *more_info = error_info[@"more_info"];
         NSError *error = [NSError errorWithDomain:@"AppleScriptHTMLErrorDomain"
                                              code:[error_info[@"number"] intValue]
-                                         userInfo:@{NSLocalizedDescriptionKey: message}];
+                                         userInfo:@{NSLocalizedDescriptionKey: message ,
+                                                    NSLocalizedRecoverySuggestionErrorKey: more_info
+                                         }];
         NSAlert *alert = [NSAlert alertWithError:error];
         [alert beginSheetModalForWindow:mainWindow
                           modalDelegate:self
