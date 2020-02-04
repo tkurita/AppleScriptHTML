@@ -1,4 +1,4 @@
-global XFile
+global PathInfo
 
 property _target_text : missing value
 
@@ -49,7 +49,7 @@ on doc_name()
 	if (a_name starts with "名称未設定") or (a_name starts with "Untitled") then
 		set a_name to "edit"
 	else
-		set a_name to XFile's make_with(a_name)'s basename()
+		set a_name to PathInfo's basename_of(a_name)
 	end if
 	
 	return a_name

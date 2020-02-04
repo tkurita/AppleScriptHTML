@@ -14,7 +14,7 @@ script ASHTMLProcessor
 	property XList : "@module"
 	property XText : "@module"
 	property RGBColor : "@module"
-	property XFile : "@module"
+    property PathInfo: "@module"
 	property CSSBuilder : "@module"
 	property TemplateProcessor : "@module"
 	property _only_local_ : true

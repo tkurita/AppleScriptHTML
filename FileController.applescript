@@ -1,4 +1,4 @@
-global XFile
+global PathInfo
 
 property NSUserDefaults : class "NSUserDefaults"
 property NSURL : class "NSURL"
@@ -55,7 +55,7 @@ on doc_name()
 	--log "start doc_name"
 	resolve_target_path()
 	--log my _target_path
-	set a_name to XFile's make_with((my _target_path) as POSIX file)'s basename()
+	set a_name to PathInfo's make_with((my _target_path) as POSIX file)'s basename()
 	--log a_name
 	--log "end doc_name"
 	return a_name
